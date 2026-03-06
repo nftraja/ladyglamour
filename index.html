@@ -23,18 +23,16 @@
 
 <button class="drawer-back" onclick="toggleDrawer()">← Back</button>
 
-<a href="#">💄 Beauty & Makeup</a>
-<a href="#">👗 Fashion & Clothing</a>
-<a href="#">👜 Bags & Accessories</a>
-<a href="#">💍 Jewelry & Watches</a>
-<a href="#">🧴 Skincare & Wellness</a>
-<a href="#">🧘 Fitness & Health</a>
-<a href="#">📱 Women Tech & Gadgets</a>
+<a href="#">🧳 Travel & Mobility</a>
+<a href="#">📱 Smart Gadgets</a>
+<a href="#">👜 Fashion Accessories</a>
 <a href="#">🏠 Home & Kitchen</a>
-<a href="#">🛍 Lifestyle Essentials</a>
-<a href="#">🧳 Travel & Accessories</a>
+<a href="#">💪 Fitness & Wellness</a>
+<a href="#">💄 Beauty Devices</a>
+<a href="#">💻 Work Essentials</a>
+<a href="#">🏕 Outdoor Gear</a>
 <a href="#">🎁 Gift Ideas</a>
-<a href="#">🛒 Marketplace Deals</a>
+<a href="#">🧳 Bags & Organizers</a>
 
 </div>
 
@@ -72,11 +70,27 @@ and trending marketplace deals from multiple platforms.
 
 
 
-<!-- HOT DEALS API -->
+<!-- AI ASSISTANT -->
 
 <div class="glass-card">
 
-<div class="card-title">⚡ Hot Deals</div>
+<div class="card-title">🤖 LadyGlamour AI Assistant</div>
+
+<div class="theme-divider-b"></div>
+
+<input id="searchBox"
+placeholder="Search products like smartwatch, handbag, travel gadget"
+style="width:100%;padding:10px;border-radius:10px;border:none;">
+
+</div>
+
+
+
+<!-- LIVE DEALS API -->
+
+<div class="glass-card">
+
+<div class="card-title">⚡ Live Deals</div>
 
 <div class="theme-divider-b"></div>
 
@@ -96,15 +110,15 @@ and trending marketplace deals from multiple platforms.
 
 <div class="brand-wrap">
 
-<a href="AFF_LINK" class="brand" style="--chip-color:#2962ff;"><span>Smart Watch</span></a>
+<a href="AFF_LINK" class="brand" style="--chip-color:#2962ff;"><span>⌚ Smart Watches</span></a>
 
-<a href="AFF_LINK" class="brand" style="--chip-color:#ff1744;"><span>Wireless Earbuds</span></a>
+<a href="AFF_LINK" class="brand" style="--chip-color:#ff1744;"><span>🎧 Wireless Earbuds</span></a>
 
-<a href="AFF_LINK" class="brand" style="--chip-color:#00c853;"><span>Power Bank</span></a>
+<a href="AFF_LINK" class="brand" style="--chip-color:#00c853;"><span>🔋 Power Banks</span></a>
 
-<a href="AFF_LINK" class="brand" style="--chip-color:#7b1fa2;"><span>Bluetooth Speaker</span></a>
+<a href="AFF_LINK" class="brand" style="--chip-color:#7b1fa2;"><span>🔊 Bluetooth Speakers</span></a>
 
-<a href="AFF_LINK" class="brand" style="--chip-color:#ff9100;"><span>Mini Projector</span></a>
+<a href="AFF_LINK" class="brand" style="--chip-color:#ff9100;"><span>📽 Mini Projectors</span></a>
 
 </div>
 
@@ -144,7 +158,7 @@ and trending marketplace deals from multiple platforms.
 
 <div class="glass-card">
 
-<div class="card-title">🚀 Explore NFTRaja Ecosystem</div>
+<div class="card-title">🌐 NFTRaja Ecosystem</div>
 
 <div class="theme-divider-b"></div>
 
@@ -154,6 +168,20 @@ Explore curated product collections, discover trending deals
 and navigate the NFTRaja digital commerce ecosystem.
 
 </p>
+
+<div class="theme-divider-b"></div>
+
+<div class="brand-wrap">
+
+<a href="#" class="brand" style="--chip-color:#ff416c;"><span>🔥 Deals Hub</span></a>
+
+<a href="#" class="brand" style="--chip-color:#00c853;"><span>📂 Collections</span></a>
+
+<a href="#" class="brand" style="--chip-color:#7b1fa2;"><span>🎨 Digital Art</span></a>
+
+<a href="#" class="brand" style="--chip-color:#ff9100;"><span>📖 Blog</span></a>
+
+</div>
 
 </div>
 
@@ -199,7 +227,7 @@ overlay.addEventListener("click",toggleDrawer);
 
 
 
-/* HOT DEALS API */
+/* LIVE DEALS API */
 
 fetch("https://dummyjson.com/products?limit=6")
 
@@ -215,9 +243,21 @@ html += `
 
 <div class="glass-card">
 
+<img src="${p.thumbnail}" style="width:100%;border-radius:12px">
+
 <div class="card-title">${p.title}</div>
 
+<div class="theme-divider-b"></div>
+
 <p class="card-text">$${p.price}</p>
+
+<div class="brand-wrap">
+
+<a href="#" class="brand" style="--chip-color:#2962ff;">
+<span>View Deal</span>
+</a>
+
+</div>
 
 </div>
 
