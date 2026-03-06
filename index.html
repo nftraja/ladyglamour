@@ -8,10 +8,10 @@
 </head>
 
 <body>
+
 <div class="drawer-overlay" id="drawerOverlay"></div>
 
 <div class="drawer" id="drawer">
-
 <button class="drawer-back" onclick="toggleDrawer()">← Back</button>
 
 <a href="#">🧳 Travel & Mobility</a>
@@ -24,6 +24,7 @@
 <a href="#">🏕 Outdoor Gear</a>
 <a href="#">🎁 Gift Ideas</a>
 <a href="#">🧳 Bags & Organizers</a>
+
 </div>
 
 <header class="app-header">
@@ -33,117 +34,271 @@
 </header>
 
 <main class="main-content">
+
 <!-- HERO -->
+
 <div class="category-hero">
 <h1>🔥 Smart Deals For Women</h1>
 <div class="theme-divider"></div>
+
 <p>
 Discover curated gadgets, lifestyle gear, fashion accessories
 and trending marketplace deals from multiple platforms.
 </p>
 </div>
 
+
 <!-- AI ASSISTANT -->
+
 <div class="glass-card">
 <div class="card-title">🤖 LadyGlamour AI Assistant</div>
 <div class="theme-divider-b"></div>
+
 <input id="searchBox"
 placeholder="Search products like smartwatch, handbag, travel gadget"
 style="width:100%;padding:10px;border-radius:10px;border:none;">
+
 </div>
 
-<!-- AMAZON PICKS -->
+
 <!-- WOMEN STYLE PICKS -->
+
 <div class="glass-card">
+
 <div class="card-title">💄 Women Style Picks</div>
+
 <div class="theme-divider-b"></div>
+
 <div class="brand-wrap">
-<a href="#" class="brand" style="--chip-color:#ec407a;"><span>Purses</span></a>
-<a href="#" class="brand" style="--chip-color:#ff1744;"><span>Handbags</span></a>
-<a href="#" class="brand" style="--chip-color:#2962ff;"><span>Watches</span></a>
-<a href="#" class="brand" style="--chip-color:#00c853;"><span>Perfumes</span></a>
-<a href="#" class="brand" style="--chip-color:#7b1fa2;"><span>Footwears</span></a>
-<a href="#" class="brand" style="--chip-color:#ff9100;"><span>Eyewears</span></a>
+
+<a href="#" class="brand" data-cat="purse" style="--chip-color:#ec407a;"><span>Purses</span></a>
+
+<a href="#" class="brand" data-cat="handbag" style="--chip-color:#ff1744;"><span>Handbags</span></a>
+
+<a href="#" class="brand" data-cat="watch" style="--chip-color:#2962ff;"><span>Watches</span></a>
+
+<a href="#" class="brand" data-cat="perfume" style="--chip-color:#00c853;"><span>Perfumes</span></a>
+
+<a href="#" class="brand" data-cat="footwear" style="--chip-color:#7b1fa2;"><span>Footwears</span></a>
+
+<a href="#" class="brand" data-cat="eyewear" style="--chip-color:#ff9100;"><span>Eyewears</span></a>
+
 </div>
+
 </div>
+
 
 <!-- LIVE DEALS API -->
+
 <div class="glass-card">
+
 <div class="card-title">⚡ Live Deals</div>
+
 <div class="theme-divider-b"></div>
+
 <div class="grid" id="hotDeals"></div>
+
 </div>
+
 
 <!-- CATEGORIES -->
+
 <div class="glass-card">
+
 <div class="card-title">📂 Categories</div>
+
 <div class="theme-divider-b"></div>
+
 <div class="brand-wrap">
-<a href="#" class="brand" style="--chip-color:#ec407a;"><span>Beauty</span></a>
-<a href="#" class="brand" style="--chip-color:#ff1744;"><span>Fashion</span></a>
-<a href="#" class="brand" style="--chip-color:#00c853;"><span>Gadgets</span></a>
-<a href="#" class="brand" style="--chip-color:#7b1fa2;"><span>Fitness</span></a>
-<a href="#" class="brand" style="--chip-color:#ff9100;"><span>Travel</span></a>
-<a href="#" class="brand" style="--chip-color:#2962ff;"><span>Home</span></a>
-</div>
+
+<a href="#" class="brand" data-cat="beauty" style="--chip-color:#ec407a;"><span>Beauty</span></a>
+
+<a href="#" class="brand" data-cat="fashion" style="--chip-color:#ff1744;"><span>Fashion</span></a>
+
+<a href="#" class="brand" data-cat="gadget" style="--chip-color:#00c853;"><span>Gadgets</span></a>
+
+<a href="#" class="brand" data-cat="fitness" style="--chip-color:#7b1fa2;"><span>Fitness</span></a>
+
+<a href="#" class="brand" data-cat="travel" style="--chip-color:#ff9100;"><span>Travel</span></a>
+
+<a href="#" class="brand" data-cat="home" style="--chip-color:#2962ff;"><span>Home</span></a>
+
 </div>
 
+</div>
+
+
 <!-- NFTRAJA -->
+
 <div class="glass-card">
+
 <div class="card-title">🌐 NFTRaja Ecosystem</div>
+
 <div class="theme-divider-b"></div>
+
 <p class="card-text">
 Explore curated product collections, discover trending deals
 and navigate the NFTRaja digital commerce ecosystem.
 </p>
+
 <div class="theme-divider-b"></div>
+
 <div class="brand-wrap">
+
 <a href="#" class="brand" style="--chip-color:#ff416c;"><span>🔥 Deals Hub</span></a>
+
 <a href="#" class="brand" style="--chip-color:#00c853;"><span>📂 Collections</span></a>
+
 <a href="#" class="brand" style="--chip-color:#7b1fa2;"><span>🎨 Digital Art</span></a>
+
 <a href="#" class="brand" style="--chip-color:#ff9100;"><span>📖 Blog</span></a>
+
 </div>
+
 </div>
 
 </main>
+
+
 <div class="bottom-nav">
+
 <a href="#" class="nav-item"><span>🏠 Home</span></a>
 <a href="#" class="nav-item"><span>🏷️ Deals</span></a>
 <a href="#" class="nav-item"><span>🛍 Products</span></a>
 <a href="#" class="nav-item"><span>📖 Blog</span></a>
+
 </div>
 
+
 <script>
-/* drawer */
+
+
+/* DRAWER */
+
 const drawer = document.getElementById("drawer");
 const overlay = document.getElementById("drawerOverlay");
+
 function toggleDrawer(){
+
 drawer.classList.toggle("active");
 overlay.classList.toggle("active");
+
 document.body.style.overflow =
 drawer.classList.contains("active") ? "hidden" : "";
+
 }
 
 overlay.addEventListener("click",toggleDrawer);
 
-/* LIVE DEALS API */
-fetch("https://dummyjson.com/products?limit=6")
-.then(res => res.json())
-.then(data => {
+
+
+/* CATEGORY CLICK → API SEARCH */
+
+document.querySelectorAll("[data-cat]").forEach(btn=>{
+
+btn.addEventListener("click",function(e){
+
+e.preventDefault();
+
+let query = this.dataset.cat;
+
+loadDeals(query);
+
+document.querySelector("#hotDeals").scrollIntoView({
+behavior:"smooth"
+});
+
+});
+
+});
+
+
+
+/* SEARCH BOX */
+
+const searchBox = document.getElementById("searchBox");
+
+searchBox.addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+
+loadDeals(searchBox.value);
+
+document.querySelector("#hotDeals").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+});
+
+
+
+/* DEAL LOADER */
+
+function loadDeals(query){
+
+fetch("https://dummyjson.com/products/search?q="+query)
+
+.then(res=>res.json())
+
+.then(data=>{
+
 let html="";
-data.products.forEach(p => {
+
+data.products.slice(0,6).forEach(p=>{
+
+let q = p.title.replaceAll(" ","+");
+
+let img =
+"https://source.unsplash.com/400x300/?"+q;
+
+let flipkart =
+"https://www.flipkart.com/search?q="+q;
+
+let ebay =
+"https://www.ebay.com/sch/i.html?_nkw="+q;
+
+let meesho =
+"https://www.meesho.com/search?q="+q;
+
 html += `
 
 <div class="glass-card">
-<img src="${p.thumbnail}" style="width:100%;border-radius:12px">
+
+<img src="${img}" style="width:100%;border-radius:12px">
+
 <div class="card-title">${p.title}</div>
+
 <div class="theme-divider-b"></div>
-<p class="card-text">$${p.price}</p>
+
+<p class="card-text">
+Demo image — see original product on Amazon.
+</p>
+
 <div class="brand-wrap">
-<a href="#" class="brand" style="--chip-color:#2962ff;">
-<span>View Deal</span>
+
+<a href="#" class="brand" style="--chip-color:#ff9900;">
+<span>Amazon</span>
 </a>
+
+<a href="${flipkart}" target="_blank"
+class="brand" style="--chip-color:#2962ff;">
+<span>Flipkart</span>
+</a>
+
+<a href="${ebay}" target="_blank"
+class="brand" style="--chip-color:#e53238;">
+<span>eBay</span>
+</a>
+
+<a href="${meesho}" target="_blank"
+class="brand" style="--chip-color:#ff3f6c;">
+<span>Meesho</span>
+</a>
+
 </div>
+
 </div>
 
 `;
@@ -151,7 +306,18 @@ html += `
 });
 
 document.getElementById("hotDeals").innerHTML = html;
+
 });
+
+}
+
+
+
+/* INITIAL LOAD */
+
+loadDeals("smartwatch");
+
+
 </script>
 
 </body>
