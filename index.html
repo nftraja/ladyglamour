@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>LadyGlamour Smart Deals</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+
+<div class="drawer" id="drawer">
+
+<button class="drawer-back" onclick="toggleDrawer()">← Back</button>
+
+<a href="#">💄 Beauty & Makeup</a>
+<a href="#">👗 Fashion & Clothing</a>
+<a href="#">👜 Bags & Accessories</a>
+<a href="#">💍 Jewelry & Watches</a>
+<a href="#">🧴 Skincare & Wellness</a>
+<a href="#">🧘 Fitness & Health</a>
+<a href="#">📱 Women Tech & Gadgets</a>
+<a href="#">🏠 Home & Kitchen</a>
+<a href="#">🛍 Lifestyle Essentials</a>
+<a href="#">🧳 Travel & Accessories</a>
+<a href="#">🎁 Gift Ideas</a>
+<a href="#">🛒 Marketplace Deals</a>
+
+</div>
+
+
+
+<header class="app-header">
+
+<button class="menu-btn" onclick="toggleDrawer()">☰</button>
+
+<div class="logo">🛍 LadyGlamour</div>
+
+<div class="header-icons">🏷️</div>
+
+</header>
+
+
+
+<main class="main-content">
+
+
+<!-- HERO -->
+
+<div class="category-hero">
+
+<h1>🔥 Smart Deals For Women</h1>
+
+<div class="theme-divider"></div>
+
+<p>
+Discover curated gadgets, lifestyle gear, fashion accessories
+and trending marketplace deals from multiple platforms.
+</p>
+
+</div>
+
+
+
+<!-- HOT DEALS API -->
+
+<div class="glass-card">
+
+<div class="card-title">⚡ Hot Deals</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="grid" id="hotDeals"></div>
+
+</div>
+
+
+
+<!-- AMAZON PICKS -->
+
+<div class="glass-card">
+
+<div class="card-title">⭐ Amazon Picks</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="brand-wrap">
+
+<a href="AFF_LINK" class="brand" style="--chip-color:#2962ff;"><span>Smart Watch</span></a>
+
+<a href="AFF_LINK" class="brand" style="--chip-color:#ff1744;"><span>Wireless Earbuds</span></a>
+
+<a href="AFF_LINK" class="brand" style="--chip-color:#00c853;"><span>Power Bank</span></a>
+
+<a href="AFF_LINK" class="brand" style="--chip-color:#7b1fa2;"><span>Bluetooth Speaker</span></a>
+
+<a href="AFF_LINK" class="brand" style="--chip-color:#ff9100;"><span>Mini Projector</span></a>
+
+</div>
+
+</div>
+
+
+
+<!-- CATEGORIES -->
+
+<div class="glass-card">
+
+<div class="card-title">📂 Categories</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="brand-wrap">
+
+<a href="#" class="brand" style="--chip-color:#ec407a;"><span>Beauty</span></a>
+
+<a href="#" class="brand" style="--chip-color:#ff1744;"><span>Fashion</span></a>
+
+<a href="#" class="brand" style="--chip-color:#00c853;"><span>Gadgets</span></a>
+
+<a href="#" class="brand" style="--chip-color:#7b1fa2;"><span>Fitness</span></a>
+
+<a href="#" class="brand" style="--chip-color:#ff9100;"><span>Travel</span></a>
+
+<a href="#" class="brand" style="--chip-color:#2962ff;"><span>Home</span></a>
+
+</div>
+
+</div>
+
+
+
+<!-- NFTRAJA -->
+
+<div class="glass-card">
+
+<div class="card-title">🚀 Explore NFTRaja Ecosystem</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+
+Explore curated product collections, discover trending deals
+and navigate the NFTRaja digital commerce ecosystem.
+
+</p>
+
+</div>
+
+
+</main>
+
+
+
+<div class="bottom-nav">
+
+<a href="#" class="nav-item"><span>🏠 Home</span></a>
+
+<a href="#" class="nav-item"><span>🏷️ Deals</span></a>
+
+<a href="#" class="nav-item"><span>🛍 Products</span></a>
+
+<a href="#" class="nav-item"><span>📖 Blog</span></a>
+
+</div>
+
+
+
+<script>
+
+
+/* drawer */
+
+const drawer = document.getElementById("drawer");
+const overlay = document.getElementById("drawerOverlay");
+
+function toggleDrawer(){
+
+drawer.classList.toggle("active");
+
+overlay.classList.toggle("active");
+
+document.body.style.overflow =
+drawer.classList.contains("active") ? "hidden" : "";
+
+}
+
+overlay.addEventListener("click",toggleDrawer);
+
+
+
+/* HOT DEALS API */
+
+fetch("https://dummyjson.com/products?limit=6")
+
+.then(res => res.json())
+
+.then(data => {
+
+let html="";
+
+data.products.forEach(p => {
+
+html += `
+
+<div class="glass-card">
+
+<div class="card-title">${p.title}</div>
+
+<p class="card-text">$${p.price}</p>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("hotDeals").innerHTML = html;
+
+});
+
+
+</script>
+
+
+
+</body>
+</html>
