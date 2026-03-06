@@ -71,6 +71,11 @@ products.slice(0,6).forEach(p => {
 
 let q = p.title.replaceAll(" ","+");
 
+/* marketplace links */
+
+let amazon =
+"https://www.amazon.in/s?k="+q;
+
 let flipkart =
 "https://www.flipkart.com/search?q="+q;
 
@@ -79,6 +84,19 @@ let ebay =
 
 let meesho =
 "https://www.meesho.com/search?q="+q;
+
+
+/* best deal demo */
+
+let markets = [
+{ name:"Amazon", color:"#ff9900" },
+{ name:"Flipkart", color:"#2962ff" },
+{ name:"eBay", color:"#e53238" },
+{ name:"Meesho", color:"#ff3f6c" }
+];
+
+let best = markets[Math.floor(Math.random()*markets.length)];
+
 
 html += `
 
@@ -92,12 +110,21 @@ style="width:100%;border-radius:12px">
 <div class="theme-divider-b"></div>
 
 <p class="card-text">
-Demo image — see original product on Amazon
+Preview image. View full product details on the selected marketplace.
 </p>
+
+<div class="theme-divider-b"></div>
+
+<div class="card-text">
+🔥 Best Deal → ${best.name}
+</div>
+
+<div class="theme-divider-b"></div>
 
 <div class="brand-wrap">
 
-<a href="#" class="brand"
+<a href="${amazon}" target="_blank"
+class="brand"
 style="--chip-color:#ff9900;">
 <span>Amazon</span>
 </a>
@@ -131,7 +158,6 @@ style="--chip-color:#ff3f6c;">
 grid.innerHTML = html;
 
 }
-
 
 
 /* ==============================
