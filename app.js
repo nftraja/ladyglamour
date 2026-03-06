@@ -3,7 +3,9 @@ LadyGlamour Core Script
 ============================== */
 
 
-/* DRAWER SYSTEM */
+/* ==============================
+DRAWER SYSTEM
+============================== */
 
 const drawer = document.getElementById("drawer");
 const overlay = document.getElementById("drawerOverlay");
@@ -19,7 +21,9 @@ drawer.classList.contains("active") ? "hidden" : "";
 
 }
 
+if(overlay){
 overlay.addEventListener("click",toggleDrawer);
+}
 
 
 
@@ -27,11 +31,13 @@ overlay.addEventListener("click",toggleDrawer);
 LIVE DEALS API
 ============================== */
 
-async function loadDeals(){
+async function loadDeals(query="smartwatch"){
 
 try{
 
-let res = await fetch("https://dummyjson.com/products?limit=6");
+let res = await fetch(
+"https://dummyjson.com/products/search?q="+query
+);
 
 let data = await res.json();
 
@@ -57,9 +63,22 @@ function renderDeals(products){
 
 let grid = document.getElementById("hotDeals");
 
+if(!grid) return;
+
 let html = "";
 
-products.forEach(p => {
+products.slice(0,6).forEach(p => {
+
+let q = p.title.replaceAll(" ","+");
+
+let flipkart =
+"https://www.flipkart.com/search?q="+q;
+
+let ebay =
+"https://www.ebay.com/sch/i.html?_nkw="+q;
+
+let meesho =
+"https://www.meesho.com/search?q="+q;
 
 html += `
 
@@ -72,23 +91,33 @@ style="width:100%;border-radius:12px">
 
 <div class="theme-divider-b"></div>
 
-<p class="card-text">$${p.price}</p>
+<p class="card-text">
+Demo image — see original product on Amazon
+</p>
 
 <div class="brand-wrap">
 
 <a href="#" class="brand"
-style="--chip-color:#2962ff;">
+style="--chip-color:#ff9900;">
 <span>Amazon</span>
 </a>
 
-<a href="#" class="brand"
-style="--chip-color:#ff1744;">
+<a href="${flipkart}" target="_blank"
+class="brand"
+style="--chip-color:#2962ff;">
 <span>Flipkart</span>
 </a>
 
-<a href="#" class="brand"
-style="--chip-color:#00c853;">
-<span>AliExpress</span>
+<a href="${ebay}" target="_blank"
+class="brand"
+style="--chip-color:#e53238;">
+<span>eBay</span>
+</a>
+
+<a href="${meesho}" target="_blank"
+class="brand"
+style="--chip-color:#ff3f6c;">
+<span>Meesho</span>
 </a>
 
 </div>
@@ -106,7 +135,7 @@ grid.innerHTML = html;
 
 
 /* ==============================
-AI SEARCH DEMO
+AI SEARCH
 ============================== */
 
 const searchBox = document.getElementById("searchBox");
@@ -132,9 +161,7 @@ async function searchProducts(){
 let query = searchBox.value.trim();
 
 if(!query){
-
 return;
-
 }
 
 try{
@@ -147,10 +174,7 @@ let data = await res.json();
 
 renderDeals(data.products);
 
-window.scrollTo({
-top:document.getElementById("hotDeals").offsetTop - 80,
-behavior:"smooth"
-});
+scrollToDeals();
 
 }
 
@@ -159,6 +183,50 @@ catch(e){
 console.log("Search Error",e);
 
 }
+
+}
+
+
+
+/* ==============================
+CATEGORY CLICK SYSTEM
+============================== */
+
+document.querySelectorAll("[data-cat]").forEach(btn=>{
+
+btn.addEventListener("click",function(e){
+
+e.preventDefault();
+
+let query = this.dataset.cat;
+
+loadDeals(query);
+
+scrollToDeals();
+
+});
+
+});
+
+
+
+/* ==============================
+SCROLL TO DEALS
+============================== */
+
+function scrollToDeals(){
+
+let target = document.getElementById("hotDeals");
+
+if(!target) return;
+
+window.scrollTo({
+
+top:target.offsetTop - 80,
+
+behavior:"smooth"
+
+});
 
 }
 
