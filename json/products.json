@@ -1,61 +1,61 @@
 {
  "purse":[
-  {"id":"purse1","title":"Mini Leather Purse","link":"https://amazon.in"},
-  {"id":"purse2","title":"Classic Women Wallet","link":"https://amazon.in"},
-  {"id":"purse3","title":"Compact Travel Purse","link":"https://amazon.in"}
+  {"id":"purse1","title":"Mini Leather Purse","price":"₹799","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"purse2","title":"Classic Women Wallet","price":"₹699","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"purse3","title":"Compact Travel Purse","price":"₹899","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
  ],
 
  "handbag":[
-  {"id":"handbag1","title":"Luxury Shoulder Handbag","link":"https://amazon.in"},
-  {"id":"handbag2","title":"Designer Tote Bag","link":"https://amazon.in"},
-  {"id":"handbag3","title":"Elegant Office Handbag","link":"https://amazon.in"}
+  {"id":"handbag1","title":"Luxury Shoulder Handbag","price":"₹1299","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"handbag2","title":"Designer Tote Bag","price":"₹1499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"handbag3","title":"Elegant Office Handbag","price":"₹1199","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
  ],
 
  "watch":[
-  {"id":"watch1","title":"Elegant Women Watch","link":"https://amazon.in"},
-  {"id":"watch2","title":"Rose Gold Ladies Watch","link":"https://amazon.in"},
-  {"id":"watch3","title":"Minimal Fashion Watch","link":"https://amazon.in"}
+  {"id":"watch1","title":"Elegant Women Watch","price":"₹2499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"watch2","title":"Rose Gold Ladies Watch","price":"₹2199","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"watch3","title":"Minimal Fashion Watch","price":"₹1999","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
  ],
 
  "perfume":[
-  {"id":"perfume1","title":"Luxury Floral Perfume","link":"https://amazon.in"},
-  {"id":"perfume2","title":"Premium Women Fragrance","link":"https://amazon.in"},
-  {"id":"perfume3","title":"Fresh Daily Perfume","link":"https://amazon.in"}
+  {"id":"perfume1","title":"Luxury Floral Perfume","price":"₹999","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"perfume2","title":"Premium Women Fragrance","price":"₹1199","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"perfume3","title":"Fresh Daily Perfume","price":"₹799","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
  ],
 
  "footwear":[
-  {"id":"footwear1","title":"Stylish Women Sneakers","link":"https://amazon.in"},
-  {"id":"footwear2","title":"Comfort Walking Shoes","link":"https://amazon.in"},
-  {"id":"footwear3","title":"Lightweight Casual Shoes","link":"https://amazon.in"}
+  {"id":"footwear1","title":"Stylish Women Sneakers","price":"₹1599","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"footwear2","title":"Comfort Walking Shoes","price":"₹1299","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"footwear3","title":"Lightweight Casual Shoes","price":"₹1199","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
  ],
 
  "eyewear":[
-  {"id":"eyewear1","title":"Classic Women Sunglasses","link":"https://amazon.in"},
-  {"id":"eyewear2","title":"Luxury UV Protection Glasses","link":"https://amazon.in"},
-  {"id":"eyewear3","title":"Fashion Cat Eye Sunglasses","link":"https://amazon.in"}
+  {"id":"eyewear1","title":"Classic Women Sunglasses","price":"₹599","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"eyewear2","title":"Luxury UV Protection Glasses","price":"₹799","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"eyewear3","title":"Fashion Cat Eye Sunglasses","price":"₹699","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
  ],
 
  "jewellery":[
-  {"id":"jewellery1","title":"Elegant Gold Necklace","link":"https://amazon.in"},
-  {"id":"jewellery2","title":"Minimal Pearl Earrings","link":"https://amazon.in"},
-  {"id":"jewellery3","title":"Luxury Bracelet Set","link":"https://amazon.in"}
+  {"id":"jewellery1","title":"Elegant Gold Necklace","price":"₹1499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"jewellery2","title":"Minimal Pearl Earrings","price":"₹799","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"jewellery3","title":"Luxury Bracelet Set","price":"₹999","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
  ],
 
  "hairtools":[
-  {"id":"hairtools1","title":"Professional Hair Dryer","link":"https://amazon.in"},
-  {"id":"hairtools2","title":"Ceramic Hair Straightener","link":"https://amazon.in"},
-  {"id":"hairtools3","title":"Automatic Hair Curler","link":"https://amazon.in"}
+  {"id":"hairtools1","title":"Professional Hair Dryer","price":"₹1699","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"hairtools2","title":"Ceramic Hair Straightener","price":"₹1499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"hairtools3","title":"Automatic Hair Curler","price":"₹1899","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
  ],
 
  "belts":[
-  {"id":"belts1","title":"Classic Leather Belt","link":"https://amazon.in"},
-  {"id":"belts2","title":"Fashion Women Waist Belt","link":"https://amazon.in"},
-  {"id":"belts3","title":"Elegant Designer Belt","link":"https://amazon.in"}
+  {"id":"belts1","title":"Classic Leather Belt","price":"₹499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"belts2","title":"Fashion Women Waist Belt","price":"₹599","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"belts3","title":"Elegant Designer Belt","price":"₹699","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
  ],
 
  "scarves":[
-  {"id":"scarves1","title":"Soft Silk Fashion Scarf","link":"https://amazon.in"},
-  {"id":"scarves2","title":"Winter Warm Neck Scarf","link":"https://amazon.in"},
-  {"id":"scarves3","title":"Lightweight Summer Scarf","link":"https://amazon.in"}
+  {"id":"scarves1","title":"Soft Silk Fashion Scarf","price":"₹499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"scarves2","title":"Winter Warm Neck Scarf","price":"₹599","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
+  {"id":"scarves3","title":"Lightweight Summer Scarf","price":"₹399","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
  ]
 }
