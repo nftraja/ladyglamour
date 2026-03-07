@@ -13,7 +13,6 @@ const overlay = document.getElementById("drawerOverlay");
 function toggleDrawer(){
 
 drawer.classList.toggle("active");
-
 overlay.classList.toggle("active");
 
 document.body.style.overflow =
@@ -28,123 +27,74 @@ overlay.addEventListener("click",toggleDrawer);
 
 
 /* ==============================
-LIVE DEALS API
+JSON PRODUCT STORE
 ============================== */
 
-async function loadDeals(query="smartwatch"){
+let storeData = {};
+
+async function loadStore(){
 
 try{
 
-let res = await fetch(
-"https://dummyjson.com/products/search?q="+query
-);
+let res = await fetch("products.json");
 
-let data = await res.json();
-
-renderDeals(data.products);
+storeData = await res.json();
 
 }
-
 catch(e){
 
-console.log("Deals API Error",e);
+console.log("JSON load error",e);
 
 }
 
 }
+
+loadStore();
 
 
 
 /* ==============================
-RENDER DEAL CARDS
+RENDER PRODUCT CARDS
 ============================== */
 
-function renderDeals(products){
+function renderProducts(cat){
 
 let grid = document.getElementById("hotDeals");
 
-if(!grid) return;
+if(!storeData[cat]){
 
-let html = "";
+grid.innerHTML="<p>No products available</p>";
 
-products.slice(0,6).forEach(p => {
+return;
 
-let q = p.title.replaceAll(" ","+");
+}
 
-/* marketplace links */
+let html="";
 
-let amazon =
-"https://www.amazon.in/s?k="+q;
+storeData[cat].forEach(p=>{
 
-let flipkart =
-"https://www.flipkart.com/search?q="+q;
-
-let ebay =
-"https://www.ebay.com/sch/i.html?_nkw="+q;
-
-let meesho =
-"https://www.meesho.com/search?q="+q;
-
-
-/* best deal demo */
-
-let markets = [
-{ name:"Amazon", color:"#ff9900" },
-{ name:"Flipkart", color:"#2962ff" },
-{ name:"eBay", color:"#e53238" },
-{ name:"Meesho", color:"#ff3f6c" }
-];
-
-let best = markets[Math.floor(Math.random()*markets.length)];
-
-
-html += `
+html+=`
 
 <div class="glass-card">
 
-<img src="${p.thumbnail}" 
-style="width:100%;border-radius:12px">
+<img src="${p.image}" style="width:100%;border-radius:12px">
 
 <div class="card-title">${p.title}</div>
 
 <div class="theme-divider-b"></div>
 
 <p class="card-text">
-Preview image. View full product details on the selected marketplace.
+Preview image. View original product on Amazon marketplace.
 </p>
-
-<div class="theme-divider-b"></div>
-
-<div class="card-text">
-🔥 Best Deal → ${best.name}
-</div>
-
-<div class="theme-divider-b"></div>
 
 <div class="brand-wrap">
 
-<a href="${amazon}" target="_blank"
+<a href="${p.link}" target="_blank"
 class="brand"
 style="--chip-color:#ff9900;">
-<span>Amazon</span>
-</a>
 
-<a href="${flipkart}" target="_blank"
-class="brand"
-style="--chip-color:#2962ff;">
-<span>Flipkart</span>
-</a>
+<span>View Deal</span>
 
-<a href="${ebay}" target="_blank"
-class="brand"
-style="--chip-color:#e53238;">
-<span>eBay</span>
-</a>
-
-<a href="${meesho}" target="_blank"
-class="brand"
-style="--chip-color:#ff3f6c;">
-<span>Meesho</span>
 </a>
 
 </div>
@@ -155,60 +105,7 @@ style="--chip-color:#ff3f6c;">
 
 });
 
-grid.innerHTML = html;
-
-}
-
-
-/* ==============================
-AI SEARCH
-============================== */
-
-const searchBox = document.getElementById("searchBox");
-
-if(searchBox){
-
-searchBox.addEventListener("keyup",function(e){
-
-if(e.key === "Enter"){
-
-searchProducts();
-
-}
-
-});
-
-}
-
-
-
-async function searchProducts(){
-
-let query = searchBox.value.trim();
-
-if(!query){
-return;
-}
-
-try{
-
-let res = await fetch(
-"https://dummyjson.com/products/search?q="+query
-);
-
-let data = await res.json();
-
-renderDeals(data.products);
-
-scrollToDeals();
-
-}
-
-catch(e){
-
-console.log("Search Error",e);
-
-}
+grid.innerHTML=html;
 
 }
 
@@ -224,9 +121,9 @@ btn.addEventListener("click",function(e){
 
 e.preventDefault();
 
-let query = this.dataset.cat;
+let cat=this.dataset.cat;
 
-loadDeals(query);
+renderProducts(cat);
 
 scrollToDeals();
 
@@ -242,14 +139,13 @@ SCROLL TO DEALS
 
 function scrollToDeals(){
 
-let target = document.getElementById("hotDeals");
+let target=document.getElementById("hotDeals");
 
 if(!target) return;
 
 window.scrollTo({
 
-top:target.offsetTop - 80,
-
+top:target.offsetTop-80,
 behavior:"smooth"
 
 });
@@ -259,7 +155,91 @@ behavior:"smooth"
 
 
 /* ==============================
-INIT
+AI SEARCH (Local JSON)
 ============================== */
 
-loadDeals();
+const searchBox=document.getElementById("searchBox");
+
+if(searchBox){
+
+searchBox.addEventListener("keyup",function(e){
+
+if(e.key==="Enter"){
+
+searchProducts();
+
+}
+
+});
+
+}
+
+function searchProducts(){
+
+let query=searchBox.value.toLowerCase();
+
+let results=[];
+
+Object.values(storeData).forEach(cat=>{
+
+cat.forEach(p=>{
+
+if(p.title.toLowerCase().includes(query)){
+
+results.push(p);
+
+}
+
+});
+
+});
+
+renderSearch(results);
+
+scrollToDeals();
+
+}
+
+function renderSearch(products){
+
+let grid=document.getElementById("hotDeals");
+
+let html="";
+
+products.forEach(p=>{
+
+html+=`
+
+<div class="glass-card">
+
+<img src="${p.image}" style="width:100%;border-radius:12px">
+
+<div class="card-title">${p.title}</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+Preview image. View original product on Amazon marketplace.
+</p>
+
+<div class="brand-wrap">
+
+<a href="${p.link}" target="_blank"
+class="brand"
+style="--chip-color:#ff9900;">
+
+<span>View Deal</span>
+
+</a>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+grid.innerHTML=html;
+
+}
