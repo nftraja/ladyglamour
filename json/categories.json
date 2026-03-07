@@ -1,0 +1,75 @@
+{
+  "categories":[
+
+    {
+      "title":"Travel & Mobility",
+      "subtitle":"Travel gear, luggage organizers, passport wallets and smart travel accessories.",
+      "icon":"🧳",
+      "slug":"travel-mobility"
+    },
+
+    {
+      "title":"Smart Gadgets & Tech",
+      "subtitle":"Smartwatches, earbuds, power banks and everyday technology essentials.",
+      "icon":"📱",
+      "slug":"smart-gadgets"
+    },
+
+    {
+      "title":"Fashion Accessories",
+      "subtitle":"Handbags, purses, sunglasses, belts and stylish everyday fashion accessories.",
+      "icon":"👜",
+      "slug":"fashion-accessories"
+    },
+
+    {
+      "title":"Home & Kitchen Essentials",
+      "subtitle":"Kitchen gadgets, organizers and useful tools for everyday home convenience.",
+      "icon":"🏠",
+      "slug":"home-kitchen"
+    },
+
+    {
+      "title":"Fitness & Wellness",
+      "subtitle":"Fitness accessories, yoga gear and wellness tools for an active lifestyle.",
+      "icon":"💪",
+      "slug":"fitness-wellness"
+    },
+
+    {
+      "title":"Beauty Devices",
+      "subtitle":"Hair styling tools, skincare gadgets and modern beauty devices.",
+      "icon":"💄",
+      "slug":"beauty-devices"
+    },
+
+    {
+      "title":"Work & Study Essentials",
+      "subtitle":"Desk accessories, laptop tools and productivity gadgets for work or study.",
+      "icon":"💻",
+      "slug":"work-study"
+    },
+
+    {
+      "title":"Outdoor & Lifestyle Gear",
+      "subtitle":"Outdoor travel gear, lifestyle gadgets and adventure accessories.",
+      "icon":"🏕",
+      "slug":"outdoor-lifestyle"
+    },
+
+    {
+      "title":"Gift Ideas",
+      "subtitle":"Curated gift picks perfect for birthdays, celebrations and special moments.",
+      "icon":"🎁",
+      "slug":"gift-ideas"
+    },
+
+    {
+      "title":"Bags, Organizers & Daily Carry",
+      "subtitle":"Backpacks, travel organizers and everyday carry essentials.",
+      "icon":"🎒",
+      "slug":"bags-organizers"
+    }
+
+  ]
+}
