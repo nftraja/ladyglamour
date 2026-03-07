@@ -1,8 +1,33 @@
 {
  "purse":[
-  {"id":"purse1","title":"Mini Leather Purse","price":"₹799","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"purse2","title":"Classic Women Wallet","price":"₹699","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"purse3","title":"Compact Travel Purse","price":"₹899","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
+  {
+   "id":"purse1",
+   "title":"J J Accessories Stylish Crossbody Sling Purse",
+   "price":"₹299",
+   "discount":"70% OFF",
+   "link":"https://amzn.to/4aWRFYM"
+  },
+  {
+   "id":"purse2",
+   "title":"Hexwell Women Clutch Purse with Detachable Chain",
+   "price":"₹499",
+   "discount":"50% OFF",
+   "link":"https://amzn.to/4st6RTb"
+  },
+  {
+   "id":"purse3",
+   "title":"Lady Quinton Trendy Handbag for Girls and Women",
+   "price":"₹418",
+   "discount":"75% OFF",
+   "link":"https://amzn.to/4baqkRs"
+  },
+  {
+   "id":"purse4",
+   "title":"J I Accessories Women Stylish Crossbody Sling Bag",
+   "price":"₹284",
+   "discount":"72% OFF",
+   "link":"https://amzn.to/40dXaMz"
+  }
  ],
 
  "handbag":[
