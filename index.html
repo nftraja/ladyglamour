@@ -262,46 +262,7 @@ let ebay =
 let meesho =
 "https://www.meesho.com/search?q="+q;
 
-html += `
-
-<div class="glass-card">
-
-<img src="${img}" style="width:100%;border-radius:12px">
-
-<div class="card-title">${p.title}</div>
-
-<div class="theme-divider-b"></div>
-
-<p class="card-text">
-Demo image — see original product on Amazon.
-</p>
-
-<div class="brand-wrap">
-
-<a href="#" class="brand" style="--chip-color:#ff9900;">
-<span>Amazon</span>
-</a>
-
-<a href="${flipkart}" target="_blank"
-class="brand" style="--chip-color:#2962ff;">
-<span>Flipkart</span>
-</a>
-
-<a href="${ebay}" target="_blank"
-class="brand" style="--chip-color:#e53238;">
-<span>eBay</span>
-</a>
-
-<a href="${meesho}" target="_blank"
-class="brand" style="--chip-color:#ff3f6c;">
-<span>Meesho</span>
-</a>
-
-</div>
-
-</div>
-
-`;
+html += ` ... `;
 
 });
 
@@ -310,6 +271,10 @@ document.getElementById("hotDeals").innerHTML = html;
 });
 
 }
+
+/* INITIAL LOAD */
+
+loadDeals("smartwatch");
 
 
 
