@@ -37,7 +37,6 @@ async function loadStore(){
 try{
 
 let res = await fetch("products.json");
-
 storeData = await res.json();
 
 }
@@ -54,6 +53,18 @@ loadStore();
 
 
 /* ==============================
+GET UNSPLASH IMAGE
+============================== */
+
+function getImage(query){
+
+return "https://source.unsplash.com/400x300/?"+query.replaceAll(" ","+");
+
+}
+
+
+
+/* ==============================
 RENDER PRODUCT CARDS
 ============================== */
 
@@ -64,7 +75,6 @@ let grid = document.getElementById("hotDeals");
 if(!storeData[cat]){
 
 grid.innerHTML="<p>No products available</p>";
-
 return;
 
 }
@@ -73,18 +83,20 @@ let html="";
 
 storeData[cat].forEach(p=>{
 
+let img = getImage(p.title);
+
 html+=`
 
 <div class="glass-card">
 
-<img src="${p.image}" style="width:100%;border-radius:12px">
+<img src="${img}" style="width:100%;border-radius:12px">
 
 <div class="card-title">${p.title}</div>
 
 <div class="theme-divider-b"></div>
 
 <p class="card-text">
-Preview image. View original product on Amazon marketplace.
+Preview image. View original product on marketplace.
 </p>
 
 <div class="brand-wrap">
@@ -200,6 +212,12 @@ scrollToDeals();
 
 }
 
+
+
+/* ==============================
+RENDER SEARCH RESULTS
+============================== */
+
 function renderSearch(products){
 
 let grid=document.getElementById("hotDeals");
@@ -208,18 +226,20 @@ let html="";
 
 products.forEach(p=>{
 
+let img = getImage(p.title);
+
 html+=`
 
 <div class="glass-card">
 
-<img src="${p.image}" style="width:100%;border-radius:12px">
+<img src="${img}" style="width:100%;border-radius:12px">
 
 <div class="card-title">${p.title}</div>
 
 <div class="theme-divider-b"></div>
 
 <p class="card-text">
-Preview image. View original product on Amazon marketplace.
+Preview image. View original product on marketplace.
 </p>
 
 <div class="brand-wrap">
