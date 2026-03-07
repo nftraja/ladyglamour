@@ -364,14 +364,16 @@ let pid=params.get("p");
 if(!pid) return;
 
 let found=null;
+let category=null;
 
-Object.values(storeData).forEach(cat=>{
+Object.keys(storeData).forEach(cat=>{
 
-cat.forEach(p=>{
+storeData[cat].forEach(p=>{
 
 if(p.id===pid){
 
 found=p;
+category=cat;
 
 }
 
@@ -382,10 +384,77 @@ found=p;
 if(found){
 
 renderSearch([found]);
-
 scrollToDeals();
 
+/* v2 conversion layout → related products */
+
+renderRelatedProducts(category,found.id);
+
 }
+
+}
+
+
+
+/* ==============================
+RELATED PRODUCTS (v2 CONVERSION)
+============================== */
+
+function renderRelatedProducts(cat,excludeId){
+
+let grid=document.getElementById("hotDeals");
+
+if(!storeData[cat]) return;
+
+let html="";
+
+html+=`
+
+<div style="width:100%;margin-top:20px">
+
+<div class="card-title">More From This Collection</div>
+
+<div class="theme-divider-b"></div>
+
+</div>
+
+`;
+
+storeData[cat].forEach(p=>{
+
+if(p.id===excludeId) return;
+
+html+=`
+
+<div class="glass-card">
+
+<div class="card-title">${p.title}</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+Price: ${p.price}
+</p>
+
+<div class="brand-wrap">
+
+<a href="?p=${p.id}"
+class="brand"
+style="--chip-color:#2962ff;">
+
+<span>View</span>
+
+</a>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+grid.innerHTML+=html;
 
 }
 
