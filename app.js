@@ -40,6 +40,7 @@ let res = await fetch("json/products.json");
 storeData = await res.json();
 
 loadSharedProduct();
+loadSharedCollection();
 
 }
 catch(e){
@@ -381,6 +382,30 @@ found=p;
 if(found){
 
 renderSearch([found]);
+
+scrollToDeals();
+
+}
+
+}
+
+
+
+/* ==============================
+COLLECTION SHARE LINK SYSTEM
+============================== */
+
+function loadSharedCollection(){
+
+let params=new URLSearchParams(window.location.search);
+
+let cat=params.get("cat");
+
+if(!cat) return;
+
+if(storeData[cat]){
+
+renderProducts(cat);
 
 scrollToDeals();
 
