@@ -1,0 +1,110 @@
+{
+ "collections":[
+
+  {
+   "title":"Travel Smart Essentials",
+   "subtitle":"Smart travel gadgets, packing tools and mobility gear for modern women.",
+   "icon":"🧳",
+   "slug":"travel-smart"
+  },
+
+  {
+   "title":"Women Smart Tech Picks",
+   "subtitle":"Trending smart gadgets including watches, earbuds and compact tech accessories.",
+   "icon":"📱",
+   "slug":"women-tech"
+  },
+
+  {
+   "title":"Premium Handbag Collection",
+   "subtitle":"Stylish handbags, purses and fashion carry accessories curated for daily elegance.",
+   "icon":"👜",
+   "slug":"handbag-collection"
+  },
+
+  {
+   "title":"Daily Carry Essentials",
+   "subtitle":"Compact everyday carry gear including wallets, organizers and mini accessories.",
+   "icon":"🎒",
+   "slug":"daily-carry"
+  },
+
+  {
+   "title":"Home Organization Picks",
+   "subtitle":"Smart organizers and storage solutions for kitchen, wardrobe and home spaces.",
+   "icon":"🏠",
+   "slug":"home-organization"
+  },
+
+  {
+   "title":"Smart Kitchen Tools",
+   "subtitle":"Useful kitchen gadgets and compact appliances designed for efficient cooking.",
+   "icon":"🍳",
+   "slug":"kitchen-tools"
+  },
+
+  {
+   "title":"Beauty Gadget Picks",
+   "subtitle":"Modern beauty devices including hair styling tools and skincare gadgets.",
+   "icon":"💄",
+   "slug":"beauty-gadgets"
+  },
+
+  {
+   "title":"Fitness & Wellness Gear",
+   "subtitle":"Fitness accessories, wellness devices and active lifestyle tools.",
+   "icon":"💪",
+   "slug":"fitness-gear"
+  },
+
+  {
+   "title":"Outdoor Lifestyle Gear",
+   "subtitle":"Outdoor travel accessories and lifestyle gear for adventure and leisure.",
+   "icon":"🏕",
+   "slug":"outdoor-lifestyle"
+  },
+
+  {
+   "title":"Women Work Setup",
+   "subtitle":"Productivity tools, desk accessories and work-from-home essentials.",
+   "icon":"💻",
+   "slug":"work-setup"
+  },
+
+  {
+   "title":"Gift Worthy Picks",
+   "subtitle":"Handpicked gift ideas perfect for special occasions and everyday surprises.",
+   "icon":"🎁",
+   "slug":"gift-picks"
+  },
+
+  {
+   "title":"Everyday Fashion Accessories",
+   "subtitle":"Belts, scarves, sunglasses and stylish accessories for daily fashion.",
+   "icon":"👗",
+   "slug":"fashion-accessories"
+  },
+
+  {
+   "title":"Travel Comfort Collection",
+   "subtitle":"Travel comfort gear including neck pillows, organizers and travel essentials.",
+   "icon":"✈️",
+   "slug":"travel-comfort"
+  },
+
+  {
+   "title":"Smart Study Essentials",
+   "subtitle":"Study gadgets, tablet accessories and tools for productive learning.",
+   "icon":"📚",
+   "slug":"study-essentials"
+  },
+
+  {
+   "title":"Premium Lifestyle Picks",
+   "subtitle":"High quality lifestyle gadgets and premium everyday products.",
+   "icon":"✨",
+   "slug":"premium-lifestyle"
+  }
+
+ ]
+}
