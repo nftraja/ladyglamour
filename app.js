@@ -36,8 +36,12 @@ async function loadStore(){
 
 try{
 
-let res = await fetch("products.json");
+let res = await fetch("json/products.json");
 storeData = await res.json();
+
+/* check share link */
+
+loadSharedProduct();
 
 }
 catch(e){
@@ -261,5 +265,147 @@ style="--chip-color:#ff9900;">
 });
 
 grid.innerHTML=html;
+
+}
+
+
+
+/* ==============================
+EXPLORE SYSTEM
+============================== */
+
+document.querySelectorAll("[data-nav]").forEach(btn=>{
+
+btn.addEventListener("click",function(e){
+
+e.preventDefault();
+
+let type=this.dataset.nav;
+
+loadExplore(type);
+
+scrollToExplore();
+
+});
+
+});
+
+
+
+/* ==============================
+LOAD COLLECTIONS / CATEGORIES
+============================== */
+
+async function loadExplore(type){
+
+try{
+
+let res = await fetch("json/"+type+".json");
+
+let data = await res.json();
+
+renderExplore(data[type]);
+
+}
+catch(e){
+
+console.log("Explore JSON error",e);
+
+}
+
+}
+
+
+
+/* ==============================
+RENDER EXPLORE CARDS
+============================== */
+
+function renderExplore(items){
+
+let grid=document.getElementById("exploreDeals");
+
+let html="";
+
+items.forEach(item=>{
+
+html+=`
+
+<div class="glass-card">
+
+<div class="card-title">${item.icon} ${item.title}</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">${item.subtitle}</p>
+
+</div>
+
+`;
+
+});
+
+grid.innerHTML=html;
+
+}
+
+
+
+/* ==============================
+SCROLL TO EXPLORE
+============================== */
+
+function scrollToExplore(){
+
+let target=document.getElementById("exploreDeals");
+
+if(!target) return;
+
+window.scrollTo({
+
+top:target.offsetTop-80,
+behavior:"smooth"
+
+});
+
+}
+
+
+
+/* ==============================
+DIRECT PRODUCT SHARE LINK
+============================== */
+
+function loadSharedProduct(){
+
+let params=new URLSearchParams(window.location.search);
+
+let pid=params.get("p");
+
+if(!pid) return;
+
+let found=null;
+
+Object.values(storeData).forEach(cat=>{
+
+cat.forEach(p=>{
+
+if(p.id===pid){
+
+found=p;
+
+}
+
+});
+
+});
+
+if(found){
+
+renderSearch([found]);
+
+scrollToDeals();
+
+}
 
 }
