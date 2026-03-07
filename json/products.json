@@ -1,86 +1,71 @@
 {
- "purse":[
-  {
-   "id":"purse1",
-   "title":"J J Accessories Stylish Crossbody Sling Purse",
-   "price":"₹299",
-   "discount":"70% OFF",
-   "link":"https://amzn.to/4aWRFYM"
-  },
-  {
-   "id":"purse2",
-   "title":"Hexwell Women Clutch Purse with Detachable Chain",
-   "price":"₹499",
-   "discount":"50% OFF",
-   "link":"https://amzn.to/4st6RTb"
-  },
-  {
-   "id":"purse3",
-   "title":"Lady Quinton Trendy Handbag for Girls and Women",
-   "price":"₹418",
-   "discount":"75% OFF",
-   "link":"https://amzn.to/4baqkRs"
-  },
-  {
-   "id":"purse4",
-   "title":"J I Accessories Women Stylish Crossbody Sling Bag",
-   "price":"₹284",
-   "discount":"72% OFF",
-   "link":"https://amzn.to/40dXaMz"
-  }
- ],
+"purse":[
+{
+"id":"purse1",
+"title":"J J Accessories Stylish Crossbody Sling Purse",
+"price":"₹299",
+"discount":"70% OFF",
+"colors":"10",
+"link":"https://amzn.to/4aWRFYM"
+},
+{
+"id":"purse2",
+"title":"Hexwell Women Clutch Purse with Detachable Chain",
+"price":"₹499",
+"discount":"50% OFF",
+"colors":"2",
+"link":"https://amzn.to/4st6RTb"
+},
+{
+"id":"purse3",
+"title":"Lady Quinton Trendy Handbag for Girls and Women",
+"price":"₹418",
+"discount":"75% OFF",
+"colors":"10",
+"link":"https://amzn.to/4baqkRs"
+},
+{
+"id":"purse4",
+"title":"J I Accessories Women Stylish Crossbody Sling Bag",
+"price":"₹284",
+"discount":"72% OFF",
+"colors":"3",
+"link":"https://amzn.to/4b6UuoQ"
+}
+],
 
- "handbag":[
-  {"id":"handbag1","title":"Luxury Shoulder Handbag","price":"₹1299","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"handbag2","title":"Designer Tote Bag","price":"₹1499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"handbag3","title":"Elegant Office Handbag","price":"₹1199","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
- ],
-
- "watch":[
-  {"id":"watch1","title":"Elegant Women Watch","price":"₹2499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"watch2","title":"Rose Gold Ladies Watch","price":"₹2199","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"watch3","title":"Minimal Fashion Watch","price":"₹1999","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
- ],
-
- "perfume":[
-  {"id":"perfume1","title":"Luxury Floral Perfume","price":"₹999","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"perfume2","title":"Premium Women Fragrance","price":"₹1199","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"perfume3","title":"Fresh Daily Perfume","price":"₹799","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
- ],
-
- "footwear":[
-  {"id":"footwear1","title":"Stylish Women Sneakers","price":"₹1599","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"footwear2","title":"Comfort Walking Shoes","price":"₹1299","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"footwear3","title":"Lightweight Casual Shoes","price":"₹1199","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
- ],
-
- "eyewear":[
-  {"id":"eyewear1","title":"Classic Women Sunglasses","price":"₹599","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"eyewear2","title":"Luxury UV Protection Glasses","price":"₹799","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"eyewear3","title":"Fashion Cat Eye Sunglasses","price":"₹699","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
- ],
-
- "jewellery":[
-  {"id":"jewellery1","title":"Elegant Gold Necklace","price":"₹1499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"jewellery2","title":"Minimal Pearl Earrings","price":"₹799","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"jewellery3","title":"Luxury Bracelet Set","price":"₹999","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
- ],
-
- "hairtools":[
-  {"id":"hairtools1","title":"Professional Hair Dryer","price":"₹1699","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"hairtools2","title":"Ceramic Hair Straightener","price":"₹1499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"hairtools3","title":"Automatic Hair Curler","price":"₹1899","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
- ],
-
- "belts":[
-  {"id":"belts1","title":"Classic Leather Belt","price":"₹499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"belts2","title":"Fashion Women Waist Belt","price":"₹599","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"belts3","title":"Elegant Designer Belt","price":"₹699","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
- ],
-
- "scarves":[
-  {"id":"scarves1","title":"Soft Silk Fashion Scarf","price":"₹499","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"scarves2","title":"Winter Warm Neck Scarf","price":"₹599","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"},
-  {"id":"scarves3","title":"Lightweight Summer Scarf","price":"₹399","link":"https://www.amazon.in/dp/ASIN/?tag=Ladyglamour-21"}
- ]
+"wallet":[
+{
+"id":"wallet1",
+"title":"WildHorn RFID Protected Leather Wallet",
+"price":"₹399",
+"discount":"60% OFF",
+"colors":"3",
+"link":"https://amzn.to/4swvEG7"
+},
+{
+"id":"wallet2",
+"title":"Urban Forest Genuine Leather Wallet",
+"price":"₹449",
+"discount":"55% OFF",
+"colors":"3",
+"link":"https://amzn.to/40M8lfw"
+},
+{
+"id":"wallet3",
+"title":"Contacts Stylish Leather Wallet",
+"price":"₹599",
+"discount":"50% OFF",
+"colors":"10",
+"link":"https://amzn.to/4lzlC4V"
+},
+{
+"id":"wallet4",
+"title":"Contacts RFID Blocking Leather Wallet",
+"price":"₹699",
+"discount":"45% OFF",
+"colors":"5",
+"link":"https://amzn.to/4bcENMS"
+}
+]
 }
