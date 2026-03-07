@@ -39,8 +39,6 @@ try{
 let res = await fetch("json/products.json");
 storeData = await res.json();
 
-/* check share link */
-
 loadSharedProduct();
 
 }
@@ -53,18 +51,6 @@ console.log("JSON load error",e);
 }
 
 loadStore();
-
-
-
-/* ==============================
-GET UNSPLASH IMAGE
-============================== */
-
-function getImage(query){
-
-return "https://source.unsplash.com/400x300/?"+query.replaceAll(" ","+");
-
-}
 
 
 
@@ -87,20 +73,16 @@ let html="";
 
 storeData[cat].forEach(p=>{
 
-let img = getImage(p.title);
-
 html+=`
 
 <div class="glass-card">
-
-<img src="${img}" style="width:100%;border-radius:12px">
 
 <div class="card-title">${p.title}</div>
 
 <div class="theme-divider-b"></div>
 
 <p class="card-text">
-Preview image. View original product on marketplace.
+Price: ${p.price || "Check on marketplace"}
 </p>
 
 <div class="brand-wrap">
@@ -230,20 +212,16 @@ let html="";
 
 products.forEach(p=>{
 
-let img = getImage(p.title);
-
 html+=`
 
 <div class="glass-card">
-
-<img src="${img}" style="width:100%;border-radius:12px">
 
 <div class="card-title">${p.title}</div>
 
 <div class="theme-divider-b"></div>
 
 <p class="card-text">
-Preview image. View original product on marketplace.
+Price: ${p.price || "Check on marketplace"}
 </p>
 
 <div class="brand-wrap">
