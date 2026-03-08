@@ -1,3 +1,4 @@
+{
 "fashion":[
 {
 "id":"fashion1",
@@ -35,4 +36,356 @@
 "image":"https://rukminim2.flixcart.com/image/832/832/xif0q/top/x/y/z/women-top-fashion-original-imagxyz.jpeg?q=90",
 "link":"#"
 }
+],
+
+"beauty":[
+{
+"id":"beauty1",
+"title":"Matte Waterproof Lipstick Set",
+"price":"₹199",
+"discount":"50% OFF",
+"colors":"8",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/lipstick/k/j/g/matte-lipstick-set-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"beauty2",
+"title":"Professional Makeup Kit",
+"price":"₹699",
+"discount":"65% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/makeup-kit/k/p/k/professional-kit-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"beauty3",
+"title":"Vitamin C Face Serum",
+"price":"₹299",
+"discount":"55% OFF",
+"colors":"2",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/serum/x/y/z/vitamin-c-serum-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"beauty4",
+"title":"Hair Straightener Brush",
+"price":"₹799",
+"discount":"60% OFF",
+"colors":"2",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/hair-straightener/z/y/x/brush-original-imagxyz.jpeg?q=90",
+"link":"#"
+}
+],
+
+"jewellery":[
+{
+"id":"jewel1",
+"title":"Gold Plated Necklace Set",
+"price":"₹399",
+"discount":"70% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/jewellery-set/x/y/z/gold-plated-necklace-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"jewel2",
+"title":"Stylish Hoop Earrings",
+"price":"₹199",
+"discount":"60% OFF",
+"colors":"4",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/earring/x/y/z/hoop-earrings-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"jewel3",
+"title":"Traditional Bangles Set",
+"price":"₹299",
+"discount":"50% OFF",
+"colors":"5",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/bangle/x/y/z/bangles-set-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"jewel4",
+"title":"Crystal Fashion Ring",
+"price":"₹149",
+"discount":"45% OFF",
+"colors":"6",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/ring/x/y/z/crystal-ring-original-imagxyz.jpeg?q=90",
+"link":"#"
+}
+],
+
+"watches":[
+{
+"id":"watch1",
+"title":"Women Elegant Wrist Watch",
+"price":"₹399",
+"discount":"60% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/watch/x/y/z/women-watch-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"watch2",
+"title":"Luxury Couple Watch Set",
+"price":"₹699",
+"discount":"55% OFF",
+"colors":"2",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/watch-set/x/y/z/couple-watch-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"watch3",
+"title":"Bracelet Style Women Watch",
+"price":"₹499",
+"discount":"50% OFF",
+"colors":"4",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/watch/x/y/z/bracelet-watch-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"watch4",
+"title":"Smart Fitness Watch",
+"price":"₹999",
+"discount":"65% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/smartwatch/x/y/z/smart-watch-original-imagxyz.jpeg?q=90",
+"link":"#"
+}
+],
+
+"home":[
+{
+"id":"home1",
+"title":"Multi Purpose Storage Box",
+"price":"₹249",
+"discount":"40% OFF",
+"colors":"4",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/storage-box/x/y/z/storage-box-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"home2",
+"title":"Kitchen Vegetable Chopper",
+"price":"₹299",
+"discount":"55% OFF",
+"colors":"2",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/chopper/x/y/z/vegetable-chopper-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"home3",
+"title":"Lunch Box Set",
+"price":"₹349",
+"discount":"50% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/lunch-box/x/y/z/lunchbox-set-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"home4",
+"title":"Kitchen Storage Containers",
+"price":"₹399",
+"discount":"45% OFF",
+"colors":"5",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/container/x/y/z/kitchen-container-original-imagxyz.jpeg?q=90",
+"link":"#"
+}
+],
+
+"decor":[
+{
+"id":"decor1",
+"title":"LED Curtain Lights",
+"price":"₹299",
+"discount":"60% OFF",
+"colors":"2",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/led-light/x/y/z/curtain-light-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"decor2",
+"title":"Modern Wall Frame Set",
+"price":"₹499",
+"discount":"55% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/wall-frame/x/y/z/frame-set-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"decor3",
+"title":"Decorative Table Lamp",
+"price":"₹599",
+"discount":"50% OFF",
+"colors":"2",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/lamp/x/y/z/table-lamp-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"decor4",
+"title":"Artificial Flower Vase",
+"price":"₹349",
+"discount":"45% OFF",
+"colors":"4",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/vase/x/y/z/flower-vase-original-imagxyz.jpeg?q=90",
+"link":"#"
+}
+],
+
+"travel":[
+{
+"id":"travel1",
+"title":"Travel Toiletry Organizer",
+"price":"₹299",
+"discount":"50% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/travel-organizer/x/y/z/organizer-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"travel2",
+"title":"Passport Holder Wallet",
+"price":"₹199",
+"discount":"40% OFF",
+"colors":"5",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/passport-holder/x/y/z/passport-wallet-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"travel3",
+"title":"Travel Neck Pillow",
+"price":"₹349",
+"discount":"55% OFF",
+"colors":"4",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/neck-pillow/x/y/z/pillow-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"travel4",
+"title":"Portable Travel Bottle Set",
+"price":"₹249",
+"discount":"50% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/travel-bottle/x/y/z/bottle-set-original-imagxyz.jpeg?q=90",
+"link":"#"
+}
+],
+
+"fitness":[
+{
+"id":"fit1",
+"title":"Yoga Exercise Mat",
+"price":"₹399",
+"discount":"60% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/yoga-mat/x/y/z/mat-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"fit2",
+"title":"Resistance Band Set",
+"price":"₹299",
+"discount":"50% OFF",
+"colors":"2",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/resistance-band/x/y/z/band-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"fit3",
+"title":"Gym Water Bottle",
+"price":"₹199",
+"discount":"40% OFF",
+"colors":"4",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/water-bottle/x/y/z/gym-bottle-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"fit4",
+"title":"Skipping Rope Fitness",
+"price":"₹149",
+"discount":"35% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/skipping-rope/x/y/z/rope-original-imagxyz.jpeg?q=90",
+"link":"#"
+}
+],
+
+"gadgets":[
+{
+"id":"gad1",
+"title":"Mini Ring Selfie Light",
+"price":"₹249",
+"discount":"50% OFF",
+"colors":"2",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/selfie-light/x/y/z/ring-light-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"gad2",
+"title":"Portable Bluetooth Speaker",
+"price":"₹599",
+"discount":"60% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/bluetooth-speaker/x/y/z/speaker-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"gad3",
+"title":"Adjustable Mobile Stand",
+"price":"₹199",
+"discount":"45% OFF",
+"colors":"4",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/mobile-stand/x/y/z/stand-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"gad4",
+"title":"Fast Charging Power Bank",
+"price":"₹699",
+"discount":"55% OFF",
+"colors":"2",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/power-bank/x/y/z/powerbank-original-imagxyz.jpeg?q=90",
+"link":"#"
+}
+],
+
+"accessories":[
+{
+"id":"acc1",
+"title":"Women Fashion Sunglasses",
+"price":"₹249",
+"discount":"50% OFF",
+"colors":"4",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/sunglasses/x/y/z/women-sunglasses-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"acc2",
+"title":"Stylish Hair Clip Set",
+"price":"₹149",
+"discount":"40% OFF",
+"colors":"6",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/hair-clip/x/y/z/hair-clip-set-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"acc3",
+"title":"Women Silk Scarf",
+"price":"₹199",
+"discount":"45% OFF",
+"colors":"5",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/scarf/x/y/z/silk-scarf-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"acc4",
+"title":"Fashion Waist Belt",
+"price":"₹299",
+"discount":"50% OFF",
+"colors":"3",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/belt/x/y/z/fashion-belt-original-imagxyz.jpeg?q=90",
+"link":"#"
+}
 ]
+}
