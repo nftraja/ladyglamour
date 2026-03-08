@@ -1,4 +1,16 @@
 {
+"saree":[
+{
+"id":"saree1",
+"title":"Elegant Banarasi Silk Saree",
+"price":"₹499",
+"discount":"60% OFF",
+"colors":"5",
+"image":"https://via.placeholder.com/800x800.png?text=Saree+Product",
+"link":"#"
+}
+],
+
 "kurta":[
 {
 "id":"kurta1",
@@ -11,14 +23,26 @@
 }
 ],
 
-"saree":[
+"jeans":[
 {
-"id":"saree1",
-"title":"Elegant Banarasi Silk Saree for Women",
-"price":"₹499",
-"discount":"60% OFF",
-"colors":"5",
-"image":"https://via.placeholder.com/800x800.png?text=Saree+Product",
+"id":"jeans1",
+"title":"Women Stylish Blue Denim Jeans",
+"price":"₹599",
+"discount":"55% OFF",
+"colors":"3",
+"image":"https://via.placeholder.com/800x800.png?text=Jeans",
+"link":"#"
+}
+],
+
+"tshirt":[
+{
+"id":"tshirt1",
+"title":"Women Casual Cotton Tshirt",
+"price":"₹299",
+"discount":"50% OFF",
+"colors":"4",
+"image":"https://via.placeholder.com/800x800.png?text=Tshirt",
 "link":"#"
 }
 ]
