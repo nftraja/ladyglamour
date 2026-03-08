@@ -47,7 +47,7 @@ renderProducts("purse");
 }
 catch(e){
 
-console.log("JSON load error",e);
+console.log("Amazon JSON error",e);
 
 }
 
@@ -68,17 +68,13 @@ let res = await fetch("json/marketplaces.json");
 
 marketplaceData = await res.json();
 
-/* default load */
+/* first category auto load */
 
-renderMarketplace("saree");
+let firstCat = Object.keys(marketplaceData)[0];
 
-/* dropdown auto select */
+renderMarketplace(firstCat);
 
-let dropdown=document.getElementById("marketCategory");
-
-if(dropdown){
-dropdown.value="saree";
-}
+activateChip(firstCat);
 
 }
 catch(e){
@@ -203,7 +199,7 @@ grid.innerHTML=html;
 
 
 /* ==============================
-AMAZON DROPDOWN CATEGORY
+AMAZON DROPDOWN
 ============================== */
 
 const amazonDropdown = document.getElementById("amazonCategory");
@@ -230,16 +226,16 @@ scrollToDeals();
 
 
 /* ==============================
-MARKETPLACE DROPDOWN CATEGORY
+MARKETPLACE CATEGORY CHIPS
 ============================== */
 
-const marketDropdown = document.getElementById("marketCategory");
+const chips = document.querySelectorAll(".cat-chip");
 
-if(marketDropdown){
+chips.forEach(chip=>{
 
-marketDropdown.addEventListener("change",function(){
+chip.addEventListener("click",function(){
 
-let cat = this.value;
+let cat = this.dataset.cat;
 
 if(!cat) return;
 
@@ -249,7 +245,30 @@ return;
 
 renderMarketplace(cat);
 
+activateChip(cat);
+
 scrollToMarketplace();
+
+});
+
+});
+
+
+/* ==============================
+CHIP ACTIVE STATE
+============================== */
+
+function activateChip(cat){
+
+document.querySelectorAll(".cat-chip").forEach(chip=>{
+
+chip.classList.remove("active");
+
+if(chip.dataset.cat === cat){
+
+chip.classList.add("active");
+
+}
 
 });
 
