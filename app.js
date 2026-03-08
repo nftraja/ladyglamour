@@ -25,10 +25,11 @@ STORE DATA
 ============================== */
 
 let storeData = {};
+let marketplaceData = {};
 
 
 /* ==============================
-LOAD JSON
+LOAD AMAZON JSON
 ============================== */
 
 async function loadStore(){
@@ -53,6 +54,30 @@ console.log("JSON load error",e);
 }
 
 loadStore();
+
+
+/* ==============================
+LOAD MARKETPLACE JSON
+============================== */
+
+async function loadMarketplace(){
+
+try{
+
+let res = await fetch("json/marketplaces.json");
+
+marketplaceData = await res.json();
+
+}
+catch(e){
+
+console.log("Marketplace JSON error",e);
+
+}
+
+}
+
+loadMarketplace();
 
 
 /* ==============================
@@ -106,7 +131,7 @@ style="--chip-color:#ff9900;">
 
 
 /* ==============================
-RENDER PRODUCTS
+RENDER AMAZON PRODUCTS
 ============================== */
 
 function renderProducts(cat){
@@ -136,6 +161,36 @@ grid.innerHTML=html;
 
 
 /* ==============================
+RENDER MARKETPLACE PRODUCTS
+============================== */
+
+function renderMarketplace(cat){
+
+let grid = document.getElementById("marketDeals");
+
+if(!grid) return;
+
+if(!marketplaceData[cat]){
+
+grid.innerHTML="<p>No products available</p>";
+return;
+
+}
+
+let html="";
+
+marketplaceData[cat].forEach(p=>{
+
+html+=productCard(p);
+
+});
+
+grid.innerHTML=html;
+
+}
+
+
+/* ==============================
 AMAZON DROPDOWN CATEGORY
 ============================== */
 
@@ -154,6 +209,33 @@ return;
 }
 
 renderProducts(cat);
+
+scrollToDeals();
+
+});
+
+}
+
+
+/* ==============================
+MARKETPLACE DROPDOWN CATEGORY
+============================== */
+
+const marketDropdown = document.getElementById("marketCategory");
+
+if(marketDropdown){
+
+marketDropdown.addEventListener("change",function(){
+
+let cat = this.value;
+
+if(!cat) return;
+
+if(!marketplaceData || Object.keys(marketplaceData).length===0){
+return;
+}
+
+renderMarketplace(cat);
 
 scrollToDeals();
 
