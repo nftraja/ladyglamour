@@ -92,6 +92,7 @@ console.log("Marketplace JSON error",e);
 
 loadMarketplace();
 
+
 /* ==============================
 PRODUCT CARD
 ============================== */
@@ -240,31 +241,26 @@ scrollToDeals();
 
 });
 
+
 /* ==============================
-CUSTOM MARKETPLACE DROPDOWN
+MARKETPLACE CUSTOM DROPDOWN
 ============================== */
 
-const selectedBox = document.getElementById("marketSelected");
-const dropdownList = document.getElementById("marketDropdown");
-const dropdownItems = document.querySelectorAll(".dropdown-item");
+const marketSelected = document.getElementById("marketSelected");
+const marketDropdown = document.getElementById("marketDropdown");
 
+if(marketSelected){
 
-/* OPEN CLOSE */
+marketSelected.addEventListener("click",function(){
 
-if(selectedBox){
-
-selectedBox.addEventListener("click",function(){
-
-dropdownList.classList.toggle("active");
+marketDropdown.classList.toggle("active");
 
 });
 
 }
 
-
-/* SELECT CATEGORY */
-
-dropdownItems.forEach(item=>{
+document.querySelectorAll("#marketDropdown .dropdown-item")
+.forEach(item=>{
 
 item.addEventListener("click",function(){
 
@@ -272,9 +268,11 @@ let cat = this.dataset.cat;
 
 renderMarketplace(cat);
 
-updateDropdownText(cat);
+marketSelected.innerHTML =
+this.textContent +
+' <span class="dropdown-arrow">⌄</span>';
 
-dropdownList.classList.remove("active");
+marketDropdown.classList.remove("active");
 
 scrollToMarketplace();
 
@@ -283,25 +281,16 @@ scrollToMarketplace();
 });
 
 
-/* UPDATE DROPDOWN TEXT */
-
-function updateDropdownText(cat){
-
-let label = cat.charAt(0).toUpperCase() + cat.slice(1);
-
-selectedBox.innerHTML =
-label + ' <span class="dropdown-arrow">⌄</span>';
-
-}
-
-
-/* CLOSE DROPDOWN OUTSIDE CLICK */
+/* ==============================
+CLOSE DROPDOWN OUTSIDE CLICK
+============================== */
 
 document.addEventListener("click",function(e){
 
 if(!e.target.closest(".custom-dropdown")){
 
-dropdownList.classList.remove("active");
+if(amazonDropdown) amazonDropdown.classList.remove("active");
+if(marketDropdown) marketDropdown.classList.remove("active");
 
 }
 
