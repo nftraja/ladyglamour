@@ -51,40 +51,56 @@ Coming soon: Ask the AI assistant to find trending deals, products and fashion a
 </p>
 </div>
 
-<!-- AMAZON PICKS -->
+<!-- ==============================
+AMAZON PICKS
+============================== -->
+
 <div class="glass-card">
 <div class="card-title">💄 Amazon Women Style Picks</div>
 <div class="theme-divider-b"></div>
+<div class="custom-dropdown">
 
-<select id="amazonCategory" class="category-select">
-<option value="">Select Category</option>
-<option value="purse">Purses</option>
-<option value="wallet">Wallets</option>
-</select>
-
+<!-- AMAZON SELECTED -->
+<div class="dropdown-selected" id="amazonSelected">
+Select Category
+<span class="dropdown-arrow">⌄</span>
 </div>
 
-<!-- AMAZON PRODUCTS -->
+<!-- AMAZON DROPDOWN LIST -->
+<div class="dropdown-list" id="amazonDropdown">
+<div class="dropdown-item" data-cat="purse">Purses</div>
+<div class="dropdown-item" data-cat="wallet">Wallets</div>
+</div>
+</div>
+</div>
+
+<!-- ==============================
+AMAZON PRODUCTS
+============================== -->
+
 <div class="glass-card">
 <div class="card-title">🛍 Amazon Deals</div>
 <div class="theme-divider-b"></div>
 <div class="grid" id="hotDeals"></div>
 </div>
 
-<!-- MARKETPLACE PICKS -->
+<!-- ==============================
+MARKETPLACE PICKS
+============================== -->
+
 <div class="glass-card">
 <div class="card-title">🛍 Marketplace Style Picks</div>
 <div class="theme-divider-b"></div>
-
 <div class="custom-dropdown">
 
+<!-- MARKETPLACE SELECTED -->
 <div class="dropdown-selected" id="marketSelected">
 Select Category
 <span class="dropdown-arrow">⌄</span>
 </div>
 
+<!-- MARKETPLACE DROPDOWN LIST -->
 <div class="dropdown-list" id="marketDropdown">
-
 <div class="dropdown-item" data-cat="fashion">Fashion</div>
 <div class="dropdown-item" data-cat="beauty">Beauty</div>
 <div class="dropdown-item" data-cat="jewellery">Jewellery</div>
@@ -95,14 +111,14 @@ Select Category
 <div class="dropdown-item" data-cat="fitness">Fitness</div>
 <div class="dropdown-item" data-cat="gadgets">Gadgets</div>
 <div class="dropdown-item" data-cat="accessories">Accessories</div>
-
+</div>
+</div>
 </div>
 
-</div>
+<!-- ==============================
+MARKETPLACE PRODUCTS
+============================== -->
 
-</div>
-
-<!-- MARKETPLACE PRODUCTS -->
 <div class="glass-card">
 <div class="card-title">🛒 Marketplace Deals</div>
 <div class="theme-divider-b"></div>
@@ -115,33 +131,27 @@ Select Category
 <div class="theme-divider-b"></div>
 
 <div class="brand-wrap">
-
 <a href="#" class="brand"
 data-deal="electronics"
 style="--chip-color:#2962ff;">
 <span>Electronics</span>
 </a>
-
 <a href="#" class="brand"
 data-deal="fashion"
 style="--chip-color:#ec407a;">
 <span>Fashion</span>
 </a>
-
 <a href="#" class="brand"
 data-deal="home"
 style="--chip-color:#ff9100;">
 <span>Home</span>
 </a>
-
 <a href="#" class="brand"
 data-deal="beauty"
 style="--chip-color:#7b1fa2;">
 <span>Beauty</span>
 </a>
-
 </div>
-
 </div>
 
 <!-- LIVE DEAL GRID -->
@@ -157,27 +167,22 @@ style="--chip-color:#7b1fa2;">
 <div class="theme-divider-b"></div>
 
 <div class="brand-wrap">
-
 <a href="#" class="brand"
 data-nav="collections"
 style="--chip-color:#ec407a;">
 <span>Fashion Picks</span>
 </a>
-
 <a href="#" class="brand"
 data-nav="collections"
 style="--chip-color:#26c6da;">
 <span>Travel Gear</span>
 </a>
-
 <a href="#" class="brand"
 data-nav="collections"
 style="--chip-color:#ff9100;">
 <span>Gift Ideas</span>
 </a>
-
 </div>
-
 </div>
 
 <!-- EXPLORE SECTION -->
@@ -186,53 +191,43 @@ style="--chip-color:#ff9100;">
 <div class="theme-divider-b"></div>
 
 <div class="brand-wrap">
-
 <a href="#" class="brand"
 style="--chip-color:#ff416c;">
 <span>🔥 Trending</span>
 </a>
-
 <a href="#" class="brand"
 style="--chip-color:#00c853;">
 <span>📦 New Products</span>
 </a>
-
 <a href="#" class="brand"
 style="--chip-color:#7b1fa2;">
 <span>💡 Gadgets</span>
 </a>
-
 <a href="#" class="brand"
 style="--chip-color:#ff9100;">
 <span>🎁 Gifts</span>
 </a>
-
 </div>
-
 </div>
 
 <!-- AI SEARCH -->
 <div class="glass-card">
 <div class="card-title">🔎 AI Product Search</div>
 <div class="theme-divider-b"></div>
-
 <input
 id="searchBox"
 placeholder="Search purse, wallet, smartwatch..."
 style="width:100%;padding:10px;border-radius:10px;border:none;">
-
 </div>
 
 </main>
 
 <!-- BOTTOM NAV -->
 <div class="bottom-nav">
-
 <a href="#" class="nav-item"><span>🏠</span></a>
 <a href="#" class="nav-item"><span>🏷️</span></a>
 <a href="#" class="nav-item"><span>🛍</span></a>
 <a href="#" class="nav-item"><span>📖</span></a>
-
 </div>
 
 <script src="app.js"></script>
