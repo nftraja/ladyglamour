@@ -312,6 +312,14 @@ line-height:1.4;
 margin-bottom:6px;
 }
 
+.product-image{
+transition:transform .25s ease;
+}
+
+.glass-card:hover .product-image{
+transform:scale(1.04);
+}
+
 @media(min-width:768px){
 .grid{
 grid-template-columns:repeat(4,1fr);
