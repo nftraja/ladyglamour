@@ -6,7 +6,7 @@
 "price":"₹299",
 "discount":"70% OFF",
 "colors":"10",
-"image":"https://picsum.photos/seed/purse1/900/506",
+"image":"https://m.media-amazon.com/images/I/B17hNNcKeFL._SL1500_.jpg",
 "link":"https://amzn.to/4aWRFYM"
 },
 {
@@ -15,7 +15,7 @@
 "price":"₹499",
 "discount":"50% OFF",
 "colors":"2",
-"image":"https://picsum.photos/seed/purse2/900/506",
+"image":"https://m.media-amazon.com/images/I/91Dn6LHeHOL._SL1500_.jpg",
 "link":"https://amzn.to/4st6RTb"
 },
 {
@@ -24,7 +24,7 @@
 "price":"₹418",
 "discount":"75% OFF",
 "colors":"10",
-"image":"https://picsum.photos/seed/purse3/900/506",
+"image":"https://m.media-amazon.com/images/I/919ySWIfFCL._SL1500_.jpg",
 "link":"https://amzn.to/4baqkRs"
 },
 {
@@ -33,7 +33,7 @@
 "price":"₹284",
 "discount":"72% OFF",
 "colors":"3",
-"image":"https://picsum.photos/seed/purse4/900/506",
+"image":"https://m.media-amazon.com/images/I/91AcBKu6q9L._SL1500_.jpg",
 "link":"https://amzn.to/4b6UuoQ"
 }
 ],
@@ -45,7 +45,7 @@
 "price":"₹399",
 "discount":"60% OFF",
 "colors":"3",
-"image":"https://picsum.photos/seed/wallet1/900/506",
+"image":"https://m.media-amazon.com/images/I/81NThDSYpHL._SL1500_.jpg",
 "link":"https://amzn.to/4swvEG7"
 },
 {
@@ -54,8 +54,8 @@
 "price":"₹449",
 "discount":"55% OFF",
 "colors":"3",
-"image":"https://picsum.photos/seed/wallet2/900/506",
-"link":"https://amzn.to/40M8lfw"
+"image":"https://m.media-amazon.com/images/I/81o4fjC9iTL._SL1500_.jpg",
+"link":"https://amzn.to/4rg2wld"
 },
 {
 "id":"wallet3",
@@ -63,7 +63,7 @@
 "price":"₹599",
 "discount":"50% OFF",
 "colors":"10",
-"image":"https://picsum.photos/seed/wallet3/900/506",
+"image":"https://m.media-amazon.com/images/I/91RR7h0P5UL._SL1500_.jpg",
 "link":"https://amzn.to/4lzlC4V"
 },
 {
@@ -72,7 +72,7 @@
 "price":"₹699",
 "discount":"45% OFF",
 "colors":"5",
-"image":"https://picsum.photos/seed/wallet4/900/506",
+"image":"https://m.media-amazon.com/images/I/A1ONj3mF+lL._SL1500_.jpg",
 "link":"https://amzn.to/4bcENMS"
 }
 ]
