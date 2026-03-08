@@ -56,18 +56,32 @@ loadStore();
 
 
 /* ==============================
-SMART IMAGE SYSTEM
+SMART PRODUCT IMAGE SYSTEM
 ============================== */
 
-function getImage(cat){
+function getImage(title,cat){
+
+let keyword="fashion";
 
 if(cat==="purse")
-return "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=60";
+keyword="women purse handbag fashion";
 
 if(cat==="wallet")
-return "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=60";
+keyword="leather wallet mens wallet";
 
-return "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=60";
+if(cat==="handbag")
+keyword="women handbag fashion bag";
+
+if(cat==="watch")
+keyword="wristwatch luxury watch";
+
+if(cat==="perfume")
+keyword="perfume bottle luxury fragrance";
+
+if(cat==="jewellery")
+keyword="fashion jewellery necklace";
+
+return `https://source.unsplash.com/600x400/?${keyword}`;
 
 }
 
@@ -92,7 +106,7 @@ let html="";
 
 storeData[cat].forEach(p=>{
 
-let img = getImage(cat);
+let img = getImage(p.title,cat);
 
 html+=`
 
@@ -244,12 +258,14 @@ let html="";
 
 products.forEach(p=>{
 
+let img = getImage(p.title,"fashion");
+
 html+=`
 
 <div class="glass-card">
 
 <div class="product-image"
-style="background-image:url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=60')"></div>
+style="background-image:url('${img}')"></div>
 
 <div class="card-title">${p.title}</div>
 
