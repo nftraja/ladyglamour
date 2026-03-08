@@ -1,214 +1,526 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>LadyGlamour Smart Deals</title>
-<link rel="stylesheet" href="style.css">
-</head>
+/* ==============================
+LadyGlamour Core Script
+============================== */
 
-<body>
 
-<div class="drawer-overlay" id="drawerOverlay"></div>
-<div class="drawer" id="drawer">
-<button class="drawer-back" onclick="toggleDrawer()">← Back</button>
+/* ==============================
+DRAWER SYSTEM
+============================== */
 
-<a href="#">🧳 Travel & Mobility</a>
-<a href="#">📱 Smart Gadgets</a>
-<a href="#">👜 Fashion Accessories</a>
-<a href="#">🏠 Home & Kitchen</a>
-<a href="#">💪 Fitness & Wellness</a>
-<a href="#">💄 Beauty Devices</a>
-<a href="#">💻 Work Essentials</a>
-<a href="#">🏕 Outdoor Gear</a>
-<a href="#">🎁 Gift Ideas</a>
-<a href="#">🧳 Bags & Organizers</a>
-</div>
+const drawer = document.getElementById("drawer");
+const overlay = document.getElementById("drawerOverlay");
 
-<header class="app-header">
-<button class="menu-btn" onclick="toggleDrawer()">☰</button>
-<div class="logo">🛍 LadyGlamour</div>
-<div class="header-icons">🏷️</div>
-</header>
+function toggleDrawer(){
 
-<main class="main-content">
+drawer.classList.toggle("active");
+overlay.classList.toggle("active");
 
-<!-- HERO -->
-<div class="category-hero">
-<h1>🔥 Smart Deals For Women</h1>
-<div class="theme-divider"></div>
-<p>
-Discover curated gadgets, lifestyle gear, fashion accessories
-and trending marketplace deals from multiple platforms.
-</p>
-</div>
+document.body.style.overflow =
+drawer.classList.contains("active") ? "hidden" : "";
 
-<!-- AI ASSISTANT -->
+}
+
+if(overlay){
+overlay.addEventListener("click",toggleDrawer);
+}
+
+
+
+/* ==============================
+JSON PRODUCT STORE
+============================== */
+
+let storeData = {};
+
+async function loadStore(){
+
+try{
+
+let res = await fetch("json/amazon.json");
+storeData = await res.json();
+
+loadSharedProduct();
+loadSharedCollection();
+
+}
+catch(e){
+
+console.log("JSON load error",e);
+
+}
+
+}
+
+loadStore();
+
+
+
+/* ==============================
+UNSPLASH IMAGE ENGINE
+============================== */
+
+function getImage(keyword){
+
+return `https://source.unsplash.com/600x338/?${encodeURIComponent(keyword)}`;
+
+}
+
+
+
+/* ==============================
+RENDER PRODUCT CARDS
+============================== */
+
+function renderProducts(cat){
+
+let grid = document.getElementById("hotDeals");
+
+if(!storeData[cat]){
+
+grid.innerHTML="<p>No products available</p>";
+return;
+
+}
+
+let html="";
+
+storeData[cat].forEach(p=>{
+
+let img=getImage(p.keyword || p.title);
+
+html+=`
+
 <div class="glass-card">
-<div class="card-title">🤖 Coming-Soon - AI Assistant</div>
+
+<div class="product-image"
+style="background-image:url('${img}')"></div>
+
+<div class="card-title">${p.title}</div>
+
 <div class="theme-divider-b"></div>
-<input id="searchBox"
-placeholder="Search products like smartwatch, handbag, travel gadget"
-style="width:100%;padding:10px;border-radius:10px;border:none;">
+
+<div class="product-meta">
+
+<div class="product-price">${p.price || ""}</div>
+
+<div class="product-discount">${p.discount || ""}</div>
+
+<div class="product-colors">
+Colors Available: ${p.colors || "-"}
 </div>
 
-<!-- WOMEN STYLE PICKS -->
-<div class="glass-card">
-<div class="card-title">💄 Amazon Women Style Picks</div>
-<div class="theme-divider-b"></div>
-<p class="card-text">
-Explore trending women fashion accessories including stylish purses, wallets, handbags, watches, perfumes and everyday style essentials. Click any category below to discover curated Amazon deals and popular picks selected for the LadyGlamour store.
-</p>
-<div class="theme-divider-b"></div>
-<div class="brand-wrap">
-<a href="#" class="brand" data-cat="purse" style="--chip-color:#ec407a;"><span>Purses</span></a>
-<a href="#" class="brand" data-cat="purse" style="--chip-color:#ec407a;"><span>Wallets</span></a>
-<a href="#" class="brand" data-cat="handbag" style="--chip-color:#ff1744;"><span>Handbags</span></a>
-<a href="#" class="brand" data-cat="watch" style="--chip-color:#2962ff;"><span>Watches</span></a>
-<a href="#" class="brand" data-cat="perfume" style="--chip-color:#00c853;"><span>Perfumes</span></a>
-<a href="#" class="brand" data-cat="footwear" style="--chip-color:#7b1fa2;"><span>Footwears</span></a>
-<a href="#" class="brand" data-cat="eyewear" style="--chip-color:#ff9100;"><span>Eyewears</span></a>
-<a href="#" class="brand" data-cat="jewellery" style="--chip-color:#ab47bc;"><span>Jewellery</span></a>
-<a href="#" class="brand" data-cat="hairtools" style="--chip-color:#26c6da;"><span>Hair Tools</span></a>
-<a href="#" class="brand" data-cat="belts" style="--chip-color:#8d6e63;"><span>Belts</span></a>
-<a href="#" class="brand" data-cat="scarves" style="--chip-color:#42a5f5;"><span>Scarves</span></a>
-</div>
 </div>
 
-<!-- AMAZON PRODUCTS (JSON) -->
-<div class="glass-card">
-<div class="card-title">🛍 Amazon Deals</div>
-<div class="theme-divider-b"></div>
-<div class="grid" id="hotDeals"></div>
-</div>
-
-<!-- SHOP101 STORE -->
-<div class="glass-card">
-<div class="card-title">🏬 Shop101 Store</div>
-<div class="theme-divider-b"></div>
-<p class="card-text">
-Browse our curated fashion store on Shop101 featuring handbags, purses, wallets and trending women accessories. Explore the full collection directly in our external store.
-</p>
-<div class="theme-divider-b"></div>
-<div class="brand-wrap">
-<a href="SHOP101_STORE_LINK" target="_blank" class="brand" style="--chip-color:#ff6f00;">
-<span>Visit Shop101 Store</span>
-</a>
-</div>
-</div>
-
-<!-- DROPSHIPPING DEALS -->
-<div class="glass-card">
-<div class="card-title">🛒 Dropshipping Deals</div>
-<div class="theme-divider-b"></div>
-<p class="card-text">
-Discover trending fashion accessories and budget deals sourced from reseller platforms. Click a platform below to explore available deals and product collections.
-</p>
-<div class="theme-divider-b"></div>
-<div class="brand-wrap">
-<a href="#" class="brand" data-store="meesho" style="--chip-color:#ff3f6c;">
-<span>View Deals on Meesho</span>
-</a>
-<a href="#" class="brand" data-store="glowroad" style="--chip-color:#ff9800;">
-<span>View Deals on GlowRoad</span>
-</a>
-</div>
-</div>
-
-<!-- LIVE DEALS ENGINE -->
-<div class="glass-card">
-<div class="card-title">🔥 Live Marketplace Deals</div>
-<div class="theme-divider-b"></div>
-<p class="card-text">
-Discover trending deals and discounted products from global marketplaces including eBay, AliExpress and other deal networks.
-</p>
-<div class="theme-divider-b"></div>
 <div class="brand-wrap">
 
-<a href="javascript:void(0)" class="brand" data-deal="electronics" style="--chip-color:#2962ff;">
-<span>Electronics Deals</span>
+<a href="${p.link}" target="_blank"
+class="brand"
+style="--chip-color:#ff9900;">
+
+<span>View Deal</span>
+
 </a>
-<a href="javascript:void(0)" class="brand" data-deal="fashion" style="--chip-color:#ec407a;">
-<span>Fashion Deals</span>
-</a>
-<a href="javascript:void(0)" class="brand" data-deal="gadgets" style="--chip-color:#00c853;">
-<span>Smart Gadgets</span>
-</a>
-<a href="javascript:void(0)" class="brand" data-deal="home" style="--chip-color:#ff9100;">
-<span>Home Essentials</span>
-</a>
-<a href="javascript:void(0)" class="brand" data-deal="beauty" style="--chip-color:#7b1fa2;">
-<span>Beauty Picks</span>
-</a>
-<a href="javascript:void(0)" class="brand" data-deal="travel" style="--chip-color:#26c6da;">
-<span>Travel Gear</span>
-</a>
-<a href="javascript:void(0)" class="brand" data-deal="fitness" style="--chip-color:#ab47bc;">
-<span>Fitness Gear</span>
-</a>
-<a href="javascript:void(0)" class="brand" data-deal="gaming" style="--chip-color:#ff1744;">
-<span>Gaming Deals</span>
-</a>
-<a href="javascript:void(0)" class="brand" data-deal="office" style="--chip-color:#8d6e63;">
-<span>Office Essentials</span>
-</a>
-<a href="javascript:void(0)" class="brand" data-deal="accessories" style="--chip-color:#42a5f5;">
-<span>Daily Accessories</span>
-</a>
-</div>
+
 </div>
 
-<!-- LIVE DEALS RENDER BLOCK -->
-<div class="glass-card">
-<div class="card-title">⚡ Trending Deals</div>
-<div class="theme-divider-b"></div>
-<div class="grid" id="liveDeals"></div>
 </div>
 
-<!-- NAVIGATION -->
+`;
+
+});
+
+grid.innerHTML=html;
+
+}
+
+
+
+/* ==============================
+CATEGORY CLICK SYSTEM
+============================== */
+
+document.querySelectorAll("[data-cat]").forEach(btn=>{
+
+btn.addEventListener("click",function(e){
+
+e.preventDefault();
+
+let cat=this.dataset.cat;
+
+renderProducts(cat);
+
+scrollToDeals();
+
+});
+
+});
+
+
+
+/* ==============================
+SCROLL TO DEALS
+============================== */
+
+function scrollToDeals(){
+
+let target=document.getElementById("hotDeals");
+
+if(!target) return;
+
+window.scrollTo({
+
+top:target.offsetTop-80,
+behavior:"smooth"
+
+});
+
+}
+
+
+
+/* ==============================
+AI SEARCH (Local JSON)
+============================== */
+
+const searchBox=document.getElementById("searchBox");
+
+if(searchBox){
+
+searchBox.addEventListener("keyup",function(e){
+
+if(e.key==="Enter"){
+
+searchProducts();
+
+}
+
+});
+
+}
+
+function searchProducts(){
+
+let query=searchBox.value.toLowerCase();
+
+let results=[];
+
+Object.values(storeData).forEach(cat=>{
+
+cat.forEach(p=>{
+
+if(p.title.toLowerCase().includes(query)){
+
+results.push(p);
+
+}
+
+});
+
+});
+
+renderSearch(results);
+
+scrollToDeals();
+
+}
+
+
+
+/* ==============================
+RENDER SEARCH RESULTS
+============================== */
+
+function renderSearch(products){
+
+let grid=document.getElementById("hotDeals");
+
+let html="";
+
+products.forEach(p=>{
+
+let img=getImage(p.keyword || p.title);
+
+html+=`
+
 <div class="glass-card">
-<div class="card-title">📂 Explore</div>
+
+<div class="product-image"
+style="background-image:url('${img}')"></div>
+
+<div class="card-title">${p.title}</div>
+
 <div class="theme-divider-b"></div>
+
+<div class="product-meta">
+
+<div class="product-price">${p.price || ""}</div>
+
+<div class="product-discount">${p.discount || ""}</div>
+
+<div class="product-colors">
+Colors Available: ${p.colors || "-"}
+</div>
+
+</div>
+
 <div class="brand-wrap">
-<a href="#" class="brand" data-nav="collections" style="--chip-color:#ec407a;"><span>Collections</span></a>
-<a href="#" class="brand" data-nav="categories" style="--chip-color:#2962ff;"><span>Categories</span></a>
-</div>
+
+<a href="${p.link}" target="_blank"
+class="brand"
+style="--chip-color:#ff9900;">
+
+<span>View Deal</span>
+
+</a>
+
 </div>
 
+</div>
 
-<!-- EXPLORE RENDER BLOCK -->
+`;
+
+});
+
+grid.innerHTML=html;
+
+}
+
+
+
+/* ==============================
+EXPLORE SYSTEM
+============================== */
+
+document.querySelectorAll("[data-nav]").forEach(btn=>{
+
+btn.addEventListener("click",function(e){
+
+e.preventDefault();
+
+let type=this.dataset.nav;
+
+loadExplore(type);
+
+scrollToExplore();
+
+});
+
+});
+
+
+
+/* ==============================
+LOAD COLLECTIONS / CATEGORIES
+============================== */
+
+async function loadExplore(type){
+
+try{
+
+let res = await fetch("json/"+type+".json");
+
+let data = await res.json();
+
+renderExplore(data[type]);
+
+}
+catch(e){
+
+console.log("Explore JSON error",e);
+
+}
+
+}
+
+
+
+/* ==============================
+RENDER EXPLORE CARDS
+============================== */
+
+function renderExplore(items){
+
+let grid=document.getElementById("exploreDeals");
+
+let html="";
+
+items.forEach(item=>{
+
+html+=`
+
 <div class="glass-card">
-<div class="card-title">📁 Explore Sections</div>
+
+<div class="card-title">${item.icon} ${item.title}</div>
+
 <div class="theme-divider-b"></div>
-<div class="grid" id="exploreDeals"></div>
+
+<p class="card-text">${item.subtitle}</p>
+
 </div>
 
-<!-- NFTRAJA -->
+`;
+
+});
+
+grid.innerHTML=html;
+
+}
+
+
+
+/* ==============================
+SCROLL TO EXPLORE
+============================== */
+
+function scrollToExplore(){
+
+let target=document.getElementById("exploreDeals");
+
+if(!target) return;
+
+window.scrollTo({
+
+top:target.offsetTop-80,
+behavior:"smooth"
+
+});
+
+}
+
+
+
+/* ==============================
+DIRECT PRODUCT SHARE LINK
+============================== */
+
+function loadSharedProduct(){
+
+let params=new URLSearchParams(window.location.search);
+
+let pid=params.get("p");
+
+if(!pid) return;
+
+let found=null;
+let category=null;
+
+Object.keys(storeData).forEach(cat=>{
+
+storeData[cat].forEach(p=>{
+
+if(p.id===pid){
+
+found=p;
+category=cat;
+
+}
+
+});
+
+});
+
+if(found){
+
+renderSearch([found]);
+scrollToDeals();
+
+renderRelatedProducts(category,found.id);
+
+}
+
+}
+
+
+
+/* ==============================
+RELATED PRODUCTS (v2 CONVERSION)
+============================== */
+
+function renderRelatedProducts(cat,excludeId){
+
+let grid=document.getElementById("hotDeals");
+
+if(!storeData[cat]) return;
+
+let html="";
+
+html+=`
+
+<div style="width:100%;margin-top:20px">
+
+<div class="card-title">More From This Collection</div>
+
+<div class="theme-divider-b"></div>
+
+</div>
+
+`;
+
+storeData[cat].forEach(p=>{
+
+if(p.id===excludeId) return;
+
+let img=getImage(p.keyword || p.title);
+
+html+=`
+
 <div class="glass-card">
-<div class="card-title">🌐 NFTRaja Ecosystem</div>
+
+<div class="product-image"
+style="background-image:url('${img}')"></div>
+
+<div class="card-title">${p.title}</div>
+
 <div class="theme-divider-b"></div>
-<p class="card-text">
-Explore curated product collections, discover trending deals
-and navigate the NFTRaja digital commerce ecosystem.
-</p>
-<div class="theme-divider-b"></div>
+
+<div class="product-meta">
+
+<div class="product-price">${p.price}</div>
+
+</div>
+
 <div class="brand-wrap">
-<a href="#" class="brand" style="--chip-color:#ff416c;"><span>🔥 Tools</span></a>
-<a href="#" class="brand" style="--chip-color:#00c853;"><span>📂 Gallery</span></a>
-<a href="#" class="brand" style="--chip-color:#7b1fa2;"><span>🎨 Digital Art</span></a>
-<a href="#" class="brand" style="--chip-color:#ff9100;"><span>📖 Blog</span></a>
-</div>
-</div>
-</main>
 
-<div class="bottom-nav">
-<a href="#" class="nav-item"><span>🏠 Home</span></a>
-<a href="#" class="nav-item"><span>🏷️ Deals</span></a>
-<a href="#" class="nav-item"><span>🛍 Products</span></a>
-<a href="#" class="nav-item"><span>📖 Blog</span></a>
+<a href="?p=${p.id}"
+class="brand"
+style="--chip-color:#2962ff;">
+
+<span>View</span>
+
+</a>
+
 </div>
 
-<script src="app.js"></script>
+</div>
 
-</body>
-</html>
+`;
+
+});
+
+grid.innerHTML+=html;
+
+}
+
+
+
+/* ==============================
+COLLECTION SHARE LINK SYSTEM
+============================== */
+
+function loadSharedCollection(){
+
+let params=new URLSearchParams(window.location.search);
+
+let cat=params.get("cat");
+
+if(!cat) return;
+
+if(storeData[cat]){
+
+renderProducts(cat);
+
+scrollToDeals();
+
+}
+
+}
