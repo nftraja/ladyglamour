@@ -2,6 +2,7 @@
 LadyGlamour Core Script
 ============================== */
 
+
 /* ==============================
 DRAWER SYSTEM
 ============================== */
@@ -22,6 +23,7 @@ drawer.classList.contains("active") ? "hidden" : "";
 if(overlay){
 overlay.addEventListener("click",toggleDrawer);
 }
+
 
 /* ==============================
 JSON PRODUCT STORE
@@ -51,8 +53,10 @@ console.log("JSON load error",e);
 
 loadStore();
 
+
 /* ==============================
-SMART IMAGE ENGINE (HD + Pinterest)
+SMART IMAGE ENGINE
+(Pinterest + HD Images)
 ============================== */
 
 function getImage(title,cat,index){
@@ -60,13 +64,13 @@ function getImage(title,cat,index){
 let keyword="fashion product";
 
 if(cat==="purse")
-keyword="women purse handbag fashion";
+keyword="women purse handbag";
 
 if(cat==="wallet")
-keyword="leather wallet mens wallet";
+keyword="leather wallet";
 
 if(cat==="handbag")
-keyword="women luxury handbag";
+keyword="women handbag";
 
 if(cat==="watch")
 keyword="luxury wristwatch";
@@ -77,15 +81,71 @@ keyword="luxury perfume bottle";
 if(cat==="jewellery")
 keyword="fashion jewellery necklace";
 
+
 let productKeyword = title
 .toLowerCase()
 .split(" ")
 .slice(0,3)
 .join(",");
 
-return "https://source.unsplash.com/900x1200/?${keyword},${productKeyword}&sig=${index}";
+
+/* FIXED TEMPLATE STRING */
+
+return `https://source.unsplash.com/900x1200/?${keyword},${productKeyword}&sig=${index}`;
 
 }
+
+
+/* ==============================
+PRODUCT CARD TEMPLATE
+============================== */
+
+function productCard(p,img){
+
+return `
+
+<div class="glass-card">
+
+<div class="product-image"
+style="background-image:url('${img}')"
+role="img"
+aria-label="${p.title}">
+</div>
+
+<div class="card-title">${p.title}</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="product-meta">
+
+<div class="product-price">${p.price}</div>
+
+<div class="product-discount">${p.discount}</div>
+
+<div class="product-colors">
+Colors Available: ${p.colors}
+</div>
+
+</div>
+
+<div class="brand-wrap">
+
+<a href="${p.link}" target="_blank"
+class="brand"
+style="--chip-color:#ff9900;">
+
+<span>View Deal</span>
+
+</a>
+
+</div>
+
+</div>
+
+`;
+
+}
+
 
 /* ==============================
 RENDER PRODUCT CARDS
@@ -108,35 +168,14 @@ storeData[cat].forEach((p,index)=>{
 
 let img = getImage(p.title,cat,index);
 
-html+=`
-
-<div class="glass-card"><div class="product-image"
-style="background-image:url('${img}')"
-role="img"
-aria-label="${p.title}">
-</div><div class="card-title">${p.title}</div><div class="theme-divider-b"></div><div class="product-meta"><div class="product-price">${p.price}</div><div class="product-discount">${p.discount}</div><div class="product-colors">
-Colors Available: ${p.colors}
-</div></div><div class="brand-wrap"><a href="${p.link}" target="_blank"
-class="brand"
-style="--chip-color:#ff9900;">
-
-<span>View Deal</span>
-
-</a></div></div>`;
+html+=productCard(p,img);
 
 });
 
 grid.innerHTML=html;
 
-/* Lazy reveal */
-
-setTimeout(()=>{
-document.querySelectorAll('.product-image').forEach(img=>{
-img.style.opacity="1";
-});
-},200);
-
 }
+
 
 /* ==============================
 CATEGORY CLICK SYSTEM
@@ -158,6 +197,7 @@ scrollToDeals();
 
 });
 
+
 /* ==============================
 SCROLL TO DEALS
 ============================== */
@@ -177,6 +217,7 @@ behavior:"smooth"
 
 }
 
+
 /* ==============================
 AI SEARCH (Local JSON)
 ============================== */
@@ -195,18 +236,20 @@ searchProducts();
 
 }
 
+
 function searchProducts(){
 
 let query=searchBox.value.toLowerCase();
 
 let results=[];
 
-Object.values(storeData).forEach(cat=>{
+Object.keys(storeData).forEach(cat=>{
 
-cat.forEach(p=>{
+storeData[cat].forEach(p=>{
 
 if(p.title.toLowerCase().includes(query)){
 
+p.cat=cat;
 results.push(p);
 
 }
@@ -216,9 +259,11 @@ results.push(p);
 });
 
 renderSearch(results);
+
 scrollToDeals();
 
 }
+
 
 /* ==============================
 RENDER SEARCH RESULTS
@@ -232,29 +277,16 @@ let html="";
 
 products.forEach((p,index)=>{
 
-let img = getImage(p.title,"fashion",index);
+let img=getImage(p.title,p.cat || "fashion",index);
 
-html+=`
-
-<div class="glass-card"><div class="product-image"
-style="background-image:url('${img}')"
-role="img"
-aria-label="${p.title}">
-</div><div class="card-title">${p.title}</div><div class="theme-divider-b"></div><div class="product-meta"><div class="product-price">${p.price}</div><div class="product-discount">${p.discount}</div><div class="product-colors">
-Colors Available: ${p.colors}
-</div></div><div class="brand-wrap"><a href="${p.link}" target="_blank"
-class="brand"
-style="--chip-color:#ff9900;">
-
-<span>View Deal</span>
-
-</a></div></div>`;
+html+=productCard(p,img);
 
 });
 
 grid.innerHTML=html;
 
 }
+
 
 /* ==============================
 DIRECT PRODUCT SHARE LINK
@@ -269,13 +301,17 @@ let pid=params.get("p");
 if(!pid) return;
 
 let found=null;
+let catName=null;
 
-Object.values(storeData).forEach(cat=>{
+Object.keys(storeData).forEach(cat=>{
 
-cat.forEach(p=>{
+storeData[cat].forEach(p=>{
 
 if(p.id===pid){
+
 found=p;
+catName=cat;
+
 }
 
 });
@@ -284,12 +320,13 @@ found=p;
 
 if(found){
 
-renderSearch([found]);
+renderSearch([{...found,cat:catName}]);
 scrollToDeals();
 
 }
 
 }
+
 
 /* ==============================
 COLLECTION SHARE LINK SYSTEM
