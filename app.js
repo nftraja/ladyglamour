@@ -56,32 +56,38 @@ loadStore();
 
 
 /* ==============================
-SMART PRODUCT IMAGE SYSTEM
+SMART PRODUCT IMAGE ENGINE
 ============================== */
 
-function getImage(title,cat){
+function getImage(title,cat,index){
 
 let keyword="fashion";
 
 if(cat==="purse")
-keyword="women purse handbag fashion";
+keyword="women purse handbag";
 
 if(cat==="wallet")
-keyword="leather wallet mens wallet";
+keyword="leather wallet";
 
 if(cat==="handbag")
-keyword="women handbag fashion bag";
+keyword="women handbag";
 
 if(cat==="watch")
-keyword="wristwatch luxury watch";
+keyword="luxury wristwatch";
 
 if(cat==="perfume")
-keyword="perfume bottle luxury fragrance";
+keyword="perfume bottle";
 
 if(cat==="jewellery")
-keyword="fashion jewellery necklace";
+keyword="fashion jewellery";
 
-return `https://source.unsplash.com/600x400/?${keyword}`;
+let productKeyword = title
+.toLowerCase()
+.split(" ")
+.slice(0,2)
+.join(",");
+
+return `https://source.unsplash.com/600x400/?${keyword},${productKeyword}&sig=${index}`;
 
 }
 
@@ -104,9 +110,9 @@ return;
 
 let html="";
 
-storeData[cat].forEach(p=>{
+storeData[cat].forEach((p,index)=>{
 
-let img = getImage(p.title,cat);
+let img = getImage(p.title,cat,index);
 
 html+=`
 
@@ -256,9 +262,9 @@ let grid=document.getElementById("hotDeals");
 
 let html="";
 
-products.forEach(p=>{
+products.forEach((p,index)=>{
 
-let img = getImage(p.title,"fashion");
+let img = getImage(p.title,"fashion",index);
 
 html+=`
 
