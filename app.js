@@ -199,31 +199,42 @@ grid.innerHTML=html;
 
 
 /* ==============================
-AMAZON DROPDOWN
+AMAZON CUSTOM DROPDOWN
 ============================== */
 
-const amazonDropdown = document.getElementById("amazonCategory");
+const amazonSelected = document.getElementById("amazonSelected");
+const amazonDropdown = document.getElementById("amazonDropdown");
 
-if(amazonDropdown){
+if(amazonSelected){
 
-amazonDropdown.addEventListener("change",function(){
+amazonSelected.addEventListener("click",function(){
 
-let cat = this.value;
-
-if(!cat) return;
-
-if(!storeData || Object.keys(storeData).length===0){
-return;
-}
-
-renderProducts(cat);
-
-scrollToDeals();
+amazonDropdown.classList.toggle("active");
 
 });
 
 }
 
+document.querySelectorAll("#amazonDropdown .dropdown-item")
+.forEach(item=>{
+
+item.addEventListener("click",function(){
+
+let cat = this.dataset.cat;
+
+renderProducts(cat);
+
+amazonSelected.innerHTML =
+this.textContent +
+' <span class="dropdown-arrow">⌄</span>';
+
+amazonDropdown.classList.remove("active");
+
+scrollToDeals();
+
+});
+
+});
 
 /* ==============================
 CUSTOM MARKETPLACE DROPDOWN
