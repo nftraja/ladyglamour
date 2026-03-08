@@ -7,16 +7,16 @@ LadyGlamour Core Script
 DRAWER SYSTEM
 ============================== */
 
-const drawer = document.getElementById("drawer");
-const overlay = document.getElementById("drawerOverlay");
+const drawer=document.getElementById("drawer");
+const overlay=document.getElementById("drawerOverlay");
 
 function toggleDrawer(){
 
 drawer.classList.toggle("active");
 overlay.classList.toggle("active");
 
-document.body.style.overflow =
-drawer.classList.contains("active") ? "hidden" : "";
+document.body.style.overflow=
+drawer.classList.contains("active")?"hidden":"";
 
 }
 
@@ -25,27 +25,35 @@ overlay.addEventListener("click",toggleDrawer);
 }
 
 
-
 /* ==============================
-JSON PRODUCT STORE
+STORE DATA
 ============================== */
 
-let storeData = {};
+let storeData={};
+
+
+/* ==============================
+LOAD AMAZON JSON
+============================== */
 
 async function loadStore(){
 
 try{
 
-let res = await fetch("json/amazon.json");
-storeData = await res.json();
+let res=await fetch("json/amazon.json");
+
+storeData=await res.json();
+
+console.log("Store Loaded",storeData);
 
 loadSharedProduct();
 loadSharedCollection();
 
 }
+
 catch(e){
 
-console.log("JSON load error",e);
+console.log("JSON Load Error",e);
 
 }
 
@@ -61,19 +69,19 @@ UNSPLASH IMAGE ENGINE
 
 function getImage(keyword){
 
-return `https://source.unsplash.com/600x338/?${encodeURIComponent(keyword)}`;
+return "https://source.unsplash.com/600x338/?"+encodeURIComponent(keyword);
 
 }
 
 
 
 /* ==============================
-RENDER PRODUCT CARDS
+RENDER PRODUCTS
 ============================== */
 
 function renderProducts(cat){
 
-let grid = document.getElementById("hotDeals");
+let grid=document.getElementById("hotDeals");
 
 if(!storeData[cat]){
 
@@ -86,14 +94,15 @@ let html="";
 
 storeData[cat].forEach(p=>{
 
-let img=getImage(p.keyword || p.title);
+let img=getImage(p.title);
 
 html+=`
 
 <div class="glass-card">
 
 <div class="product-image"
-style="background-image:url('${img}')"></div>
+style="background-image:url('${img}')">
+</div>
 
 <div class="card-title">${p.title}</div>
 
@@ -101,12 +110,16 @@ style="background-image:url('${img}')"></div>
 
 <div class="product-meta">
 
-<div class="product-price">${p.price || ""}</div>
+<div class="product-price">
+${p.price||""}
+</div>
 
-<div class="product-discount">${p.discount || ""}</div>
+<div class="product-discount">
+${p.discount||""}
+</div>
 
 <div class="product-colors">
-Colors Available: ${p.colors || "-"}
+Colors: ${p.colors||"-"}
 </div>
 
 </div>
@@ -115,7 +128,7 @@ Colors Available: ${p.colors || "-"}
 
 <a href="${p.link}" target="_blank"
 class="brand"
-style="--chip-color:#ff9900;">
+style="--chip-color:#ff9900">
 
 <span>View Deal</span>
 
@@ -136,7 +149,7 @@ grid.innerHTML=html;
 
 
 /* ==============================
-CATEGORY CLICK SYSTEM
+CATEGORY BUTTONS
 ============================== */
 
 document.querySelectorAll("[data-cat]").forEach(btn=>{
@@ -158,14 +171,14 @@ scrollToDeals();
 
 
 /* ==============================
-SCROLL TO DEALS
+SCROLL
 ============================== */
 
 function scrollToDeals(){
 
 let target=document.getElementById("hotDeals");
 
-if(!target) return;
+if(!target)return;
 
 window.scrollTo({
 
@@ -179,7 +192,7 @@ behavior:"smooth"
 
 
 /* ==============================
-AI SEARCH (Local JSON)
+SEARCH SYSTEM
 ============================== */
 
 const searchBox=document.getElementById("searchBox");
@@ -189,14 +202,14 @@ if(searchBox){
 searchBox.addEventListener("keyup",function(e){
 
 if(e.key==="Enter"){
-
 searchProducts();
-
 }
 
 });
 
 }
+
+
 
 function searchProducts(){
 
@@ -209,9 +222,7 @@ Object.values(storeData).forEach(cat=>{
 cat.forEach(p=>{
 
 if(p.title.toLowerCase().includes(query)){
-
 results.push(p);
-
 }
 
 });
@@ -227,7 +238,7 @@ scrollToDeals();
 
 
 /* ==============================
-RENDER SEARCH RESULTS
+RENDER SEARCH
 ============================== */
 
 function renderSearch(products){
@@ -238,14 +249,15 @@ let html="";
 
 products.forEach(p=>{
 
-let img=getImage(p.keyword || p.title);
+let img=getImage(p.title);
 
 html+=`
 
 <div class="glass-card">
 
 <div class="product-image"
-style="background-image:url('${img}')"></div>
+style="background-image:url('${img}')">
+</div>
 
 <div class="card-title">${p.title}</div>
 
@@ -253,12 +265,16 @@ style="background-image:url('${img}')"></div>
 
 <div class="product-meta">
 
-<div class="product-price">${p.price || ""}</div>
+<div class="product-price">
+${p.price||""}
+</div>
 
-<div class="product-discount">${p.discount || ""}</div>
+<div class="product-discount">
+${p.discount||""}
+</div>
 
 <div class="product-colors">
-Colors Available: ${p.colors || "-"}
+Colors: ${p.colors||"-"}
 </div>
 
 </div>
@@ -267,7 +283,7 @@ Colors Available: ${p.colors || "-"}
 
 <a href="${p.link}" target="_blank"
 class="brand"
-style="--chip-color:#ff9900;">
+style="--chip-color:#ff9900">
 
 <span>View Deal</span>
 
@@ -288,109 +304,7 @@ grid.innerHTML=html;
 
 
 /* ==============================
-EXPLORE SYSTEM
-============================== */
-
-document.querySelectorAll("[data-nav]").forEach(btn=>{
-
-btn.addEventListener("click",function(e){
-
-e.preventDefault();
-
-let type=this.dataset.nav;
-
-loadExplore(type);
-
-scrollToExplore();
-
-});
-
-});
-
-
-
-/* ==============================
-LOAD COLLECTIONS / CATEGORIES
-============================== */
-
-async function loadExplore(type){
-
-try{
-
-let res = await fetch("json/"+type+".json");
-
-let data = await res.json();
-
-renderExplore(data[type]);
-
-}
-catch(e){
-
-console.log("Explore JSON error",e);
-
-}
-
-}
-
-
-
-/* ==============================
-RENDER EXPLORE CARDS
-============================== */
-
-function renderExplore(items){
-
-let grid=document.getElementById("exploreDeals");
-
-let html="";
-
-items.forEach(item=>{
-
-html+=`
-
-<div class="glass-card">
-
-<div class="card-title">${item.icon} ${item.title}</div>
-
-<div class="theme-divider-b"></div>
-
-<p class="card-text">${item.subtitle}</p>
-
-</div>
-
-`;
-
-});
-
-grid.innerHTML=html;
-
-}
-
-
-
-/* ==============================
-SCROLL TO EXPLORE
-============================== */
-
-function scrollToExplore(){
-
-let target=document.getElementById("exploreDeals");
-
-if(!target) return;
-
-window.scrollTo({
-
-top:target.offsetTop-80,
-behavior:"smooth"
-
-});
-
-}
-
-
-
-/* ==============================
-DIRECT PRODUCT SHARE LINK
+PRODUCT SHARE LINK
 ============================== */
 
 function loadSharedProduct(){
@@ -399,7 +313,7 @@ let params=new URLSearchParams(window.location.search);
 
 let pid=params.get("p");
 
-if(!pid) return;
+if(!pid)return;
 
 let found=null;
 let category=null;
@@ -433,14 +347,14 @@ renderRelatedProducts(category,found.id);
 
 
 /* ==============================
-RELATED PRODUCTS (v2 CONVERSION)
+RELATED PRODUCTS
 ============================== */
 
 function renderRelatedProducts(cat,excludeId){
 
 let grid=document.getElementById("hotDeals");
 
-if(!storeData[cat]) return;
+if(!storeData[cat])return;
 
 let html="";
 
@@ -448,7 +362,9 @@ html+=`
 
 <div style="width:100%;margin-top:20px">
 
-<div class="card-title">More From This Collection</div>
+<div class="card-title">
+More From This Collection
+</div>
 
 <div class="theme-divider-b"></div>
 
@@ -458,16 +374,17 @@ html+=`
 
 storeData[cat].forEach(p=>{
 
-if(p.id===excludeId) return;
+if(p.id===excludeId)return;
 
-let img=getImage(p.keyword || p.title);
+let img=getImage(p.title);
 
 html+=`
 
 <div class="glass-card">
 
 <div class="product-image"
-style="background-image:url('${img}')"></div>
+style="background-image:url('${img}')">
+</div>
 
 <div class="card-title">${p.title}</div>
 
@@ -483,7 +400,7 @@ style="background-image:url('${img}')"></div>
 
 <a href="?p=${p.id}"
 class="brand"
-style="--chip-color:#2962ff;">
+style="--chip-color:#2962ff">
 
 <span>View</span>
 
@@ -504,7 +421,7 @@ grid.innerHTML+=html;
 
 
 /* ==============================
-COLLECTION SHARE LINK SYSTEM
+COLLECTION SHARE
 ============================== */
 
 function loadSharedCollection(){
@@ -513,7 +430,7 @@ let params=new URLSearchParams(window.location.search);
 
 let cat=params.get("cat");
 
-if(!cat) return;
+if(!cat)return;
 
 if(storeData[cat]){
 
