@@ -2,7 +2,6 @@
 LadyGlamour Core Script
 ============================== */
 
-
 /* ==============================
 DRAWER SYSTEM
 ============================== */
@@ -24,8 +23,6 @@ if(overlay){
 overlay.addEventListener("click",toggleDrawer);
 }
 
-
-
 /* ==============================
 JSON PRODUCT STORE
 ============================== */
@@ -37,6 +34,7 @@ async function loadStore(){
 try{
 
 let res = await fetch("json/amazon.json");
+
 storeData = await res.json();
 
 loadSharedProduct();
@@ -53,10 +51,8 @@ console.log("JSON load error",e);
 
 loadStore();
 
-
-
 /* ==============================
-SMART PRODUCT IMAGE ENGINE
+SMART IMAGE ENGINE (HD + Pinterest)
 ============================== */
 
 function getImage(title,cat,index){
@@ -64,7 +60,7 @@ function getImage(title,cat,index){
 let keyword="fashion product";
 
 if(cat==="purse")
-keyword="women fashion purse handbag";
+keyword="women purse handbag fashion";
 
 if(cat==="wallet")
 keyword="leather wallet mens wallet";
@@ -87,11 +83,9 @@ let productKeyword = title
 .slice(0,3)
 .join(",");
 
-return `https://source.unsplash.com/900x1200/?${keyword},${productKeyword}&sig=${index}`;
+return "https://source.unsplash.com/900x1200/?${keyword},${productKeyword}&sig=${index}";
 
 }
-
-
 
 /* ==============================
 RENDER PRODUCT CARDS
@@ -116,50 +110,33 @@ let img = getImage(p.title,cat,index);
 
 html+=`
 
-<div class="glass-card">
-
-<div class="product-image"
-style="background-image:url('${img}')"></div>
-
-<div class="card-title">${p.title}</div>
-
-<div class="theme-divider-b"></div>
-
-<div class="product-meta">
-
-<div class="product-price">${p.price}</div>
-
-<div class="product-discount">${p.discount}</div>
-
-<div class="product-colors">
+<div class="glass-card"><div class="product-image"
+style="background-image:url('${img}')"
+role="img"
+aria-label="${p.title}">
+</div><div class="card-title">${p.title}</div><div class="theme-divider-b"></div><div class="product-meta"><div class="product-price">${p.price}</div><div class="product-discount">${p.discount}</div><div class="product-colors">
 Colors Available: ${p.colors}
-</div>
-
-</div>
-
-<div class="brand-wrap">
-
-<a href="${p.link}" target="_blank"
+</div></div><div class="brand-wrap"><a href="${p.link}" target="_blank"
 class="brand"
 style="--chip-color:#ff9900;">
 
 <span>View Deal</span>
 
-</a>
-
-</div>
-
-</div>
-
-`;
+</a></div></div>`;
 
 });
 
 grid.innerHTML=html;
 
+/* Lazy reveal */
+
+setTimeout(()=>{
+document.querySelectorAll('.product-image').forEach(img=>{
+img.style.opacity="1";
+});
+},200);
+
 }
-
-
 
 /* ==============================
 CATEGORY CLICK SYSTEM
@@ -181,8 +158,6 @@ scrollToDeals();
 
 });
 
-
-
 /* ==============================
 SCROLL TO DEALS
 ============================== */
@@ -202,8 +177,6 @@ behavior:"smooth"
 
 }
 
-
-
 /* ==============================
 AI SEARCH (Local JSON)
 ============================== */
@@ -215,9 +188,7 @@ if(searchBox){
 searchBox.addEventListener("keyup",function(e){
 
 if(e.key==="Enter"){
-
 searchProducts();
-
 }
 
 });
@@ -245,12 +216,9 @@ results.push(p);
 });
 
 renderSearch(results);
-
 scrollToDeals();
 
 }
-
-
 
 /* ==============================
 RENDER SEARCH RESULTS
@@ -268,50 +236,25 @@ let img = getImage(p.title,"fashion",index);
 
 html+=`
 
-<div class="glass-card">
-
-<div class="product-image"
-style="background-image:url('${img}')"></div>
-
-<div class="card-title">${p.title}</div>
-
-<div class="theme-divider-b"></div>
-
-<div class="product-meta">
-
-<div class="product-price">${p.price}</div>
-
-<div class="product-discount">${p.discount}</div>
-
-<div class="product-colors">
+<div class="glass-card"><div class="product-image"
+style="background-image:url('${img}')"
+role="img"
+aria-label="${p.title}">
+</div><div class="card-title">${p.title}</div><div class="theme-divider-b"></div><div class="product-meta"><div class="product-price">${p.price}</div><div class="product-discount">${p.discount}</div><div class="product-colors">
 Colors Available: ${p.colors}
-</div>
-
-</div>
-
-<div class="brand-wrap">
-
-<a href="${p.link}" target="_blank"
+</div></div><div class="brand-wrap"><a href="${p.link}" target="_blank"
 class="brand"
 style="--chip-color:#ff9900;">
 
 <span>View Deal</span>
 
-</a>
-
-</div>
-
-</div>
-
-`;
+</a></div></div>`;
 
 });
 
 grid.innerHTML=html;
 
 }
-
-
 
 /* ==============================
 DIRECT PRODUCT SHARE LINK
@@ -332,9 +275,7 @@ Object.values(storeData).forEach(cat=>{
 cat.forEach(p=>{
 
 if(p.id===pid){
-
 found=p;
-
 }
 
 });
@@ -349,8 +290,6 @@ scrollToDeals();
 }
 
 }
-
-
 
 /* ==============================
 COLLECTION SHARE LINK SYSTEM
