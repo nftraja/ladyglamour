@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -8,13 +7,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
 <div class="drawer-overlay" id="drawerOverlay"></div>
-
 <div class="drawer" id="drawer">
-
 <button class="drawer-back" onclick="toggleDrawer()">← Back</button>
 
 <a href="#">🧳 Travel & Mobility</a>
@@ -27,150 +23,40 @@
 <a href="#">🏕 Outdoor Gear</a>
 <a href="#">🎁 Gift Ideas</a>
 <a href="#">🧳 Bags & Organizers</a>
-
 </div>
 
-
-
 <header class="app-header">
-
 <button class="menu-btn" onclick="toggleDrawer()">☰</button>
-
 <div class="logo">🛍 LadyGlamour</div>
-
 <div class="header-icons">🏷️</div>
-
 </header>
-
-
 
 <main class="main-content">
 
-
 <!-- HERO -->
-
 <div class="category-hero">
-
 <h1>🔥 Smart Deals For Women</h1>
-
 <div class="theme-divider"></div>
-
 <p>
 Discover curated gadgets, lifestyle gear, fashion accessories
 and trending marketplace deals from multiple platforms.
 </p>
-
 </div>
 
 <!-- AI ASSISTANT -->
-
 <div class="glass-card">
-
 <div class="card-title">🤖 Coming-Soon - AI Assistant</div>
-
 <div class="theme-divider-b"></div>
-
 <input id="searchBox"
 placeholder="Search products like smartwatch, handbag, travel gadget"
 style="width:100%;padding:10px;border-radius:10px;border:none;">
-
-</div>
-
-<!-- LIVE DEALS ENGINE -->
-
-<div class="glass-card">
-
-<div class="card-title">🔥 Live Marketplace Deals</div>
-
-<div class="theme-divider-b"></div>
-
-<p class="card-text">
-Discover trending deals and discounted products from global marketplaces including eBay, AliExpress and other deal networks.
-</p>
-
-<div class="theme-divider-b"></div>
-
-<div class="brand-wrap">
-
-<a href="javascript:void(0)" class="brand" data-deal="electronics" style="--chip-color:#2962ff;">
-<span>Electronics Deals</span>
-</a>
-
-<a href="javascript:void(0)" class="brand" data-deal="fashion" style="--chip-color:#ec407a;">
-<span>Fashion Deals</span>
-</a>
-
-<a href="javascript:void(0)" class="brand" data-deal="gadgets" style="--chip-color:#00c853;">
-<span>Smart Gadgets</span>
-</a>
-
-<a href="javascript:void(0)" class="brand" data-deal="home" style="--chip-color:#ff9100;">
-<span>Home Essentials</span>
-</a>
-
-<a href="javascript:void(0)" class="brand" data-deal="beauty" style="--chip-color:#7b1fa2;">
-<span>Beauty Picks</span>
-</a>
-
-<a href="javascript:void(0)" class="brand" data-deal="travel" style="--chip-color:#26c6da;">
-<span>Travel Gear</span>
-</a>
-
-<a href="javascript:void(0)" class="brand" data-deal="fitness" style="--chip-color:#ab47bc;">
-<span>Fitness Gear</span>
-</a>
-
-<a href="javascript:void(0)" class="brand" data-deal="gaming" style="--chip-color:#ff1744;">
-<span>Gaming Deals</span>
-</a>
-
-<a href="javascript:void(0)" class="brand" data-deal="office" style="--chip-color:#8d6e63;">
-<span>Office Essentials</span>
-</a>
-
-<a href="javascript:void(0)" class="brand" data-deal="accessories" style="--chip-color:#42a5f5;">
-<span>Daily Accessories</span>
-</a>
-
-</div>
-
-</div>
-
-
-<!-- LIVE DEALS RENDER BLOCK -->
-
-<div class="glass-card">
-
-<div class="card-title">⚡ Trending Deals</div>
-
-<div class="theme-divider-b"></div>
-
-<div class="grid" id="liveDeals"></div>
-
-</div>
-
-<!-- LIVE DEALS RENDER BLOCK -->
-
-<div class="glass-card">
-
-<div class="card-title">⚡ Trending Deals</div>
-
-<div class="theme-divider-b"></div>
-
-<div class="grid" id="liveDeals"></div>
-
 </div>
 
 <!-- WOMEN STYLE PICKS -->
-
 <div class="glass-card">
-
 <div class="card-title">💄 Amazon Women Style Picks</div>
-
 <div class="theme-divider-b"></div>
-
 <div class="brand-wrap">
-
 <a href="#" class="brand" data-cat="purse" style="--chip-color:#ec407a;"><span>Purses</span></a>
 <a href="#" class="brand" data-cat="purse" style="--chip-color:#ec407a;"><span>Wallets</span></a>
 <a href="#" class="brand" data-cat="handbag" style="--chip-color:#ff1744;"><span>Handbags</span></a>
@@ -182,109 +68,108 @@ Discover trending deals and discounted products from global marketplaces includi
 <a href="#" class="brand" data-cat="hairtools" style="--chip-color:#26c6da;"><span>Hair Tools</span></a>
 <a href="#" class="brand" data-cat="belts" style="--chip-color:#8d6e63;"><span>Belts</span></a>
 <a href="#" class="brand" data-cat="scarves" style="--chip-color:#42a5f5;"><span>Scarves</span></a>
-
 </div>
-
 </div>
-
-
 
 <!-- AMAZON PRODUCTS (JSON) -->
-
 <div class="glass-card">
-
 <div class="card-title">🛍 Amazon Deals</div>
-
 <div class="theme-divider-b"></div>
-
 <div class="grid" id="hotDeals"></div>
-
 </div>
 
-
-
-<!-- NAVIGATION -->
-
+<!-- LIVE DEALS ENGINE -->
 <div class="glass-card">
-
-<div class="card-title">📂 Explore</div>
-
+<div class="card-title">🔥 Live Marketplace Deals</div>
 <div class="theme-divider-b"></div>
-
+<p class="card-text">
+Discover trending deals and discounted products from global marketplaces including eBay, AliExpress and other deal networks.
+</p>
+<div class="theme-divider-b"></div>
 <div class="brand-wrap">
 
+<a href="javascript:void(0)" class="brand" data-deal="electronics" style="--chip-color:#2962ff;">
+<span>Electronics Deals</span>
+</a>
+<a href="javascript:void(0)" class="brand" data-deal="fashion" style="--chip-color:#ec407a;">
+<span>Fashion Deals</span>
+</a>
+<a href="javascript:void(0)" class="brand" data-deal="gadgets" style="--chip-color:#00c853;">
+<span>Smart Gadgets</span>
+</a>
+<a href="javascript:void(0)" class="brand" data-deal="home" style="--chip-color:#ff9100;">
+<span>Home Essentials</span>
+</a>
+<a href="javascript:void(0)" class="brand" data-deal="beauty" style="--chip-color:#7b1fa2;">
+<span>Beauty Picks</span>
+</a>
+<a href="javascript:void(0)" class="brand" data-deal="travel" style="--chip-color:#26c6da;">
+<span>Travel Gear</span>
+</a>
+<a href="javascript:void(0)" class="brand" data-deal="fitness" style="--chip-color:#ab47bc;">
+<span>Fitness Gear</span>
+</a>
+<a href="javascript:void(0)" class="brand" data-deal="gaming" style="--chip-color:#ff1744;">
+<span>Gaming Deals</span>
+</a>
+<a href="javascript:void(0)" class="brand" data-deal="office" style="--chip-color:#8d6e63;">
+<span>Office Essentials</span>
+</a>
+<a href="javascript:void(0)" class="brand" data-deal="accessories" style="--chip-color:#42a5f5;">
+<span>Daily Accessories</span>
+</a>
+</div>
+</div>
+
+<!-- LIVE DEALS RENDER BLOCK -->
+<div class="glass-card">
+<div class="card-title">⚡ Trending Deals</div>
+<div class="theme-divider-b"></div>
+<div class="grid" id="liveDeals"></div>
+</div>
+
+<!-- NAVIGATION -->
+<div class="glass-card">
+<div class="card-title">📂 Explore</div>
+<div class="theme-divider-b"></div>
+<div class="brand-wrap">
 <a href="#" class="brand" data-nav="collections" style="--chip-color:#ec407a;"><span>Collections</span></a>
-
 <a href="#" class="brand" data-nav="categories" style="--chip-color:#2962ff;"><span>Categories</span></a>
-
 </div>
-
 </div>
-
 
 
 <!-- EXPLORE RENDER BLOCK -->
-
 <div class="glass-card">
-
 <div class="card-title">📁 Explore Sections</div>
-
 <div class="theme-divider-b"></div>
-
 <div class="grid" id="exploreDeals"></div>
-
 </div>
-
-
 
 <!-- NFTRAJA -->
-
 <div class="glass-card">
-
 <div class="card-title">🌐 NFTRaja Ecosystem</div>
-
 <div class="theme-divider-b"></div>
-
 <p class="card-text">
-
 Explore curated product collections, discover trending deals
 and navigate the NFTRaja digital commerce ecosystem.
-
 </p>
-
 <div class="theme-divider-b"></div>
-
 <div class="brand-wrap">
-
 <a href="#" class="brand" style="--chip-color:#ff416c;"><span>🔥 Tools</span></a>
-
 <a href="#" class="brand" style="--chip-color:#00c853;"><span>📂 Gallery</span></a>
-
 <a href="#" class="brand" style="--chip-color:#7b1fa2;"><span>🎨 Digital Art</span></a>
-
 <a href="#" class="brand" style="--chip-color:#ff9100;"><span>📖 Blog</span></a>
-
 </div>
-
 </div>
-
 </main>
 
-
-
 <div class="bottom-nav">
-
 <a href="#" class="nav-item"><span>🏠 Home</span></a>
-
 <a href="#" class="nav-item"><span>🏷️ Deals</span></a>
-
 <a href="#" class="nav-item"><span>🛍 Products</span></a>
-
 <a href="#" class="nav-item"><span>📖 Blog</span></a>
-
 </div>
-
-
 
 <script src="app.js"></script>
 
