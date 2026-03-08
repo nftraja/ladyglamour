@@ -26,42 +26,77 @@ overlay.addEventListener("click",toggleDrawer);
 
 
 /* ==============================
-JSON PRODUCT STORE
+STORE DATA
 ============================== */
 
-let storeData = {};
+let amazonData = {};
+let meeshoData = {};
+let glowroadData = {};
+let collectionsData = {};
+
+
+/* ==============================
+LOAD JSON DATA
+============================== */
 
 async function loadStore(){
 
 try{
 
-let res = await fetch("json/amazon.json");
+const amazon = await fetch("json/amazon.json");
+amazonData = await amazon.json();
 
-storeData = await res.json();
-
+}catch(e){
+console.log("Amazon JSON error",e);
 }
-catch(e){
 
-console.log("JSON load error",e);
+try{
 
+const meesho = await fetch("json/meesho.json");
+meeshoData = await meesho.json();
+
+}catch(e){
+console.log("Meesho JSON error",e);
 }
+
+try{
+
+const glow = await fetch("json/glowroad.json");
+glowroadData = await glow.json();
+
+}catch(e){
+console.log("Glowroad JSON error",e);
+}
+
+try{
+
+const col = await fetch("json/collections.json");
+collectionsData = await col.json();
+
+}catch(e){
+console.log("Collections JSON error",e);
+}
+
+initButtons();
 
 }
 
 loadStore();
 
 
+
 /* ==============================
-IMAGE ENGINE (Stable CDN)
+IMAGE ENGINE
 ============================== */
 
 function getImage(keyword,index){
 
-let seed = keyword.replace(/\s+/g,"") + index;
+let k = keyword.replace(/\s+/g,"-");
 
-return `https://picsum.photos/seed/${seed}/900/506`;
+return `https://source.unsplash.com/900x506/?${k}&sig=${index}`;
 
 }
+
 
 
 /* ==============================
@@ -71,7 +106,6 @@ PRODUCT CARD
 function productCard(p,img){
 
 return `
-
 <div class="glass-card">
 
 <div class="product-image"
@@ -88,17 +122,18 @@ aria-label="${p.title}">
 
 <div class="product-price">${p.price}</div>
 
-<div class="product-discount">${p.discount}</div>
+<div class="product-discount">${p.discount || ""}</div>
 
 <div class="product-colors">
-Colors Available: ${p.colors}
+Colors: ${p.colors || "-"}
 </div>
 
 </div>
 
 <div class="brand-wrap">
 
-<a href="${p.link}" target="_blank"
+<a href="${p.link}"
+target="_blank"
 class="brand"
 style="--chip-color:#ff9900;">
 
@@ -109,21 +144,21 @@ style="--chip-color:#ff9900;">
 </div>
 
 </div>
-
 `;
 
 }
+
 
 
 /* ==============================
 RENDER PRODUCTS
 ============================== */
 
-function renderProducts(cat){
+function renderProducts(data,cat,gridId){
 
-let grid = document.getElementById("hotDeals");
+let grid = document.getElementById(gridId);
 
-if(!storeData[cat]){
+if(!data[cat]){
 
 grid.innerHTML="<p>No products available</p>";
 return;
@@ -132,22 +167,27 @@ return;
 
 let html="";
 
-storeData[cat].forEach((p,index)=>{
+data[cat].forEach((p,index)=>{
 
-let img = getImage(p.keyword,index);
+let img = getImage(p.keyword || "fashion product",index);
 
-html+=productCard(p,img);
+html += productCard(p,img);
 
 });
 
-grid.innerHTML=html;
+grid.innerHTML = html;
 
 }
 
 
+
 /* ==============================
-CATEGORY CLICK
+CATEGORY BUTTONS
 ============================== */
+
+function initButtons(){
+
+/* AMAZON */
 
 document.querySelectorAll("[data-cat]").forEach(btn=>{
 
@@ -155,10 +195,187 @@ btn.addEventListener("click",function(e){
 
 e.preventDefault();
 
-let cat=this.dataset.cat;
+let cat = this.dataset.cat;
 
-renderProducts(cat);
+renderProducts(amazonData,cat,"hotDeals");
+
+scrollTo("hotDeals");
 
 });
 
 });
+
+
+/* LIVE DEALS */
+
+document.querySelectorAll("[data-deal]").forEach(btn=>{
+
+btn.addEventListener("click",function(e){
+
+e.preventDefault();
+
+let cat = this.dataset.deal;
+
+renderProducts(amazonData,cat,"liveDeals");
+
+scrollTo("liveDeals");
+
+});
+
+});
+
+
+/* COLLECTIONS */
+
+document.querySelectorAll("[data-nav]").forEach(btn=>{
+
+btn.addEventListener("click",function(e){
+
+e.preventDefault();
+
+let type = this.dataset.nav;
+
+renderCollections(type);
+
+scrollTo("exploreDeals");
+
+});
+
+});
+
+}
+
+
+
+/* ==============================
+RENDER COLLECTIONS
+============================== */
+
+function renderCollections(type){
+
+let grid = document.getElementById("exploreDeals");
+
+if(!collectionsData[type]){
+
+grid.innerHTML="<p>No collections</p>";
+return;
+
+}
+
+let html="";
+
+collectionsData[type].forEach(item=>{
+
+html += `
+<div class="glass-card">
+
+<div class="card-title">
+${item.icon} ${item.title}
+</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+${item.subtitle}
+</p>
+
+</div>
+`;
+
+});
+
+grid.innerHTML = html;
+
+}
+
+
+
+/* ==============================
+AI SEARCH
+============================== */
+
+const searchBox = document.getElementById("searchBox");
+
+if(searchBox){
+
+searchBox.addEventListener("keyup",function(e){
+
+if(e.key === "Enter"){
+searchProducts();
+}
+
+});
+
+}
+
+
+function searchProducts(){
+
+let query = searchBox.value.toLowerCase();
+
+let results = [];
+
+Object.values(amazonData).forEach(cat=>{
+
+cat.forEach(p=>{
+
+if(p.title.toLowerCase().includes(query)){
+
+results.push(p);
+
+}
+
+});
+
+});
+
+renderSearch(results);
+
+scrollTo("hotDeals");
+
+}
+
+
+
+/* ==============================
+RENDER SEARCH
+============================== */
+
+function renderSearch(products){
+
+let grid = document.getElementById("hotDeals");
+
+let html="";
+
+products.forEach((p,index)=>{
+
+let img = getImage(p.keyword || "product",index);
+
+html += productCard(p,img);
+
+});
+
+grid.innerHTML = html;
+
+}
+
+
+
+/* ==============================
+SCROLL
+============================== */
+
+function scrollTo(id){
+
+let el = document.getElementById(id);
+
+if(!el) return;
+
+window.scrollTo({
+
+top:el.offsetTop - 80,
+behavior:"smooth"
+
+});
+
+}
