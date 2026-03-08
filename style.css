@@ -1,10 +1,16 @@
-/* GLOBAL */
+/* ==============================
+GLOBAL
+============================== */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -14,7 +20,9 @@ overflow-x:hidden;
 }
 
 
-/* HEADER */
+/* ==============================
+HEADER
+============================== */
 
 .app-header{
 position:fixed;
@@ -48,7 +56,9 @@ letter-spacing:.5px;
 }
 
 
-/* DRAWER */
+/* ==============================
+DRAWER
+============================== */
 
 .drawer{
 position:fixed;
@@ -77,6 +87,11 @@ font-size:12px;
 border-bottom:1px solid rgba(255,255,255,.05);
 }
 
+
+/* ==============================
+DRAWER OVERLAY
+============================== */
+
 .drawer-overlay{
 position:fixed;
 top:0;
@@ -93,14 +108,18 @@ display:block;
 }
 
 
-/* MAIN */
+/* ==============================
+MAIN
+============================== */
 
 .main-content{
 padding:70px 12px 70px;
 }
 
 
-/* GLASS CARD */
+/* ==============================
+GLASS CARD
+============================== */
 
 .glass-card{
 border-radius:18px;
@@ -111,7 +130,9 @@ border:1.5px solid rgba(0,255,136,0.28);
 }
 
 
-/* TEXT */
+/* ==============================
+TEXT
+============================== */
 
 .card-title{
 font-size:15px;
@@ -128,7 +149,9 @@ color:#ffffff;
 }
 
 
-/* DIVIDER */
+/* ==============================
+DIVIDER
+============================== */
 
 .theme-divider{
 height:1px;
@@ -143,7 +166,9 @@ background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent)
 }
 
 
-/* CHIP BUTTONS */
+/* ==============================
+CHIP BUTTONS
+============================== */
 
 .brand-wrap{
 display:flex;
@@ -153,7 +178,6 @@ justify-content:center;
 }
 
 .brand{
-position:relative;
 display:inline-flex;
 align-items:center;
 justify-content:center;
@@ -176,7 +200,9 @@ text-shadow:0 1px 2px rgba(0,0,0,.9);
 }
 
 
-/* HERO */
+/* ==============================
+HERO
+============================== */
 
 .category-hero{
 border-radius:20px;
@@ -198,7 +224,9 @@ color:#ffffff;
 }
 
 
-/* BOTTOM NAV */
+/* ==============================
+BOTTOM NAV
+============================== */
 
 .bottom-nav{
 position:fixed;
@@ -230,7 +258,9 @@ font-size:17px;
 }
 
 
-/* GRID */
+/* ==============================
+GRID
+============================== */
 
 .grid{
 display:grid;
@@ -238,8 +268,9 @@ grid-template-columns:repeat(2,1fr);
 gap:10px;
 }
 
+
 /* ==============================
-PRODUCT IMAGE SYSTEM
+PRODUCT IMAGE
 ============================== */
 
 .product-image{
@@ -250,11 +281,16 @@ margin-bottom:8px;
 background-size:cover;
 background-position:center;
 border:1px solid rgba(255,255,255,.1);
+transition:transform .25s ease;
+}
+
+.glass-card:hover .product-image{
+transform:scale(1.04);
 }
 
 
 /* ==============================
-PRODUCT META INFO
+PRODUCT META
 ============================== */
 
 .product-meta{
@@ -299,7 +335,7 @@ margin-top:4px;
 
 
 /* ==============================
-PRODUCT CARD SPACING
+CARD SPACING
 ============================== */
 
 .grid .glass-card{
@@ -310,18 +346,18 @@ padding:12px;
 font-size:13px;
 line-height:1.4;
 margin-bottom:6px;
+min-height:36px;
 }
 
-.product-image{
-transition:transform .25s ease;
-}
 
-.glass-card:hover .product-image{
-transform:scale(1.04);
-}
+/* ==============================
+RESPONSIVE
+============================== */
 
 @media(min-width:768px){
+
 .grid{
 grid-template-columns:repeat(4,1fr);
 }
+
 }
