@@ -68,6 +68,18 @@ let res = await fetch("json/marketplaces.json");
 
 marketplaceData = await res.json();
 
+/* default load */
+
+renderMarketplace("saree");
+
+/* dropdown auto select */
+
+let dropdown=document.getElementById("marketCategory");
+
+if(dropdown){
+dropdown.value="saree";
+}
+
 }
 catch(e){
 
