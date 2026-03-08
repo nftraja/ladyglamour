@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -13,19 +13,22 @@
 
 <body>
 
+
 <div class="drawer-overlay" id="drawerOverlay"></div>
+
 
 <div class="drawer" id="drawer">
 
-<button class="drawer-back" onclick="toggleDrawer()">← Back</button>
+<button class="menu-btn" onclick="toggleDrawer()">← Back</button>
 
-<a href="#">👜 Fashion Accessories</a>
-<a href="#">⌚ Watches</a>
-<a href="#">💄 Beauty Devices</a>
-<a href="#">👟 Footwear</a>
-<a href="#">🎒 Bags</a>
+<a href="#">Fashion Accessories</a>
+<a href="#">Watches</a>
+<a href="#">Beauty</a>
+<a href="#">Footwear</a>
+<a href="#">Bags</a>
 
 </div>
+
 
 
 <header class="app-header">
@@ -39,6 +42,7 @@
 </header>
 
 
+
 <main class="main-content">
 
 
@@ -48,11 +52,7 @@
 
 <div class="theme-divider"></div>
 
-<p>
-
-Discover trending fashion accessories, curated deals and marketplace products.
-
-</p>
+<p>Discover curated Amazon fashion accessories and trending deals.</p>
 
 </div>
 
@@ -60,13 +60,13 @@ Discover trending fashion accessories, curated deals and marketplace products.
 
 <div class="glass-card">
 
-<div class="card-title">🤖 AI Product Search</div>
+<div class="card-title">🤖 AI Search</div>
 
 <div class="theme-divider-b"></div>
 
 <input
 id="searchBox"
-placeholder="Search purse, wallet, handbag"
+placeholder="Search purse, wallet..."
 style="width:100%;padding:10px;border-radius:10px;border:none;"
 >
 
@@ -84,12 +84,17 @@ style="width:100%;padding:10px;border-radius:10px;border:none;"
 
 <a href="#" class="brand" data-cat="purse"
 style="--chip-color:linear-gradient(135deg,#ff4b2b,#ff416c);">
+
 <span>Purses</span>
+
 </a>
+
 
 <a href="#" class="brand" data-cat="wallet"
 style="--chip-color:linear-gradient(135deg,#ff416c,#ff9100);">
+
 <span>Wallets</span>
+
 </a>
 
 </div>
@@ -110,45 +115,7 @@ style="--chip-color:linear-gradient(135deg,#ff416c,#ff9100);">
 
 
 
-<div class="glass-card">
-
-<div class="card-title">🛒 Reseller Deals</div>
-
-<div class="theme-divider-b"></div>
-
-<div class="brand-wrap">
-
-<a href="#" class="brand"
-style="--chip-color:linear-gradient(135deg,#ff3f6c,#ff9100);">
-
-<span>View Deals on Meesho</span>
-
-</a>
-
-<a href="#" class="brand"
-style="--chip-color:linear-gradient(135deg,#ff9800,#ff1744);">
-
-<span>View Deals on GlowRoad</span>
-
-</a>
-
-</div>
-
-</div>
-
-
 </main>
-
-
-
-<div class="bottom-nav">
-
-<a href="#" class="nav-item"><span>🏠</span></a>
-<a href="#" class="nav-item"><span>🏷️</span></a>
-<a href="#" class="nav-item"><span>🛍</span></a>
-
-</div>
-
 
 <script src="app.js"></script>
 
