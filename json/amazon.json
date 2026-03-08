@@ -6,7 +6,7 @@
 "price":"₹299",
 "discount":"70% OFF",
 "colors":"10",
-"keyword":"crossbody purse",
+"image":"https://picsum.photos/seed/purse1/900/506",
 "link":"https://amzn.to/4aWRFYM"
 },
 {
@@ -15,7 +15,7 @@
 "price":"₹499",
 "discount":"50% OFF",
 "colors":"2",
-"keyword":"clutch purse",
+"image":"https://picsum.photos/seed/purse2/900/506",
 "link":"https://amzn.to/4st6RTb"
 },
 {
@@ -24,7 +24,7 @@
 "price":"₹418",
 "discount":"75% OFF",
 "colors":"10",
-"keyword":"women handbag",
+"image":"https://picsum.photos/seed/purse3/900/506",
 "link":"https://amzn.to/4baqkRs"
 },
 {
@@ -33,7 +33,7 @@
 "price":"₹284",
 "discount":"72% OFF",
 "colors":"3",
-"keyword":"sling purse",
+"image":"https://picsum.photos/seed/purse4/900/506",
 "link":"https://amzn.to/4b6UuoQ"
 }
 ],
@@ -45,7 +45,7 @@
 "price":"₹399",
 "discount":"60% OFF",
 "colors":"3",
-"keyword":"leather wallet",
+"image":"https://picsum.photos/seed/wallet1/900/506",
 "link":"https://amzn.to/4swvEG7"
 },
 {
@@ -54,7 +54,7 @@
 "price":"₹449",
 "discount":"55% OFF",
 "colors":"3",
-"keyword":"mens wallet leather",
+"image":"https://picsum.photos/seed/wallet2/900/506",
 "link":"https://amzn.to/40M8lfw"
 },
 {
@@ -63,7 +63,7 @@
 "price":"₹599",
 "discount":"50% OFF",
 "colors":"10",
-"keyword":"leather card wallet",
+"image":"https://picsum.photos/seed/wallet3/900/506",
 "link":"https://amzn.to/4lzlC4V"
 },
 {
@@ -72,7 +72,7 @@
 "price":"₹699",
 "discount":"45% OFF",
 "colors":"5",
-"keyword":"rfid leather wallet",
+"image":"https://picsum.photos/seed/wallet4/900/506",
 "link":"https://amzn.to/4bcENMS"
 }
 ]
