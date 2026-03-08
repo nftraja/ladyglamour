@@ -40,7 +40,7 @@ let res = await fetch("json/amazon.json");
 
 storeData = await res.json();
 
-/* default load */
+/* DEFAULT AMAZON CATEGORY */
 
 renderProducts("purse");
 
@@ -68,13 +68,11 @@ let res = await fetch("json/marketplaces.json");
 
 marketplaceData = await res.json();
 
-/* first category auto load */
+/* FIRST CATEGORY AUTO LOAD */
 
 let firstCat = Object.keys(marketplaceData)[0];
 
 renderMarketplace(firstCat);
-
-activateChip(firstCat);
 
 }
 catch(e){
@@ -226,16 +224,16 @@ scrollToDeals();
 
 
 /* ==============================
-MARKETPLACE CATEGORY CHIPS
+MARKETPLACE DROPDOWN
 ============================== */
 
-const chips = document.querySelectorAll(".cat-chip");
+const marketDropdown = document.getElementById("marketCategory");
 
-chips.forEach(chip=>{
+if(marketDropdown){
 
-chip.addEventListener("click",function(){
+marketDropdown.addEventListener("change",function(){
 
-let cat = this.dataset.cat;
+let cat = this.value;
 
 if(!cat) return;
 
@@ -245,30 +243,7 @@ return;
 
 renderMarketplace(cat);
 
-activateChip(cat);
-
 scrollToMarketplace();
-
-});
-
-});
-
-
-/* ==============================
-CHIP ACTIVE STATE
-============================== */
-
-function activateChip(cat){
-
-document.querySelectorAll(".cat-chip").forEach(chip=>{
-
-chip.classList.remove("active");
-
-if(chip.dataset.cat === cat){
-
-chip.classList.add("active");
-
-}
 
 });
 
