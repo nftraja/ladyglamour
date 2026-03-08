@@ -68,13 +68,18 @@ let res = await fetch("json/marketplaces.json");
 
 marketplaceData = await res.json();
 
-/* FIRST CATEGORY AUTO LOAD */
+/* DEFAULT CATEGORY */
 
-let firstCat = Object.keys(marketplaceData)[0];
+renderMarketplace("fashion");
 
-renderMarketplace(firstCat);
+/* dropdown label update */
 
-updateDropdownText(firstCat);
+const marketSelected = document.getElementById("marketSelected");
+
+if(marketSelected){
+marketSelected.innerHTML =
+'Fashion <span class="dropdown-arrow">⌄</span>';
+}
 
 }
 catch(e){
@@ -86,7 +91,6 @@ console.log("Marketplace JSON error",e);
 }
 
 loadMarketplace();
-
 
 /* ==============================
 PRODUCT CARD
