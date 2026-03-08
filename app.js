@@ -61,33 +61,33 @@ SMART PRODUCT IMAGE ENGINE
 
 function getImage(title,cat,index){
 
-let keyword="fashion";
+let keyword="fashion product";
 
 if(cat==="purse")
-keyword="women purse handbag";
+keyword="women fashion purse handbag";
 
 if(cat==="wallet")
-keyword="leather wallet";
+keyword="leather wallet mens wallet";
 
 if(cat==="handbag")
-keyword="women handbag";
+keyword="women luxury handbag";
 
 if(cat==="watch")
 keyword="luxury wristwatch";
 
 if(cat==="perfume")
-keyword="perfume bottle";
+keyword="luxury perfume bottle";
 
 if(cat==="jewellery")
-keyword="fashion jewellery";
+keyword="fashion jewellery necklace";
 
 let productKeyword = title
 .toLowerCase()
 .split(" ")
-.slice(0,2)
+.slice(0,3)
 .join(",");
 
-return `https://source.unsplash.com/600x400/?${keyword},${productKeyword}&sig=${index}`;
+return `https://source.unsplash.com/900x1200/?${keyword},${productKeyword}&sig=${index}`;
 
 }
 
