@@ -136,18 +136,18 @@ grid.innerHTML=html;
 
 
 /* ==============================
-CATEGORY CLICK
+AMAZON DROPDOWN CATEGORY
 ============================== */
 
-document.querySelectorAll("[data-cat]").forEach(btn=>{
+const amazonDropdown = document.getElementById("amazonCategory");
 
-btn.addEventListener("click",function(e){
+if(amazonDropdown){
 
-e.preventDefault();
+amazonDropdown.addEventListener("change",function(){
 
-let cat=this.dataset.cat;
+let cat = this.value;
 
-/* prevent click before JSON load */
+if(!cat) return;
 
 if(!storeData || Object.keys(storeData).length===0){
 return;
@@ -159,7 +159,7 @@ scrollToDeals();
 
 });
 
-});
+}
 
 
 /* ==============================
