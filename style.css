@@ -275,19 +275,20 @@ PRODUCT IMAGE
 
 .product-image{
 width:100%;
-aspect-ratio:16/9;
+aspect-ratio:4/5;
 border-radius:12px;
 margin-bottom:8px;
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,.1);
 transition:transform .25s ease;
+opacity:0;
 }
 
 .glass-card:hover .product-image{
 transform:scale(1.04);
 }
-
 
 /* ==============================
 PRODUCT META
