@@ -21,10 +21,15 @@ overlay.addEventListener("click",toggleDrawer);
 
 
 /* ==============================
-LOAD JSON
+STORE DATA
 ============================== */
 
 let storeData = {};
+
+
+/* ==============================
+LOAD JSON
+============================== */
 
 async function loadStore(){
 
@@ -33,6 +38,10 @@ try{
 let res = await fetch("json/amazon.json");
 
 storeData = await res.json();
+
+/* default load */
+
+renderProducts("purse");
 
 }
 catch(e){
@@ -104,6 +113,8 @@ function renderProducts(cat){
 
 let grid = document.getElementById("hotDeals");
 
+if(!grid) return;
+
 if(!storeData[cat]){
 
 grid.innerHTML="<p>No products available</p>";
@@ -135,6 +146,12 @@ btn.addEventListener("click",function(e){
 e.preventDefault();
 
 let cat=this.dataset.cat;
+
+/* prevent click before JSON load */
+
+if(!storeData || Object.keys(storeData).length===0){
+return;
+}
 
 renderProducts(cat);
 
@@ -185,6 +202,7 @@ searchProducts();
 
 }
 
+
 function searchProducts(){
 
 let query=searchBox.value.toLowerCase();
@@ -209,9 +227,21 @@ renderSearch(results);
 
 }
 
+
+/* ==============================
+RENDER SEARCH RESULTS
+============================== */
+
 function renderSearch(products){
 
 let grid=document.getElementById("hotDeals");
+
+if(!products.length){
+
+grid.innerHTML="<p>No products found</p>";
+return;
+
+}
 
 let html="";
 
