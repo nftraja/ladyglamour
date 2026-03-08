@@ -1,49 +1,38 @@
+"fashion":[
 {
-"saree":[
-{
-"id":"saree1",
-"title":"Elegant Banarasi Silk Saree",
-"price":"₹499",
-"discount":"60% OFF",
-"colors":"5",
-"image":"https://via.placeholder.com/800x800.png?text=Saree+Product",
-"link":"#"
-}
-],
-
-"kurta":[
-{
-"id":"kurta1",
+"id":"fashion1",
 "title":"Women Printed Anarkali Kurta",
 "price":"₹340",
 "discount":"74% OFF",
 "colors":"4",
 "image":"https://rukminim2.flixcart.com/image/832/832/xif0q/kurta/b/y/b/m-yc-001-anarkali-kurta-vaday-original-imah3kekchkgf44y.jpeg?q=90",
 "link":"https://fktr.in/7xgI79s"
-}
-],
-
-"jeans":[
+},
 {
-"id":"jeans1",
-"title":"Women Stylish Blue Denim Jeans",
+"id":"fashion2",
+"title":"Women Casual Denim Jeans",
 "price":"₹599",
 "discount":"55% OFF",
 "colors":"3",
-"image":"https://via.placeholder.com/800x800.png?text=Jeans",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/jean/u/d/l/28-women-jeans-levi-original-imagxyz.jpeg?q=90",
 "link":"#"
-}
-],
-
-"tshirt":[
+},
 {
-"id":"tshirt1",
-"title":"Women Casual Cotton Tshirt",
+"id":"fashion3",
+"title":"Women Floral Summer Dress",
+"price":"₹499",
+"discount":"60% OFF",
+"colors":"4",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/dress/k/w/j/m-women-dress-fashion-original-imagxyz.jpeg?q=90",
+"link":"#"
+},
+{
+"id":"fashion4",
+"title":"Women Cotton Printed Top",
 "price":"₹299",
 "discount":"50% OFF",
-"colors":"4",
-"image":"https://via.placeholder.com/800x800.png?text=Tshirt",
+"colors":"6",
+"image":"https://rukminim2.flixcart.com/image/832/832/xif0q/top/x/y/z/women-top-fashion-original-imagxyz.jpeg?q=90",
 "link":"#"
 }
 ]
-}
