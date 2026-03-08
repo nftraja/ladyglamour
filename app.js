@@ -74,6 +74,8 @@ let firstCat = Object.keys(marketplaceData)[0];
 
 renderMarketplace(firstCat);
 
+updateDropdownText(firstCat);
+
 }
 catch(e){
 
@@ -224,30 +226,71 @@ scrollToDeals();
 
 
 /* ==============================
-MARKETPLACE DROPDOWN
+CUSTOM MARKETPLACE DROPDOWN
 ============================== */
 
-const marketDropdown = document.getElementById("marketCategory");
+const selectedBox = document.getElementById("marketSelected");
+const dropdownList = document.getElementById("marketDropdown");
+const dropdownItems = document.querySelectorAll(".dropdown-item");
 
-if(marketDropdown){
 
-marketDropdown.addEventListener("change",function(){
+/* OPEN CLOSE */
 
-let cat = this.value;
+if(selectedBox){
 
-if(!cat) return;
+selectedBox.addEventListener("click",function(){
 
-if(!marketplaceData || Object.keys(marketplaceData).length===0){
-return;
+dropdownList.classList.toggle("active");
+
+});
+
 }
 
+
+/* SELECT CATEGORY */
+
+dropdownItems.forEach(item=>{
+
+item.addEventListener("click",function(){
+
+let cat = this.dataset.cat;
+
 renderMarketplace(cat);
+
+updateDropdownText(cat);
+
+dropdownList.classList.remove("active");
 
 scrollToMarketplace();
 
 });
 
+});
+
+
+/* UPDATE DROPDOWN TEXT */
+
+function updateDropdownText(cat){
+
+let label = cat.charAt(0).toUpperCase() + cat.slice(1);
+
+selectedBox.innerHTML =
+label + ' <span class="dropdown-arrow">⌄</span>';
+
 }
+
+
+/* CLOSE DROPDOWN OUTSIDE CLICK */
+
+document.addEventListener("click",function(e){
+
+if(!e.target.closest(".custom-dropdown")){
+
+dropdownList.classList.remove("active");
+
+}
+
+});
 
 
 /* ==============================
