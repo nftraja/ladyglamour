@@ -87,10 +87,6 @@ font-size:12px;
 border-bottom:1px solid rgba(255,255,255,.05);
 }
 
-.drawer a:hover{
-background:rgba(0,255,136,.08);
-}
-
 
 /* ==============================
 DRAWER OVERLAY
@@ -133,11 +129,6 @@ padding:16px;
 margin-bottom:12px;
 background:rgba(255,255,255,0.04);
 border:1.5px solid rgba(0,255,136,0.28);
-transition:transform .2s ease;
-}
-
-.glass-card:hover{
-transform:translateY(-2px);
 }
 
 
@@ -209,12 +200,6 @@ inset 0 -4px 8px rgba(0,0,0,.6);
 
 border:1px solid rgba(255,255,255,.35);
 text-shadow:0 1px 2px rgba(0,0,0,.9);
-
-transition:transform .15s ease;
-}
-
-.brand:hover{
-transform:translateY(-2px);
 }
 
 
@@ -243,41 +228,6 @@ color:#ffffff;
 
 
 /* ==============================
-BOTTOM NAV
-============================== */
-
-.bottom-nav{
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-height:55px;
-backdrop-filter:blur(12px);
-display:flex;
-justify-content:space-around;
-align-items:center;
-border-top:1px solid rgba(0,255,136,0.28);
-z-index:200;
-background:rgba(0,0,0,.5);
-}
-
-.bottom-nav a{
-color:gold;
-text-decoration:none;
-}
-
-.nav-item{
-text-align:center;
-font-size:11px;
-}
-
-.nav-item span{
-display:block;
-font-size:17px;
-}
-
-
-/* ==============================
 GRID
 ============================== */
 
@@ -289,23 +239,18 @@ gap:10px;
 
 
 /* ==============================
-PRODUCT IMAGE
+PRODUCT IMAGE (16:9)
 ============================== */
 
 .product-image{
 width:100%;
-aspect-ratio:4/5;
+aspect-ratio:16/9;
 border-radius:12px;
 margin-bottom:8px;
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,.1);
-transition:transform .25s ease;
-}
-
-.glass-card:hover .product-image{
-transform:scale(1.04);
 }
 
 
@@ -335,22 +280,6 @@ font-weight:700;
 .product-colors{
 font-size:12px;
 color:#cccccc;
-}
-
-
-/* ==============================
-DEAL BADGE
-============================== */
-
-.discount-badge{
-display:inline-block;
-padding:3px 8px;
-border-radius:6px;
-background:#ff416c;
-color:#fff;
-font-size:11px;
-font-weight:700;
-margin-top:4px;
 }
 
 
