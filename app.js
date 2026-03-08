@@ -1,40 +1,83 @@
+/* ==============================
+LadyGlamour Core Script
+============================== */
+
+
+/* ==============================
+DRAWER SYSTEM
+============================== */
+
 const drawer = document.getElementById("drawer");
 const overlay = document.getElementById("drawerOverlay");
 
 function toggleDrawer(){
+
 drawer.classList.toggle("active");
 overlay.classList.toggle("active");
+
+document.body.style.overflow =
+drawer.classList.contains("active") ? "hidden" : "";
+
 }
 
+if(overlay){
 overlay.addEventListener("click",toggleDrawer);
+}
 
 
-let storeData={};
+/* ==============================
+JSON PRODUCT STORE
+============================== */
+
+let storeData = {};
 
 async function loadStore(){
 
-let res=await fetch("json/amazon.json");
-storeData=await res.json();
+try{
+
+let res = await fetch("json/amazon.json");
+
+storeData = await res.json();
+
+}
+catch(e){
+
+console.log("JSON load error",e);
+
+}
 
 }
 
 loadStore();
 
 
+/* ==============================
+IMAGE ENGINE (Stable CDN)
+============================== */
+
 function getImage(keyword,index){
 
-return `https://images.unsplash.com/photo-1503342217505-b0a15cf70489?auto=format&fit=crop&w=900&q=60&${keyword}&sig=${index}`;
+let seed = keyword.replace(/\s+/g,"") + index;
+
+return `https://picsum.photos/seed/${seed}/900/506`;
 
 }
 
 
+/* ==============================
+PRODUCT CARD
+============================== */
+
 function productCard(p,img){
 
 return `
+
 <div class="glass-card">
 
 <div class="product-image"
-style="background-image:url('${img}')">
+style="background-image:url('${img}')"
+role="img"
+aria-label="${p.title}">
 </div>
 
 <div class="card-title">${p.title}</div>
@@ -42,33 +85,56 @@ style="background-image:url('${img}')">
 <div class="theme-divider-b"></div>
 
 <div class="product-meta">
+
 <div class="product-price">${p.price}</div>
+
 <div class="product-discount">${p.discount}</div>
-<div class="product-colors">Colors Available: ${p.colors}</div>
+
+<div class="product-colors">
+Colors Available: ${p.colors}
+</div>
+
 </div>
 
 <div class="brand-wrap">
+
 <a href="${p.link}" target="_blank"
 class="brand"
 style="--chip-color:#ff9900;">
-View Deal
+
+<span>View Deal</span>
+
 </a>
+
 </div>
 
 </div>
+
 `;
+
 }
 
 
+/* ==============================
+RENDER PRODUCTS
+============================== */
+
 function renderProducts(cat){
 
-let grid=document.getElementById("hotDeals");
+let grid = document.getElementById("hotDeals");
+
+if(!storeData[cat]){
+
+grid.innerHTML="<p>No products available</p>";
+return;
+
+}
 
 let html="";
 
 storeData[cat].forEach((p,index)=>{
 
-let img=getImage(p.keyword,index);
+let img = getImage(p.keyword,index);
 
 html+=productCard(p,img);
 
@@ -79,9 +145,20 @@ grid.innerHTML=html;
 }
 
 
+/* ==============================
+CATEGORY CLICK
+============================== */
+
 document.querySelectorAll("[data-cat]").forEach(btn=>{
+
 btn.addEventListener("click",function(e){
+
 e.preventDefault();
-renderProducts(this.dataset.cat);
+
+let cat=this.dataset.cat;
+
+renderProducts(cat);
+
 });
+
 });
