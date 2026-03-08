@@ -1,9 +1,4 @@
 /* ==============================
-LadyGlamour Core Script
-============================== */
-
-
-/* ==============================
 DRAWER SYSTEM
 ============================== */
 
@@ -26,92 +21,43 @@ overlay.addEventListener("click",toggleDrawer);
 
 
 /* ==============================
-STORE DATA
+LOAD JSON
 ============================== */
 
-let amazonData = {};
-let meeshoData = {};
-let glowroadData = {};
-let collectionsData = {};
-
-
-/* ==============================
-LOAD JSON DATA
-============================== */
+let storeData = {};
 
 async function loadStore(){
 
 try{
 
-const amazon = await fetch("json/amazon.json");
-amazonData = await amazon.json();
+let res = await fetch("json/amazon.json");
 
-}catch(e){
-console.log("Amazon JSON error",e);
+storeData = await res.json();
+
 }
+catch(e){
 
-try{
+console.log("JSON load error",e);
 
-const meesho = await fetch("json/meesho.json");
-meeshoData = await meesho.json();
-
-}catch(e){
-console.log("Meesho JSON error",e);
 }
-
-try{
-
-const glow = await fetch("json/glowroad.json");
-glowroadData = await glow.json();
-
-}catch(e){
-console.log("Glowroad JSON error",e);
-}
-
-try{
-
-const col = await fetch("json/collections.json");
-collectionsData = await col.json();
-
-}catch(e){
-console.log("Collections JSON error",e);
-}
-
-initButtons();
 
 }
 
 loadStore();
 
 
-
-/* ==============================
-IMAGE ENGINE
-============================== */
-
-function getImage(keyword,index){
-
-let k = keyword.replace(/\s+/g,"");
-
-return `https://picsum.photos/seed/${k}${index}/900/506`;
-
-}
-
-
-
 /* ==============================
 PRODUCT CARD
 ============================== */
 
-function productCard(p,img){
+function productCard(p){
 
 return `
+
 <div class="glass-card">
 
 <div class="product-image"
-style="background-image:url('${img}')"
-role="img"
-aria-label="${p.title}">
+style="background-image:url('${p.image}')">
 </div>
 
 <div class="card-title">${p.title}</div>
@@ -122,10 +68,10 @@ aria-label="${p.title}">
 
 <div class="product-price">${p.price}</div>
 
-<div class="product-discount">${p.discount || ""}</div>
+<div class="product-discount">${p.discount}</div>
 
 <div class="product-colors">
-Colors: ${p.colors || "-"}
+Colors: ${p.colors}
 </div>
 
 </div>
@@ -144,21 +90,21 @@ style="--chip-color:#ff9900;">
 </div>
 
 </div>
+
 `;
 
 }
-
 
 
 /* ==============================
 RENDER PRODUCTS
 ============================== */
 
-function renderProducts(data,cat,gridId){
+function renderProducts(cat){
 
-let grid = document.getElementById(gridId);
+let grid = document.getElementById("hotDeals");
 
-if(!data[cat]){
+if(!storeData[cat]){
 
 grid.innerHTML="<p>No products available</p>";
 return;
@@ -167,27 +113,20 @@ return;
 
 let html="";
 
-data[cat].forEach((p,index)=>{
+storeData[cat].forEach(p=>{
 
-let img = getImage(p.keyword || "fashion product",index);
-
-html += productCard(p,img);
+html+=productCard(p);
 
 });
 
-grid.innerHTML = html;
+grid.innerHTML=html;
 
 }
 
 
-
 /* ==============================
-CATEGORY BUTTONS
+CATEGORY CLICK
 ============================== */
-
-function initButtons(){
-
-/* AMAZON */
 
 document.querySelectorAll("[data-cat]").forEach(btn=>{
 
@@ -195,127 +134,64 @@ btn.addEventListener("click",function(e){
 
 e.preventDefault();
 
-let cat = this.dataset.cat;
+let cat=this.dataset.cat;
 
-renderProducts(amazonData,cat,"hotDeals");
+renderProducts(cat);
 
-scrollTo("hotDeals");
-
-});
-
-});
-
-
-/* LIVE DEALS */
-
-document.querySelectorAll("[data-deal]").forEach(btn=>{
-
-btn.addEventListener("click",function(e){
-
-e.preventDefault();
-
-let cat = this.dataset.deal;
-
-renderProducts(amazonData,cat,"liveDeals");
-
-scrollTo("liveDeals");
+scrollToDeals();
 
 });
 
 });
-
-
-/* COLLECTIONS */
-
-document.querySelectorAll("[data-nav]").forEach(btn=>{
-
-btn.addEventListener("click",function(e){
-
-e.preventDefault();
-
-let type = this.dataset.nav;
-
-renderCollections(type);
-
-scrollTo("exploreDeals");
-
-});
-
-});
-
-}
-
 
 
 /* ==============================
-RENDER COLLECTIONS
+SCROLL
 ============================== */
 
-function renderCollections(type){
+function scrollToDeals(){
 
-let grid = document.getElementById("exploreDeals");
+let target=document.getElementById("hotDeals");
 
-if(!collectionsData[type]){
+if(!target) return;
 
-grid.innerHTML="<p>No collections</p>";
-return;
+window.scrollTo({
 
-}
-
-let html="";
-
-collectionsData[type].forEach(item=>{
-
-html += `
-<div class="glass-card">
-
-<div class="card-title">
-${item.icon} ${item.title}
-</div>
-
-<div class="theme-divider-b"></div>
-
-<p class="card-text">
-${item.subtitle}
-</p>
-
-</div>
-`;
+top:target.offsetTop-80,
+behavior:"smooth"
 
 });
 
-grid.innerHTML = html;
-
 }
 
 
-
 /* ==============================
-AI SEARCH
+SEARCH
 ============================== */
 
-const searchBox = document.getElementById("searchBox");
+const searchBox=document.getElementById("searchBox");
 
 if(searchBox){
 
 searchBox.addEventListener("keyup",function(e){
 
-if(e.key === "Enter"){
+if(e.key==="Enter"){
+
 searchProducts();
+
 }
 
 });
 
 }
 
-
 function searchProducts(){
 
-let query = searchBox.value.toLowerCase();
+let query=searchBox.value.toLowerCase();
 
-let results = [];
+let results=[];
 
-Object.values(amazonData).forEach(cat=>{
+Object.values(storeData).forEach(cat=>{
 
 cat.forEach(p=>{
 
@@ -331,51 +207,20 @@ results.push(p);
 
 renderSearch(results);
 
-scrollTo("hotDeals");
-
 }
-
-
-
-/* ==============================
-RENDER SEARCH
-============================== */
 
 function renderSearch(products){
 
-let grid = document.getElementById("hotDeals");
+let grid=document.getElementById("hotDeals");
 
 let html="";
 
-products.forEach((p,index)=>{
+products.forEach(p=>{
 
-let img = getImage(p.keyword || "product",index);
-
-html += productCard(p,img);
+html+=productCard(p);
 
 });
 
-grid.innerHTML = html;
-
-}
-
-
-
-/* ==============================
-SCROLL
-============================== */
-
-function scrollTo(id){
-
-let el = document.getElementById(id);
-
-if(!el) return;
-
-window.scrollTo({
-
-top:el.offsetTop - 80,
-behavior:"smooth"
-
-});
+grid.innerHTML=html;
 
 }
