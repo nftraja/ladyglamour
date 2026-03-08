@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>LadyGlamour Smart Deals</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<!-- DRAWER OVERLAY -->
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+
+<!-- DRAWER -->
+
+<div class="drawer" id="drawer">
+
+<button class="drawer-back" onclick="toggleDrawer()">← Back</button>
+
+<a href="#">👜 Fashion Accessories</a>
+<a href="#">⌚ Watches</a>
+<a href="#">💄 Beauty Devices</a>
+<a href="#">👟 Footwear</a>
+<a href="#">🎒 Bags & Organizers</a>
+<a href="#">🧳 Travel Gear</a>
+<a href="#">🏠 Home Essentials</a>
+<a href="#">🎁 Gift Ideas</a>
+
+</div>
+
+
+
+<!-- HEADER -->
+
+<header class="app-header">
+
+<button class="menu-btn" onclick="toggleDrawer()">☰</button>
+
+<div class="logo">🛍 LadyGlamour</div>
+
+<div class="header-icons">🏷️</div>
+
+</header>
+
+
+
+<!-- MAIN CONTENT -->
+
+<main class="main-content">
+
+
+<!-- HERO -->
+
+<div class="category-hero">
+
+<h1>🔥 Smart Deals For Women</h1>
+
+<div class="theme-divider"></div>
+
+<p>
+Discover trending fashion accessories, smart gadgets and curated marketplace deals from Amazon and reseller platforms.
+</p>
+
+</div>
+
+
+
+<!-- AI ASSISTANT -->
+
+<div class="glass-card">
+
+<div class="card-title">🤖 Coming Soon - AI Assistant</div>
+
+<div class="theme-divider-b"></div>
+
+<input
+id="searchBox"
+placeholder="Search product like purse, wallet, smartwatch"
+style="width:100%;padding:10px;border-radius:10px;border:none;"
+>
+
+</div>
+
+
+
+<!-- AMAZON WOMEN PICKS -->
+
+<div class="glass-card">
+
+<div class="card-title">💄 Amazon Women Style Picks</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+
+Explore trending fashion accessories including stylish purses, wallets, handbags and perfumes curated for the LadyGlamour store.
+
+</p>
+
+<div class="theme-divider-b"></div>
+
+<div class="brand-wrap">
+
+<a href="#" class="brand" data-cat="purse"
+style="--chip-color:linear-gradient(135deg,#ff4b2b,#ff416c);">
+<span>Purses</span>
+</a>
+
+<a href="#" class="brand" data-cat="wallet"
+style="--chip-color:linear-gradient(135deg,#ff416c,#ff9100);">
+<span>Wallets</span>
+</a>
+
+<a href="#" class="brand" data-cat="handbag"
+style="--chip-color:linear-gradient(135deg,#ff1744,#ff6f00);">
+<span>Handbags</span>
+</a>
+
+<a href="#" class="brand" data-cat="watch"
+style="--chip-color:linear-gradient(135deg,#2962ff,#00c853);">
+<span>Watches</span>
+</a>
+
+<a href="#" class="brand" data-cat="perfume"
+style="--chip-color:linear-gradient(135deg,#7b1fa2,#ec407a);">
+<span>Perfumes</span>
+</a>
+
+<a href="#" class="brand" data-cat="footwear"
+style="--chip-color:linear-gradient(135deg,#00c853,#26c6da);">
+<span>Footwears</span>
+</a>
+
+<a href="#" class="brand" data-cat="eyewear"
+style="--chip-color:linear-gradient(135deg,#ff9100,#ff1744);">
+<span>Eyewears</span>
+</a>
+
+<a href="#" class="brand" data-cat="jewellery"
+style="--chip-color:linear-gradient(135deg,#ab47bc,#7b1fa2);">
+<span>Jewellery</span>
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- AMAZON PRODUCTS -->
+
+<div class="glass-card">
+
+<div class="card-title">🛍 Amazon Deals</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="grid" id="hotDeals"></div>
+
+</div>
+
+
+
+<!-- SHOP101 STORE -->
+
+<div class="glass-card">
+
+<div class="card-title">🏬 Shop101 Store</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+
+Browse our external reseller store for curated handbags, purses and trending fashion accessories.
+
+</p>
+
+<div class="theme-divider-b"></div>
+
+<div class="brand-wrap">
+
+<a
+href="SHOP101_STORE_LINK"
+target="_blank"
+class="brand"
+style="--chip-color:linear-gradient(135deg,#ff6f00,#ff1744);"
+>
+
+<span>Visit Shop101 Store</span>
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DROPSHIPPING DEALS -->
+
+<div class="glass-card">
+
+<div class="card-title">🛒 Reseller Deals</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+
+Explore trending deals from reseller platforms like Meesho and GlowRoad.
+
+</p>
+
+<div class="theme-divider-b"></div>
+
+<div class="brand-wrap">
+
+<a href="#" class="brand" data-store="meesho"
+style="--chip-color:linear-gradient(135deg,#ff3f6c,#ff9100);">
+<span>View Deals on Meesho</span>
+</a>
+
+<a href="#" class="brand" data-store="glowroad"
+style="--chip-color:linear-gradient(135deg,#ff9800,#ff1744);">
+<span>View Deals on GlowRoad</span>
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- LIVE DEAL ENGINE -->
+
+<div class="glass-card">
+
+<div class="card-title">🔥 Live Marketplace Deals</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="brand-wrap">
+
+<a href="javascript:void(0)" class="brand" data-deal="electronics"
+style="--chip-color:linear-gradient(135deg,#2962ff,#00c853);">
+<span>Electronics</span>
+</a>
+
+<a href="javascript:void(0)" class="brand" data-deal="fashion"
+style="--chip-color:linear-gradient(135deg,#ff4b2b,#ff416c);">
+<span>Fashion</span>
+</a>
+
+<a href="javascript:void(0)" class="brand" data-deal="home"
+style="--chip-color:linear-gradient(135deg,#ff9100,#ff1744);">
+<span>Home</span>
+</a>
+
+<a href="javascript:void(0)" class="brand" data-deal="beauty"
+style="--chip-color:linear-gradient(135deg,#7b1fa2,#ec407a);">
+<span>Beauty</span>
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- LIVE DEAL RENDER -->
+
+<div class="glass-card">
+
+<div class="card-title">⚡ Trending Deals</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="grid" id="liveDeals"></div>
+
+</div>
+
+
+
+<!-- EXPLORE -->
+
+<div class="glass-card">
+
+<div class="card-title">📂 Explore</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="brand-wrap">
+
+<a href="#" class="brand" data-nav="collections"
+style="--chip-color:linear-gradient(135deg,#ec407a,#ff1744);">
+<span>Collections</span>
+</a>
+
+<a href="#" class="brand" data-nav="categories"
+style="--chip-color:linear-gradient(135deg,#2962ff,#26c6da);">
+<span>Categories</span>
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- EXPLORE RENDER -->
+
+<div class="glass-card">
+
+<div class="card-title">📁 Explore Sections</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="grid" id="exploreDeals"></div>
+
+</div>
+
+
+
+<!-- NFTRAJA -->
+
+<div class="glass-card">
+
+<div class="card-title">🌐 NFTRaja Ecosystem</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+
+Explore digital tools, creative galleries and the broader NFTRaja ecosystem.
+
+</p>
+
+<div class="theme-divider-b"></div>
+
+<div class="brand-wrap">
+
+<a href="#" class="brand"
+style="--chip-color:linear-gradient(135deg,#ff416c,#ff4b2b);">
+<span>🔥 Tools</span>
+</a>
+
+<a href="#" class="brand"
+style="--chip-color:linear-gradient(135deg,#00c853,#26c6da);">
+<span>📂 Gallery</span>
+</a>
+
+<a href="#" class="brand"
+style="--chip-color:linear-gradient(135deg,#7b1fa2,#ab47bc);">
+<span>🎨 Digital Art</span>
+</a>
+
+<a href="#" class="brand"
+style="--chip-color:linear-gradient(135deg,#ff9100,#ff1744);">
+<span>📖 Blog</span>
+</a>
+
+</div>
+
+</div>
+
+
+</main>
+
+
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom-nav">
+
+<a href="#" class="nav-item"><span>🏠</span></a>
+<a href="#" class="nav-item"><span>🏷️</span></a>
+<a href="#" class="nav-item"><span>🛍</span></a>
+<a href="#" class="nav-item"><span>📖</span></a>
+
+</div>
+
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
