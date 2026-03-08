@@ -237,7 +237,7 @@ return;
 
 renderMarketplace(cat);
 
-scrollToDeals();
+scrollToMarketplace();
 
 });
 
@@ -245,12 +245,32 @@ scrollToDeals();
 
 
 /* ==============================
-SCROLL
+SCROLL AMAZON
 ============================== */
 
 function scrollToDeals(){
 
 let target=document.getElementById("hotDeals");
+
+if(!target) return;
+
+window.scrollTo({
+
+top:target.offsetTop-80,
+behavior:"smooth"
+
+});
+
+}
+
+
+/* ==============================
+SCROLL MARKETPLACE
+============================== */
+
+function scrollToMarketplace(){
+
+let target=document.getElementById("marketDeals");
 
 if(!target) return;
 
