@@ -1,30 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
 <title>LadyGlamour Smart Deals</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
-
 <!-- DRAWER OVERLAY -->
-
 <div class="drawer-overlay" id="drawerOverlay"></div>
 
-
 <!-- DRAWER MENU -->
-
 <div class="drawer" id="drawer">
-
 <button class="menu-btn" onclick="toggleDrawer()">← Back</button>
-
 <a href="#">Fashion Accessories</a>
 <a href="#">Watches</a>
 <a href="#">Beauty</a>
@@ -32,284 +21,187 @@
 <a href="#">Bags</a>
 <a href="#">Collections</a>
 <a href="#">Deals</a>
-
 </div>
 
-
-
 <!-- HEADER -->
-
 <header class="app-header">
-
 <button class="menu-btn" onclick="toggleDrawer()">☰</button>
-
 <div class="logo">🛍 LadyGlamour</div>
-
 <div class="header-icons">🏷️</div>
-
 </header>
 
-
-
 <!-- MAIN CONTENT -->
-
 <main class="main-content">
 
-
 <!-- HERO -->
-
 <div class="category-hero">
-
 <h1>🔥 Smart Deals For Women</h1>
-
 <div class="theme-divider"></div>
-
 <p>
 Discover curated Amazon fashion accessories, reseller products and trending marketplace deals.
 </p>
-
 </div>
 
-
-
 <!-- AI ASSISTANT -->
-
 <div class="glass-card">
-
 <div class="card-title">🤖 AI Assistant</div>
-
 <div class="theme-divider-b"></div>
-
 <p class="card-text">
 Coming soon: Ask the AI assistant to find trending deals, products and fashion accessories.
 </p>
-
 </div>
 
-
-
 <!-- AI SEARCH -->
-
 <div class="glass-card">
-
 <div class="card-title">🔎 AI Product Search</div>
-
 <div class="theme-divider-b"></div>
-
 <input
 id="searchBox"
 placeholder="Search purse, wallet, smartwatch..."
-style="width:100%;padding:10px;border-radius:10px;border:none;"
->
-
+style="width:100%;padding:10px;border-radius:10px;border:none;">
 </div>
-
-
 
 <!-- AMAZON PICKS (DROPDOWN VERSION) -->
-
 <div class="glass-card">
-
 <div class="card-title">💄 Amazon Women Style Picks</div>
-
 <div class="theme-divider-b"></div>
-
 <select id="amazonCategory" class="category-select">
-
 <option value="">Select Category</option>
-
 <option value="purse">Purses</option>
-
 <option value="wallet">Wallets</option>
-
 </select>
-
 </div>
-
-
 
 <!-- AMAZON PRODUCTS -->
-
 <div class="glass-card">
-
 <div class="card-title">🛍 Amazon Deals</div>
-
 <div class="theme-divider-b"></div>
-
 <div class="grid" id="hotDeals"></div>
-
 </div>
 
+<!-- MEESHO PICKS -->
+<div class="glass-card">
+<div class="card-title">🛒 Meesho Style Picks</div>
+<div class="theme-divider-b"></div>
+<select id="meeshoCategory" class="category-select">
+<option value="">Select Category</option>
+<option value="saree">Sarees</option>
+<option value="kurti">Kurtis</option>
+</select>
+</div>
 
+<!-- MEESHO PRODUCTS -->
+<div class="glass-card">
+<div class="card-title">🛒 Meesho Deals</div>
+<div class="theme-divider-b"></div>
+<div class="grid" id="meeshoDeals"></div>
+</div>
 
 <!-- LIVE DEALS -->
-
 <div class="glass-card">
-
 <div class="card-title">🔥 Live Marketplace Deals</div>
-
 <div class="theme-divider-b"></div>
-
 <div class="brand-wrap">
-
 <a href="#" class="brand"
 data-deal="electronics"
 style="--chip-color:#2962ff;">
 <span>Electronics</span>
 </a>
-
 <a href="#" class="brand"
 data-deal="fashion"
 style="--chip-color:#ec407a;">
 <span>Fashion</span>
 </a>
-
 <a href="#" class="brand"
 data-deal="home"
 style="--chip-color:#ff9100;">
 <span>Home</span>
 </a>
-
 <a href="#" class="brand"
 data-deal="beauty"
 style="--chip-color:#7b1fa2;">
 <span>Beauty</span>
 </a>
-
 </div>
-
 </div>
-
-
 
 <!-- LIVE DEAL GRID -->
-
 <div class="glass-card">
-
 <div class="card-title">⚡ Trending Deals</div>
-
 <div class="theme-divider-b"></div>
-
 <div class="grid" id="liveDeals"></div>
-
 </div>
-
-
 
 <!-- MEESHO PRODUCTS -->
-
 <div class="glass-card">
-
 <div class="card-title">🛒 Meesho Deals</div>
-
 <div class="theme-divider-b"></div>
-
 <div class="grid" id="meeshoDeals"></div>
-
 </div>
-
-
 
 <!-- GLOWROAD PRODUCTS -->
-
 <div class="glass-card">
-
 <div class="card-title">🛍 GlowRoad Deals</div>
-
 <div class="theme-divider-b"></div>
-
 <div class="grid" id="glowroadDeals"></div>
-
 </div>
 
-
-
 <!-- COLLECTIONS -->
-
 <div class="glass-card">
-
 <div class="card-title">📦 Collections</div>
-
 <div class="theme-divider-b"></div>
-
 <div class="brand-wrap">
-
 <a href="#" class="brand"
 data-nav="collections"
 style="--chip-color:#ec407a;">
 <span>Fashion Picks</span>
 </a>
-
 <a href="#" class="brand"
 data-nav="collections"
 style="--chip-color:#26c6da;">
 <span>Travel Gear</span>
 </a>
-
 <a href="#" class="brand"
 data-nav="collections"
 style="--chip-color:#ff9100;">
 <span>Gift Ideas</span>
 </a>
-
 </div>
-
 </div>
-
-
 
 <!-- EXPLORE SECTION -->
-
 <div class="glass-card">
-
 <div class="card-title">📂 Explore</div>
-
 <div class="theme-divider-b"></div>
-
 <div class="brand-wrap">
-
 <a href="#" class="brand"
 style="--chip-color:#ff416c;">
 <span>🔥 Trending</span>
 </a>
-
 <a href="#" class="brand"
 style="--chip-color:#00c853;">
 <span>📦 New Products</span>
 </a>
-
 <a href="#" class="brand"
 style="--chip-color:#7b1fa2;">
 <span>💡 Gadgets</span>
 </a>
-
 <a href="#" class="brand"
 style="--chip-color:#ff9100;">
 <span>🎁 Gifts</span>
 </a>
-
 </div>
-
 </div>
-
-
 
 </main>
 
-
-
 <!-- BOTTOM NAV -->
-
 <div class="bottom-nav">
-
 <a href="#" class="nav-item"><span>🏠</span></a>
 <a href="#" class="nav-item"><span>🏷️</span></a>
 <a href="#" class="nav-item"><span>🛍</span></a>
 <a href="#" class="nav-item"><span>📖</span></a>
-
 </div>
-
-
 
 <script src="app.js"></script>
 
