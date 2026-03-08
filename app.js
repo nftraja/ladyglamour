@@ -56,14 +56,18 @@ loadStore();
 
 
 /* ==============================
-UNSPLASH IMAGE SYSTEM
+SMART IMAGE SYSTEM
 ============================== */
 
-function getImage(title){
+function getImage(cat){
 
-let keyword = title.split(" ")[0];
+if(cat==="purse")
+return "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=60";
 
-return "https://source.unsplash.com/600x400/?"+keyword;
+if(cat==="wallet")
+return "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=60";
+
+return "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=60";
 
 }
 
@@ -88,7 +92,7 @@ let html="";
 
 storeData[cat].forEach(p=>{
 
-let img = getImage(p.title);
+let img = getImage(cat);
 
 html+=`
 
@@ -200,8 +204,6 @@ searchProducts();
 
 }
 
-
-
 function searchProducts(){
 
 let query=searchBox.value.toLowerCase();
@@ -242,14 +244,12 @@ let html="";
 
 products.forEach(p=>{
 
-let img = getImage(p.title);
-
 html+=`
 
 <div class="glass-card">
 
 <div class="product-image"
-style="background-image:url('${img}')"></div>
+style="background-image:url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=60')"></div>
 
 <div class="card-title">${p.title}</div>
 
@@ -345,7 +345,6 @@ if(!cat) return;
 if(storeData[cat]){
 
 renderProducts(cat);
-
 scrollToDeals();
 
 }
