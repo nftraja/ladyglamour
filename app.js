@@ -36,7 +36,7 @@ async function loadStore(){
 
 try{
 
-let res = await fetch("json/products.json");
+let res = await fetch("json/amazon.json");
 storeData = await res.json();
 
 loadSharedProduct();
@@ -52,6 +52,18 @@ console.log("JSON load error",e);
 }
 
 loadStore();
+
+
+
+/* ==============================
+UNSPLASH IMAGE ENGINE
+============================== */
+
+function getImage(keyword){
+
+return `https://source.unsplash.com/600x338/?${encodeURIComponent(keyword)}`;
+
+}
 
 
 
@@ -74,17 +86,30 @@ let html="";
 
 storeData[cat].forEach(p=>{
 
+let img=getImage(p.keyword || p.title);
+
 html+=`
 
 <div class="glass-card">
+
+<div class="product-image"
+style="background-image:url('${img}')"></div>
 
 <div class="card-title">${p.title}</div>
 
 <div class="theme-divider-b"></div>
 
-<p class="card-text">
-Price: ${p.price || "Check on marketplace"}
-</p>
+<div class="product-meta">
+
+<div class="product-price">${p.price || ""}</div>
+
+<div class="product-discount">${p.discount || ""}</div>
+
+<div class="product-colors">
+Colors Available: ${p.colors || "-"}
+</div>
+
+</div>
 
 <div class="brand-wrap">
 
@@ -213,17 +238,30 @@ let html="";
 
 products.forEach(p=>{
 
+let img=getImage(p.keyword || p.title);
+
 html+=`
 
 <div class="glass-card">
+
+<div class="product-image"
+style="background-image:url('${img}')"></div>
 
 <div class="card-title">${p.title}</div>
 
 <div class="theme-divider-b"></div>
 
-<p class="card-text">
-Price: ${p.price || "Check on marketplace"}
-</p>
+<div class="product-meta">
+
+<div class="product-price">${p.price || ""}</div>
+
+<div class="product-discount">${p.discount || ""}</div>
+
+<div class="product-colors">
+Colors Available: ${p.colors || "-"}
+</div>
+
+</div>
 
 <div class="brand-wrap">
 
@@ -386,8 +424,6 @@ if(found){
 renderSearch([found]);
 scrollToDeals();
 
-/* v2 conversion layout → related products */
-
 renderRelatedProducts(category,found.id);
 
 }
@@ -424,17 +460,24 @@ storeData[cat].forEach(p=>{
 
 if(p.id===excludeId) return;
 
+let img=getImage(p.keyword || p.title);
+
 html+=`
 
 <div class="glass-card">
+
+<div class="product-image"
+style="background-image:url('${img}')"></div>
 
 <div class="card-title">${p.title}</div>
 
 <div class="theme-divider-b"></div>
 
-<p class="card-text">
-Price: ${p.price}
-</p>
+<div class="product-meta">
+
+<div class="product-price">${p.price}</div>
+
+</div>
 
 <div class="brand-wrap">
 
