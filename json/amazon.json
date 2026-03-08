@@ -1,0 +1,83 @@
+{
+"amazon": {
+
+"purse":[
+  {
+    "id":"purse1",
+    "title":"J J Accessories Stylish Crossbody Sling Purse",
+    "price":"₹299",
+    "discount":"70% OFF",
+    "colors":"10",
+    "keyword":"women crossbody sling purse",
+    "link":"https://amzn.to/4aWRFYM"
+  },
+  {
+    "id":"purse2",
+    "title":"Hexwell Women Clutch Purse with Detachable Chain",
+    "price":"₹499",
+    "discount":"50% OFF",
+    "colors":"2",
+    "keyword":"women clutch purse",
+    "link":"https://amzn.to/4st6RTb"
+  },
+  {
+    "id":"purse3",
+    "title":"Lady Quinton Trendy Handbag for Girls and Women",
+    "price":"₹418",
+    "discount":"75% OFF",
+    "colors":"10",
+    "keyword":"trendy women handbag",
+    "link":"https://amzn.to/4baqkRs"
+  },
+  {
+    "id":"purse4",
+    "title":"J I Accessories Women Stylish Crossbody Sling Bag",
+    "price":"₹284",
+    "discount":"72% OFF",
+    "colors":"3",
+    "keyword":"women sling bag fashion",
+    "link":"https://amzn.to/4b6UuoQ"
+  }
+],
+
+"wallet":[
+  {
+    "id":"wallet1",
+    "title":"WildHorn RFID Protected Leather Wallet",
+    "price":"₹399",
+    "discount":"60% OFF",
+    "colors":"3",
+    "keyword":"leather wallet men",
+    "link":"https://amzn.to/4swvEG7"
+  },
+  {
+    "id":"wallet2",
+    "title":"Urban Forest Genuine Leather Wallet",
+    "price":"₹449",
+    "discount":"55% OFF",
+    "colors":"3",
+    "keyword":"genuine leather wallet",
+    "link":"https://amzn.to/40M8lfw"
+  },
+  {
+    "id":"wallet3",
+    "title":"Contacts Stylish Leather Wallet",
+    "price":"₹599",
+    "discount":"50% OFF",
+    "colors":"10",
+    "keyword":"stylish leather wallet",
+    "link":"https://amzn.to/4lzlC4V"
+  },
+  {
+    "id":"wallet4",
+    "title":"Contacts RFID Blocking Leather Wallet",
+    "price":"₹699",
+    "discount":"45% OFF",
+    "colors":"5",
+    "keyword":"rfid blocking wallet",
+    "link":"https://amzn.to/4bcENMS"
+  }
+]
+
+}
+}
