@@ -7,6 +7,8 @@ const overlay = document.getElementById("drawerOverlay");
 
 function toggleDrawer(){
 
+if(!drawer || !overlay) return;
+
 drawer.classList.toggle("active");
 overlay.classList.toggle("active");
 
@@ -37,18 +39,14 @@ async function loadStore(){
 try{
 
 let res = await fetch("json/amazon.json");
-
 storeData = await res.json();
 
-/* DEFAULT AMAZON CATEGORY */
-
+/* DEFAULT CATEGORY */
 renderProducts("purse");
 
 }
 catch(e){
-
 console.log("Amazon JSON error",e);
-
 }
 
 }
@@ -60,86 +58,103 @@ loadStore();
 CAROUSEL SYSTEM
 ============================== */
 
-function scrollCarousel(dir){
+document.addEventListener("DOMContentLoaded",()=>{
 
 const carousel = document.getElementById("guideCarousel");
 
 if(!carousel) return;
 
-const scrollAmount = 220;
+
+/* ------------------------------
+AUTO SLIDE (3s)
+------------------------------ */
+
+setInterval(()=>{
 
 carousel.scrollBy({
-left: dir * scrollAmount,
-behavior: "smooth"
+left:280,
+behavior:"smooth"
+});
+
+/* loop reset */
+
+if(carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth){
+
+carousel.scrollTo({
+left:0,
+behavior:"smooth"
 });
 
 }
 
-/* swipe support */
+},3000);
 
-const guideCarousel = document.getElementById("guideCarousel");
 
-if(guideCarousel){
+/* ------------------------------
+MOUSE DRAG
+------------------------------ */
 
 let isDown=false;
 let startX;
 let scrollLeft;
 
-guideCarousel.addEventListener("mousedown",(e)=>{
+carousel.addEventListener("mousedown",(e)=>{
 
 isDown=true;
-startX=e.pageX-guideCarousel.offsetLeft;
-scrollLeft=guideCarousel.scrollLeft;
+startX=e.pageX-carousel.offsetLeft;
+scrollLeft=carousel.scrollLeft;
 
 });
 
-guideCarousel.addEventListener("mouseleave",()=>{
+carousel.addEventListener("mouseleave",()=>{
 
 isDown=false;
 
 });
 
-guideCarousel.addEventListener("mouseup",()=>{
+carousel.addEventListener("mouseup",()=>{
 
 isDown=false;
 
 });
 
-guideCarousel.addEventListener("mousemove",(e)=>{
+carousel.addEventListener("mousemove",(e)=>{
 
 if(!isDown) return;
 
 e.preventDefault();
 
-const x=e.pageX-guideCarousel.offsetLeft;
-
+const x=e.pageX-carousel.offsetLeft;
 const walk=(x-startX)*1.5;
 
-guideCarousel.scrollLeft=scrollLeft-walk;
+carousel.scrollLeft=scrollLeft-walk;
 
 });
 
-/* touch swipe */
+
+/* ------------------------------
+TOUCH SWIPE
+------------------------------ */
 
 let touchStartX=0;
 
-guideCarousel.addEventListener("touchstart",(e)=>{
+carousel.addEventListener("touchstart",(e)=>{
 
 touchStartX=e.touches[0].clientX;
 
 });
 
-guideCarousel.addEventListener("touchmove",(e)=>{
+carousel.addEventListener("touchmove",(e)=>{
 
 let touchEndX=e.touches[0].clientX;
 
-guideCarousel.scrollLeft+=touchStartX-touchEndX;
+carousel.scrollLeft += touchStartX - touchEndX;
 
-touchStartX=touchEndX;
+touchStartX = touchEndX;
 
 });
 
-}
+});
 
 
 /* ==============================
@@ -169,9 +184,7 @@ marketSelected.innerHTML =
 
 }
 catch(e){
-
 console.log("Marketplace JSON error",e);
-
 }
 
 }
@@ -200,7 +213,6 @@ style="background-image:url('${p.image}')">
 <div class="product-meta">
 
 <div class="product-price">${p.price}</div>
-
 <div class="product-discount">${p.discount}</div>
 
 </div>
@@ -245,9 +257,7 @@ return;
 let html="";
 
 storeData[cat].forEach(p=>{
-
 html+=productCard(p);
-
 });
 
 grid.innerHTML=html;
@@ -275,9 +285,7 @@ return;
 let html="";
 
 marketplaceData[cat].forEach(p=>{
-
 html+=productCard(p);
-
 });
 
 grid.innerHTML=html;
@@ -390,10 +398,8 @@ let target=document.getElementById("hotDeals");
 if(!target) return;
 
 window.scrollTo({
-
 top:target.offsetTop-80,
 behavior:"smooth"
-
 });
 
 }
@@ -410,10 +416,8 @@ let target=document.getElementById("marketDeals");
 if(!target) return;
 
 window.scrollTo({
-
 top:target.offsetTop-80,
 behavior:"smooth"
-
 });
 
 }
@@ -430,20 +434,16 @@ if(searchBox){
 searchBox.addEventListener("keyup",function(e){
 
 if(e.key==="Enter"){
-
 searchProducts();
-
 }
 
 });
 
 }
 
-
 function searchProducts(){
 
 let query=searchBox.value.toLowerCase();
-
 let results=[];
 
 Object.values(storeData).forEach(cat=>{
@@ -451,9 +451,7 @@ Object.values(storeData).forEach(cat=>{
 cat.forEach(p=>{
 
 if(p.title.toLowerCase().includes(query)){
-
 results.push(p);
-
 }
 
 });
@@ -483,9 +481,7 @@ return;
 let html="";
 
 products.forEach(p=>{
-
 html+=productCard(p);
-
 });
 
 grid.innerHTML=html;
