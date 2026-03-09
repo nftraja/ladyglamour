@@ -55,9 +55,10 @@ console.log("Amazon JSON error",e);
 
 loadStore();
 
-// ===============================
-// Carousel Scroll
-// ===============================
+
+/* ==============================
+CAROUSEL SYSTEM
+============================== */
 
 function scrollCarousel(dir){
 
@@ -73,6 +74,73 @@ behavior: "smooth"
 });
 
 }
+
+/* swipe support */
+
+const guideCarousel = document.getElementById("guideCarousel");
+
+if(guideCarousel){
+
+let isDown=false;
+let startX;
+let scrollLeft;
+
+guideCarousel.addEventListener("mousedown",(e)=>{
+
+isDown=true;
+startX=e.pageX-guideCarousel.offsetLeft;
+scrollLeft=guideCarousel.scrollLeft;
+
+});
+
+guideCarousel.addEventListener("mouseleave",()=>{
+
+isDown=false;
+
+});
+
+guideCarousel.addEventListener("mouseup",()=>{
+
+isDown=false;
+
+});
+
+guideCarousel.addEventListener("mousemove",(e)=>{
+
+if(!isDown) return;
+
+e.preventDefault();
+
+const x=e.pageX-guideCarousel.offsetLeft;
+
+const walk=(x-startX)*1.5;
+
+guideCarousel.scrollLeft=scrollLeft-walk;
+
+});
+
+/* touch swipe */
+
+let touchStartX=0;
+
+guideCarousel.addEventListener("touchstart",(e)=>{
+
+touchStartX=e.touches[0].clientX;
+
+});
+
+guideCarousel.addEventListener("touchmove",(e)=>{
+
+let touchEndX=e.touches[0].clientX;
+
+guideCarousel.scrollLeft+=touchStartX-touchEndX;
+
+touchStartX=touchEndX;
+
+});
+
+}
+
 
 /* ==============================
 LOAD MARKETPLACE JSON
