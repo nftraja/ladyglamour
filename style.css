@@ -56,6 +56,18 @@ letter-spacing:.5px;
 }
 
 
+.header-icons{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.header-icons img{
+width:28px;
+height:28px;
+object-fit:contain;
+}
+
 /* ==============================
 DRAWER
 ============================== */
