@@ -64,21 +64,24 @@ const carousel = document.getElementById("guideCarousel");
 
 if(!carousel) return;
 
+let autoSlide;
 
 /* ------------------------------
 AUTO SLIDE (3s)
 ------------------------------ */
 
-setInterval(()=>{
+function startAuto(){
+
+autoSlide = setInterval(()=>{
+
+const cardWidth = carousel.querySelector(".guide-card").offsetWidth + 10;
 
 carousel.scrollBy({
-left:280,
+left:cardWidth,
 behavior:"smooth"
 });
 
-/* loop reset */
-
-if(carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth){
+if(carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth-5){
 
 carousel.scrollTo({
 left:0,
@@ -88,6 +91,14 @@ behavior:"smooth"
 }
 
 },3000);
+
+}
+
+function stopAuto(){
+clearInterval(autoSlide);
+}
+
+startAuto();
 
 
 /* ------------------------------
@@ -103,19 +114,18 @@ carousel.addEventListener("mousedown",(e)=>{
 isDown=true;
 startX=e.pageX-carousel.offsetLeft;
 scrollLeft=carousel.scrollLeft;
+stopAuto();
 
 });
 
 carousel.addEventListener("mouseleave",()=>{
-
 isDown=false;
-
+startAuto();
 });
 
 carousel.addEventListener("mouseup",()=>{
-
 isDown=false;
-
+startAuto();
 });
 
 carousel.addEventListener("mousemove",(e)=>{
@@ -141,6 +151,7 @@ let touchStartX=0;
 carousel.addEventListener("touchstart",(e)=>{
 
 touchStartX=e.touches[0].clientX;
+stopAuto();
 
 });
 
@@ -148,14 +159,19 @@ carousel.addEventListener("touchmove",(e)=>{
 
 let touchEndX=e.touches[0].clientX;
 
-carousel.scrollLeft += touchStartX - touchEndX;
+carousel.scrollLeft += touchStartX-touchEndX;
 
 touchStartX = touchEndX;
 
 });
 
+carousel.addEventListener("touchend",()=>{
+
+startAuto();
+
 });
 
+});
 
 /* ==============================
 LOAD MARKETPLACE JSON
