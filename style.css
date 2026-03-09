@@ -440,64 +440,35 @@ margin:5px 0;
 .guide-carousel{
 display:flex;
 align-items:flex-start;
-gap:6px;
+gap:10px;
 overflow-x:auto;
 scroll-behavior:smooth;
 scroll-snap-type:x mandatory;
 -webkit-overflow-scrolling:touch;
 padding:8px 10px;
 
-/* FIX */
-min-height:190px;
+/* height fix */
+min-height:150px;
 }
 
 .guide-carousel::-webkit-scrollbar{
 display:none;
 }
 
+/* 16:9 cards */
+
 .guide-carousel .guide-card{
-flex:0 0 180px;
-width:180px;
-aspect-ratio:1/1;
+flex:0 0 260px;
+width:260px;
+aspect-ratio:16/9;
 height:auto;
 scroll-snap-align:start;
 }
 
-.carousel-arrow{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-width:44px;
-height:44px;
-border-radius:50%;
-border:1px solid rgba(255,255,255,0.35);
-cursor:pointer;
-z-index:20;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:20px;
-font-weight:900;
-color:#ffffff;
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(8px);
-box-shadow:
-0 6px 14px rgba(0,0,0,.65),
-inset 0 1px 0 rgba(255,255,255,.35),
-inset 0 -3px 6px rgba(0,0,0,.55);
-}
 
-.carousel-arrow.left{
-left:4px;
-}
-
-.carousel-arrow.right{
-right:4px;
-}
-
-.carousel-arrow:active{
-transform:translateY(-50%) scale(.9);
-}
+/* ==============================
+CARD (THEME SAME)
+============================== */
 
 .guide-card{
 position:relative;
@@ -506,8 +477,7 @@ padding:8px;
 color:#fff;
 display:flex;
 flex-direction:column;
-justify-content:space-between;
-aspect-ratio:1/1;
+justify-content:flex-end;
 overflow:hidden;
 text-decoration:none;
 
@@ -566,58 +536,19 @@ position:relative;
 z-index:2;
 }
 
+/* icon remove but css safe */
+
 .guide-icon{
-font-size:26px;
-padding:7px 10px;
+display:none;
 }
 
-.guide-cta{
-align-self:flex-start;
+/* title */
+
+.guide-title{
+font-size:13px;
+font-weight:700;
 margin-left:10px;
 margin-bottom:10px;
-padding:9px 18px;
-border-radius:999px;
-font-size:12px;
-font-weight:700;
-text-decoration:none;
-color:#ffffff;
-background:linear-gradient(145deg,
-rgba(255,255,255,.18),
-rgba(0,0,0,.45)
-);
-box-shadow:
-0 6px 14px rgba(0,0,0,.65),
-inset 0 1px 0 rgba(255,255,255,.35),
-inset 0 -2px 6px rgba(0,0,0,.6);
-border:1px solid rgba(255,255,255,.35);
-letter-spacing:.3px;
-display:inline-block;
-white-space:nowrap;
-transform:translateZ(0);
-}
-
-.guide-cta:active{
-transform:translateY(2px);
-box-shadow:
-0 2px 6px rgba(0,0,0,.7),
-inset 0 3px 6px rgba(0,0,0,.7);
-}
-
-@media(max-width:600px){
-
-.product-grid.active{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:768px){
-
-.carousel-arrow{
-width:36px;
-height:36px;
-font-size:18px;
-opacity:.9;
 }
 
 }
@@ -627,6 +558,26 @@ opacity:.9;
 RESPONSIVE
 ============================== */
 
+/* Mobile carousel cards */
+@media(max-width:768px){
+
+.guide-carousel .guide-card{
+flex:0 0 220px;
+width:220px;
+}
+
+}
+
+/* Small devices grid */
+@media(max-width:600px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Desktop grid */
 @media(min-width:768px){
 
 .grid{
