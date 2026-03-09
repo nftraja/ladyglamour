@@ -309,7 +309,6 @@ cursor:pointer;
 background:rgba(0,255,136,0.15);
 }
 
-
 /* ==============================
 HERO
 ============================== */
@@ -333,7 +332,6 @@ font-size:13.5px;
 color:#ffffff;
 }
 
-
 /* ==============================
 GRID
 ============================== */
@@ -343,7 +341,6 @@ display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:10px;
 }
-
 
 /* ==============================
 PRODUCT IMAGE (16:9)
@@ -359,7 +356,6 @@ background-position:center;
 background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,.1);
 }
-
 
 /* ==============================
 PRODUCT META
@@ -383,12 +379,6 @@ font-size:12px;
 color:#ff4b2b;
 font-weight:700;
 }
-
-.product-colors{
-font-size:12px;
-color:#cccccc;
-}
-
 
 /* ==============================
 CARD SPACING
