@@ -446,6 +446,9 @@ scroll-behavior:smooth;
 scroll-snap-type:x mandatory;
 -webkit-overflow-scrolling:touch;
 padding:8px 10px;
+
+/* FIX */
+min-height:190px;
 }
 
 .guide-carousel::-webkit-scrollbar{
@@ -518,6 +521,9 @@ inset 0 1px 0 rgba(255,255,255,0.25),
 inset 0 -8px 20px rgba(0,0,0,0.35),
 0 8px 25px rgba(0,0,0,0.55);
 transition:.35s ease;
+
+/* FIX */
+min-height:180px;
 }
 
 .guide-card::before{
@@ -623,7 +629,6 @@ opacity:.9;
 }
 
 }
-
 
 /* ==============================
 RESPONSIVE
