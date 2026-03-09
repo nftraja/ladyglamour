@@ -55,6 +55,20 @@ console.log("Amazon JSON error",e);
 
 loadStore();
 
+// ===============================
+// Carousel Scroll
+// ===============================
+
+function scrollCarousel(direction){
+
+if(!carousel) return;
+
+carousel.scrollBy({
+left: direction * 220,
+behavior:"smooth"
+});
+
+}
 
 /* ==============================
 LOAD MARKETPLACE JSON
