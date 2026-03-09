@@ -27,7 +27,7 @@ STORE DATA
 ============================== */
 
 let storeData = {};
-let marketplaceData = {};
+let myntraData = {};   // UPDATED
 
 
 /* ==============================
@@ -66,10 +66,6 @@ if(!carousel) return;
 
 let autoSlide;
 
-/* ------------------------------
-AUTO SLIDE (3s)
------------------------------- */
-
 function startAuto(){
 
 autoSlide = setInterval(()=>{
@@ -100,10 +96,6 @@ clearInterval(autoSlide);
 
 startAuto();
 
-
-/* ------------------------------
-MOUSE DRAG
------------------------------- */
 
 let isDown=false;
 let startX;
@@ -142,10 +134,6 @@ carousel.scrollLeft=scrollLeft-walk;
 });
 
 
-/* ------------------------------
-TOUCH SWIPE
------------------------------- */
-
 let touchStartX=0;
 
 carousel.addEventListener("touchstart",(e)=>{
@@ -166,24 +154,23 @@ touchStartX = touchEndX;
 });
 
 carousel.addEventListener("touchend",()=>{
-
 startAuto();
-
 });
 
 });
+
 
 /* ==============================
-LOAD MARKETPLACE JSON
+LOAD MYNTRA JSON
 ============================== */
 
 async function loadMarketplace(){
 
 try{
 
-let res = await fetch("json/marketplaces.json");
+let res = await fetch("json/myntra.json");   // UPDATED
 
-marketplaceData = await res.json();
+myntraData = await res.json();
 
 /* DEFAULT CATEGORY */
 
@@ -191,7 +178,7 @@ renderMarketplace("fashion");
 
 /* dropdown label update */
 
-const marketSelected = document.getElementById("marketSelected");
+const marketSelected = document.getElementById("myntraSelected"); // UPDATED
 
 if(marketSelected){
 marketSelected.innerHTML =
@@ -200,7 +187,7 @@ marketSelected.innerHTML =
 
 }
 catch(e){
-console.log("Marketplace JSON error",e);
+console.log("Myntra JSON error",e);
 }
 
 }
@@ -282,16 +269,16 @@ grid.innerHTML=html;
 
 
 /* ==============================
-RENDER MARKETPLACE PRODUCTS
+RENDER MYNTRA PRODUCTS
 ============================== */
 
 function renderMarketplace(cat){
 
-let grid = document.getElementById("marketDeals");
+let grid = document.getElementById("myntraDeals");  // UPDATED
 
 if(!grid) return;
 
-if(!marketplaceData[cat]){
+if(!myntraData[cat]){
 
 grid.innerHTML="<p>No products available</p>";
 return;
@@ -300,7 +287,7 @@ return;
 
 let html="";
 
-marketplaceData[cat].forEach(p=>{
+myntraData[cat].forEach(p=>{
 html+=productCard(p);
 });
 
@@ -349,11 +336,11 @@ scrollToDeals();
 
 
 /* ==============================
-MARKETPLACE CUSTOM DROPDOWN
+MYNTRA CUSTOM DROPDOWN
 ============================== */
 
-const marketSelected = document.getElementById("marketSelected");
-const marketDropdown = document.getElementById("marketDropdown");
+const marketSelected = document.getElementById("myntraSelected"); // UPDATED
+const marketDropdown = document.getElementById("myntraDropdown"); // UPDATED
 
 if(marketSelected){
 
@@ -365,7 +352,7 @@ marketDropdown.classList.toggle("active");
 
 }
 
-document.querySelectorAll("#marketDropdown .dropdown-item")
+document.querySelectorAll("#myntraDropdown .dropdown-item") // UPDATED
 .forEach(item=>{
 
 item.addEventListener("click",function(){
@@ -422,12 +409,12 @@ behavior:"smooth"
 
 
 /* ==============================
-SCROLL MARKETPLACE
+SCROLL MYNTRA
 ============================== */
 
 function scrollToMarketplace(){
 
-let target=document.getElementById("marketDeals");
+let target=document.getElementById("myntraDeals"); // UPDATED
 
 if(!target) return;
 
