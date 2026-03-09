@@ -493,7 +493,7 @@ content:"";
 position:absolute;
 inset:0;
 background:var(--card-color);
-opacity:.85;
+opacity:.25;
 z-index:0;
 }
 
