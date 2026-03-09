@@ -138,25 +138,6 @@ style="--chip-color:#ff9900;">
 
 }
 
-<div class="brand-wrap">
-
-<a href="${p.link}"
-target="_blank"
-class="brand"
-style="--chip-color:#ff9900;">
-
-<span>View Deal</span>
-
-</a>
-
-</div>
-
-</div>
-
-`;
-
-}
-
 
 /* ==============================
 RENDER AMAZON PRODUCTS
