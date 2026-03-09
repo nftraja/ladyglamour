@@ -59,13 +59,17 @@ loadStore();
 // Carousel Scroll
 // ===============================
 
-function scrollCarousel(direction){
+function scrollCarousel(dir){
+
+const carousel = document.getElementById("guideCarousel");
 
 if(!carousel) return;
 
+const scrollAmount = 220;
+
 carousel.scrollBy({
-left: direction * 220,
-behavior:"smooth"
+left: dir * scrollAmount,
+behavior: "smooth"
 });
 
 }
