@@ -395,6 +395,34 @@ margin-bottom:6px;
 min-height:36px;
 }
 
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:65px;
+backdrop-filter:blur(12px);
+display:flex;
+justify-content:space-around;
+align-items:center;
+border-top:1px solid rgba(0,255,136,0.28);
+z-index:200;
+}
+
+.bottom-nav a{
+color:#00ff88;
+text-decoration:none;
+}
+
+.nav-item{
+text-align:center;
+font-size:11px;
+}
+
+.nav-item span{
+display:block;
+font-size:14px;
+}
 
 /* ==============================
 RESPONSIVE
