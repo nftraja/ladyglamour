@@ -645,7 +645,6 @@ behavior:"smooth"
 
 /* ==============================
 BRAND DIRECTORY SYSTEM
-AUTO LOAD BRAND LOGOS + LINKS
 ============================== */
 
 async function loadBrands(){
@@ -672,19 +671,15 @@ html += `
 
 <img src="https://logo.clearbit.com/${b.domain}"
 alt="${b.name}"
-onerror="this.src='images/logo.png'">
+onerror="this.style.display='none'">
 
 </div>
 
 <div class="brand-info">
 
-<div class="brand-title">
-${b.name}
-</div>
+<div class="brand-title">${b.name}</div>
 
-<p class="brand-desc">
-${b.description}
-</p>
+<p class="brand-desc">${b.description}</p>
 
 <a href="${b.link}"
 target="_blank"
