@@ -1,131 +1,116 @@
-<div class="brand-store-grid">
+<!doctype html>
+<html lang="en">
 
-<!-- Amazon -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/amazon.png" alt="Amazon">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>LadyGlamour Brand Stores</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- DRAWER OVERLAY -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+
+<!-- DRAWER MENU -->
+<div class="drawer" id="drawer">
+
+<button class="menu-btn" onclick="toggleDrawer()">← Back</button>
+
+<a href="index.html">Home</a>
+
+<a href="javascript:void(0)" onclick="loadCollection('womens-fashion')">Women Fashion</a>
+<a href="javascript:void(0)" onclick="loadCollection('handbags')">Handbags</a>
+<a href="javascript:void(0)" onclick="loadCollection('footwear')">Footwear</a>
+<a href="javascript:void(0)" onclick="loadCollection('watches')">Watches</a>
+<a href="javascript:void(0)" onclick="loadCollection('jewellery')">Jewellery</a>
+<a href="javascript:void(0)" onclick="loadCollection('makeup')">Makeup</a>
+<a href="javascript:void(0)" onclick="loadCollection('skincare')">Skincare</a>
+<a href="javascript:void(0)" onclick="loadCollection('beauty-kits')">Beauty Kits</a>
+<a href="javascript:void(0)" onclick="loadCollection('perfumes')">Perfumes</a>
+<a href="javascript:void(0)" onclick="loadCollection('wallets')">Wallets</a>
+<a href="javascript:void(0)" onclick="loadCollection('sunglasses')">Sunglasses</a>
+<a href="javascript:void(0)" onclick="loadCollection('travel-bags')">Travel Bags</a>
+<a href="javascript:void(0)" onclick="loadCollection('gift-sets')">Gift Sets</a>
+<a href="javascript:void(0)" onclick="loadCollection('fashion-accessories')">Fashion Accessories</a>
+<a href="javascript:void(0)" onclick="loadCollection('phone-accessories')">Phone Accessories</a>
+<a href="javascript:void(0)" onclick="loadCollection('hair-care')">Hair Care</a>
+
+<a href="brands.html">Brand Stores</a>
+
 </div>
-<div class="brand-info">
-<div class="brand-title">Amazon</div>
-<p class="brand-desc">
-Shop electronics, fashion, beauty and daily deals from thousands of brands with fast delivery across India.
+
+
+<!-- HEADER -->
+<header class="app-header">
+
+<button class="menu-btn" onclick="toggleDrawer()">☰</button>
+
+<div class="logo">🛍 LadyGlamour</div>
+
+<div class="header-icons">
+<img src="images/logo.png" alt="logo">
+</div>
+
+</header>
+
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+<div class="glass-card">
+
+<div class="card-title">
+🏬 Explore Brand Stores
+</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+Discover top fashion, beauty, tech and lifestyle brands. Explore official brand stores and trending collections across trusted platforms.
 </p>
-<a href="AFFILIATE_LINK" class="brand-open-btn" target="_blank">
-Open Amazon Store →
-</a>
-</div>
-</div>
 
-<!-- Flipkart -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/flipkart.png" alt="Flipkart">
-</div>
-<div class="brand-info">
-<div class="brand-title">Flipkart</div>
-<p class="brand-desc">
-Explore mobiles, electronics, fashion and home products with exclusive sales and seasonal offers.
-</p>
-<a href="AFFILIATE_LINK" class="brand-open-btn" target="_blank">
-Open Flipkart Store →
-</a>
-</div>
-</div>
+<div class="theme-divider-b"></div>
 
-<!-- Myntra -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/myntra.png" alt="Myntra">
-</div>
-<div class="brand-info">
-<div class="brand-title">Myntra</div>
-<p class="brand-desc">
-Discover trending fashion, clothing, footwear and accessories from top lifestyle brands.
-</p>
-<a href="AFFILIATE_LINK" class="brand-open-btn" target="_blank">
-Open Myntra Store →
-</a>
-</div>
-</div>
-
-<!-- Ajio -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/ajio.png" alt="Ajio">
-</div>
-<div class="brand-info">
-<div class="brand-title">Ajio</div>
-<p class="brand-desc">
-Shop stylish fashion collections, premium clothing and accessories from top brands.
-</p>
-<a href="AFFILIATE_LINK" class="brand-open-btn" target="_blank">
-Open Ajio Store →
-</a>
-</div>
-</div>
-
-<!-- WOW Skin Science -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/wow.png" alt="WOW Skin Science">
-</div>
-<div class="brand-info">
-<div class="brand-title">WOW Skin Science</div>
-<p class="brand-desc">
-Explore natural skincare, haircare and beauty products designed for healthy lifestyle.
-</p>
-<a href="AFFILIATE_LINK" class="brand-open-btn" target="_blank">
-Open WOW Store →
-</a>
-</div>
-</div>
-
-<!-- Mamaearth -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/mamaearth.png" alt="Mamaearth">
-</div>
-<div class="brand-info">
-<div class="brand-title">Mamaearth</div>
-<p class="brand-desc">
-Discover toxin-free skincare, haircare and baby products inspired by nature.
-</p>
-<a href="AFFILIATE_LINK" class="brand-open-btn" target="_blank">
-Open Mamaearth Store →
-</a>
-</div>
-</div>
-
-<!-- Dot & Key -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/dotandkey.png" alt="Dot & Key">
-</div>
-<div class="brand-info">
-<div class="brand-title">Dot & Key</div>
-<p class="brand-desc">
-Shop dermatologically tested skincare solutions for glowing and healthy skin.
-</p>
-<a href="AFFILIATE_LINK" class="brand-open-btn" target="_blank">
-Open Dot & Key Store →
-</a>
-</div>
-</div>
-
-<!-- Croma -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/croma.png" alt="Croma">
-</div>
-<div class="brand-info">
-<div class="brand-title">Croma</div>
-<p class="brand-desc">
-Explore electronics, gadgets, appliances and latest tech products from trusted brands.
-</p>
-<a href="AFFILIATE_LINK" class="brand-open-btn" target="_blank">
-Open Croma Store →
-</a>
-</div>
-</div>
+<!-- BRAND GRID AUTO LOAD -->
+<div class="brand-store-grid" id="brandGrid"></div>
 
 </div>
+
+</main>
+
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+
+<a href="index.html" class="nav-item">
+<span>🏠</span>
+</a>
+
+<a href="index.html" class="nav-item">
+<span>🏷️</span>
+</a>
+
+<a href="index.html" class="nav-item">
+<span>🛍</span>
+</a>
+
+<a href="index.html" class="nav-item">
+<span>📖</span>
+</a>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
