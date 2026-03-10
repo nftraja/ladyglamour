@@ -490,3 +490,37 @@ html+=productCard(p);
 grid.innerHTML=html;
 
 }
+
+/* ==============================
+COLLECTION LOADER (DRAWER MENU)
+Load products from collection JSON
+============================== */
+
+async function loadCollection(cat){
+
+try{
+
+let res = await fetch("json/" + cat + ".json");
+
+let data = await res.json();
+
+let grid = document.getElementById("hotDeals");
+
+let html="";
+
+data.products.forEach(p=>{
+html+=productCard(p);
+});
+
+grid.innerHTML=html;
+
+/* drawer close */
+
+toggleDrawer();
+
+}
+catch(e){
+console.log("Collection error",e);
+}
+
+}
