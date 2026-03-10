@@ -80,78 +80,78 @@
 "smartwatch":[
 {
 "id":"smartwatch1",
-"title":"boAt Wave Call Smart Watch with Bluetooth Calling",
-"price":"₹1,499",
-"discount":"65% OFF",
+"title":"Boat Wave Call 3 Smartwatch 1.83",
+"price":"₹1,099",
+"discount":"84% OFF",
 "colors":"5",
-"image":"SMARTWATCH_IMAGE_URL",
-"link":"SMARTWATCH_AFFILIATE_LINK"
+"image":"https://m.media-amazon.com/images/I/71HwtfJ3c6L._SX679_.jpg",
+"link":"https://amzn.to/3NhmfmF"
 },
 {
 "id":"smartwatch2",
-"title":"Noise Pulse Go Buzz Smart Watch",
-"price":"₹1,299",
-"discount":"60% OFF",
-"colors":"4",
-"image":"SMARTWATCH_IMAGE_URL",
-"link":"SMARTWATCH_AFFILIATE_LINK"
+"title":"Fire-Boltt Ninja X Ring AMOLED Smart Watch 1.96",
+"price":"₹2,499",
+"discount":"87% OFF",
+"colors":"10",
+"image":"https://m.media-amazon.com/images/I/71TDTr8MGPL._SL1500_.jpg",
+"link":"https://amzn.to/4cA0Z65"
 },
 {
 "id":"smartwatch3",
-"title":"Fire-Boltt Ninja Call Pro Smartwatch",
-"price":"₹1,199",
-"discount":"70% OFF",
-"colors":"6",
-"image":"SMARTWATCH_IMAGE_URL",
-"link":"SMARTWATCH_AFFILIATE_LINK"
+"title":"Noise Pulse 2 Max 1.85" Display, Bluetooth Calling Smart Watch",
+"price":"₹1,099",
+"discount":"82% OFF",
+"colors":"10",
+"image":"https://m.media-amazon.com/images/I/610BF3kqBZL._SL1500_.jpg",
+"link":"https://amzn.to/4lg3P2c"
 },
 {
 "id":"smartwatch4",
-"title":"Boult Drift+ Smartwatch AMOLED Display",
-"price":"₹1,799",
-"discount":"55% OFF",
+"title":"Fastrack New Limitless Classic|Large 1.91 - Smartwatch",
+"price":"₹1,959",
+"discount":"5% OFF",
 "colors":"3",
-"image":"SMARTWATCH_IMAGE_URL",
-"link":"SMARTWATCH_AFFILIATE_LINK"
+"image":"https://m.media-amazon.com/images/I/617eGDTJz4L._SL1080_.jpg",
+"link":"https://amzn.to/4s11via"
 }
 ],
 
 "footwear":[
 {
 "id":"footwear1",
-"title":"Sparx Men Running Sports Shoes",
-"price":"₹799",
-"discount":"50% OFF",
+"title":"Women's Synthetic Leather Comfort Fashion Sandal",
+"price":"₹434",
+"discount":"64% OFF",
 "colors":"4",
-"image":"FOOTWEAR_IMAGE_URL",
-"link":"FOOTWEAR_AFFILIATE_LINK"
+"image":"https://m.media-amazon.com/images/I/71DomwkOBWL._SY695_.jpg",
+"link":"https://amzn.to/40jh4Wv"
 },
 {
 "id":"footwear2",
-"title":"Bata Women Stylish Casual Shoes",
-"price":"₹999",
+"title":"BELLA Women Fashion Wedge Slip On Black Sandal",
+"price":"₹399",
 "discount":"45% OFF",
-"colors":"3",
-"image":"FOOTWEAR_IMAGE_URL",
-"link":"FOOTWEAR_AFFILIATE_LINK"
+"colors":"1",
+"image":"https://m.media-amazon.com/images/I/61XogZFd0GL._SY695_.jpg",
+"link":"https://amzn.to/4uslzvJ"
 },
 {
 "id":"footwear3",
-"title":"Asian Men's Sports Running Shoes",
-"price":"₹699",
-"discount":"60% OFF",
-"colors":"5",
-"image":"FOOTWEAR_IMAGE_URL",
-"link":"FOOTWEAR_AFFILIATE_LINK"
+"title":"Non Slip Lightweight Shoes Bellies for Women",
+"price":"₹536",
+"discount":"79% OFF",
+"colors":"6",
+"image":"https://m.media-amazon.com/images/I/81tPkbrHwCL._SY695_.jpg",
+"link":"https://amzn.to/4cA3NA9"
 },
 {
 "id":"footwear4",
-"title":"Campus Women's Trendy Sneakers",
-"price":"₹899",
-"discount":"55% OFF",
+"title":"Campus Women's GRIT Sneakers",
+"price":"₹1,299",
+"discount":"50% OFF",
 "colors":"4",
-"image":"FOOTWEAR_IMAGE_URL",
-"link":"FOOTWEAR_AFFILIATE_LINK"
+"image":"https://m.media-amazon.com/images/I/61FqGF27eCL._SY695_.jpg",
+"link":"https://amzn.to/3MX3pBo"
 }
 ]
 }
