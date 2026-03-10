@@ -645,6 +645,7 @@ behavior:"smooth"
 
 /* ==============================
 BRAND DIRECTORY SYSTEM
+AUTO BRAND LOGO + JSON LOAD
 ============================== */
 
 async function loadBrands(){
@@ -652,7 +653,6 @@ async function loadBrands(){
 try{
 
 let res = await fetch("json/brands.json");
-
 let data = await res.json();
 
 let grid = document.getElementById("brandGrid");
@@ -669,9 +669,8 @@ html += `
 
 <div class="brand-thumb">
 
-<img src="https://logo.clearbit.com/${b.domain}"
-alt="${b.name}"
-onerror="this.style.display='none'">
+<img src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}"
+alt="${b.name}">
 
 </div>
 
