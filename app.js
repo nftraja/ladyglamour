@@ -430,7 +430,7 @@ behavior:"smooth"
 SEARCH
 ============================== */
 
-const searchBox=document.getElementById("searchBox");
+const searchBox = document.getElementById("searchBox");
 
 if(searchBox){
 
@@ -446,8 +446,8 @@ searchProducts();
 
 function searchProducts(){
 
-let query=searchBox.value.toLowerCase();
-let results=[];
+let query = searchBox.value.toLowerCase();
+let results = [];
 
 Object.values(storeData).forEach(cat=>{
 
@@ -472,22 +472,24 @@ RENDER SEARCH RESULTS
 
 function renderSearch(products){
 
-let grid=document.getElementById("hotDeals");
+let grid = document.getElementById("searchResults");
+
+if(!grid) return;
 
 if(!products.length){
 
-grid.innerHTML="<p>No products found</p>";
+grid.innerHTML = "<p>No products found</p>";
 return;
 
 }
 
-let html="";
+let html = "";
 
 products.forEach(p=>{
-html+=productCard(p);
+html += productCard(p);
 });
 
-grid.innerHTML=html;
+grid.innerHTML = html;
 
 }
 
