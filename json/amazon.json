@@ -75,5 +75,83 @@
 "image":"https://m.media-amazon.com/images/I/A1ONj3mF+lL._SL1500_.jpg",
 "link":"https://amzn.to/4bcENMS"
 }
+],
+
+"smartwatch":[
+{
+"id":"smartwatch1",
+"title":"boAt Wave Call Smart Watch with Bluetooth Calling",
+"price":"₹1,499",
+"discount":"65% OFF",
+"colors":"5",
+"image":"SMARTWATCH_IMAGE_URL",
+"link":"SMARTWATCH_AFFILIATE_LINK"
+},
+{
+"id":"smartwatch2",
+"title":"Noise Pulse Go Buzz Smart Watch",
+"price":"₹1,299",
+"discount":"60% OFF",
+"colors":"4",
+"image":"SMARTWATCH_IMAGE_URL",
+"link":"SMARTWATCH_AFFILIATE_LINK"
+},
+{
+"id":"smartwatch3",
+"title":"Fire-Boltt Ninja Call Pro Smartwatch",
+"price":"₹1,199",
+"discount":"70% OFF",
+"colors":"6",
+"image":"SMARTWATCH_IMAGE_URL",
+"link":"SMARTWATCH_AFFILIATE_LINK"
+},
+{
+"id":"smartwatch4",
+"title":"Boult Drift+ Smartwatch AMOLED Display",
+"price":"₹1,799",
+"discount":"55% OFF",
+"colors":"3",
+"image":"SMARTWATCH_IMAGE_URL",
+"link":"SMARTWATCH_AFFILIATE_LINK"
+}
+],
+
+"footwear":[
+{
+"id":"footwear1",
+"title":"Sparx Men Running Sports Shoes",
+"price":"₹799",
+"discount":"50% OFF",
+"colors":"4",
+"image":"FOOTWEAR_IMAGE_URL",
+"link":"FOOTWEAR_AFFILIATE_LINK"
+},
+{
+"id":"footwear2",
+"title":"Bata Women Stylish Casual Shoes",
+"price":"₹999",
+"discount":"45% OFF",
+"colors":"3",
+"image":"FOOTWEAR_IMAGE_URL",
+"link":"FOOTWEAR_AFFILIATE_LINK"
+},
+{
+"id":"footwear3",
+"title":"Asian Men's Sports Running Shoes",
+"price":"₹699",
+"discount":"60% OFF",
+"colors":"5",
+"image":"FOOTWEAR_IMAGE_URL",
+"link":"FOOTWEAR_AFFILIATE_LINK"
+},
+{
+"id":"footwear4",
+"title":"Campus Women's Trendy Sneakers",
+"price":"₹899",
+"discount":"55% OFF",
+"colors":"4",
+"image":"FOOTWEAR_IMAGE_URL",
+"link":"FOOTWEAR_AFFILIATE_LINK"
+}
 ]
 }
