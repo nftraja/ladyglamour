@@ -773,3 +773,48 @@ console.log("Brand JSON error",e);
 }
 
 loadBrands();
+
+
+/* ==============================
+SELECT SUGGESTION
+============================== */
+
+function selectSuggestion(title){
+
+/* input box में title भर दो */
+searchBox.value = title;
+
+/* suggestion box hide */
+if(suggestionBox) suggestionBox.innerHTML="";
+
+/* matching product खोजो */
+let results = [];
+
+Object.values(storeData).forEach(cat=>{
+
+cat.forEach(p=>{
+
+if(p.title === title){
+results.push(p);
+}
+
+});
+
+});
+
+/* results render करो */
+renderSearch(results);
+
+/* results section पर scroll करो */
+let resultSection = document.getElementById("searchResults");
+
+if(resultSection){
+
+resultSection.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+}
+
+}
