@@ -1,0 +1,97 @@
+{
+"electronics":[
+{
+"id":"elec1",
+"title":"Noise Buds VS102 Pro Bluetooth Earbuds",
+"price":"₹1,199",
+"discount":"70% OFF",
+"image":"https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/l/p/9/vs102-pro-noise-original-imagh4v2v5y9d9hg.jpeg",
+"link":"https://fkrt.cc/example1"
+},
+{
+"id":"elec2",
+"title":"Fire-Boltt Ninja Call Pro Plus Smartwatch",
+"price":"₹1,499",
+"discount":"80% OFF",
+"image":"https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/v/s/f/-original-imagh2g4d8n5vhtp.jpeg",
+"link":"https://fkrt.cc/example2"
+}
+],
+
+"gadgets":[
+{
+"id":"gad1",
+"title":"Portronics POR-343 Portable Bluetooth Speaker",
+"price":"₹899",
+"discount":"55% OFF",
+"image":"https://rukminim2.flixcart.com/image/612/612/kc0u7bk0/speaker/mobile-tablet-speaker/y/y/b/portronics-por-343-original-imafg8x9h4y9yqvz.jpeg",
+"link":"https://fkrt.cc/example3"
+}
+],
+
+"mobile":[
+{
+"id":"mob1",
+"title":"Ambrane Fast Charging Power Bank 20000mAh",
+"price":"₹1,299",
+"discount":"60% OFF",
+"image":"https://rukminim2.flixcart.com/image/612/612/xif0q/power-bank/y/d/p/20000mah-pp-20-ambrane-original-imagghzv8hhghqgk.jpeg",
+"link":"https://fkrt.cc/example4"
+}
+],
+
+"smartwatch":[
+{
+"id":"watch1",
+"title":"boAt Xtend Smartwatch with Alexa Built-in",
+"price":"₹2,299",
+"discount":"65% OFF",
+"image":"https://rukminim2.flixcart.com/image/612/612/kxrvi4w0/smartwatch/g/l/h/-original-imaga5rj2jzzqkcg.jpeg",
+"link":"https://fkrt.cc/example5"
+}
+],
+
+"audio":[
+{
+"id":"aud1",
+"title":"boAt Rockerz 450 Bluetooth Headphones",
+"price":"₹1,199",
+"discount":"72% OFF",
+"image":"https://rukminim2.flixcart.com/image/612/612/kp78e4w0/headphone/5/u/b/rockerz-450-boat-original-imag3hqyh6v6g3zm.jpeg",
+"link":"https://fkrt.cc/example6"
+}
+],
+
+"appliances":[
+{
+"id":"app1",
+"title":"Prestige Electric Kettle 1.5L",
+"price":"₹899",
+"discount":"40% OFF",
+"image":"https://rukminim2.flixcart.com/image/612/612/xif0q/electric-kettle/q/h/x/1-5-l-pkoss-1-5-prestige-original-imaghz5wq5z6k8qk.jpeg",
+"link":"https://fkrt.cc/example7"
+}
+],
+
+"kitchen":[
+{
+"id":"kit1",
+"title":"Pigeon Non-Stick Cookware Set 3 Pieces",
+"price":"₹1,199",
+"discount":"58% OFF",
+"image":"https://rukminim2.flixcart.com/image/612/612/kp78e4w0/cookware-set/k/e/n/non-stick-pigeon-original-imag3hqu3yzgqh7f.jpeg",
+"link":"https://fkrt.cc/example8"
+}
+],
+
+"gaming":[
+{
+"id":"game1",
+"title":"Redgear Pro Wireless Gamepad",
+"price":"₹1,499",
+"discount":"50% OFF",
+"image":"https://rukminim2.flixcart.com/image/612/612/jo0fbbk0/gaming-accessory/k/p/p/redgear-pro-wireless-gamepad-original-imafaxqeyh2g8b7h.jpeg",
+"link":"https://fkrt.cc/example9"
+}
+]
+}
