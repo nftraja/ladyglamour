@@ -1,0 +1,205 @@
+{
+"brands":[
+
+{
+"name":"Amazon",
+"domain":"amazon.in",
+"description":"Shop electronics, fashion, beauty and daily deals from thousands of brands with fast delivery across India.",
+"button":"Open Amazon Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Flipkart",
+"domain":"flipkart.com",
+"description":"Explore mobiles, electronics, fashion and home products with exclusive sales and seasonal offers.",
+"button":"Open Flipkart Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Myntra",
+"domain":"myntra.com",
+"description":"Discover trending fashion, clothing, footwear and accessories from top lifestyle brands.",
+"button":"Open Myntra Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Ajio",
+"domain":"ajio.com",
+"description":"Shop stylish fashion collections, premium clothing and accessories from top brands.",
+"button":"Open Ajio Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Nykaa",
+"domain":"nykaa.com",
+"description":"Explore beauty, cosmetics, skincare and premium makeup products from global brands.",
+"button":"Open Nykaa Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Mamaearth",
+"domain":"mamaearth.in",
+"description":"Discover toxin-free skincare, haircare and baby products inspired by nature.",
+"button":"Open Mamaearth Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"WOW Skin Science",
+"domain":"wow.skin",
+"description":"Explore natural skincare, haircare and beauty products designed for healthy lifestyle.",
+"button":"Open WOW Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Dot & Key",
+"domain":"dotandkey.com",
+"description":"Shop dermatologically tested skincare solutions for glowing and healthy skin.",
+"button":"Open Dot & Key Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Boat",
+"domain":"boat-lifestyle.com",
+"description":"Discover stylish audio products, smartwatches and accessories for modern lifestyle.",
+"button":"Open Boat Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Noise",
+"domain":"gonoise.com",
+"description":"Explore smartwatches, audio devices and wearable gadgets for everyday use.",
+"button":"Open Noise Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Samsung",
+"domain":"samsung.com",
+"description":"Shop smartphones, smart devices, electronics and accessories from Samsung.",
+"button":"Open Samsung Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Apple",
+"domain":"apple.com",
+"description":"Discover iPhones, MacBooks, AirPods and premium Apple ecosystem devices.",
+"button":"Open Apple Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Croma",
+"domain":"croma.com",
+"description":"Explore electronics, gadgets, appliances and latest tech products from trusted brands.",
+"button":"Open Croma Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Tata Cliq",
+"domain":"tatacliq.com",
+"description":"Shop fashion, luxury and electronics from premium Indian and international brands.",
+"button":"Open Tata Cliq Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Reliance Digital",
+"domain":"reliancedigital.in",
+"description":"Explore electronics, appliances and gadgets with exclusive offers.",
+"button":"Open Reliance Digital Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Zara",
+"domain":"zara.com",
+"description":"Shop modern fashion, clothing and accessories from Zara collections.",
+"button":"Open Zara Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"H&M",
+"domain":"hm.com",
+"description":"Discover global fashion styles, clothing and accessories from H&M.",
+"button":"Open H&M Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Levi's",
+"domain":"levi.com",
+"description":"Shop iconic denim collections, jeans and casual wear from Levi's.",
+"button":"Open Levi's Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Nike",
+"domain":"nike.com",
+"description":"Explore sportswear, sneakers and performance gear from Nike.",
+"button":"Open Nike Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Adidas",
+"domain":"adidas.com",
+"description":"Shop athletic footwear, clothing and accessories from Adidas.",
+"button":"Open Adidas Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Puma",
+"domain":"puma.com",
+"description":"Discover sportswear, sneakers and lifestyle fashion from Puma.",
+"button":"Open Puma Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Titan",
+"domain":"titan.co.in",
+"description":"Explore watches, accessories and premium lifestyle collections from Titan.",
+"button":"Open Titan Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Fossil",
+"domain":"fossil.com",
+"description":"Shop stylish watches, leather accessories and lifestyle fashion from Fossil.",
+"button":"Open Fossil Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Sephora",
+"domain":"sephora.com",
+"description":"Explore premium beauty, skincare and cosmetics from global brands.",
+"button":"Open Sephora Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Nykaa Fashion",
+"domain":"nykaafashion.com",
+"description":"Shop fashion collections, clothing and accessories from Nykaa Fashion.",
+"button":"Open Nykaa Fashion Store",
+"link":"AFFILIATE_LINK"
+}
+
+]
+}
