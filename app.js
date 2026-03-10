@@ -642,3 +642,51 @@ behavior:"smooth"
 });
 
 }
+
+/* ==============================
+BRAND DIRECTORY SYSTEM
+AUTO LOAD BRAND LOGOS + LINKS
+============================== */
+
+async function loadBrands(){
+
+let res = await fetch("json/brands.json");
+let data = await res.json();
+
+let grid = document.getElementById("brandGrid");
+
+let html="";
+
+data.brands.forEach(b=>{
+
+html += `
+
+<div class="brand-store-card">
+
+<div class="brand-thumb">
+<img src="https://logo.clearbit.com/${b.domain}">
+</div>
+
+<div class="brand-info">
+
+<div class="brand-title">${b.name}</div>
+
+<p class="brand-desc">${b.description}</p>
+
+<a href="${b.link}" target="_blank" class="brand-open-btn">
+${b.button} →
+</a>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+grid.innerHTML = html;
+
+}
+
+loadBrands();
