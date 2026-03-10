@@ -285,29 +285,6 @@ background:rgba(0,255,136,0.15);
 }
 
 /* ==============================
-HERO
-============================== */
-
-.category-hero{
-border-radius:20px;
-padding:16px;
-margin-bottom:10px;
-background:linear-gradient(135deg,#ff4b2b,#ff416c);
-}
-
-.category-hero h1{
-font-size:15px;
-font-weight:800;
-color:#ffffff;
-}
-
-.category-hero p{
-margin-top:8px;
-font-size:13.5px;
-color:#ffffff;
-}
-
-/* ==============================
 GRID
 ============================== */
 
