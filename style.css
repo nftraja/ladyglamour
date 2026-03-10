@@ -569,6 +569,99 @@ margin-bottom:10px;
 
 
 /* ==============================
+BRAND STORES GRID
+============================== */
+
+.brand-store-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+margin-top:15px;
+}
+
+
+/* ==============================
+BRAND CARD
+============================== */
+
+.brand-store-card{
+display:flex;
+gap:14px;
+padding:16px;
+border-radius:14px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+align-items:flex-start;
+}
+
+
+/* ==============================
+BRAND LOGO
+============================== */
+
+.brand-thumb img{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+
+/* ==============================
+BRAND TEXT
+============================== */
+
+.brand-title{
+font-size:16px;
+font-weight:700;
+color:#fff;
+margin-bottom:6px;
+}
+
+.brand-desc{
+font-size:13px;
+color:#ccc;
+line-height:1.4;
+margin-bottom:10px;
+}
+
+
+/* ==============================
+OPEN BRAND BUTTON
+============================== */
+
+.brand-open-btn{
+display:inline-block;
+padding:8px 14px;
+font-size:13px;
+border-radius:20px;
+text-decoration:none;
+color:#fff;
+background:linear-gradient(135deg,#ff512f,#dd2476);
+transition:.3s;
+}
+
+.brand-open-btn:hover{
+transform:translateY(-2px);
+}
+
+
+/* ==============================
+MOBILE RESPONSIVE
+============================== */
+
+@media(max-width:768px){
+
+.brand-store-grid{
+grid-template-columns:1fr;
+}
+
+.brand-store-card{
+flex-direction:row;
+}
+
+}
+
+/* ==============================
 RESPONSIVE
 ============================== */
 
