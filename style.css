@@ -584,10 +584,9 @@ BRAND CARD
 
 .brand-store-card{
 display:flex;
-align-items:center;
-gap:12px;
-padding:12px;
-border-radius:12px;
+gap:14px;
+padding:16px;
+border-radius:14px;
 
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
@@ -598,24 +597,66 @@ box-shadow:0 6px 18px rgba(0,0,0,0.6);
 
 
 /* ==============================
-BRAND LOGO
+BRAND LOGO CONTAINER
 ============================== */
 
-.brand-store-card img{
-width:40px;
-height:40px;
+.brand-thumb{
+width:60px;
+height:60px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+flex-shrink:0;
+}
+
+.brand-thumb img{
+max-width:100%;
+max-height:100%;
 object-fit:contain;
 }
 
 
 /* ==============================
-BRAND TITLE
+BRAND TEXT
 ============================== */
 
-.brand-store-card span{
-font-size:14px;
-font-weight:600;
+.brand-title{
+font-size:16px;
+font-weight:700;
 color:#ffffff;
+margin-bottom:6px;
+}
+
+.brand-desc{
+font-size:13px;
+color:#cccccc;
+line-height:1.4;
+margin-bottom:10px;
+}
+
+
+/* ==============================
+OPEN BRAND BUTTON
+============================== */
+
+.brand-open-btn{
+display:inline-block;
+padding:8px 14px;
+font-size:13px;
+border-radius:20px;
+text-decoration:none;
+
+color:#ffffff;
+background:linear-gradient(135deg,#ff512f,#dd2476);
+
+transition:.3s;
+}
+
+.brand-open-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 16px rgba(0,0,0,0.6);
 }
 
 
@@ -623,32 +664,10 @@ color:#ffffff;
 RESPONSIVE
 ============================== */
 
-/* Mobile */
-
 @media(max-width:768px){
 
 .brand-store-grid{
 grid-template-columns:1fr;
-}
-
-}
-
-/* Tablet */
-
-@media(min-width:769px) and (max-width:1024px){
-
-.brand-store-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-/* Desktop */
-
-@media(min-width:1025px){
-
-.brand-store-grid{
-grid-template-columns:repeat(4,1fr);
 }
 
 }
