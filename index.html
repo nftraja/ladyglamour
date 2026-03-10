@@ -3,23 +3,22 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>LadyGlamour Smart Deals</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<div class="page-wrap">
+
 <!-- DRAWER OVERLAY -->
 <div class="drawer-overlay" id="drawerOverlay"></div>
 
-<!-- ==============================
-DRAWER MENU
-============================== -->
-
+<!-- DRAWER MENU -->
 <div class="drawer" id="drawer">
 <button class="menu-btn" onclick="toggleDrawer()">← Back</button>
+
 <a href="javascript:void(0)" onclick="loadCollection('womens-fashion')">Women Fashion</a>
 <a href="javascript:void(0)" onclick="loadCollection('handbags')">Handbags</a>
 <a href="javascript:void(0)" onclick="loadCollection('footwear')">Footwear</a>
@@ -38,10 +37,7 @@ DRAWER MENU
 <a href="javascript:void(0)" onclick="loadCollection('hair-care')">Hair Care</a>
 </div>
 
-<!-- ==============================
-HEADER
-============================== -->
-
+<!-- HEADER -->
 <header class="app-header">
 <button class="menu-btn" onclick="toggleDrawer()">☰</button>
 <div class="logo">🛍 LadyGlamour</div>
@@ -53,10 +49,7 @@ HEADER
 <!-- MAIN CONTENT -->
 <main class="main-content">
 
-<!-- ==============================
-COLLECTION CAROUSEL
-============================== -->
-
+<!-- COLLECTION SLIDER -->
 <div class="guide-carousel-title">Explore LadyGlamour Collections</div>
 
 <div class="guide-carousel-wrap">
@@ -108,8 +101,8 @@ COLLECTION CAROUSEL
 <div class="dropdown-list" id="amazonDropdown">
 <div class="dropdown-item" data-cat="purse">Purses</div>
 <div class="dropdown-item" data-cat="wallet">Wallets</div>
-<div class="dropdown-item" data-cat="smartwatch">Smartwatches</div>  
-<div class="dropdown-item" data-cat="footwear">Footwears</div>  
+<div class="dropdown-item" data-cat="smartwatch">Smartwatches</div>
+<div class="dropdown-item" data-cat="footwear">Footwear</div>
 </div>
 </div>
 </div>
@@ -155,13 +148,9 @@ COLLECTION CAROUSEL
 <div class="theme-divider-b"></div>
 
 <div class="custom-dropdown">
-
-<div class="dropdown-selected" id="flipkartSelected">
-Select Category<span class="dropdown-arrow">⌄</span>
-</div>
+<div class="dropdown-selected" id="flipkartSelected">Select Category<span class="dropdown-arrow">⌄</span></div>
 
 <div class="dropdown-list" id="flipkartDropdown">
-
 <div class="dropdown-item" data-cat="electronics">Electronics</div>
 <div class="dropdown-item" data-cat="gadgets">Smart Gadgets</div>
 <div class="dropdown-item" data-cat="mobile">Mobile Accessories</div>
@@ -179,118 +168,6 @@ Select Category<span class="dropdown-arrow">⌄</span>
 <div class="card-title">🛒 Flipkart Deals</div>
 <div class="theme-divider-b"></div>
 <div class="grid" id="flipkartDeals"></div>
-</div>
-
-<!-- Amazon -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/amazon.png" alt="Amazon">
-</div>
-<div>
-<div class="brand-title">Amazon</div>
-<p class="brand-desc">
-Shop electronics, fashion, beauty and daily deals from thousands of brands with fast delivery across India.
-</p>
-<a href="#" class="brand-open-btn">Open Amazon Store →</a>
-</div>
-</div>
-
-<!-- Flipkart -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/flipkart.png" alt="Flipkart">
-</div>
-<div>
-<div class="brand-title">Flipkart</div>
-<p class="brand-desc">
-Explore mobiles, electronics, fashion and home products with exclusive sales and seasonal offers.
-</p>
-<a href="#" class="brand-open-btn">Open Flipkart Store →</a>
-</div>
-</div>
-
-<!-- Myntra -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/myntra.png" alt="Myntra">
-</div>
-<div>
-<div class="brand-title">Myntra</div>
-<p class="brand-desc">
-Discover trending fashion, clothing, footwear and accessories from top lifestyle brands.
-</p>
-<a href="#" class="brand-open-btn">Open Myntra Store →</a>
-</div>
-</div>
-
-<!-- Ajio -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/ajio.png" alt="Ajio">
-</div>
-<div>
-<div class="brand-title">Ajio</div>
-<p class="brand-desc">
-Shop stylish fashion collections, premium clothing and accessories from top brands.
-</p>
-<a href="#" class="brand-open-btn">Open Ajio Store →</a>
-</div>
-</div>
-
-<!-- WOW -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/wow.png" alt="WOW Skin Science">
-</div>
-<div>
-<div class="brand-title">WOW Skin Science</div>
-<p class="brand-desc">
-Explore natural skincare, haircare and beauty products designed for healthy lifestyle.
-</p>
-<a href="#" class="brand-open-btn">Open WOW Store →</a>
-</div>
-</div>
-
-<!-- Mamaearth -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/mamaearth.png" alt="Mamaearth">
-</div>
-<div>
-<div class="brand-title">Mamaearth</div>
-<p class="brand-desc">
-Discover toxin-free skincare, haircare and baby products inspired by nature.
-</p>
-<a href="#" class="brand-open-btn">Open Mamaearth Store →</a>
-</div>
-</div>
-
-<!-- Dot & Key -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/dotandkey.png" alt="Dot & Key">
-</div>
-<div>
-<div class="brand-title">Dot & Key</div>
-<p class="brand-desc">
-Shop dermatologically tested skincare solutions for glowing and healthy skin.
-</p>
-<a href="#" class="brand-open-btn">Open Dot & Key Store →</a>
-</div>
-</div>
-
-<!-- Croma -->
-<div class="brand-store-card">
-<div class="brand-thumb">
-<img src="images/brands/croma.png" alt="Croma">
-</div>
-<div>
-<div class="brand-title">Croma</div>
-<p class="brand-desc">
-Explore electronics, gadgets, appliances and latest tech products from trusted brands.
-</p>
-<a href="#" class="brand-open-btn">Open Croma Store →</a>
-</div>
 </div>
 
 <!-- SEARCH -->
@@ -318,6 +195,8 @@ Explore electronics, gadgets, appliances and latest tech products from trusted b
 </div>
 
 <script src="app.js"></script>
+
+</div>
 
 </body>
 </html>
