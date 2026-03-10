@@ -584,13 +584,15 @@ BRAND CARD
 
 .brand-store-card{
 display:flex;
-gap:14px;
-padding:16px;
-border-radius:14px;
+align-items:center;
+gap:12px;
+padding:12px;
+border-radius:12px;
+
 background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-align-items:flex-start;
 border:1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(10px);
 box-shadow:0 6px 18px rgba(0,0,0,0.6);
 }
 
@@ -599,50 +601,21 @@ box-shadow:0 6px 18px rgba(0,0,0,0.6);
 BRAND LOGO
 ============================== */
 
-.brand-thumb img{
-width:70px;
-height:70px;
+.brand-store-card img{
+width:40px;
+height:40px;
 object-fit:contain;
 }
 
 
 /* ==============================
-BRAND TEXT
+BRAND TITLE
 ============================== */
 
-.brand-title{
-font-size:16px;
-font-weight:700;
-color:#fff;
-margin-bottom:6px;
-}
-
-.brand-desc{
-font-size:13px;
-color:#ccc;
-line-height:1.4;
-margin-bottom:10px;
-}
-
-
-/* ==============================
-OPEN BRAND BUTTON
-============================== */
-
-.brand-open-btn{
-display:inline-block;
-padding:8px 14px;
-font-size:13px;
-border-radius:20px;
-text-decoration:none;
-color:#fff;
-background:linear-gradient(135deg,#ff512f,#dd2476);
-transition:0.3s;
-}
-
-.brand-open-btn:hover{
-transform:translateY(-2px);
-box-shadow:0 6px 16px rgba(0,0,0,0.6);
+.brand-store-card span{
+font-size:14px;
+font-weight:600;
+color:#ffffff;
 }
 
 
@@ -656,10 +629,6 @@ RESPONSIVE
 
 .brand-store-grid{
 grid-template-columns:1fr;
-}
-
-.brand-store-card{
-flex-direction:row;
 }
 
 }
