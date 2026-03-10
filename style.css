@@ -592,6 +592,8 @@ border-radius:14px;
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(10px);
 align-items:flex-start;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 6px 18px rgba(0,0,0,0.6);
 }
 
 
@@ -637,17 +639,20 @@ border-radius:20px;
 text-decoration:none;
 color:#fff;
 background:linear-gradient(135deg,#ff512f,#dd2476);
-transition:.3s;
+transition:0.3s;
 }
 
 .brand-open-btn:hover{
 transform:translateY(-2px);
+box-shadow:0 6px 16px rgba(0,0,0,0.6);
 }
 
 
 /* ==============================
-MOBILE RESPONSIVE
+RESPONSIVE
 ============================== */
+
+/* Mobile */
 
 @media(max-width:768px){
 
@@ -657,6 +662,26 @@ grid-template-columns:1fr;
 
 .brand-store-card{
 flex-direction:row;
+}
+
+}
+
+/* Tablet */
+
+@media(min-width:769px) and (max-width:1024px){
+
+.brand-store-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Desktop */
+
+@media(min-width:1025px){
+
+.brand-store-grid{
+grid-template-columns:repeat(4,1fr);
 }
 
 }
