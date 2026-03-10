@@ -427,26 +427,89 @@ behavior:"smooth"
 
 
 /* ==============================
-SEARCH
+SEARCH + LIVE SUGGESTIONS
 ============================== */
 
 const searchBox = document.getElementById("searchBox");
+const suggestionBox = document.getElementById("searchSuggestions");
 
 if(searchBox){
 
-searchBox.addEventListener("keyup",function(e){
+searchBox.addEventListener("input", liveSearch);
 
-if(e.key==="Enter"){
-searchProducts();
+}
+
+function liveSearch(){
+
+let query = searchBox.value.toLowerCase().trim();
+
+/* plural fix */
+query = query.replace("es","").replace("s","");
+
+if(!query){
+
+if(suggestionBox) suggestionBox.innerHTML="";
+return;
+
+}
+
+let results = [];
+
+Object.values(storeData).forEach(cat=>{
+
+cat.forEach(p=>{
+
+if(p.title.toLowerCase().includes(query)){
+results.push(p);
 }
 
 });
 
+});
+
+let html="";
+
+results.slice(0,5).forEach(p=>{
+
+html += `
+<div class="search-item"
+onclick="selectSuggestion('${p.title}')">
+${p.title}
+</div>
+`;
+
+});
+
+if(suggestionBox) suggestionBox.innerHTML = html;
+
 }
+
+
+/* ==============================
+SELECT SUGGESTION
+============================== */
+
+function selectSuggestion(title){
+
+searchBox.value = title;
+
+if(suggestionBox) suggestionBox.innerHTML="";
+
+searchProducts();
+
+}
+
+
+/* ==============================
+SEARCH PRODUCTS
+============================== */
 
 function searchProducts(){
 
-let query = searchBox.value.toLowerCase();
+let query = searchBox.value.toLowerCase().trim();
+
+query = query.replace("es","").replace("s","");
+
 let results = [];
 
 Object.values(storeData).forEach(cat=>{
