@@ -650,10 +650,15 @@ AUTO LOAD BRAND LOGOS + LINKS
 
 async function loadBrands(){
 
+try{
+
 let res = await fetch("json/brands.json");
+
 let data = await res.json();
 
 let grid = document.getElementById("brandGrid");
+
+if(!grid) return;
 
 let html="";
 
@@ -664,17 +669,29 @@ html += `
 <div class="brand-store-card">
 
 <div class="brand-thumb">
-<img src="https://logo.clearbit.com/${b.domain}">
+
+<img src="https://logo.clearbit.com/${b.domain}"
+alt="${b.name}"
+onerror="this.src='images/logo.png'">
+
 </div>
 
 <div class="brand-info">
 
-<div class="brand-title">${b.name}</div>
+<div class="brand-title">
+${b.name}
+</div>
 
-<p class="brand-desc">${b.description}</p>
+<p class="brand-desc">
+${b.description}
+</p>
 
-<a href="${b.link}" target="_blank" class="brand-open-btn">
+<a href="${b.link}"
+target="_blank"
+class="brand-open-btn">
+
 ${b.button} →
+
 </a>
 
 </div>
@@ -686,6 +703,13 @@ ${b.button} →
 });
 
 grid.innerHTML = html;
+
+}
+catch(e){
+
+console.log("Brand JSON error",e);
+
+}
 
 }
 
