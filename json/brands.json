@@ -1,15 +1,4 @@
 {
-"brands":[
-
-{
-"name":"Amazon",
-"domain":"amazon.in",
-"description":"Shop electronics, fashion, beauty and daily deals from thousands of brands with fast delivery across India.",
-"button":"Open Amazon Store",
-"link":"AFFILIATE_LINK"
-},
-
-{
 "name":"Flipkart",
 "domain":"flipkart.com",
 "description":"Explore mobiles, electronics, fashion and home products with exclusive sales and seasonal offers.",
@@ -34,172 +23,305 @@
 },
 
 {
-"name":"Nykaa",
-"domain":"nykaa.com",
-"description":"Explore beauty, cosmetics, skincare and premium makeup products from global brands.",
-"button":"Open Nykaa Store",
-"link":"AFFILIATE_LINK"
-},
-
-{
-"name":"Mamaearth",
-"domain":"mamaearth.in",
-"description":"Discover toxin-free skincare, haircare and baby products inspired by nature.",
-"button":"Open Mamaearth Store",
-"link":"AFFILIATE_LINK"
-},
-
-{
-"name":"WOW Skin Science",
+"name":"WOW Skin Care",
 "domain":"wow.skin",
-"description":"Explore natural skincare, haircare and beauty products designed for healthy lifestyle.",
+"description":"Explore natural skincare, haircare and beauty products designed for a healthy lifestyle.",
 "button":"Open WOW Store",
 "link":"AFFILIATE_LINK"
 },
 
 {
-"name":"Dot & Key",
+"name":"Dot & Key Skincare",
 "domain":"dotandkey.com",
-"description":"Shop dermatologically tested skincare solutions for glowing and healthy skin.",
+"description":"Shop dermatologist tested skincare solutions for glowing and healthy skin.",
 "button":"Open Dot & Key Store",
 "link":"AFFILIATE_LINK"
 },
 
 {
-"name":"Boat",
-"domain":"boat-lifestyle.com",
-"description":"Discover stylish audio products, smartwatches and accessories for modern lifestyle.",
-"button":"Open Boat Store",
+"name":"BuyKaro",
+"domain":"buykaro.com",
+"description":"Discover trending products, deals and curated shopping recommendations.",
+"button":"Open BuyKaro Store",
 "link":"AFFILIATE_LINK"
 },
 
 {
-"name":"Noise",
-"domain":"gonoise.com",
-"description":"Explore smartwatches, audio devices and wearable gadgets for everyday use.",
-"button":"Open Noise Store",
+"name":"MamaEarth",
+"domain":"mamaearth.in",
+"description":"Discover toxin-free skincare, haircare and beauty products inspired by nature.",
+"button":"Open MamaEarth Store",
 "link":"AFFILIATE_LINK"
 },
 
 {
-"name":"Samsung",
-"domain":"samsung.com",
-"description":"Shop smartphones, smart devices, electronics and accessories from Samsung.",
-"button":"Open Samsung Store",
-"link":"AFFILIATE_LINK"
-},
-
-{
-"name":"Apple",
-"domain":"apple.com",
-"description":"Discover iPhones, MacBooks, AirPods and premium Apple ecosystem devices.",
-"button":"Open Apple Store",
+"name":"Goibibo",
+"domain":"goibibo.com",
+"description":"Book flights, hotels and travel packages with exclusive deals and discounts.",
+"button":"Open Goibibo",
 "link":"AFFILIATE_LINK"
 },
 
 {
 "name":"Croma",
 "domain":"croma.com",
-"description":"Explore electronics, gadgets, appliances and latest tech products from trusted brands.",
+"description":"Explore electronics, gadgets and appliances from trusted technology brands.",
 "button":"Open Croma Store",
 "link":"AFFILIATE_LINK"
 },
 
 {
-"name":"Tata Cliq",
-"domain":"tatacliq.com",
-"description":"Shop fashion, luxury and electronics from premium Indian and international brands.",
-"button":"Open Tata Cliq Store",
+"name":"OnePlus",
+"domain":"oneplus.com",
+"description":"Discover premium smartphones, accessories and smart devices from OnePlus.",
+"button":"Open OnePlus Store",
 "link":"AFFILIATE_LINK"
 },
 
 {
-"name":"Reliance Digital",
-"domain":"reliancedigital.in",
-"description":"Explore electronics, appliances and gadgets with exclusive offers.",
-"button":"Open Reliance Digital Store",
-"link":"AFFILIATE_LINK"
-},
-
-{
-"name":"Zara",
-"domain":"zara.com",
-"description":"Shop modern fashion, clothing and accessories from Zara collections.",
-"button":"Open Zara Store",
-"link":"AFFILIATE_LINK"
-},
-
-{
-"name":"H&M",
-"domain":"hm.com",
-"description":"Discover global fashion styles, clothing and accessories from H&M.",
-"button":"Open H&M Store",
-"link":"AFFILIATE_LINK"
-},
-
-{
-"name":"Levi's",
-"domain":"levi.com",
-"description":"Shop iconic denim collections, jeans and casual wear from Levi's.",
-"button":"Open Levi's Store",
-"link":"AFFILIATE_LINK"
-},
-
-{
-"name":"Nike",
-"domain":"nike.com",
-"description":"Explore sportswear, sneakers and performance gear from Nike.",
-"button":"Open Nike Store",
-"link":"AFFILIATE_LINK"
-},
-
-{
-"name":"Adidas",
-"domain":"adidas.com",
-"description":"Shop athletic footwear, clothing and accessories from Adidas.",
-"button":"Open Adidas Store",
+"name":"MakeMyTrip",
+"domain":"makemytrip.com",
+"description":"Book flights, hotels, holiday packages and travel services with great offers.",
+"button":"Open MakeMyTrip",
 "link":"AFFILIATE_LINK"
 },
 
 {
 "name":"Puma",
 "domain":"puma.com",
-"description":"Discover sportswear, sneakers and lifestyle fashion from Puma.",
+"description":"Shop sportswear, sneakers and athletic fashion from Puma.",
 "button":"Open Puma Store",
 "link":"AFFILIATE_LINK"
 },
 
 {
-"name":"Titan",
-"domain":"titan.co.in",
-"description":"Explore watches, accessories and premium lifestyle collections from Titan.",
-"button":"Open Titan Store",
+"name":"Acer",
+"domain":"acer.com",
+"description":"Explore laptops, gaming devices and electronics from Acer.",
+"button":"Open Acer Store",
 "link":"AFFILIATE_LINK"
 },
 
 {
-"name":"Fossil",
-"domain":"fossil.com",
-"description":"Shop stylish watches, leather accessories and lifestyle fashion from Fossil.",
-"button":"Open Fossil Store",
+"name":"Cleartrip",
+"domain":"cleartrip.com",
+"description":"Find flights, hotels and travel experiences with exclusive deals.",
+"button":"Open Cleartrip",
 "link":"AFFILIATE_LINK"
 },
 
 {
-"name":"Sephora",
-"domain":"sephora.com",
-"description":"Explore premium beauty, skincare and cosmetics from global brands.",
-"button":"Open Sephora Store",
+"name":"Kiro Clean Beauty",
+"domain":"kirobeauty.com",
+"description":"Explore clean beauty and vegan makeup products for modern skincare.",
+"button":"Open Kiro Beauty",
 "link":"AFFILIATE_LINK"
 },
 
 {
-"name":"Nykaa Fashion",
-"domain":"nykaafashion.com",
-"description":"Shop fashion collections, clothing and accessories from Nykaa Fashion.",
-"button":"Open Nykaa Fashion Store",
+"name":"Apna",
+"domain":"apna.co",
+"description":"Find jobs, career opportunities and professional networking on Apna.",
+"button":"Open Apna",
 "link":"AFFILIATE_LINK"
-}
+},
 
-]
+{
+"name":"Noise",
+"domain":"gonoise.com",
+"description":"Discover smartwatches, earbuds and wearable gadgets from Noise.",
+"button":"Open Noise Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Lotus Botanicals",
+"domain":"lotusbotanicals.com",
+"description":"Shop natural skincare and beauty products powered by botanical ingredients.",
+"button":"Open Lotus Botanicals",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Durex",
+"domain":"durexindia.com",
+"description":"Explore personal wellness products and intimate lifestyle essentials.",
+"button":"Open Durex Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"mPockket",
+"domain":"mpocket.com",
+"description":"Access instant personal loans and financial services through mPockket.",
+"button":"Open mPockket",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Truemeds",
+"domain":"truemeds.in",
+"description":"Order medicines and healthcare products with affordable alternatives.",
+"button":"Open Truemeds",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"ShopClues",
+"domain":"shopclues.com",
+"description":"Explore affordable fashion, electronics and daily deals on ShopClues.",
+"button":"Open ShopClues",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"SwissBeauty",
+"domain":"swissbeauty.in",
+"description":"Discover affordable makeup and beauty products from Swiss Beauty.",
+"button":"Open SwissBeauty",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Zandu",
+"domain":"zanducare.com",
+"description":"Explore ayurvedic wellness, health supplements and herbal remedies.",
+"button":"Open Zandu",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Reliance Digital",
+"domain":"reliancedigital.in",
+"description":"Shop electronics, gadgets and appliances with exclusive offers.",
+"button":"Open Reliance Digital",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"BHIM",
+"domain":"bhimupi.org.in",
+"description":"Make secure digital payments using BHIM UPI platform.",
+"button":"Open BHIM",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Zype",
+"domain":"zype.com",
+"description":"Explore digital streaming and video platform services.",
+"button":"Open Zype",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Booking.com",
+"domain":"booking.com",
+"description":"Find hotels, apartments and travel accommodations worldwide.",
+"button":"Open Booking.com",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Tata CliQ",
+"domain":"tatacliq.com",
+"description":"Shop fashion, luxury and electronics from premium brands.",
+"button":"Open Tata CliQ",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Havells",
+"domain":"havells.com",
+"description":"Discover electrical appliances, lighting and home solutions from Havells.",
+"button":"Open Havells",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"TripAdvisor",
+"domain":"tripadvisor.com",
+"description":"Discover hotels, travel reviews and trip planning insights worldwide.",
+"button":"Open TripAdvisor",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"BlackBerry",
+"domain":"blackberry.com",
+"description":"Explore security software, enterprise solutions and technology services.",
+"button":"Open BlackBerry",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"PharmEasy",
+"domain":"pharmeasy.in",
+"description":"Order medicines, healthcare products and diagnostic tests online.",
+"button":"Open PharmEasy",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"OTTplay",
+"domain":"ottplay.com",
+"description":"Discover streaming guides, OTT recommendations and entertainment updates.",
+"button":"Open OTTplay",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Oppo",
+"domain":"oppo.com",
+"description":"Explore smartphones, smart devices and accessories from OPPO.",
+"button":"Open Oppo Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Libas",
+"domain":"libas.in",
+"description":"Shop ethnic fashion, kurtis and clothing collections from Libas.",
+"button":"Open Libas",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Realme",
+"domain":"realme.com",
+"description":"Discover smartphones, audio devices and smart technology products.",
+"button":"Open Realme Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"HP",
+"domain":"hp.com",
+"description":"Explore laptops, printers and computing devices from HP.",
+"button":"Open HP Store",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"COSIQ",
+"domain":"cosiq.com",
+"description":"Discover science-based skincare and beauty solutions from COSIQ.",
+"button":"Open COSIQ",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"Healthily",
+"domain":"livehealthily.com",
+"description":"Access health advice, wellness tools and medical information online.",
+"button":"Open Healthily",
+"link":"AFFILIATE_LINK"
+},
+
+{
+"name":"KAMA Ayurveda",
+"domain":"kamaayurveda.com",
+"description":"Explore luxury ayurvedic skincare and wellness products from KAMA Ayurveda.",
+"button":"Open KAMA Ayurveda",
+"link":"AFFILIATE_LINK"
 }
