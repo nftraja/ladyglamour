@@ -493,12 +493,9 @@ grid.innerHTML=html;
 
 /* ==============================
 COLLECTION LOADER (DRAWER MENU)
-Load products from collection JSON
 ============================== */
 
 async function loadCollection(cat){
-
-try{
 
 let res = await fetch("json/" + cat + ".json");
 
@@ -514,13 +511,6 @@ html+=productCard(p);
 
 grid.innerHTML=html;
 
-/* drawer close */
-
 toggleDrawer();
-
-}
-catch(e){
-console.log("Collection error",e);
-}
 
 }
