@@ -514,3 +514,131 @@ grid.innerHTML=html;
 toggleDrawer();
 
 }
+
+/* ==============================
+FLIPKART SYSTEM
+============================== */
+
+/* FLIPKART DATA */
+
+let flipkartData = {};
+
+
+/* ==============================
+LOAD FLIPKART JSON
+============================== */
+
+async function loadFlipkart(){
+
+try{
+
+let res = await fetch("json/flipkart.json");
+
+flipkartData = await res.json();
+
+/* DEFAULT CATEGORY */
+
+renderFlipkart("electronics");
+
+/* dropdown label update */
+
+const flipSelected = document.getElementById("flipkartSelected");
+
+if(flipSelected){
+flipSelected.innerHTML =
+'Electronics <span class="dropdown-arrow">⌄</span>';
+}
+
+}
+catch(e){
+console.log("Flipkart JSON error",e);
+}
+
+}
+
+loadFlipkart();
+
+
+/* ==============================
+RENDER FLIPKART PRODUCTS
+============================== */
+
+function renderFlipkart(cat){
+
+let grid = document.getElementById("flipkartDeals");
+
+if(!grid) return;
+
+if(!flipkartData[cat]){
+
+grid.innerHTML="<p>No products available</p>";
+return;
+
+}
+
+let html="";
+
+flipkartData[cat].forEach(p=>{
+html+=productCard(p);
+});
+
+grid.innerHTML=html;
+
+}
+
+
+/* ==============================
+FLIPKART CUSTOM DROPDOWN
+============================== */
+
+const flipSelected = document.getElementById("flipkartSelected");
+const flipDropdown = document.getElementById("flipkartDropdown");
+
+if(flipSelected){
+
+flipSelected.addEventListener("click",function(){
+
+flipDropdown.classList.toggle("active");
+
+});
+
+}
+
+document.querySelectorAll("#flipkartDropdown .dropdown-item")
+.forEach(item=>{
+
+item.addEventListener("click",function(){
+
+let cat = this.dataset.cat;
+
+renderFlipkart(cat);
+
+flipSelected.innerHTML =
+this.textContent +
+' <span class="dropdown-arrow">⌄</span>';
+
+flipDropdown.classList.remove("active");
+
+scrollToFlipkart();
+
+});
+
+});
+
+
+/* ==============================
+SCROLL FLIPKART
+============================== */
+
+function scrollToFlipkart(){
+
+let target=document.getElementById("flipkartDeals");
+
+if(!target) return;
+
+window.scrollTo({
+top:target.offsetTop-80,
+behavior:"smooth"
+});
+
+}
