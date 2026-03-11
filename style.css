@@ -166,9 +166,9 @@ CATEGORY ICON GRID
 .category-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:10px;
-margin-top:10px;
-margin-bottom:10px;
+gap:8px;
+margin-top:12px;
+margin-bottom:12px;
 justify-items:center;
 align-items:start;
 }
@@ -197,7 +197,7 @@ background:#222;
 }
 
 .category-icon span{
-font-size:12px;
+font-size:11px;
 margin-top:6px;
 text-align:center;
 }
@@ -444,9 +444,9 @@ overflow:hidden;
 }
 
 .guide-carousel-title{
-font-size:15px;
+font-size:14px;
 font-weight:700;
-color:#66ffb3;
+color:gold;
 text-align:center;
 margin:5px 0;
 }
@@ -454,7 +454,7 @@ margin:5px 0;
 .guide-carousel{
 display:flex;
 align-items:flex-start;
-gap:10px;
+gap:8px;
 overflow-x:auto;
 scroll-behavior:smooth;
 scroll-snap-type:x mandatory;
@@ -477,89 +477,6 @@ width:260px;
 aspect-ratio:16/9;
 height:auto;
 scroll-snap-align:start;
-}
-
-/* ==============================
-CARD (THEME SAME)
-============================== */
-
-.guide-card{
-position:relative;
-border-radius:18px;
-padding:8px;
-color:#fff;
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-overflow:hidden;
-text-decoration:none;
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-border:1px solid rgba(255,255,255,0.18);
-}
-
-.guide-card::before{
-content:"";
-position:absolute;
-inset:0;
-background:var(--card-color);
-opacity:.25;
-z-index:0;
-}
-
-.guide-card::after{
-content:"";
-position:absolute;
-top:0;
-left:0;
-right:0;
-height:45%;
-background:linear-gradient(
-180deg,
-rgba(255,255,255,0.55),
-rgba(255,255,255,0.18),
-transparent
-);
-opacity:.35;
-pointer-events:none;
-}
-
-.guide-card span.gloss{
-position:absolute;
-top:-80%;
-left:-40%;
-width:60%;
-height:220%;
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,0.35),
-transparent
-);
-transform:rotate(25deg);
-opacity:0;
-transition:.6s;
-}
-
-.guide-card *{
-position:relative;
-z-index:2;
-}
-
-/* icon remove but css safe */
-
-.guide-icon{
-display:none;
-}
-
-/* title */
-
-.guide-title{
-font-size:14px;
-font-weight:700;
-margin-left:10px;
-margin-bottom:10px;
 }
 
 /* ==============================
