@@ -168,10 +168,8 @@ display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:14px;
 margin-top:12px;
-
-/* FIX */
-padding:0 8px;
 justify-items:center;
+align-items:start;
 }
 
 /* ==============================
@@ -185,6 +183,7 @@ align-items:center;
 text-align:center;
 text-decoration:none;
 color:#ffffff;
+width:100%;
 }
 
 .category-icon img{
@@ -199,6 +198,7 @@ background:#222;
 .category-icon span{
 font-size:12px;
 margin-top:6px;
+text-align:center;
 }
 
 /* ==============================
@@ -209,7 +209,6 @@ DESKTOP GRID
 
 .category-grid{
 grid-template-columns:repeat(8,1fr);
-padding:0 12px;
 }
 
 .category-icon img{
