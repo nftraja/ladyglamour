@@ -160,6 +160,59 @@ text-align:center;
 }
 
 /* ==============================
+CATEGORY ICON GRID
+============================== */
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+margin-top:12px;
+}
+
+/* ==============================
+CATEGORY ICON
+============================== */
+
+.category-icon{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+text-decoration:none;
+color:#ffffff;
+}
+
+.category-icon img{
+width:70px;
+height:70px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid rgba(255,255,255,0.15);
+background:#222;
+}
+
+.category-icon span{
+font-size:12px;
+margin-top:6px;
+}
+
+/* ==============================
+DESKTOP GRID
+============================== */
+
+@media(min-width:768px){
+
+.category-grid{
+grid-template-columns:repeat(8,1fr);
+}
+
+.category-icon img{
+width:80px;
+height:80px;
+}
+
+/* ==============================
 DIVIDER
 ============================== */
 
