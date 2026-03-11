@@ -219,6 +219,85 @@ height:80px;
 
 }
 
+.guide-card{
+position:relative;
+border-radius:18px;
+padding:8px;
+color:#fff;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+overflow:hidden;
+text-decoration:none;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+border:1px solid rgba(255,255,255,0.18);
+}
+
+.guide-card::before{
+content:"";
+position:absolute;
+inset:0;
+background:var(--card-color);
+opacity:.25;
+z-index:0;
+}
+
+.guide-card::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:45%;
+background:linear-gradient(
+180deg,
+rgba(255,255,255,0.55),
+rgba(255,255,255,0.18),
+transparent
+);
+opacity:.35;
+pointer-events:none;
+}
+
+.guide-card span.gloss{
+position:absolute;
+top:-80%;
+left:-40%;
+width:60%;
+height:220%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.35),
+transparent
+);
+transform:rotate(25deg);
+opacity:0;
+transition:.6s;
+}
+
+.guide-card *{
+position:relative;
+z-index:2;
+}
+
+/* icon remove but css safe */
+
+.guide-icon{
+display:none;
+}
+
+/* title */
+
+.guide-title{
+font-size:14px;
+font-weight:700;
+margin-left:10px;
+margin-bottom:10px;
+}
+
 /* ==============================
 DIVIDER
 ============================== */
