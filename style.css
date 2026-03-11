@@ -166,8 +166,9 @@ CATEGORY ICON GRID
 .category-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:14px;
-margin-top:12px;
+gap:10px;
+margin-top:10px;
+margin-bottom:10px;
 justify-items:center;
 align-items:start;
 }
