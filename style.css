@@ -168,6 +168,9 @@ display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:12px;
 margin-top:12px;
+
+/* FIX ALIGNMENT */
+justify-items:center;
 }
 
 /* ==============================
