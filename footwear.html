@@ -10,9 +10,7 @@
 
 <style>
 
-/* ==============================
-GLOBAL
-============================== */
+/* GLOBAL */
 
 *{
 margin:0;
@@ -27,84 +25,85 @@ color:#fff;
 padding:20px;
 }
 
-/* ==============================
-CARD
-============================== */
+/* GLASS CARD */
 
 .glass-card{
 border-radius:18px;
-padding:12px;
-margin-bottom:16px;
+padding:15px;
+margin-bottom:18px;
 background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.08);
 }
 
-/* ==============================
-TITLE
-============================== */
+/* TITLE */
 
 .card-title{
 font-size:14px;
 font-weight:700;
 text-align:center;
-margin-bottom:8px;
+margin-bottom:10px;
 }
 
-/* ==============================
-DIVIDER
-============================== */
+/* DIVIDER */
 
 .theme-divider-b{
 height:1px;
-margin:8px 0 12px;
+margin:8px 0 14px;
 background:linear-gradient(90deg,transparent,#ffffff80,transparent);
 }
 
-/* ==============================
-PRODUCT GRID
-============================== */
+/* GRID */
 
 .product-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:10px;
+gap:12px;
 }
 
-/* ==============================
-PRODUCT CARD
-============================== */
+/* DESKTOP */
+
+@media(min-width:900px){
+
+.product-grid{
+grid-template-columns:repeat(6,1fr);
+}
+
+}
+
+@media(min-width:1200px){
+
+.product-grid{
+grid-template-columns:repeat(8,1fr);
+}
+
+}
+
+/* CARD */
 
 .product-card{
-position:relative;
-aspect-ratio:1/2;
+background:#111;
 border-radius:14px;
 overflow:hidden;
-background-size:cover;
-background-position:center;
+border:1px solid rgba(255,255,255,0.08);
 }
 
-/* ==============================
-OVERLAY
-============================== */
+/* IMAGE */
 
-.product-overlay{
-position:absolute;
-bottom:0;
-left:0;
-right:0;
+.product-img{
+width:100%;
+aspect-ratio:1/1.25;
+object-fit:cover;
+display:block;
+}
+
+/* CAPTION */
+
+.product-caption{
 padding:10px;
 text-align:center;
-background:linear-gradient(
-to top,
-rgba(0,0,0,0.9),
-rgba(0,0,0,0.4),
-transparent
-);
 }
 
-/* ==============================
-PRICE
-============================== */
+/* PRICE */
 
 .product-price{
 font-size:14px;
@@ -113,18 +112,16 @@ color:#00ff88;
 margin-bottom:6px;
 }
 
-/* ==============================
-BUTTON
-============================== */
+/* BUTTON */
 
 .view-btn{
 display:inline-block;
 padding:6px 12px;
-border-radius:20px;
 font-size:12px;
-text-decoration:none;
-color:#fff;
+border-radius:20px;
 background:linear-gradient(135deg,#ff512f,#dd2476);
+color:#fff;
+text-decoration:none;
 }
 
 </style>
@@ -144,37 +141,46 @@ background:linear-gradient(135deg,#ff512f,#dd2476);
 
 <div class="product-grid">
 
-<div class="product-card" style="background-image:url('https://m.media-amazon.com/images/I/71DomwkOBWL._SY695_.jpg')">
-<div class="product-overlay">
+
+<div class="product-card">
+<img src="https://m.media-amazon.com/images/I/71DomwkOBWL._SY695_.jpg" class="product-img">
+<div class="product-caption">
 <div class="product-price">₹434</div>
 <a href="https://amzn.to/40jh4Wv" class="view-btn">View Deal</a>
 </div>
 </div>
 
-<div class="product-card" style="background-image:url('https://m.media-amazon.com/images/I/61XogZFd0GL._SY695_.jpg')">
-<div class="product-overlay">
+
+<div class="product-card">
+<img src="https://m.media-amazon.com/images/I/61XogZFd0GL._SY695_.jpg" class="product-img">
+<div class="product-caption">
 <div class="product-price">₹399</div>
 <a href="https://amzn.to/4uslzvJ" class="view-btn">View Deal</a>
 </div>
 </div>
 
-<div class="product-card" style="background-image:url('https://m.media-amazon.com/images/I/81tPkbrHwCL._SY695_.jpg')">
-<div class="product-overlay">
+
+<div class="product-card">
+<img src="https://m.media-amazon.com/images/I/81tPkbrHwCL._SY695_.jpg" class="product-img">
+<div class="product-caption">
 <div class="product-price">₹536</div>
 <a href="https://amzn.to/4cA3NA9" class="view-btn">View Deal</a>
 </div>
 </div>
 
-<div class="product-card" style="background-image:url('https://m.media-amazon.com/images/I/61FqGF27eCL._SY695_.jpg')">
-<div class="product-overlay">
+
+<div class="product-card">
+<img src="https://m.media-amazon.com/images/I/61FqGF27eCL._SY695_.jpg" class="product-img">
+<div class="product-caption">
 <div class="product-price">₹1299</div>
 <a href="https://amzn.to/3MX3pBo" class="view-btn">View Deal</a>
 </div>
 </div>
 
-</div>
 
 </div>
+</div>
+
 
 
 <!-- FLIPKART -->
@@ -187,23 +193,28 @@ background:linear-gradient(135deg,#ff512f,#dd2476);
 
 <div class="product-grid">
 
-<div class="product-card" style="background-image:url('https://images.pexels.com/photos/19090/pexels-photo.jpg')">
-<div class="product-overlay">
+
+<div class="product-card">
+<img src="https://images.pexels.com/photos/19090/pexels-photo.jpg" class="product-img">
+<div class="product-caption">
 <div class="product-price">₹999</div>
 <a href="#" class="view-btn">View Deal</a>
 </div>
 </div>
 
-<div class="product-card" style="background-image:url('https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg')">
-<div class="product-overlay">
+
+<div class="product-card">
+<img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg" class="product-img">
+<div class="product-caption">
 <div class="product-price">₹799</div>
 <a href="#" class="view-btn">View Deal</a>
 </div>
 </div>
 
-</div>
 
 </div>
+</div>
+
 
 
 <!-- MYNTRA -->
@@ -216,22 +227,26 @@ background:linear-gradient(135deg,#ff512f,#dd2476);
 
 <div class="product-grid">
 
-<div class="product-card" style="background-image:url('https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg')">
-<div class="product-overlay">
+
+<div class="product-card">
+<img src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg" class="product-img">
+<div class="product-caption">
 <div class="product-price">₹1099</div>
 <a href="#" class="view-btn">View Deal</a>
 </div>
 </div>
 
-<div class="product-card" style="background-image:url('https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg')">
-<div class="product-overlay">
+
+<div class="product-card">
+<img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg" class="product-img">
+<div class="product-caption">
 <div class="product-price">₹899</div>
 <a href="#" class="view-btn">View Deal</a>
 </div>
 </div>
 
-</div>
 
+</div>
 </div>
 
 
