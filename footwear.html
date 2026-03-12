@@ -1,9 +1,13 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>LadyGlamour Footwear Deals</title>
+
 <style>
 
 /* GLOBAL */
@@ -21,7 +25,7 @@ color:#fff;
 padding:20px;
 }
 
-/* GLASS CARD */
+/* CARD */
 
 .glass-card{
 border-radius:18px;
@@ -53,28 +57,24 @@ background:linear-gradient(90deg,transparent,#ffffff80,transparent);
 .product-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:10px;
+gap:12px;
 }
 
 /* DESKTOP */
 
 @media(min-width:900px){
-
 .product-grid{
 grid-template-columns:repeat(6,1fr);
 }
-
 }
 
 @media(min-width:1200px){
-
 .product-grid{
 grid-template-columns:repeat(8,1fr);
 }
-
 }
 
-/* CARD */
+/* PRODUCT CARD */
 
 .product-card{
 background:#111;
@@ -99,6 +99,19 @@ padding:10px;
 text-align:center;
 }
 
+/* DISCOUNT */
+
+.product-discount{
+display:inline-block;
+background:#ffd700;
+color:#000;
+font-size:11px;
+font-weight:700;
+padding:3px 6px;
+border-radius:6px;
+margin-bottom:6px;
+}
+
 /* PRICE */
 
 .product-price{
@@ -119,29 +132,37 @@ background:linear-gradient(135deg,#ff512f,#dd2476);
 color:#fff;
 text-decoration:none;
 }
+
 </style>
+
 </head>
 
 <body>
 
+
 <!-- AMAZON -->
+
 <div class="glass-card">
+
 <div class="card-title">Amazon Footwear</div>
+
 <div class="theme-divider-b"></div>
 
 <div class="product-grid">
+
 <div class="product-card">
 <img src="https://m.media-amazon.com/images/I/71DomwkOBWL._SY695_.jpg" class="product-img">
 <div class="product-caption">
+<div class="product-discount">64% OFF</div>
 <div class="product-price">₹434</div>
 <a href="https://amzn.to/40jh4Wv" class="view-btn">View Deal</a>
 </div>
 </div>
 
-
 <div class="product-card">
 <img src="https://m.media-amazon.com/images/I/61XogZFd0GL._SY695_.jpg" class="product-img">
 <div class="product-caption">
+<div class="product-discount">45% OFF</div>
 <div class="product-price">₹399</div>
 <a href="https://amzn.to/4uslzvJ" class="view-btn">View Deal</a>
 </div>
@@ -150,6 +171,7 @@ text-decoration:none;
 <div class="product-card">
 <img src="https://m.media-amazon.com/images/I/81tPkbrHwCL._SY695_.jpg" class="product-img">
 <div class="product-caption">
+<div class="product-discount">79% OFF</div>
 <div class="product-price">₹536</div>
 <a href="https://amzn.to/4cA3NA9" class="view-btn">View Deal</a>
 </div>
@@ -158,23 +180,31 @@ text-decoration:none;
 <div class="product-card">
 <img src="https://m.media-amazon.com/images/I/61FqGF27eCL._SY695_.jpg" class="product-img">
 <div class="product-caption">
+<div class="product-discount">50% OFF</div>
 <div class="product-price">₹1299</div>
 <a href="https://amzn.to/3MX3pBo" class="view-btn">View Deal</a>
 </div>
 </div>
 
 </div>
+
 </div>
 
+
 <!-- FLIPKART -->
+
 <div class="glass-card">
+
 <div class="card-title">Flipkart Footwear</div>
+
 <div class="theme-divider-b"></div>
 
 <div class="product-grid">
+
 <div class="product-card">
 <img src="https://images.pexels.com/photos/19090/pexels-photo.jpg" class="product-img">
 <div class="product-caption">
+<div class="product-discount">40% OFF</div>
 <div class="product-price">₹999</div>
 <a href="#" class="view-btn">View Deal</a>
 </div>
@@ -183,24 +213,31 @@ text-decoration:none;
 <div class="product-card">
 <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg" class="product-img">
 <div class="product-caption">
+<div class="product-discount">35% OFF</div>
 <div class="product-price">₹799</div>
 <a href="#" class="view-btn">View Deal</a>
 </div>
 </div>
 
+</div>
 
 </div>
-</div>
+
 
 <!-- MYNTRA -->
+
 <div class="glass-card">
+
 <div class="card-title">Myntra Footwear</div>
+
 <div class="theme-divider-b"></div>
 
 <div class="product-grid">
+
 <div class="product-card">
 <img src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg" class="product-img">
 <div class="product-caption">
+<div class="product-discount">42% OFF</div>
 <div class="product-price">₹1099</div>
 <a href="#" class="view-btn">View Deal</a>
 </div>
@@ -209,12 +246,14 @@ text-decoration:none;
 <div class="product-card">
 <img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg" class="product-img">
 <div class="product-caption">
+<div class="product-discount">30% OFF</div>
 <div class="product-price">₹899</div>
 <a href="#" class="view-btn">View Deal</a>
 </div>
 </div>
 
 </div>
+
 </div>
 
 
