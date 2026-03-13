@@ -1,157 +1,133 @@
 {
-"purse":[
-{
-"id":"purse1",
-"title":"J J Accessories Stylish Crossbody Sling Purse",
-"price":"₹299",
-"discount":"70% OFF",
-"colors":"10",
-"image":"https://m.media-amazon.com/images/I/B17hNNcKeFL._SL1500_.jpg",
-"link":"https://amzn.to/4aWRFYM"
-},
-{
-"id":"purse2",
-"title":"Hexwell Women Clutch Purse with Detachable Chain",
-"price":"₹499",
-"discount":"50% OFF",
-"colors":"2",
-"image":"https://m.media-amazon.com/images/I/91Dn6LHeHOL._SL1500_.jpg",
-"link":"https://amzn.to/4st6RTb"
-},
-{
-"id":"purse3",
-"title":"Lady Quinton Trendy Handbag for Girls and Women",
-"price":"₹418",
-"discount":"75% OFF",
-"colors":"10",
-"image":"https://m.media-amazon.com/images/I/919ySWIfFCL._SL1500_.jpg",
-"link":"https://amzn.to/4baqkRs"
-},
-{
-"id":"purse4",
-"title":"J I Accessories Women Stylish Crossbody Sling Bag",
-"price":"₹699",
-"discount":"65% OFF",
-"colors":"5",
-"image":"https://m.media-amazon.com/images/I/91AcBKu6q9L._SL1500_.jpg",
-"link":"https://amzn.to/4b6UuoQ"
-}
+"laptop":[
+{"title":"Slim Business Laptop","price":"₹42,999","image":"#","link":"#"},
+{"title":"Gaming Laptop RGB Keyboard","price":"₹79,999","image":"#","link":"#"},
+{"title":"Student Budget Laptop","price":"₹29,999","image":"#","link":"#"},
+{"title":"Creator Laptop SSD","price":"₹1,09,999","image":"#","link":"#"},
+{"title":"Lightweight Ultrabook","price":"₹49,999","image":"#","link":"#"},
+{"title":"Metal Body Laptop","price":"₹54,999","image":"#","link":"#"},
+{"title":"Work From Home Laptop","price":"₹39,999","image":"#","link":"#"},
+{"title":"Premium Performance Laptop","price":"₹84,999","image":"#","link":"#"}
 ],
 
-"wallet":[
-{
-"id":"wallet1",
-"title":"WildHorn RFID Protected Leather Wallet",
-"price":"₹299",
-"discount":"70% OFF",
-"colors":"3",
-"image":"https://m.media-amazon.com/images/I/81NThDSYpHL._SL1500_.jpg",
-"link":"https://amzn.to/4swvEG7"
-},
-{
-"id":"wallet2",
-"title":"Urban Forest Genuine Leather Wallet",
-"price":"₹299",
-"discount":"80% OFF",
-"colors":"3",
-"image":"https://m.media-amazon.com/images/I/81o4fjC9iTL._SL1500_.jpg",
-"link":"https://amzn.to/4rg2wld"
-},
-{
-"id":"wallet3",
-"title":"Contacts Stylish Leather Wallet",
-"price":"₹280",
-"discount":"72% OFF",
-"colors":"10",
-"image":"https://m.media-amazon.com/images/I/91RR7h0P5UL._SL1500_.jpg",
-"link":"https://amzn.to/4lzlC4V"
-},
-{
-"id":"wallet4",
-"title":"Contacts RFID Blocking Leather Wallet",
-"price":"₹429",
-"discount":"77% OFF",
-"colors":"7",
-"image":"https://m.media-amazon.com/images/I/A1ONj3mF+lL._SL1500_.jpg",
-"link":"https://amzn.to/4bcENMS"
-}
+"mobile":[
+{"title":"Flagship 5G Smartphone","price":"₹59,999","image":"#","link":"#"},
+{"title":"Budget 5G Smartphone","price":"₹12,999","image":"#","link":"#"},
+{"title":"Premium Camera Smartphone","price":"₹44,999","image":"#","link":"#"},
+{"title":"Gaming Smartphone","price":"₹39,999","image":"#","link":"#"},
+{"title":"Mid Range Smartphone","price":"₹24,999","image":"#","link":"#"},
+{"title":"Compact Smartphone","price":"₹18,999","image":"#","link":"#"},
+{"title":"Student Budget Phone","price":"₹9,999","image":"#","link":"#"},
+{"title":"Ultra Camera Smartphone","price":"₹69,999","image":"#","link":"#"}
+],
+
+"tablet":[
+{"title":"Android Tablet HD","price":"₹12,999","image":"#","link":"#"},
+{"title":"Kids Learning Tablet","price":"₹8,999","image":"#","link":"#"},
+{"title":"Entertainment Tablet","price":"₹15,999","image":"#","link":"#"},
+{"title":"Premium Tablet","price":"₹39,999","image":"#","link":"#"},
+{"title":"10 Inch Android Tablet","price":"₹13,999","image":"#","link":"#"},
+{"title":"Productivity Tablet","price":"₹21,999","image":"#","link":"#"},
+{"title":"Budget Tablet","price":"₹9,999","image":"#","link":"#"},
+{"title":"Media Tablet","price":"₹17,999","image":"#","link":"#"}
+],
+
+"camera":[
+{"title":"Mirrorless Camera 4K","price":"₹69,999","image":"#","link":"#"},
+{"title":"Professional DSLR Camera","price":"₹79,999","image":"#","link":"#"},
+{"title":"Compact Vlogging Camera","price":"₹49,999","image":"#","link":"#"},
+{"title":"4K Action Camera","price":"₹12,999","image":"#","link":"#"},
+{"title":"Beginner Camera Kit","price":"₹34,999","image":"#","link":"#"},
+{"title":"Content Creator Camera","price":"₹59,999","image":"#","link":"#"},
+{"title":"Travel Camera","price":"₹27,999","image":"#","link":"#"},
+{"title":"Pro Photography Camera","price":"₹1,09,999","image":"#","link":"#"}
+],
+
+"gaming":[
+{"title":"Gaming Console 4K","price":"₹39,999","image":"#","link":"#"},
+{"title":"RGB Gaming Keyboard","price":"₹2,499","image":"#","link":"#"},
+{"title":"Gaming Mouse High DPI","price":"₹1,299","image":"#","link":"#"},
+{"title":"Wireless Gaming Controller","price":"₹3,499","image":"#","link":"#"},
+{"title":"Gaming Headset RGB","price":"₹1,999","image":"#","link":"#"},
+{"title":"Gaming Laptop Cooling Pad","price":"₹1,199","image":"#","link":"#"},
+{"title":"Gaming Chair Ergonomic","price":"₹9,999","image":"#","link":"#"},
+{"title":"RGB Gaming Desk Setup","price":"₹14,999","image":"#","link":"#"}
+],
+
+"headphones":[
+{"title":"Wireless Noise Cancelling Headphones","price":"₹3,999","image":"#","link":"#"},
+{"title":"Studio Monitoring Headphones","price":"₹4,999","image":"#","link":"#"},
+{"title":"Bluetooth Over Ear Headphones","price":"₹2,499","image":"#","link":"#"},
+{"title":"Gaming Headset with Mic","price":"₹1,999","image":"#","link":"#"},
+{"title":"Budget Wireless Headphones","price":"₹1,299","image":"#","link":"#"},
+{"title":"Premium Sound Headphones","price":"₹6,999","image":"#","link":"#"},
+{"title":"Foldable Travel Headphones","price":"₹2,199","image":"#","link":"#"},
+{"title":"Professional Audio Headphones","price":"₹7,999","image":"#","link":"#"}
+],
+
+"speakers":[
+{"title":"Portable Bluetooth Speaker","price":"₹1,999","image":"#","link":"#"},
+{"title":"Party Speaker Bass Boost","price":"₹3,499","image":"#","link":"#"},
+{"title":"Mini Travel Speaker","price":"₹999","image":"#","link":"#"},
+{"title":"Premium Wireless Speaker","price":"₹4,499","image":"#","link":"#"},
+{"title":"Outdoor Bluetooth Speaker","price":"₹2,799","image":"#","link":"#"},
+{"title":"Smart Home Speaker","price":"₹5,999","image":"#","link":"#"},
+{"title":"Compact Desk Speaker","price":"₹1,299","image":"#","link":"#"},
+{"title":"High Power Party Speaker","price":"₹8,999","image":"#","link":"#"}
+],
+
+"accessories":[
+{"title":"Laptop Backpack Waterproof","price":"₹999","image":"#","link":"#"},
+{"title":"USB Type-C Hub Adapter","price":"₹799","image":"#","link":"#"},
+{"title":"Laptop Cooling Pad RGB","price":"₹1,299","image":"#","link":"#"},
+{"title":"Wireless Charging Pad","price":"₹699","image":"#","link":"#"},
+{"title":"Phone Stand Holder","price":"₹299","image":"#","link":"#"},
+{"title":"Cable Organizer Kit","price":"₹399","image":"#","link":"#"},
+{"title":"Desk Setup Accessories","price":"₹1,499","image":"#","link":"#"},
+{"title":"USB Fast Charging Cable","price":"₹249","image":"#","link":"#"}
 ],
 
 "smartwatch":[
-{
-"id":"smartwatch1",
-"title":"Boat Wave Call 3 Smartwatch 1.83",
-"price":"₹1,099",
-"discount":"84% OFF",
-"colors":"5",
-"image":"https://m.media-amazon.com/images/I/71HwtfJ3c6L._SX679_.jpg",
-"link":"https://amzn.to/3NhmfmF"
-},
-{
-"id":"smartwatch2",
-"title":"Fire-Boltt Ninja X Ring AMOLED Smart Watch 1.96",
-"price":"₹2,499",
-"discount":"87% OFF",
-"colors":"10",
-"image":"https://m.media-amazon.com/images/I/71TDTr8MGPL._SL1500_.jpg",
-"link":"https://amzn.to/4cA0Z65"
-},
-{
-"id":"smartwatch3",
-"title":"Noise Pulse 2 Max 1.85 Display, Bluetooth Calling Smart Watch",
-"price":"₹1,099",
-"discount":"82% OFF",
-"colors":"10",
-"image":"https://m.media-amazon.com/images/I/610BF3kqBZL._SL1500_.jpg",
-"link":"https://amzn.to/4lg3P2c"
-},
-{
-"id":"smartwatch4",
-"title":"Fastrack New Limitless Classic|Large 1.91 - Smartwatch",
-"price":"₹1,959",
-"discount":"5% OFF",
-"colors":"3",
-"image":"https://m.media-amazon.com/images/I/617eGDTJz4L._SL1080_.jpg",
-"link":"https://amzn.to/4s11via"
-}
+{"title":"Bluetooth Calling Smartwatch","price":"₹1,999","image":"#","link":"#"},
+{"title":"AMOLED Display Smartwatch","price":"₹3,499","image":"#","link":"#"},
+{"title":"Fitness Tracking Smartwatch","price":"₹2,499","image":"#","link":"#"},
+{"title":"Premium Health Smartwatch","price":"₹4,999","image":"#","link":"#"},
+{"title":"Budget Smartwatch","price":"₹1,499","image":"#","link":"#"},
+{"title":"Sports Smartwatch","price":"₹2,999","image":"#","link":"#"},
+{"title":"Waterproof Smartwatch","price":"₹3,199","image":"#","link":"#"},
+{"title":"Luxury Smartwatch","price":"₹6,999","image":"#","link":"#"}
 ],
 
-"footwear":[
-{
-"id":"footwear1",
-"title":"Women's Synthetic Leather Comfort Fashion Sandal",
-"price":"₹434",
-"discount":"64% OFF",
-"colors":"4",
-"image":"https://m.media-amazon.com/images/I/71DomwkOBWL._SY695_.jpg",
-"link":"https://amzn.to/40jh4Wv"
-},
-{
-"id":"footwear2",
-"title":"BELLA Women Fashion Wedge Slip On Black Sandal",
-"price":"₹399",
-"discount":"45% OFF",
-"colors":"1",
-"image":"https://m.media-amazon.com/images/I/61XogZFd0GL._SY695_.jpg",
-"link":"https://amzn.to/4uslzvJ"
-},
-{
-"id":"footwear3",
-"title":"Non Slip Lightweight Shoes Bellies for Women",
-"price":"₹536",
-"discount":"79% OFF",
-"colors":"6",
-"image":"https://m.media-amazon.com/images/I/81tPkbrHwCL._SY695_.jpg",
-"link":"https://amzn.to/4cA3NA9"
-},
-{
-"id":"footwear4",
-"title":"Campus Women's GRIT Sneakers",
-"price":"₹1,299",
-"discount":"50% OFF",
-"colors":"4",
-"image":"https://m.media-amazon.com/images/I/61FqGF27eCL._SY695_.jpg",
-"link":"https://amzn.to/3MX3pBo"
-}
+"powerbank":[
+{"title":"10000mAh Fast Charging Power Bank","price":"₹899","image":"#","link":"#"},
+{"title":"20000mAh High Capacity Power Bank","price":"₹1,299","image":"#","link":"#"},
+{"title":"Mini Pocket Power Bank","price":"₹699","image":"#","link":"#"},
+{"title":"Wireless Charging Power Bank","price":"₹1,499","image":"#","link":"#"},
+{"title":"Slim Portable Power Bank","price":"₹799","image":"#","link":"#"},
+{"title":"Travel Power Bank","price":"₹999","image":"#","link":"#"},
+{"title":"Fast Charge Power Bank","price":"₹1,199","image":"#","link":"#"},
+{"title":"Premium Metal Power Bank","price":"₹1,799","image":"#","link":"#"}
+],
+
+"streaming":[
+{"title":"USB Condenser Microphone","price":"₹2,999","image":"#","link":"#"},
+{"title":"LED Ring Light Kit","price":"₹1,499","image":"#","link":"#"},
+{"title":"Camera Tripod Stand","price":"₹1,199","image":"#","link":"#"},
+{"title":"Streaming Capture Card","price":"₹3,999","image":"#","link":"#"},
+{"title":"Podcast Microphone Kit","price":"₹4,499","image":"#","link":"#"},
+{"title":"Lighting Setup Kit","price":"₹2,799","image":"#","link":"#"},
+{"title":"Streaming Webcam HD","price":"₹1,999","image":"#","link":"#"},
+{"title":"Professional Streaming Gear","price":"₹6,999","image":"#","link":"#"}
+],
+
+"drones":[
+{"title":"4K Camera Drone","price":"₹6,999","image":"#","link":"#"},
+{"title":"Foldable GPS Drone","price":"₹9,999","image":"#","link":"#"},
+{"title":"Mini Beginner Drone","price":"₹3,499","image":"#","link":"#"},
+{"title":"Professional Camera Drone","price":"₹24,999","image":"#","link":"#"},
+{"title":"Travel Drone Compact","price":"₹7,999","image":"#","link":"#"},
+{"title":"Drone with 4K Stabilization","price":"₹12,999","image":"#","link":"#"},
+{"title":"Camera Drone Pro Kit","price":"₹19,999","image":"#","link":"#"},
+{"title":"Beginner Camera Drone","price":"₹5,999","image":"#","link":"#"}
 ]
 }
