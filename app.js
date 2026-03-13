@@ -205,13 +205,20 @@ style="--chip-color:#ff9900;">
 
 
 /* ==============================
-DEFAULT CATEGORY LOAD
+AUTO LOAD FIRST CATEGORY
 ============================== */
 
 window.onload = function(){
 
-// app open होते ही Laptop cards render होंगे
-renderProducts("laptop")
+if(typeof products !== "undefined"){
+
+const firstCategory = Object.keys(products)[0]
+
+if(firstCategory){
+renderProducts(firstCategory)
+}
+
+}
 
 }
 
