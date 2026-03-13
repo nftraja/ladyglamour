@@ -210,13 +210,8 @@ DEFAULT CATEGORY LOAD
 
 document.addEventListener("DOMContentLoaded", function(){
 
+// app open होते ही Laptop products render होंगे
 renderProducts("laptop")
-
-const selected = document.getElementById("amazonSelected")
-
-if(selected){
-selected.innerHTML = "Laptop <span class='dropdown-arrow'>⌄</span>"
-}
 
 })
 
