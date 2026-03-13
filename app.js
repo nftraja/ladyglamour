@@ -208,12 +208,12 @@ style="--chip-color:#ff9900;">
 DEFAULT CATEGORY LOAD
 ============================== */
 
-document.addEventListener("DOMContentLoaded", function(){
+window.onload = function(){
 
-// app open होते ही Laptop products render होंगे
+// app open होते ही Laptop cards render होंगे
 renderProducts("laptop")
 
-})
+}
 
 /* ==============================
 RENDER AMAZON PRODUCTS
