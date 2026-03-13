@@ -41,8 +41,12 @@ try{
 let res = await fetch("json/amazon.json");
 storeData = await res.json();
 
-/* DEFAULT CATEGORY */
-renderProducts("purse");
+/* AUTO LOAD FIRST CATEGORY */
+const firstCategory = Object.keys(storeData)[0];
+
+if(firstCategory){
+renderProducts(firstCategory);
+}
 
 }
 catch(e){
@@ -159,6 +163,7 @@ startAuto();
 
 });
 
+
 /* ==============================
 PRODUCT CARD
 ============================== */
@@ -205,24 +210,6 @@ style="--chip-color:#ff9900;">
 
 
 /* ==============================
-AUTO LOAD FIRST CATEGORY
-============================== */
-
-window.onload = function(){
-
-if(typeof products !== "undefined"){
-
-const firstCategory = Object.keys(products)[0]
-
-if(firstCategory){
-renderProducts(firstCategory)
-}
-
-}
-
-}
-
-/* ==============================
 RENDER AMAZON PRODUCTS
 ============================== */
 
@@ -232,12 +219,7 @@ let grid = document.getElementById("hotDeals");
 
 if(!grid) return;
 
-if(!storeData[cat]){
-
-grid.innerHTML="<p>No products available</p>";
-return;
-
-}
+if(!storeData[cat]) return;
 
 let html="";
 
@@ -248,6 +230,7 @@ html+=productCard(p);
 grid.innerHTML=html;
 
 }
+
 
 /* ==============================
 AMAZON CUSTOM DROPDOWN
@@ -287,6 +270,7 @@ scrollToDeals();
 
 });
 
+
 /* ==============================
 CLOSE DROPDOWN OUTSIDE CLICK
 ============================== */
@@ -296,11 +280,13 @@ document.addEventListener("click",function(e){
 if(!e.target.closest(".custom-dropdown")){
 
 if(amazonDropdown) amazonDropdown.classList.remove("active");
-if(marketDropdown) marketDropdown.classList.remove("active");
+if(typeof marketDropdown !== "undefined" && marketDropdown)
+marketDropdown.classList.remove("active");
 
 }
 
 });
+
 
 /* ==============================
 SCROLL AMAZON
@@ -318,6 +304,7 @@ behavior:"smooth"
 });
 
 }
+
 
 /* ==============================
 COLLECTION LOADER (DRAWER MENU)
@@ -342,6 +329,7 @@ grid.innerHTML=html;
 toggleDrawer();
 
 }
+
 
 /* ==============================
 BRAND DIRECTORY SYSTEM
@@ -408,4 +396,3 @@ console.log("Brand JSON error",e);
 }
 
 loadBrands();
-
