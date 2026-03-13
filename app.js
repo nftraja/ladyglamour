@@ -205,6 +205,22 @@ style="--chip-color:#ff9900;">
 
 
 /* ==============================
+DEFAULT CATEGORY LOAD
+============================== */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+renderProducts("laptop")
+
+const selected = document.getElementById("amazonSelected")
+
+if(selected){
+selected.innerHTML = "Laptop <span class='dropdown-arrow'>⌄</span>"
+}
+
+})
+
+/* ==============================
 RENDER AMAZON PRODUCTS
 ============================== */
 
