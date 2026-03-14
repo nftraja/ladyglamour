@@ -44,25 +44,25 @@
 ],
 
 "gaming":[
-{"title":"Gaming Console 4K","price":"₹39,999","discount":"20% OFF","image":"#","link":"#"},
-{"title":"RGB Gaming Keyboard","price":"₹2,499","discount":"30% OFF","image":"#","link":"#"},
-{"title":"Gaming Mouse High DPI","price":"₹1,299","discount":"35% OFF","image":"#","link":"#"},
-{"title":"Wireless Gaming Controller","price":"₹3,499","discount":"25% OFF","image":"#","link":"#"},
-{"title":"Gaming Headset RGB","price":"₹1,999","discount":"32% OFF","image":"#","link":"#"},
-{"title":"Gaming Laptop Cooling Pad","price":"₹1,199","discount":"40% OFF","image":"#","link":"#"},
-{"title":"Gaming Chair Ergonomic","price":"₹9,999","discount":"18% OFF","image":"#","link":"#"},
-{"title":"RGB Gaming Desk Setup","price":"₹14,999","discount":"22% OFF","image":"#","link":"#"}
+{"title":"Arcade Console-128GB SanDisk","price":"₹13,500","discount":"10% OFF","image":"https://m.media-amazon.com/images/I/51PkeVOIp7L._SL1080_.jpg","link":"https://amzn.to/3NDHkIa"},
+{"title":"Wired Gaming Headset for PC","price":"₹5,499","discount":"58% OFF","image":"https://m.media-amazon.com/images/I/71ltsViEA8L._SL1500_.jpg","link":"https://amzn.to/46Yx0ky"},
+{"title":"Gaming Earbuds","price":"₹799","discount":"84% OFF","image":"https://m.media-amazon.com/images/I/61xUny0zw5L._SL1496_.jpg","link":"https://amzn.to/3Nq5XYJ"},
+{"title":"M Plus Wired Gaming Mouse","price":"₹599","discount":"54% OFF","image":"https://m.media-amazon.com/images/I/71ezQFgSl7L._SL1500_.jpg","link":"https://amzn.to/3NDHtLI"},
+{"title":"Kreo Premium Gaming Chair","price":"₹11,999","discount":"60% OFF","image":"https://m.media-amazon.com/images/I/51OQ3Eo9lCL._SL1200_.jpg","link":"https://amzn.to/4rzYYe3"},
+{"title":"Gaming Mouse Pad","price":"₹229","discount":"82% OFF","image":"https://m.media-amazon.com/images/I/61s6d6BxW4L._SL1500_.jpg","link":"https://amzn.to/4schcTX"},
+{"title":"Gaming Laptop","price":"₹89,990","discount":"22% OFF","image":"https://m.media-amazon.com/images/I/81+DaZP4aSL._SL1500_.jpg","link":"https://amzn.to/4bHn7KG"},
+{"title":"Gaming Steering Wheel and Pedals","price":"₹5,999","discount":"40% OFF","image":"https://m.media-amazon.com/images/I/61l8ogcHLBL._SL1500_.jpg","link":"https://amzn.to/4bIDZAQ"}
 ],
 
 "headphones":[
-{"title":"Wireless Noise Cancelling Headphones","price":"₹3,999","discount":"28% OFF","image":"#","link":"#"},
-{"title":"Studio Monitoring Headphones","price":"₹4,999","discount":"20% OFF","image":"#","link":"#"},
-{"title":"Bluetooth Over Ear Headphones","price":"₹2,499","discount":"35% OFF","image":"#","link":"#"},
-{"title":"Gaming Headset with Mic","price":"₹1,999","discount":"32% OFF","image":"#","link":"#"},
-{"title":"Budget Wireless Headphones","price":"₹1,299","discount":"40% OFF","image":"#","link":"#"},
-{"title":"Premium Sound Headphones","price":"₹6,999","discount":"18% OFF","image":"#","link":"#"},
-{"title":"Foldable Travel Headphones","price":"₹2,199","discount":"30% OFF","image":"#","link":"#"},
-{"title":"Professional Audio Headphones","price":"₹7,999","discount":"16% OFF","image":"#","link":"#"}
+{"title":"Bluetooth Headphones","price":"₹2,699","discount":"66% OFF","image":"https://m.media-amazon.com/images/I/61qdD0zSk8L._SL1500_.jpg","link":"https://amzn.to/4uuXrs4"},
+{"title":"pTron Headphones with HD Mic","price":"₹599","discount":"77% OFF","image":"https://m.media-amazon.com/images/I/51tM5eJfqWL._SL1200_.jpg","link":"https://amzn.to/4lDpba3"},
+{"title":"Stereo Headphone","price":"₹6,499","discount":"49% OFF","image":"https://m.media-amazon.com/images/I/81APjlVpgbL._SL1500_.jpg","link":"https://amzn.to/4cMEfjo"},
+{"title":"Boat Bluetooth Headphones","price":"₹1,199","discount":"60% OFF","image":"https://m.media-amazon.com/images/I/61RbNdlNWIL._SL1500_.jpg","link":"https://amzn.to/413bveS"},
+{"title":"Ear Buds Wireless","price":"₹1,799","discount":"70% OFF","image":"https://m.media-amazon.com/images/I/71N+XrCr9vL._SL1500_.jpg","link":"https://amzn.to/4lqkGzs"},
+{"title":"Sony WH Wireless Bluetooth","price":"₹3,989","discount":"33% OFF","image":"https://m.media-amazon.com/images/I/41JACWT-wWL._SL1200_.jpg","link":"https://amzn.to/3P5ng1W"},
+{"title":"Anker H30i Wireless Headphones","price":"₹1,299","discount":"68% OFF","image":"https://m.media-amazon.com/images/I/51MKRHXe65L._SL1500_.jpg","link":"https://amzn.to/3NfvILt"},
+{"title":"Boat BassHeads Headphones","price":"₹299","discount":"70% OFF","image":"https://m.media-amazon.com/images/I/513ugd16C6L._SL1500_.jpg","link":"https://amzn.to/4b8szGq"}
 ],
 
 "speakers":[
