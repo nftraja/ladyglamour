@@ -1,13 +1,13 @@
 {
 "laptop":[
-{"title":"Slim Business Laptop","price":"₹42,999","image":"#","link":"#"},
-{"title":"Gaming Laptop RGB Keyboard","price":"₹79,999","image":"#","link":"#"},
-{"title":"Student Budget Laptop","price":"₹29,999","image":"#","link":"#"},
-{"title":"Creator Laptop SSD","price":"₹1,09,999","image":"#","link":"#"},
-{"title":"Lightweight Ultrabook","price":"₹49,999","image":"#","link":"#"},
-{"title":"Metal Body Laptop","price":"₹54,999","image":"#","link":"#"},
-{"title":"Work From Home Laptop","price":"₹39,999","image":"#","link":"#"},
-{"title":"Premium Performance Laptop","price":"₹84,999","image":"#","link":"#"}
+{"title":"Lenovo V15 AMD","price":"₹50,019","image":"https://m.media-amazon.com/images/I/41U0mEisocL.jpg","link":"https://amzn.to/4bkfQPD"},
+{"title":"Lenovo V15 G4","price":"₹42,810","image":"https://m.media-amazon.com/images/I/71aup0IO2ZL._SL1500_.jpg","link":"https://amzn.to/3N2iTEf"},
+{"title":"ASUS Vivobook 15","price":"₹49,990","image":"https://m.media-amazon.com/images/I/71zMooVIVAL._SL1500_.jpg","link":"https://amzn.to/4buAMnn"},
+{"title":"HP 15, Intel Core i5","price":"₹59,836","image":"https://m.media-amazon.com/images/I/71H9R4OoBOL._SL1500_.jpg","link":"https://amzn.to/4cNbItT"},
+{"title":"Primebook 2 Pro","price":"₹19,990","image":"https://m.media-amazon.com/images/I/51CIIx6l+VL.jpg","link":"https://amzn.to/4sKMjG6"},
+{"title":"Primebook 2 Max","price":"₹22,990","image":"https://m.media-amazon.com/images/I/51JTBldTCXL.jpg","link":"https://amzn.to/46VNGcv"},
+{"title":"HP Professional 14","price":"₹45,360","image":"https://m.media-amazon.com/images/I/71mlCwkDsIL._SL1500_.jpg","link":"https://amzn.to/46VNU3l"},
+{"title":"Dell 15, 13th Gen Intel Core i5","price":"₹60,885","image":"https://m.media-amazon.com/images/I/611DLBKu8JL._SL1500_.jpg","link":"https://amzn.to/4uuSmju"}
 ],
 
 "mobile":[
