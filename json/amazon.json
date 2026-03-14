@@ -66,25 +66,25 @@
 ],
 
 "speakers":[
-{"title":"Portable Bluetooth Speaker","price":"₹1,999","discount":"32% OFF","image":"#","link":"#"},
-{"title":"Party Speaker Bass Boost","price":"₹3,499","discount":"25% OFF","image":"#","link":"#"},
-{"title":"Mini Travel Speaker","price":"₹999","discount":"40% OFF","image":"#","link":"#"},
-{"title":"Premium Wireless Speaker","price":"₹4,499","discount":"22% OFF","image":"#","link":"#"},
-{"title":"Outdoor Bluetooth Speaker","price":"₹2,799","discount":"30% OFF","image":"#","link":"#"},
-{"title":"Smart Home Speaker","price":"₹5,999","discount":"20% OFF","image":"#","link":"#"},
-{"title":"Compact Desk Speaker","price":"₹1,299","discount":"35% OFF","image":"#","link":"#"},
-{"title":"High Power Party Speaker","price":"₹8,999","discount":"18% OFF","image":"#","link":"#"}
+{"title":"Amazon Echo Dot Smart speaker","price":"₹5,499","discount":"3% OFF","image":"https://m.media-amazon.com/images/I/81hgjKwsdHL._SL1500_.jpg","link":"https://amzn.to/4scfgLh"},
+{"title":"Boat Home Theatre Speaker","price":"₹6,499","discount":"70% OFF","image":"https://m.media-amazon.com/images/I/813Ru0LsF9L._SL1500_.jpg","link":"https://amzn.to/3P0hmz8"},
+{"title":"Boat Stone 352 Pro Speaker","price":"₹1,699","discount":"66% OFF","image":"https://m.media-amazon.com/images/I/71o6CU8MqVL._SL1500_.jpg","link":"https://amzn.to/4rxTwbt"},
+{"title":"Portronics SoundDrum","price":"₹999","discount":"60% OFF","image":"https://m.media-amazon.com/images/I/61ygYGBZUBL._SL1500_.jpg","link":"https://amzn.to/4s8wKI5"},
+{"title":"Boat Soundbar Speaker","price":"₹1,998","discount":"67% OFF","image":"https://m.media-amazon.com/images/I/51SFh0i5HHL._SL1500_.jpg","link":"https://amzn.to/4boyFBs"},
+{"title":"Dubstep Pop Wireless Speaker","price":"₹499","discount":"92% OFF","image":"https://m.media-amazon.com/images/I/71YG3ZhUwxL._SL1500_.jpg","link":"https://amzn.to/4ruL7W2"},
+{"title":"Tribit Bluetooth Speaker","price":"₹13,999","discount":"18% OFF","image":"https://m.media-amazon.com/images/I/712uPFP3MrL._SL1500_.jpg","link":"https://amzn.to/4ryzq0N"},
+{"title":"Portronics Apollo Bluetooth Speaker","price":"₹1,299","discount":"48% OFF","image":"https://m.media-amazon.com/images/I/7145QM-EBcL._SL1500_.jpg","link":"https://amzn.to/4bFPXeu"}
 ],
 
 "accessories":[
-{"title":"Laptop Backpack Waterproof","price":"₹999","discount":"40% OFF","image":"#","link":"#"},
-{"title":"USB Type-C Hub Adapter","price":"₹799","discount":"35% OFF","image":"#","link":"#"},
-{"title":"Laptop Cooling Pad RGB","price":"₹1,299","discount":"32% OFF","image":"#","link":"#"},
-{"title":"Wireless Charging Pad","price":"₹699","discount":"38% OFF","image":"#","link":"#"},
-{"title":"Phone Stand Holder","price":"₹299","discount":"45% OFF","image":"#","link":"#"},
-{"title":"Cable Organizer Kit","price":"₹399","discount":"40% OFF","image":"#","link":"#"},
-{"title":"Desk Setup Accessories","price":"₹1,499","discount":"28% OFF","image":"#","link":"#"},
-{"title":"USB Fast Charging Cable","price":"₹249","discount":"50% OFF","image":"#","link":"#"}
+{"title":"Portronics OTG Adaptor","price":"₹119","discount":"80% OFF","image":"https://m.media-amazon.com/images/I/616jdfyhw8L._SL1500_.jpg","link":"https://amzn.to/4cIpBtm"},
+{"title":"EUCOS 62" Phone Tripod","price":"₹2,088","discount":"30% OFF","image":"https://m.media-amazon.com/images/I/61LnPbT7KML._SL1500_.jpg","link":"https://amzn.to/4baYDti"},
+{"title":"3D HD Screen Magnifier","price":"₹255","discount":"74% OFF","image":"https://m.media-amazon.com/images/I/71WCpnvqGmL._SL1500_.jpg","link":"https://amzn.to/40wqLRl"},
+{"title":"Urban Wolf Tech Pouch","price":"₹789","discount":"31% OFF","image":"https://m.media-amazon.com/images/I/61mgu9K9ZFL._SL1000_.jpg","link":"https://amzn.to/3NDoQrl"},
+{"title":"Fast Charging Data Cable Kit","price":"₹299","discount":"63% OFF","image":"https://m.media-amazon.com/images/I/61WRloz+86L._SL1500_.jpg","link":"https://amzn.to/4uqXuFq"},
+{"title":"Travel Adapter and Wall Charger","price":"₹529","discount":"89% OFF","image":"https://m.media-amazon.com/images/I/611RCy1XjsL._SL1500_.jpg","link":"https://amzn.to/4sBJw1C"},
+{"title":"GRENARO Mic for YouTube","price":"₹788","discount":"61% OFF","image":"https://m.media-amazon.com/images/I/71dhDqkgHPL._SL1500_.jpg","link":"https://amzn.to/4sEEjGs"},
+{"title":"Amazon Basics LED Video Light for Photography","price":"₹1,199","discount":"70% OFF","image":"https://m.media-amazon.com/images/I/71ZvmpwenDL._SL1500_.jpg","link":"https://amzn.to/4cN0aHg"}
 ],
 
 "smartwatch":[
