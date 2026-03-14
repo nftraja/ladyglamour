@@ -11,36 +11,36 @@
 ],
 
 "mobile":[
-{"title":"Flagship 5G Smartphone","price":"₹59,999","discount":"25% OFF","image":"#","link":"#"},
-{"title":"Budget 5G Smartphone","price":"₹12,999","discount":"40% OFF","image":"#","link":"#"},
-{"title":"Premium Camera Smartphone","price":"₹44,999","discount":"30% OFF","image":"#","link":"#"},
-{"title":"Gaming Smartphone","price":"₹39,999","discount":"35% OFF","image":"#","link":"#"},
-{"title":"Mid Range Smartphone","price":"₹24,999","discount":"28% OFF","image":"#","link":"#"},
-{"title":"Compact Smartphone","price":"₹18,999","discount":"22% OFF","image":"#","link":"#"},
-{"title":"Student Budget Phone","price":"₹9,999","discount":"45% OFF","image":"#","link":"#"},
-{"title":"Ultra Camera Smartphone","price":"₹69,999","discount":"20% OFF","image":"#","link":"#"}
+{"title":"iPhone 16 Plus 256 GB","price":"₹89,900","discount":"10% OFF","image":"https://m.media-amazon.com/images/I/71AXSIdO4oL._SL1500_.jpg","link":"https://amzn.to/3P0tZKz"},
+{"title":"Samsung Galaxy A55 5G","price":"₹30,999","discount":"37% OFF","image":"https://m.media-amazon.com/images/I/71ZrPkGgcLL._SL1500_.jpg","link":"https://amzn.to/4bu4N6H"},
+{"title":"OnePlus 13R","price":"₹39,999","discount":"11% OFF","image":"https://m.media-amazon.com/images/I/61muVCIy-uL._SL1500_.jpg","link":"https://amzn.to/3PAbAUS"},
+{"title":"realme NARZO 80 Pro","price":"₹21,999","discount":"21% OFF","image":"https://m.media-amazon.com/images/I/71QnMG2gedL._SL1500_.jpg","link":"https://amzn.to/40raQE1"},
+{"title":"OnePlus Nord CE5","price":"₹24,998","discount":"14% OFF","image":"https://m.media-amazon.com/images/I/61TFhTNYuhL._SL1500_.jpg","link":"https://amzn.to/4sJH7C6"},
+{"title":"Samsung Galaxy","price":"₹25,999","discount":"24% OFF","image":"https://m.media-amazon.com/images/I/71Acpnvfu2L._SL1500_.jpg","link":"https://amzn.to/4b9GprZ"},
+{"title":"realme P4X Smartphone","price":"₹15,897","discount":"12% OFF","image":"https://m.media-amazon.com/images/I/71+nUkNc2rL._SL1500_.jpg","link":"https://amzn.to/4lBScDa"},
+{"title":"realme NARZO 90 5G","price":"₹18,499","discount":"8% OFF","image":"https://m.media-amazon.com/images/I/81c-THT67CL._SL1500_.jpg","link":"https://amzn.to/4dlUYKv"}
 ],
 
 "tablet":[
-{"title":"Android Tablet HD","price":"₹12,999","discount":"30% OFF","image":"#","link":"#"},
-{"title":"Kids Learning Tablet","price":"₹8,999","discount":"35% OFF","image":"#","link":"#"},
-{"title":"Entertainment Tablet","price":"₹15,999","discount":"28% OFF","image":"#","link":"#"},
-{"title":"Premium Tablet","price":"₹39,999","discount":"22% OFF","image":"#","link":"#"},
-{"title":"10 Inch Android Tablet","price":"₹13,999","discount":"25% OFF","image":"#","link":"#"},
-{"title":"Productivity Tablet","price":"₹21,999","discount":"26% OFF","image":"#","link":"#"},
-{"title":"Budget Tablet","price":"₹9,999","discount":"32% OFF","image":"#","link":"#"},
-{"title":"Media Tablet","price":"₹17,999","discount":"27% OFF","image":"#","link":"#"}
+{"title":"Redmi Pad 2","price":"₹15,999","discount":"6% OFF","image":"https://m.media-amazon.com/images/I/71XIM211EkL._SL1500_.jpg","link":"https://amzn.to/3NCGqf2"},
+{"title":"Redmi Pad 2 Pro","price":"₹24,999","discount":"17% OFF","image":"https://m.media-amazon.com/images/I/71+PHb7QW6L._SL1500_.jpg","link":"https://amzn.to/4sIzNH1"},
+{"title":"OnePlus Pad Go","price":"₹17,999","discount":"10% OFF","image":"https://m.media-amazon.com/images/I/51oj5gE7P+L._SL1500_.jpg","link":"https://amzn.to/4rC7TLT"},
+{"title":"Samsung Galaxy Tab","price":"₹38,999","discount":"7% OFF","image":"https://m.media-amazon.com/images/I/71v4SZ7IzdL._SL1500_.jpg","link":"https://amzn.to/47v8pnE"},
+{"title":"Lenovo Idea Tab","price":"₹20,998","discount":"16% OFF","image":"https://m.media-amazon.com/images/I/811f0wwClAL._SL1500_.jpg","link":"https://amzn.to/3Nq3Rbj"},
+{"title":"Lenovo Tab","price":"₹11,999","discount":"33% OFF","image":"https://m.media-amazon.com/images/I/71rjCPr462L._SL1500_.jpg","link":"https://amzn.to/4cIm0LS"},
+{"title":"Apple iPad 11","price":"₹33,900","discount":"3% OFF","image":"https://m.media-amazon.com/images/I/614DUOrmADL._SL1500_.jpg","link":"https://amzn.to/40AguUi"},
+{"title":"DOMO Slate SL39","price":"₹7,249","discount":"71% OFF","image":"https://m.media-amazon.com/images/I/71By6LDTnQL._SL1500_.jpg","link":"https://amzn.to/3NxYA1z"}
 ],
 
 "camera":[
-{"title":"Mirrorless Camera 4K","price":"₹69,999","discount":"18% OFF","image":"#","link":"#"},
-{"title":"Professional DSLR Camera","price":"₹79,999","discount":"15% OFF","image":"#","link":"#"},
-{"title":"Compact Vlogging Camera","price":"₹49,999","discount":"20% OFF","image":"#","link":"#"},
-{"title":"4K Action Camera","price":"₹12,999","discount":"35% OFF","image":"#","link":"#"},
-{"title":"Beginner Camera Kit","price":"₹34,999","discount":"24% OFF","image":"#","link":"#"},
-{"title":"Content Creator Camera","price":"₹59,999","discount":"19% OFF","image":"#","link":"#"},
-{"title":"Travel Camera","price":"₹27,999","discount":"21% OFF","image":"#","link":"#"},
-{"title":"Pro Photography Camera","price":"₹1,09,999","discount":"12% OFF","image":"#","link":"#"}
+{"title":"DJI Osmo Action","price":"₹34,990","discount":"36% OFF","image":"https://m.media-amazon.com/images/I/61aVOV4fkGL._SL1500_.jpg","link":"https://amzn.to/473ENh8"},
+{"title":"kimire Digital Camera Recorder","price":"₹6,999","discount":"46% OFF","image":"https://m.media-amazon.com/images/I/71C6TFutbeL._SL1500_.jpg","link":"https://amzn.to/4bovGZM"},
+{"title":"DJI Osmo Pocket 3","price":"₹40,990","discount":"32% OFF","image":"https://m.media-amazon.com/images/I/61tukvVUMiL._SL1500_.jpg","link":"https://amzn.to/47v8Xdc"},
+{"title":"Insta360 X5","price":"₹52,990","discount":"12% OFF","image":"https://m.media-amazon.com/images/I/71QlOD0rTzL._SL1500_.jpg","link":"https://amzn.to/413D7k9"},
+{"title":"Sony New Alpha ILCE-6100X","price":"₹73,990","discount":"18% OFF","image":"https://m.media-amazon.com/images/I/71SsP7PGEVL._SL1500_.jpg","link":"https://amzn.to/4rseuZ5"},
+{"title":"Canon EOS R50 RF-S18","price":"₹61,990","discount":"18% OFF","image":"https://m.media-amazon.com/images/I/81LskAU5h1L._SL1500_.jpg","link":"https://amzn.to/4s9ZnES"},
+{"title":"Sony Alpha ILCE-6400M","price":"₹88,490","discount":"24% OFF","image":"https://m.media-amazon.com/images/I/71-E+cXcs1L._SL1500_.jpg","link":"https://amzn.to/47A3G47"},
+{"title":"Sony Digital Camera ZV","price":"₹69,990","discount":"10% OFF","image":"https://m.media-amazon.com/images/I/61EGyktwgTL._SL1500_.jpg","link":"https://amzn.to/3P6S0zA"}
 ],
 
 "gaming":[
