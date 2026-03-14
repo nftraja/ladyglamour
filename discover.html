@@ -1,135 +1,64 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>LadyGlamour Discover</title>
-
-<style>
-
-/* GLOBAL */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#0b0b0b,#151515);
-color:#fff;
-padding:20px;
-}
-
-
-/* GLASS CARD */
-
-.glass-card{
-border-radius:18px;
-padding:15px;
-margin-bottom:18px;
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-}
-
-
-/* TITLE */
-
-.card-title{
-font-size:15px;
-font-weight:700;
-text-align:center;
-margin-bottom:10px;
-}
-
-
-/* DIVIDER */
-
-.theme-divider{
-height:1px;
-margin:10px 0 14px;
-background:linear-gradient(90deg,transparent,#ffffff80,transparent);
-}
-
-
-/* PLATFORM GRID */
-
-.platform-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-}
-
-@media(min-width:800px){
-.platform-grid{
-grid-template-columns:repeat(4,1fr);
-}
-}
-
-
-/* PLATFORM CARD */
-
-.platform-card{
-background:#111;
-border-radius:14px;
-padding:12px;
-text-align:center;
-border:1px solid rgba(255,255,255,0.08);
-transition:.25s;
-}
-
-.platform-card:hover{
-transform:translateY(-3px);
-border-color:#ff4d88;
-}
-
-
-/* PLATFORM LOGO */
-
-.platform-logo img{
-width:40px;
-height:40px;
-margin-bottom:8px;
-}
-
-
-/* PLATFORM NAME */
-
-.platform-name{
-font-size:13px;
-font-weight:600;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
+
+<div class="page-wrap">
+
+<header class="app-header">
+<a href="index.html" class="menu-btn">←</a>
+<div class="logo">🔎 Discover</div>
+<div class="header-icons">
+<img src="images/logo.png">
+</div>
+</header>
+
+
+<main class="main-content">
+
+
+<!-- INTRO -->
+
+<div class="glass-card">
+<div class="card-title" style="font-size:12px;margin-bottom:5px;color:gold;">
+Discover Women Opportunities
+</div>
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+Explore curated platforms where women can learn new skills, discover creator tools and join trusted partner programs. Find useful resources, communities and opportunities designed to help you grow, create and explore new possibilities online.
+</p>
+
+</div>
 
 
 <!-- WOMEN RESELLING -->
 
 <div class="glass-card">
 
-<div class="card-title">💼 Women Reselling</div>
-
-<div class="theme-divider"></div>
-
-<div class="platform-grid">
-
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=meesho.com">
+<div class="card-title">
+💼 Women Reselling
 </div>
-<div class="platform-name">Meesho</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="social-wrap">
+
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=meesho.com">
+<span>Meesho</span>
 </a>
 
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=glowroad.com">
-</div>
-<div class="platform-name">GlowRoad</div>
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=glowroad.com">
+<span>GlowRoad</span>
 </a>
 
 </div>
@@ -137,28 +66,26 @@ font-weight:600;
 </div>
 
 
-<!-- HANDMADE CREATORS -->
+<!-- HANDMADE -->
 
 <div class="glass-card">
 
-<div class="card-title">🎨 Handmade Creators</div>
-
-<div class="theme-divider"></div>
-
-<div class="platform-grid">
-
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=etsy.com">
+<div class="card-title">
+🎨 Handmade Creators
 </div>
-<div class="platform-name">Etsy</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="social-wrap">
+
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=etsy.com">
+<span>Etsy</span>
 </a>
 
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=canva.com">
-</div>
-<div class="platform-name">Canva Creator</div>
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=canva.com">
+<span>Canva Creator</span>
 </a>
 
 </div>
@@ -170,24 +97,22 @@ font-weight:600;
 
 <div class="glass-card">
 
-<div class="card-title">💻 Freelancing Platforms</div>
-
-<div class="theme-divider"></div>
-
-<div class="platform-grid">
-
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=fiverr.com">
+<div class="card-title">
+💻 Freelancing Platforms
 </div>
-<div class="platform-name">Fiverr</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="social-wrap">
+
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=fiverr.com">
+<span>Fiverr</span>
 </a>
 
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=upwork.com">
-</div>
-<div class="platform-name">Upwork</div>
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=upwork.com">
+<span>Upwork</span>
 </a>
 
 </div>
@@ -199,31 +124,27 @@ font-weight:600;
 
 <div class="glass-card">
 
-<div class="card-title">🎓 Learning Platforms</div>
-
-<div class="theme-divider"></div>
-
-<div class="platform-grid">
-
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=udemy.com">
+<div class="card-title">
+🎓 Learning Platforms
 </div>
-<div class="platform-name">Udemy</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="social-wrap">
+
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=udemy.com">
+<span>Udemy</span>
 </a>
 
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=skillshare.com">
-</div>
-<div class="platform-name">Skillshare</div>
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=skillshare.com">
+<span>Skillshare</span>
 </a>
 
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=coursera.org">
-</div>
-<div class="platform-name">Coursera</div>
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=coursera.org">
+<span>Coursera</span>
 </a>
 
 </div>
@@ -231,28 +152,26 @@ font-weight:600;
 </div>
 
 
-<!-- CREATOR PROGRAMS -->
+<!-- CREATOR -->
 
 <div class="glass-card">
 
-<div class="card-title">🎥 Creator Programs</div>
-
-<div class="theme-divider"></div>
-
-<div class="platform-grid">
-
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=youtube.com">
+<div class="card-title">
+🎥 Creator Programs
 </div>
-<div class="platform-name">YouTube</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="social-wrap">
+
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=youtube.com">
+<span>YouTube</span>
 </a>
 
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=pinterest.com">
-</div>
-<div class="platform-name">Pinterest</div>
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=pinterest.com">
+<span>Pinterest</span>
 </a>
 
 </div>
@@ -260,34 +179,47 @@ font-weight:600;
 </div>
 
 
-<!-- BEAUTY AFFILIATES -->
+<!-- BEAUTY -->
 
 <div class="glass-card">
 
-<div class="card-title">💄 Beauty Affiliates</div>
-
-<div class="theme-divider"></div>
-
-<div class="platform-grid">
-
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=nykaa.com">
+<div class="card-title">
+💄 Beauty Affiliates
 </div>
-<div class="platform-name">Nykaa</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="social-wrap">
+
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=nykaa.com">
+<span>Nykaa</span>
 </a>
 
-<a href="#" class="platform-card">
-<div class="platform-logo">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=mamaearth.in">
-</div>
-<div class="platform-name">Mamaearth</div>
+<a href="#" class="social-pill">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=mamaearth.in">
+<span>Mamaearth</span>
 </a>
 
 </div>
 
 </div>
 
+
+</main>
+
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom-nav">
+<a href="index.html" class="nav-item"><span>🏠</span>Home</a>
+<a href="brands.html" class="nav-item"><span>🏷️</span>Brands</a>
+<a href="#" class="nav-item"><span>🔎</span>Discover</a>
+<a href="https://www.nftraja.com/p/lady-glamour.html" class="nav-item"><span>📖</span>Guides</a>
+</div>
+
+
+</div>
 
 </body>
 </html>
