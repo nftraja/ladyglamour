@@ -1,133 +1,133 @@
 {
 "laptop":[
-{"title":"Lenovo V15 AMD","price":"₹50,019","image":"https://m.media-amazon.com/images/I/41U0mEisocL.jpg","link":"https://amzn.to/4bkfQPD"},
-{"title":"Lenovo V15 G4","price":"₹42,810","image":"https://m.media-amazon.com/images/I/71aup0IO2ZL._SL1500_.jpg","link":"https://amzn.to/3N2iTEf"},
-{"title":"ASUS Vivobook 15","price":"₹49,990","image":"https://m.media-amazon.com/images/I/71zMooVIVAL._SL1500_.jpg","link":"https://amzn.to/4buAMnn"},
-{"title":"HP 15, Intel Core i5","price":"₹59,836","image":"https://m.media-amazon.com/images/I/71H9R4OoBOL._SL1500_.jpg","link":"https://amzn.to/4cNbItT"},
-{"title":"Primebook 2 Pro","price":"₹19,990","image":"https://m.media-amazon.com/images/I/51CIIx6l+VL.jpg","link":"https://amzn.to/4sKMjG6"},
-{"title":"Primebook 2 Max","price":"₹22,990","image":"https://m.media-amazon.com/images/I/51JTBldTCXL.jpg","link":"https://amzn.to/46VNGcv"},
-{"title":"HP Professional 14","price":"₹45,360","image":"https://m.media-amazon.com/images/I/71mlCwkDsIL._SL1500_.jpg","link":"https://amzn.to/46VNU3l"},
-{"title":"ASUS Vivobook 15","discount":"58%","price":"₹39,900","image":"https://m.media-amazon.com/images/I/71bIUPAleZL._SL1500_.jpg","link":"https://amzn.to/47LNxsm"}
+{"title":"Lenovo V15 AMD","price":"₹50,019","discount":"32% OFF","image":"https://m.media-amazon.com/images/I/41U0mEisocL.jpg","link":"https://amzn.to/4bkfQPD"},
+{"title":"Lenovo V15 G4","price":"₹42,810","discount":"35% OFF","image":"https://m.media-amazon.com/images/I/71aup0IO2ZL._SL1500_.jpg","link":"https://amzn.to/3N2iTEf"},
+{"title":"ASUS Vivobook 15","price":"₹49,990","discount":"30% OFF","image":"https://m.media-amazon.com/images/I/71zMooVIVAL._SL1500_.jpg","link":"https://amzn.to/4buAMnn"},
+{"title":"HP 15, Intel Core i5","price":"₹59,836","discount":"28% OFF","image":"https://m.media-amazon.com/images/I/71H9R4OoBOL._SL1500_.jpg","link":"https://amzn.to/4cNbItT"},
+{"title":"Primebook 2 Pro","price":"₹19,990","discount":"40% OFF","image":"https://m.media-amazon.com/images/I/51CIIx6l+VL.jpg","link":"https://amzn.to/4sKMjG6"},
+{"title":"Primebook 2 Max","price":"₹22,990","discount":"38% OFF","image":"https://m.media-amazon.com/images/I/51JTBldTCXL.jpg","link":"https://amzn.to/46VNGcv"},
+{"title":"HP Professional 14","price":"₹45,360","discount":"33% OFF","image":"https://m.media-amazon.com/images/I/71mlCwkDsIL._SL1500_.jpg","link":"https://amzn.to/46VNU3l"},
+{"title":"ASUS Vivobook 15","price":"₹39,900","discount":"58% OFF","image":"https://m.media-amazon.com/images/I/71bIUPAleZL._SL1500_.jpg","link":"https://amzn.to/47LNxsm"}
 ],
 
 "mobile":[
-{"title":"Flagship 5G Smartphone","price":"₹59,999","image":"#","link":"#"},
-{"title":"Budget 5G Smartphone","price":"₹12,999","image":"#","link":"#"},
-{"title":"Premium Camera Smartphone","price":"₹44,999","image":"#","link":"#"},
-{"title":"Gaming Smartphone","price":"₹39,999","image":"#","link":"#"},
-{"title":"Mid Range Smartphone","price":"₹24,999","image":"#","link":"#"},
-{"title":"Compact Smartphone","price":"₹18,999","image":"#","link":"#"},
-{"title":"Student Budget Phone","price":"₹9,999","image":"#","link":"#"},
-{"title":"Ultra Camera Smartphone","price":"₹69,999","image":"#","link":"#"}
+{"title":"Flagship 5G Smartphone","price":"₹59,999","discount":"25% OFF","image":"#","link":"#"},
+{"title":"Budget 5G Smartphone","price":"₹12,999","discount":"40% OFF","image":"#","link":"#"},
+{"title":"Premium Camera Smartphone","price":"₹44,999","discount":"30% OFF","image":"#","link":"#"},
+{"title":"Gaming Smartphone","price":"₹39,999","discount":"35% OFF","image":"#","link":"#"},
+{"title":"Mid Range Smartphone","price":"₹24,999","discount":"28% OFF","image":"#","link":"#"},
+{"title":"Compact Smartphone","price":"₹18,999","discount":"22% OFF","image":"#","link":"#"},
+{"title":"Student Budget Phone","price":"₹9,999","discount":"45% OFF","image":"#","link":"#"},
+{"title":"Ultra Camera Smartphone","price":"₹69,999","discount":"20% OFF","image":"#","link":"#"}
 ],
 
 "tablet":[
-{"title":"Android Tablet HD","price":"₹12,999","image":"#","link":"#"},
-{"title":"Kids Learning Tablet","price":"₹8,999","image":"#","link":"#"},
-{"title":"Entertainment Tablet","price":"₹15,999","image":"#","link":"#"},
-{"title":"Premium Tablet","price":"₹39,999","image":"#","link":"#"},
-{"title":"10 Inch Android Tablet","price":"₹13,999","image":"#","link":"#"},
-{"title":"Productivity Tablet","price":"₹21,999","image":"#","link":"#"},
-{"title":"Budget Tablet","price":"₹9,999","image":"#","link":"#"},
-{"title":"Media Tablet","price":"₹17,999","image":"#","link":"#"}
+{"title":"Android Tablet HD","price":"₹12,999","discount":"30% OFF","image":"#","link":"#"},
+{"title":"Kids Learning Tablet","price":"₹8,999","discount":"35% OFF","image":"#","link":"#"},
+{"title":"Entertainment Tablet","price":"₹15,999","discount":"28% OFF","image":"#","link":"#"},
+{"title":"Premium Tablet","price":"₹39,999","discount":"22% OFF","image":"#","link":"#"},
+{"title":"10 Inch Android Tablet","price":"₹13,999","discount":"25% OFF","image":"#","link":"#"},
+{"title":"Productivity Tablet","price":"₹21,999","discount":"26% OFF","image":"#","link":"#"},
+{"title":"Budget Tablet","price":"₹9,999","discount":"32% OFF","image":"#","link":"#"},
+{"title":"Media Tablet","price":"₹17,999","discount":"27% OFF","image":"#","link":"#"}
 ],
 
 "camera":[
-{"title":"Mirrorless Camera 4K","price":"₹69,999","image":"#","link":"#"},
-{"title":"Professional DSLR Camera","price":"₹79,999","image":"#","link":"#"},
-{"title":"Compact Vlogging Camera","price":"₹49,999","image":"#","link":"#"},
-{"title":"4K Action Camera","price":"₹12,999","image":"#","link":"#"},
-{"title":"Beginner Camera Kit","price":"₹34,999","image":"#","link":"#"},
-{"title":"Content Creator Camera","price":"₹59,999","image":"#","link":"#"},
-{"title":"Travel Camera","price":"₹27,999","image":"#","link":"#"},
-{"title":"Pro Photography Camera","price":"₹1,09,999","image":"#","link":"#"}
+{"title":"Mirrorless Camera 4K","price":"₹69,999","discount":"18% OFF","image":"#","link":"#"},
+{"title":"Professional DSLR Camera","price":"₹79,999","discount":"15% OFF","image":"#","link":"#"},
+{"title":"Compact Vlogging Camera","price":"₹49,999","discount":"20% OFF","image":"#","link":"#"},
+{"title":"4K Action Camera","price":"₹12,999","discount":"35% OFF","image":"#","link":"#"},
+{"title":"Beginner Camera Kit","price":"₹34,999","discount":"24% OFF","image":"#","link":"#"},
+{"title":"Content Creator Camera","price":"₹59,999","discount":"19% OFF","image":"#","link":"#"},
+{"title":"Travel Camera","price":"₹27,999","discount":"21% OFF","image":"#","link":"#"},
+{"title":"Pro Photography Camera","price":"₹1,09,999","discount":"12% OFF","image":"#","link":"#"}
 ],
 
 "gaming":[
-{"title":"Gaming Console 4K","price":"₹39,999","image":"#","link":"#"},
-{"title":"RGB Gaming Keyboard","price":"₹2,499","image":"#","link":"#"},
-{"title":"Gaming Mouse High DPI","price":"₹1,299","image":"#","link":"#"},
-{"title":"Wireless Gaming Controller","price":"₹3,499","image":"#","link":"#"},
-{"title":"Gaming Headset RGB","price":"₹1,999","image":"#","link":"#"},
-{"title":"Gaming Laptop Cooling Pad","price":"₹1,199","image":"#","link":"#"},
-{"title":"Gaming Chair Ergonomic","price":"₹9,999","image":"#","link":"#"},
-{"title":"RGB Gaming Desk Setup","price":"₹14,999","image":"#","link":"#"}
+{"title":"Gaming Console 4K","price":"₹39,999","discount":"20% OFF","image":"#","link":"#"},
+{"title":"RGB Gaming Keyboard","price":"₹2,499","discount":"30% OFF","image":"#","link":"#"},
+{"title":"Gaming Mouse High DPI","price":"₹1,299","discount":"35% OFF","image":"#","link":"#"},
+{"title":"Wireless Gaming Controller","price":"₹3,499","discount":"25% OFF","image":"#","link":"#"},
+{"title":"Gaming Headset RGB","price":"₹1,999","discount":"32% OFF","image":"#","link":"#"},
+{"title":"Gaming Laptop Cooling Pad","price":"₹1,199","discount":"40% OFF","image":"#","link":"#"},
+{"title":"Gaming Chair Ergonomic","price":"₹9,999","discount":"18% OFF","image":"#","link":"#"},
+{"title":"RGB Gaming Desk Setup","price":"₹14,999","discount":"22% OFF","image":"#","link":"#"}
 ],
 
 "headphones":[
-{"title":"Wireless Noise Cancelling Headphones","price":"₹3,999","image":"#","link":"#"},
-{"title":"Studio Monitoring Headphones","price":"₹4,999","image":"#","link":"#"},
-{"title":"Bluetooth Over Ear Headphones","price":"₹2,499","image":"#","link":"#"},
-{"title":"Gaming Headset with Mic","price":"₹1,999","image":"#","link":"#"},
-{"title":"Budget Wireless Headphones","price":"₹1,299","image":"#","link":"#"},
-{"title":"Premium Sound Headphones","price":"₹6,999","image":"#","link":"#"},
-{"title":"Foldable Travel Headphones","price":"₹2,199","image":"#","link":"#"},
-{"title":"Professional Audio Headphones","price":"₹7,999","image":"#","link":"#"}
+{"title":"Wireless Noise Cancelling Headphones","price":"₹3,999","discount":"28% OFF","image":"#","link":"#"},
+{"title":"Studio Monitoring Headphones","price":"₹4,999","discount":"20% OFF","image":"#","link":"#"},
+{"title":"Bluetooth Over Ear Headphones","price":"₹2,499","discount":"35% OFF","image":"#","link":"#"},
+{"title":"Gaming Headset with Mic","price":"₹1,999","discount":"32% OFF","image":"#","link":"#"},
+{"title":"Budget Wireless Headphones","price":"₹1,299","discount":"40% OFF","image":"#","link":"#"},
+{"title":"Premium Sound Headphones","price":"₹6,999","discount":"18% OFF","image":"#","link":"#"},
+{"title":"Foldable Travel Headphones","price":"₹2,199","discount":"30% OFF","image":"#","link":"#"},
+{"title":"Professional Audio Headphones","price":"₹7,999","discount":"16% OFF","image":"#","link":"#"}
 ],
 
 "speakers":[
-{"title":"Portable Bluetooth Speaker","price":"₹1,999","image":"#","link":"#"},
-{"title":"Party Speaker Bass Boost","price":"₹3,499","image":"#","link":"#"},
-{"title":"Mini Travel Speaker","price":"₹999","image":"#","link":"#"},
-{"title":"Premium Wireless Speaker","price":"₹4,499","image":"#","link":"#"},
-{"title":"Outdoor Bluetooth Speaker","price":"₹2,799","image":"#","link":"#"},
-{"title":"Smart Home Speaker","price":"₹5,999","image":"#","link":"#"},
-{"title":"Compact Desk Speaker","price":"₹1,299","image":"#","link":"#"},
-{"title":"High Power Party Speaker","price":"₹8,999","image":"#","link":"#"}
+{"title":"Portable Bluetooth Speaker","price":"₹1,999","discount":"32% OFF","image":"#","link":"#"},
+{"title":"Party Speaker Bass Boost","price":"₹3,499","discount":"25% OFF","image":"#","link":"#"},
+{"title":"Mini Travel Speaker","price":"₹999","discount":"40% OFF","image":"#","link":"#"},
+{"title":"Premium Wireless Speaker","price":"₹4,499","discount":"22% OFF","image":"#","link":"#"},
+{"title":"Outdoor Bluetooth Speaker","price":"₹2,799","discount":"30% OFF","image":"#","link":"#"},
+{"title":"Smart Home Speaker","price":"₹5,999","discount":"20% OFF","image":"#","link":"#"},
+{"title":"Compact Desk Speaker","price":"₹1,299","discount":"35% OFF","image":"#","link":"#"},
+{"title":"High Power Party Speaker","price":"₹8,999","discount":"18% OFF","image":"#","link":"#"}
 ],
 
 "accessories":[
-{"title":"Laptop Backpack Waterproof","price":"₹999","image":"#","link":"#"},
-{"title":"USB Type-C Hub Adapter","price":"₹799","image":"#","link":"#"},
-{"title":"Laptop Cooling Pad RGB","price":"₹1,299","image":"#","link":"#"},
-{"title":"Wireless Charging Pad","price":"₹699","image":"#","link":"#"},
-{"title":"Phone Stand Holder","price":"₹299","image":"#","link":"#"},
-{"title":"Cable Organizer Kit","price":"₹399","image":"#","link":"#"},
-{"title":"Desk Setup Accessories","price":"₹1,499","image":"#","link":"#"},
-{"title":"USB Fast Charging Cable","price":"₹249","image":"#","link":"#"}
+{"title":"Laptop Backpack Waterproof","price":"₹999","discount":"40% OFF","image":"#","link":"#"},
+{"title":"USB Type-C Hub Adapter","price":"₹799","discount":"35% OFF","image":"#","link":"#"},
+{"title":"Laptop Cooling Pad RGB","price":"₹1,299","discount":"32% OFF","image":"#","link":"#"},
+{"title":"Wireless Charging Pad","price":"₹699","discount":"38% OFF","image":"#","link":"#"},
+{"title":"Phone Stand Holder","price":"₹299","discount":"45% OFF","image":"#","link":"#"},
+{"title":"Cable Organizer Kit","price":"₹399","discount":"40% OFF","image":"#","link":"#"},
+{"title":"Desk Setup Accessories","price":"₹1,499","discount":"28% OFF","image":"#","link":"#"},
+{"title":"USB Fast Charging Cable","price":"₹249","discount":"50% OFF","image":"#","link":"#"}
 ],
 
 "smartwatch":[
-{"title":"Bluetooth Calling Smartwatch","price":"₹1,999","image":"#","link":"#"},
-{"title":"AMOLED Display Smartwatch","price":"₹3,499","image":"#","link":"#"},
-{"title":"Fitness Tracking Smartwatch","price":"₹2,499","image":"#","link":"#"},
-{"title":"Premium Health Smartwatch","price":"₹4,999","image":"#","link":"#"},
-{"title":"Budget Smartwatch","price":"₹1,499","image":"#","link":"#"},
-{"title":"Sports Smartwatch","price":"₹2,999","image":"#","link":"#"},
-{"title":"Waterproof Smartwatch","price":"₹3,199","image":"#","link":"#"},
-{"title":"Luxury Smartwatch","price":"₹6,999","image":"#","link":"#"}
+{"title":"Bluetooth Calling Smartwatch","price":"₹1,999","discount":"35% OFF","image":"#","link":"#"},
+{"title":"AMOLED Display Smartwatch","price":"₹3,499","discount":"28% OFF","image":"#","link":"#"},
+{"title":"Fitness Tracking Smartwatch","price":"₹2,499","discount":"32% OFF","image":"#","link":"#"},
+{"title":"Premium Health Smartwatch","price":"₹4,999","discount":"22% OFF","image":"#","link":"#"},
+{"title":"Budget Smartwatch","price":"₹1,499","discount":"40% OFF","image":"#","link":"#"},
+{"title":"Sports Smartwatch","price":"₹2,999","discount":"30% OFF","image":"#","link":"#"},
+{"title":"Waterproof Smartwatch","price":"₹3,199","discount":"27% OFF","image":"#","link":"#"},
+{"title":"Luxury Smartwatch","price":"₹6,999","discount":"18% OFF","image":"#","link":"#"}
 ],
 
 "powerbank":[
-{"title":"10000mAh Fast Charging Power Bank","price":"₹899","image":"#","link":"#"},
-{"title":"20000mAh High Capacity Power Bank","price":"₹1,299","image":"#","link":"#"},
-{"title":"Mini Pocket Power Bank","price":"₹699","image":"#","link":"#"},
-{"title":"Wireless Charging Power Bank","price":"₹1,499","image":"#","link":"#"},
-{"title":"Slim Portable Power Bank","price":"₹799","image":"#","link":"#"},
-{"title":"Travel Power Bank","price":"₹999","image":"#","link":"#"},
-{"title":"Fast Charge Power Bank","price":"₹1,199","image":"#","link":"#"},
-{"title":"Premium Metal Power Bank","price":"₹1,799","image":"#","link":"#"}
+{"title":"10000mAh Fast Charging Power Bank","price":"₹899","discount":"35% OFF","image":"#","link":"#"},
+{"title":"20000mAh High Capacity Power Bank","price":"₹1,299","discount":"30% OFF","image":"#","link":"#"},
+{"title":"Mini Pocket Power Bank","price":"₹699","discount":"40% OFF","image":"#","link":"#"},
+{"title":"Wireless Charging Power Bank","price":"₹1,499","discount":"28% OFF","image":"#","link":"#"},
+{"title":"Slim Portable Power Bank","price":"₹799","discount":"36% OFF","image":"#","link":"#"},
+{"title":"Travel Power Bank","price":"₹999","discount":"32% OFF","image":"#","link":"#"},
+{"title":"Fast Charge Power Bank","price":"₹1,199","discount":"30% OFF","image":"#","link":"#"},
+{"title":"Premium Metal Power Bank","price":"₹1,799","discount":"25% OFF","image":"#","link":"#"}
 ],
 
 "streaming":[
-{"title":"USB Condenser Microphone","price":"₹2,999","image":"#","link":"#"},
-{"title":"LED Ring Light Kit","price":"₹1,499","image":"#","link":"#"},
-{"title":"Camera Tripod Stand","price":"₹1,199","image":"#","link":"#"},
-{"title":"Streaming Capture Card","price":"₹3,999","image":"#","link":"#"},
-{"title":"Podcast Microphone Kit","price":"₹4,499","image":"#","link":"#"},
-{"title":"Lighting Setup Kit","price":"₹2,799","image":"#","link":"#"},
-{"title":"Streaming Webcam HD","price":"₹1,999","image":"#","link":"#"},
-{"title":"Professional Streaming Gear","price":"₹6,999","image":"#","link":"#"}
+{"title":"USB Condenser Microphone","price":"₹2,999","discount":"30% OFF","image":"#","link":"#"},
+{"title":"LED Ring Light Kit","price":"₹1,499","discount":"35% OFF","image":"#","link":"#"},
+{"title":"Camera Tripod Stand","price":"₹1,199","discount":"40% OFF","image":"#","link":"#"},
+{"title":"Streaming Capture Card","price":"₹3,999","discount":"22% OFF","image":"#","link":"#"},
+{"title":"Podcast Microphone Kit","price":"₹4,499","discount":"25% OFF","image":"#","link":"#"},
+{"title":"Lighting Setup Kit","price":"₹2,799","discount":"30% OFF","image":"#","link":"#"},
+{"title":"Streaming Webcam HD","price":"₹1,999","discount":"32% OFF","image":"#","link":"#"},
+{"title":"Professional Streaming Gear","price":"₹6,999","discount":"18% OFF","image":"#","link":"#"}
 ],
 
-"drones":[
-{"title":"4K Camera Drone","price":"₹6,999","image":"#","link":"#"},
-{"title":"Foldable GPS Drone","price":"₹9,999","image":"#","link":"#"},
-{"title":"Mini Beginner Drone","price":"₹3,499","image":"#","link":"#"},
-{"title":"Professional Camera Drone","price":"₹24,999","image":"#","link":"#"},
-{"title":"Travel Drone Compact","price":"₹7,999","image":"#","link":"#"},
-{"title":"Drone with 4K Stabilization","price":"₹12,999","image":"#","link":"#"},
-{"title":"Camera Drone Pro Kit","price":"₹19,999","image":"#","link":"#"},
-{"title":"Beginner Camera Drone","price":"₹5,999","image":"#","link":"#"}
+"monitors":[
+{"title":"24 Inch Full HD Monitor","price":"₹9,999","discount":"28% OFF","image":"#","link":"#"},
+{"title":"27 Inch Gaming Monitor","price":"₹19,999","discount":"22% OFF","image":"#","link":"#"},
+{"title":"Curved Gaming Monitor","price":"₹24,999","discount":"18% OFF","image":"#","link":"#"},
+{"title":"4K UHD Monitor","price":"₹34,999","discount":"15% OFF","image":"#","link":"#"},
+{"title":"UltraWide Monitor","price":"₹29,999","discount":"20% OFF","image":"#","link":"#"},
+{"title":"Office LED Monitor","price":"₹8,999","discount":"30% OFF","image":"#","link":"#"},
+{"title":"Professional Design Monitor","price":"₹39,999","discount":"17% OFF","image":"#","link":"#"},
+{"title":"Portable USB Monitor","price":"₹14,999","discount":"25% OFF","image":"#","link":"#"}
 ]
 }
