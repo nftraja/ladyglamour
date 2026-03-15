@@ -283,6 +283,46 @@ style="--chip-color:#ff512f; display:none;">
 </div>
 </main>
 
+
+<!-- INSTALL SUCCESS POPUP -->
+
+<div id="installSuccess"
+style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.7); align-items:center; justify-content:center; z-index:999;">
+
+<div class="glass-card" style="max-width:320px; text-align:center;">
+
+<div class="card-title">
+🎉 LadyGlamour Installed
+</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+LadyGlamour has been successfully installed on your device.  
+You can now open it like a mobile app.
+</p>
+
+<div class="theme-divider-b"></div>
+
+<div class="brand-wrap">
+
+<a href="/" class="brand" style="--chip-color:#ff512f;">
+<span>Open App</span>
+</a>
+
+<button onclick="document.getElementById('installSuccess').style.display='none'"
+class="brand"
+style="--chip-color:#444;">
+<span>Done</span>
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
 <!-- BOTTOM NAV -->
 <div class="bottom-nav">
 <a href="#" class="nav-item"><span>🏠</span>Home</a>
@@ -295,7 +335,6 @@ style="--chip-color:#ff512f; display:none;">
 
 </div>
 
-<script src="app.js"></script>
 
 <!-- SERVICE WORKER REGISTER -->
 <script>
@@ -314,7 +353,9 @@ console.log('Service Worker registration failed:', error);
 
 </script>
 
+
 <!-- INSTALL PROMPT SCRIPT -->
+
 <script>
 
 let deferredPrompt;
@@ -341,10 +382,16 @@ deferredPrompt = null;
 
 });
 
-</script>
 
-</body>
-</html>
+/* INSTALL SUCCESS EVENT */
+
+window.addEventListener('appinstalled', () => {
+
+document.getElementById("installSuccess").style.display="flex";
+
+});
+
+</script>
 
 </body>
 </html>
