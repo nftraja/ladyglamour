@@ -340,7 +340,7 @@ style="--chip-color:#444;">
 <script>
 
 if ('serviceWorker' in navigator) {
-window.addEventListener('load', function() {
+
 navigator.serviceWorker.register('sw.js')
 .then(function(registration) {
 console.log('Service Worker registered');
@@ -348,7 +348,7 @@ console.log('Service Worker registered');
 .catch(function(error) {
 console.log('Service Worker registration failed:', error);
 });
-});
+
 }
 
 </script>
@@ -360,24 +360,19 @@ console.log('Service Worker registration failed:', error);
 
 let deferredPrompt;
 
-document.addEventListener("DOMContentLoaded",function(){
-
 const installBtn = document.getElementById("installBtn");
 
 window.addEventListener('beforeinstallprompt', (e) => {
 
 e.preventDefault();
-
 deferredPrompt = e;
 
 });
 
-if(installBtn){
-
 installBtn.addEventListener("click", async () => {
 
 if(!deferredPrompt){
-alert("Install option will appear when your browser allows it.");
+alert("Install option will appear when browser allows it.");
 return;
 }
 
@@ -389,13 +384,9 @@ deferredPrompt = null;
 
 });
 
-}
-
 window.addEventListener('appinstalled', () => {
 
 document.getElementById("installSuccess").style.display="flex";
-
-});
 
 });
 
