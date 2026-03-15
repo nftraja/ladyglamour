@@ -215,25 +215,6 @@ Discover trending electronics, creator tools and everyday tech essentials in one
 </div>
 
 <div class="glass-card"
-style="background:linear-gradient(135deg,#ff512f,#dd2476);border:1.5px solid rgba(255,255,255,0.25);">
-<div class="card-title">
-🏬 Explore Brand Stores
-</div>
-<div class="theme-divider-b"></div>
-<p class="card-text">
-Discover top fashion, beauty and lifestyle brands. Explore official brand stores, trending collections and exclusive deals across popular platforms.
-</p>
-<div class="theme-divider-b"></div>
-<div class="brand-wrap">
-<a href="brands.html"
-class="brand"
-style="background:linear-gradient(135deg,#ff512f,#dd2476);">
-<span>Explore Brand Stores →</span>
-</a>
-</div>
-</div>
-
-<div class="glass-card"
 style="background:linear-gradient(135deg,#4e342e,#b71c5c);border:1.5px solid rgba(255,255,255,0.25);">
 <div class="card-title">
 🎓 Women Smart Skills
@@ -253,75 +234,52 @@ style="background:linear-gradient(135deg,#4e342e,#b71c5c);">
 </div>
 
 <!-- INSTALL LADYGLAMOUR APP -->
-
 <div class="glass-card">
-
 <div class="card-title">
 📲 Install LadyGlamour App
 </div>
-
 <div class="theme-divider-b"></div>
-
 <p class="card-text">
 Install LadyGlamour on your device and enjoy faster access to fashion collections, beauty finds, gadget deals, guides, blogs and smart shopping tools — just like a mobile app.
 </p>
-
 <div class="theme-divider-b"></div>
-
 <div class="brand-wrap">
-
 <a id="installBtn"
 class="brand"
 style="--chip-color:#ff512f; cursor:pointer; display:inline-flex;">
-
 <span>Install App</span>
-
 </a>
-
 </div>
 
 </div>
 </main>
 
-
 <!-- INSTALL SUCCESS POPUP -->
-
 <div id="installSuccess"
 style="display:none; pointer-events:none; position:fixed; inset:0; background:rgba(0,0,0,.7); align-items:center; justify-content:center; z-index:999;">
-
 <div class="glass-card" style="max-width:320px; text-align:center;">
-
 <div class="card-title">
 🎉 LadyGlamour Installed
 </div>
-
 <div class="theme-divider-b"></div>
-
 <p class="card-text">
 LadyGlamour has been successfully installed on your device.  
 You can now open it like a mobile app.
 </p>
-
 <div class="theme-divider-b"></div>
-
 <div class="brand-wrap">
-
 <a href="/" class="brand" style="--chip-color:#ff512f; cursor:pointer;">
 <span>Open App</span>
 </a>
-
 <a onclick="document.getElementById('installSuccess').style.display='none';document.getElementById('installSuccess').style.pointerEvents='none';"
 class="brand"
 style="--chip-color:#444; cursor:pointer;">
 <span>Done</span>
 </a>
-
 </div>
 
 </div>
-
 </div>
-
 
 <!-- BOTTOM NAV -->
 <div class="bottom-nav">
@@ -335,9 +293,7 @@ style="--chip-color:#444; cursor:pointer;">
 
 <!-- SERVICE WORKER REGISTER -->
 <script>
-
 if ('serviceWorker' in navigator) {
-
 navigator.serviceWorker.register('sw.js')
 .then(function(registration) {
 console.log('Service Worker registered');
@@ -345,59 +301,35 @@ console.log('Service Worker registered');
 .catch(function(error) {
 console.log('Service Worker registration failed:', error);
 });
-
 }
-
 </script>
 
-
 <!-- INSTALL PROMPT SCRIPT -->
-
 <script>
-
 let deferredPrompt = null;
-
 window.addEventListener('beforeinstallprompt', (e) => {
-
 e.preventDefault();
 deferredPrompt = e;
-
 console.log("Install prompt available");
-
 });
-
 document.getElementById("installBtn").addEventListener("click", async function(e){
-
 e.preventDefault();
-
 if(!deferredPrompt){
-
 alert("Use your browser menu and tap 'Add to Home Screen' to install.");
-
 return;
-
 }
-
 deferredPrompt.prompt();
-
 const { outcome } = await deferredPrompt.userChoice;
-
 if(outcome === "accepted"){
 console.log("User installed app");
 }
-
 deferredPrompt = null;
-
 });
-
 window.addEventListener('appinstalled', () => {
-
 const popup = document.getElementById("installSuccess");
 popup.style.display="flex";
 popup.style.pointerEvents="auto";
-
 });
-
 </script>
 
 </body>
