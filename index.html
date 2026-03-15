@@ -358,8 +358,7 @@ console.log('Service Worker registration failed:', error);
 
 <script>
 
-let deferredPrompt;
-
+let deferredPrompt = null;
 const installBtn = document.getElementById("installBtn");
 
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -367,18 +366,27 @@ window.addEventListener('beforeinstallprompt', (e) => {
 e.preventDefault();
 deferredPrompt = e;
 
+console.log("Install prompt available");
+
 });
 
 installBtn.addEventListener("click", async () => {
 
 if(!deferredPrompt){
-alert("Install option will appear when browser allows it.");
+
+alert("Use your browser menu and tap 'Add to Home Screen' to install.");
+
 return;
+
 }
 
 deferredPrompt.prompt();
 
 const { outcome } = await deferredPrompt.userChoice;
+
+if(outcome === "accepted"){
+console.log("User installed app");
+}
 
 deferredPrompt = null;
 
