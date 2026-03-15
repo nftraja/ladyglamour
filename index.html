@@ -270,13 +270,13 @@ Install LadyGlamour on your device and enjoy faster access to fashion collection
 
 <div class="brand-wrap">
 
-<button id="installBtn"
+<a id="installBtn"
 class="brand"
-style="--chip-color:#ff512f;">
+style="--chip-color:#ff512f; cursor:pointer; display:inline-flex;">
 
 <span>Install App</span>
 
-</button>
+</a>
 
 </div>
 
@@ -306,15 +306,15 @@ You can now open it like a mobile app.
 
 <div class="brand-wrap">
 
-<a href="/" class="brand" style="--chip-color:#ff512f;">
+<a href="/" class="brand" style="--chip-color:#ff512f; cursor:pointer;">
 <span>Open App</span>
 </a>
 
-<button onclick="document.getElementById('installSuccess').style.display='none'"
+<a onclick="document.getElementById('installSuccess').style.display='none'"
 class="brand"
-style="--chip-color:#444;">
+style="--chip-color:#444; cursor:pointer;">
 <span>Done</span>
-</button>
+</a>
 
 </div>
 
@@ -359,7 +359,6 @@ console.log('Service Worker registration failed:', error);
 <script>
 
 let deferredPrompt = null;
-const installBtn = document.getElementById("installBtn");
 
 window.addEventListener('beforeinstallprompt', (e) => {
 
@@ -370,7 +369,9 @@ console.log("Install prompt available");
 
 });
 
-installBtn.addEventListener("click", async () => {
+document.getElementById("installBtn").addEventListener("click", async function(e){
+
+e.preventDefault();
 
 if(!deferredPrompt){
 
