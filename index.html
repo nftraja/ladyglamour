@@ -252,6 +252,35 @@ style="background:linear-gradient(135deg,#4e342e,#b71c5c);">
 </div>
 </div>
 
+<!-- INSTALL LADYGLAMOUR APP -->
+
+<div class="glass-card">
+
+<div class="card-title">
+📲 Install LadyGlamour App
+</div>
+
+<div class="theme-divider-b"></div>
+
+<p class="card-text">
+Install LadyGlamour on your device and enjoy faster access to fashion collections, beauty finds, gadget deals, guides, blogs and smart shopping tools — just like a mobile app.
+</p>
+
+<div class="theme-divider-b"></div>
+
+<div class="brand-wrap">
+
+<button id="installBtn"
+class="brand"
+style="--chip-color:#ff512f; display:none;">
+
+<span>Install App</span>
+
+</button>
+
+</div>
+
+</div>
 </main>
 
 <!-- BOTTOM NAV -->
@@ -266,6 +295,9 @@ style="background:linear-gradient(135deg,#4e342e,#b71c5c);">
 
 </div>
 
+<script src="app.js"></script>
+
+<!-- SERVICE WORKER REGISTER -->
 <script>
 
 if ('serviceWorker' in navigator) {
@@ -281,6 +313,38 @@ console.log('Service Worker registration failed:', error);
 }
 
 </script>
+
+<!-- INSTALL PROMPT SCRIPT -->
+<script>
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+
+e.preventDefault();
+
+deferredPrompt = e;
+
+document.getElementById("installBtn").style.display = "inline-flex";
+
+});
+
+document.getElementById("installBtn").addEventListener("click", async () => {
+
+if(!deferredPrompt) return;
+
+deferredPrompt.prompt();
+
+const { outcome } = await deferredPrompt.userChoice;
+
+deferredPrompt = null;
+
+});
+
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
