@@ -266,5 +266,21 @@ style="background:linear-gradient(135deg,#4e342e,#b71c5c);">
 
 </div>
 
+<script>
+
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', function() {
+navigator.serviceWorker.register('sw.js')
+.then(function(registration) {
+console.log('Service Worker registered');
+})
+.catch(function(error) {
+console.log('Service Worker registration failed:', error);
+});
+});
+}
+
+</script>
+
 </body>
 </html>
