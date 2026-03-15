@@ -272,7 +272,7 @@ Install LadyGlamour on your device and enjoy faster access to fashion collection
 
 <button id="installBtn"
 class="brand"
-style="--chip-color:#ff512f; display:none;">
+style="--chip-color:#ff512f;">
 
 <span>Install App</span>
 
@@ -370,13 +370,16 @@ e.preventDefault();
 
 deferredPrompt = e;
 
-installBtn.style.display = "inline-flex";
-
 });
+
+if(installBtn){
 
 installBtn.addEventListener("click", async () => {
 
-if(!deferredPrompt) return;
+if(!deferredPrompt){
+alert("Install option will appear when your browser allows it.");
+return;
+}
 
 deferredPrompt.prompt();
 
@@ -385,6 +388,8 @@ const { outcome } = await deferredPrompt.userChoice;
 deferredPrompt = null;
 
 });
+
+}
 
 window.addEventListener('appinstalled', () => {
 
