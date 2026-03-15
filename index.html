@@ -287,7 +287,7 @@ style="--chip-color:#ff512f; cursor:pointer; display:inline-flex;">
 <!-- INSTALL SUCCESS POPUP -->
 
 <div id="installSuccess"
-style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.7); align-items:center; justify-content:center; z-index:999;">
+style="display:none; pointer-events:none; position:fixed; inset:0; background:rgba(0,0,0,.7); align-items:center; justify-content:center; z-index:999;">
 
 <div class="glass-card" style="max-width:320px; text-align:center;">
 
@@ -310,7 +310,7 @@ You can now open it like a mobile app.
 <span>Open App</span>
 </a>
 
-<a onclick="document.getElementById('installSuccess').style.display='none'"
+<a onclick="document.getElementById('installSuccess').style.display='none';document.getElementById('installSuccess').style.pointerEvents='none';"
 class="brand"
 style="--chip-color:#444; cursor:pointer;">
 <span>Done</span>
@@ -395,7 +395,9 @@ deferredPrompt = null;
 
 window.addEventListener('appinstalled', () => {
 
-document.getElementById("installSuccess").style.display="flex";
+const popup = document.getElementById("installSuccess");
+popup.style.display="flex";
+popup.style.pointerEvents="auto";
 
 });
 
