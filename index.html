@@ -360,17 +360,21 @@ console.log('Service Worker registration failed:', error);
 
 let deferredPrompt;
 
+document.addEventListener("DOMContentLoaded",function(){
+
+const installBtn = document.getElementById("installBtn");
+
 window.addEventListener('beforeinstallprompt', (e) => {
 
 e.preventDefault();
 
 deferredPrompt = e;
 
-document.getElementById("installBtn").style.display = "inline-flex";
+installBtn.style.display = "inline-flex";
 
 });
 
-document.getElementById("installBtn").addEventListener("click", async () => {
+installBtn.addEventListener("click", async () => {
 
 if(!deferredPrompt) return;
 
@@ -382,12 +386,11 @@ deferredPrompt = null;
 
 });
 
-
-/* INSTALL SUCCESS EVENT */
-
 window.addEventListener('appinstalled', () => {
 
 document.getElementById("installSuccess").style.display="flex";
+
+});
 
 });
 
