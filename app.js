@@ -259,3 +259,32 @@ console.log("Brand JSON error",e);
 }
 
 loadBrands();
+
+/* ==============================
+AUTO SLIDE GUIDE CAROUSEL
+============================== */
+
+const guideCarousel = document.getElementById("guideCarousel");
+
+if(guideCarousel){
+
+let scrollAmount = 0;
+
+setInterval(()=>{
+
+const cardWidth = guideCarousel.querySelector(".guide-card")?.offsetWidth || 260;
+
+scrollAmount += cardWidth + 8;
+
+if(scrollAmount >= guideCarousel.scrollWidth - guideCarousel.clientWidth){
+scrollAmount = 0;
+}
+
+guideCarousel.scrollTo({
+left: scrollAmount,
+behavior: "smooth"
+});
+
+},4500);
+
+}
