@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>LadyGlamour Smart Deals</title>
 <link rel="stylesheet" href="style.css">
+<!-- Preload important files -->
+<link rel="preload" href="style.css" as="style">
+<link rel="preload" href="app.js" as="script">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0b0b0b">
 <!-- Universal base path fix -->
@@ -90,85 +92,105 @@ Discover trending styles, top picks and exclusive deals in one place.
 <div class="category-grid">
 
 <a href="footwear.html" class="category-icon">
-<img src="images/Footwear.webp">
+<img src="images/Footwear.webp" loading="lazy" decoding="async">
 <span>Footwear</span>
 </a>
+
 <a href="purse.html" class="category-icon">
-<img src="images/Handbag.webp">
+<img src="images/Handbag.webp" loading="lazy" decoding="async">
 <span>Purse</span>
 </a>
+
 <a href="perfume.html" class="category-icon">
-<img src="images/Perfume.webp">
+<img src="images/Perfume.webp" loading="lazy" decoding="async">
 <span>Perfume</span>
 </a>
+
 <a href="beauty.html" class="category-icon">
-<img src="images/Makeup.webp">
+<img src="images/Makeup.webp" loading="lazy" decoding="async">
 <span>Beauty</span>
 </a>
+
 <a href="jewellery.html" class="category-icon">
-<img src="images/Jewellery.webp">
+<img src="images/Jewellery.webp" loading="lazy" decoding="async">
 <span>Jewellery</span>
 </a>
+
 <a href="watch.html" class="category-icon">
-<img src="images/Eyewear.webp">
+<img src="images/Eyewear.webp" loading="lazy" decoding="async">
 <span>Eyewear</span>
 </a>
+
 <a href="wallet.html" class="category-icon">
-<img src="images/Wallet.webp">
+<img src="images/Wallet.webp" loading="lazy" decoding="async">
 <span>Wallet</span>
 </a>
+
 <a href="saree.html" class="category-icon">
-<img src="images/Saree.webp">
+<img src="images/Saree.webp" loading="lazy" decoding="async">
 <span>Saree</span>
 </a>
+
 <a href="lahanga.html" class="category-icon">
-<img src="images/Lahanga.webp">
+<img src="images/Lahanga.webp" loading="lazy" decoding="async">
 <span>Lahanga</span>
 </a>
+
 <a href="kurta.html" class="category-icon">
-<img src="images/Kurta.webp">
+<img src="images/Kurta.webp" loading="lazy" decoding="async">
 <span>Kurta</span>
 </a>
+
 <a href="jeanstop.html" class="category-icon">
-<img src="images/JeansTop.webp">
+<img src="images/JeansTop.webp" loading="lazy" decoding="async">
 <span>Jeans</span>
 </a>
+
 <a href="top.html" class="category-icon">
-<img src="images/Top.webp">
+<img src="images/Top.webp" loading="lazy" decoding="async">
 <span>Top</span>
 </a>
+
 <a href="jacket.html" class="category-icon">
-<img src="images/Jacket.webp">
+<img src="images/Jacket.webp" loading="lazy" decoding="async">
 <span>Jacket</span>
 </a>
+
 <a href="travel.html" class="category-icon">
-<img src="images/Travel.webp">
+<img src="images/Travel.webp" loading="lazy" decoding="async">
 <span>Travel</span>
 </a>
+
 <a href="gadget.html" class="category-icon">
-<img src="images/Gadget.webp">
+<img src="images/Gadget.webp" loading="lazy" decoding="async">
 <span>Gadgets</span>
 </a>
+
 <a href="kitchen.html" class="category-icon">
-<img src="images/Kitchen.webp">
+<img src="images/Kitchen.webp" loading="lazy" decoding="async">
 <span>Kitchen</span>
 </a>
+
 <a href="home.html" class="category-icon">
-<img src="images/Home.webp">
+<img src="images/Home.webp" loading="lazy" decoding="async">
 <span>Home</span>
 </a>
+
 <a href="electronics.html" class="category-icon">
-<img src="images/Electronic.webp">
+<img src="images/Electronic.webp" loading="lazy" decoding="async">
 <span>Electronics</span>
 </a>
+
 <a href="kidscare.html" class="category-icon">
-<img src="images/Kidscare.webp">
+<img src="images/Kidscare.webp" loading="lazy" decoding="async">
 <span>Kidscare</span>
 </a>
+
 <a href="accessories.html" class="category-icon">
-<img src="images/Accessories.webp">
+<img src="images/Accessories.webp" loading="lazy" decoding="async">
 <span>Accessories</span>
 </a>
+
 </div>
 
 <div class="glass-card">
@@ -398,6 +420,66 @@ popup.style.display="flex";
 
 popup.style.pointerEvents="auto";
 
+});
+
+</script>
+
+<script src="app.js"></script>
+
+<!-- INSTANT NAVIGATION -->
+<script>
+
+document.addEventListener("click",function(e){
+
+const link = e.target.closest("a");
+
+if(!link) return;
+
+const href = link.getAttribute("href");
+
+if(!href) return;
+
+if(
+href.startsWith("http") ||
+href.startsWith("#") ||
+href.startsWith("javascript") ||
+href.startsWith("mailto") ||
+href.startsWith("tel")
+){
+return;
+}
+
+if(!href.endsWith(".html")) return;
+
+e.preventDefault();
+
+fetch(href)
+.then(res => res.text())
+.then(html => {
+
+const parser = new DOMParser();
+const doc = parser.parseFromString(html,"text/html");
+
+const newContent = doc.querySelector("main");
+const currentContent = document.querySelector("main");
+
+if(newContent && currentContent){
+currentContent.innerHTML = newContent.innerHTML;
+}
+
+window.history.pushState({}, "", href);
+
+window.scrollTo(0,0);
+
+})
+.catch(()=>{
+window.location.href = href;
+});
+
+});
+
+window.addEventListener("popstate",()=>{
+location.reload();
 });
 
 </script>
