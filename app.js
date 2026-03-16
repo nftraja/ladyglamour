@@ -398,17 +398,22 @@ console.log("Brand JSON error",e);
 loadBrands();
 
 /* ==============================
-GRID RENDER FIX (PWA LAYOUT FIX)
+FORCE GRID REFLOW FIX
 ============================== */
 
-window.addEventListener("load",()=>{
-
-setTimeout(()=>{
+function fixGridLayout(){
 
 document.querySelectorAll(".product-grid").forEach(grid=>{
-grid.classList.add("grid-ready");
+
+grid.style.display="none";
+
+grid.offsetHeight; // force reflow
+
+grid.style.display="grid";
+
 });
 
-},50);
+}
 
-});
+window.addEventListener("load",fixGridLayout);
+window.addEventListener("pageshow",fixGridLayout);
