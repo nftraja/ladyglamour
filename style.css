@@ -321,29 +321,6 @@ text-shadow:0 1px 2px rgba(0,0,0,.9);
 }
 
 /* ==============================
-CATEGORY SELECT (AMAZON)
-============================== */
-.category-select{
-width:100%;
-padding:12px;
-border-radius:12px;
-border:1px solid rgba(0,255,136,0.28);
-background:rgba(255,255,255,0.06);
-color:#ffffff;
-font-size:14px;
-outline:none;
-appearance:none;
-cursor:pointer;
-}
-.category-select:focus{
-border:1px solid #00ff88;
-}
-.category-select option{
-background:#111;
-color:#ffffff;
-}
-
-/* ==============================
 CUSTOM MARKETPLACE DROPDOWN
 ============================== */
 .custom-dropdown{
@@ -394,17 +371,50 @@ cursor:pointer;
 background:rgba(0,255,136,0.15);
 }
 
-.product-price{
-font-size:14px;
-font-weight:700;
-color:#00ff88;
-margin-bottom:4px;
+/* ==============================
+GRID
+============================== */
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:8px;
 }
-.product-discount{
-font-size:11px;
-color:#ff4b2b;
-font-weight:700;
-margin-bottom:4px;
+
+/* ==============================
+PRODUCT IMAGE (16:9)
+============================== */
+.product-image{
+width:100%;
+aspect-ratio:16/9;
+border-radius:12px;
+margin-bottom:8px;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+border:1px solid rgba(255,255,255,.1);
+}
+
+/* ==============================
+PRODUCT META
+============================== */
+.product-meta{
+font-size:13px;
+text-align:center;
+margin-top:4px;
+color:#ffffff;
+}
+
+/* ==============================
+CARD SPACING
+============================== */
+.grid .glass-card{
+padding:10px;
+}
+.grid .card-title{
+font-size:12px;
+line-height:1.4;
+margin-bottom:6px;
+min-height:36px;
 }
 
 /* ==============================
