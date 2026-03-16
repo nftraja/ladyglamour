@@ -493,14 +493,18 @@ margin-bottom:5px;
 }
 
 
-/* =================================================
+/* ==============================
 AMAZON DEAL BUTTON FIX
-================================================= */
+============================== */
 
 .view-btn,
 #hotDeals a{
 
-display:inline-block;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+margin:auto;
 
 padding:8px 16px;
 
