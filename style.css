@@ -44,7 +44,7 @@ background:transparent;
 border:none;
 color:gold;
 font-size:25px;
-padding:7px 7px;
+padding:7px;
 cursor:pointer;
 }
 
@@ -58,7 +58,6 @@ letter-spacing:.5px;
 .header-icons{
 display:flex;
 align-items:center;
-justify-content:center;
 }
 
 .header-icons img{
@@ -105,10 +104,7 @@ DRAWER OVERLAY
 
 .drawer-overlay{
 position:fixed;
-top:0;
-left:0;
-right:0;
-bottom:0;
+inset:0;
 background:rgba(0,0,0,.65);
 z-index:250;
 display:none;
@@ -135,9 +131,10 @@ GLASS CARD
 .glass-card{
 border-radius:18px;
 padding:15px;
-margin-bottom:10px;
+margin-bottom:12px;
 background:rgba(255,255,255,0.04);
 border:1.5px solid rgba(0,255,136,0.28);
+backdrop-filter:blur(10px);
 }
 
 /* ==============================
@@ -160,6 +157,16 @@ text-align:center;
 }
 
 /* ==============================
+DIVIDER
+============================== */
+
+.theme-divider-b{
+height:1px;
+margin:10px 0;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
+}
+
+/* ==============================
 CATEGORY ICON GRID
 ============================== */
 
@@ -167,15 +174,9 @@ CATEGORY ICON GRID
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:8px;
-margin-top:12px;
-margin-bottom:12px;
+margin:12px 0;
 justify-items:center;
-align-items:start;
 }
-
-/* ==============================
-CATEGORY ICON
-============================== */
 
 .category-icon{
 display:flex;
@@ -184,7 +185,6 @@ align-items:center;
 text-align:center;
 text-decoration:none;
 color:#ffffff;
-width:100%;
 }
 
 .category-icon img{
@@ -199,12 +199,7 @@ background:#222;
 .category-icon span{
 font-size:11px;
 margin-top:6px;
-text-align:center;
 }
-
-/* ==============================
-DESKTOP GRID
-============================== */
 
 @media(min-width:768px){
 
@@ -219,20 +214,50 @@ height:80px;
 
 }
 
-.guide-card{
+/* ==============================
+GUIDE CAROUSEL
+============================== */
+
+.guide-carousel-wrap{
 position:relative;
+overflow:hidden;
+}
+
+.guide-carousel-title{
+font-size:14px;
+font-weight:700;
+color:gold;
+text-align:center;
+margin:6px 0;
+}
+
+.guide-carousel{
+display:flex;
+gap:8px;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+scroll-behavior:smooth;
+padding:8px;
+min-height:150px;
+}
+
+.guide-carousel::-webkit-scrollbar{
+display:none;
+}
+
+.guide-card{
+flex:0 0 260px;
+aspect-ratio:16/9;
 border-radius:18px;
+display:flex;
+align-items:flex-end;
 padding:8px;
 color:#fff;
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-overflow:hidden;
 text-decoration:none;
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,0.18);
+position:relative;
 }
 
 .guide-card::before{
@@ -241,71 +266,22 @@ position:absolute;
 inset:0;
 background:var(--card-color);
 opacity:.25;
-z-index:0;
 }
-
-.guide-card::after{
-content:"";
-position:absolute;
-top:0;
-left:0;
-right:0;
-height:45%;
-background:linear-gradient(
-180deg,
-rgba(255,255,255,0.55),
-rgba(255,255,255,0.18),
-transparent
-);
-opacity:.35;
-pointer-events:none;
-}
-
-.guide-card span.gloss{
-position:absolute;
-top:-80%;
-left:-40%;
-width:60%;
-height:220%;
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,0.35),
-transparent
-);
-transform:rotate(25deg);
-opacity:0;
-transition:.6s;
-}
-
-.guide-card *{
-position:relative;
-z-index:2;
-}
-
-/* icon remove but css safe */
-
-.guide-icon{
-display:none;
-}
-
-/* title */
 
 .guide-title{
 font-size:14px;
 font-weight:700;
-margin-left:10px;
-margin-bottom:10px;
+margin:10px;
+position:relative;
+z-index:2;
 }
 
-/* ==============================
-DIVIDER
-============================== */
+@media(max-width:768px){
 
-.theme-divider-b{
-height:1px;
-margin:10px 0;
-background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
+.guide-card{
+flex:0 0 220px;
+}
+
 }
 
 /* ==============================
@@ -331,42 +307,11 @@ color:#fff;
 text-decoration:none;
 white-space:nowrap;
 background:var(--chip-color);
-box-shadow:
-0 6px 16px rgba(0,0,0,.65),
-inset 0 2px 4px rgba(255,255,255,.45),
-inset 0 -4px 8px rgba(0,0,0,.6);
 border:1px solid rgba(255,255,255,.35);
-text-shadow:0 1px 2px rgba(0,0,0,.9);
 }
 
 /* ==============================
-CATEGORY SELECT (AMAZON)
-============================== */
-
-.category-select{
-width:100%;
-padding:12px;
-border-radius:12px;
-border:1px solid rgba(0,255,136,0.28);
-background:rgba(255,255,255,0.06);
-color:#ffffff;
-font-size:14px;
-outline:none;
-appearance:none;
-cursor:pointer;
-}
-
-.category-select:focus{
-border:1px solid #00ff88;
-}
-
-.category-select option{
-background:#111;
-color:#ffffff;
-}
-
-/* ==============================
-CUSTOM MARKETPLACE DROPDOWN
+CUSTOM DROPDOWN
 ============================== */
 
 .custom-dropdown{
@@ -380,17 +325,11 @@ padding:8px;
 border-radius:12px;
 border:1px solid rgba(0,255,136,0.28);
 background:rgba(255,255,255,0.06);
-color:#ffffff;
+color:#fff;
 font-size:14px;
 display:flex;
 justify-content:space-between;
-align-items:center;
 cursor:pointer;
-}
-
-.dropdown-arrow{
-font-size:16px;
-opacity:.8;
 }
 
 .dropdown-list{
@@ -414,7 +353,7 @@ display:block;
 .dropdown-item{
 padding:10px;
 font-size:14px;
-color:#ffffff;
+color:#fff;
 border-bottom:1px solid rgba(255,255,255,.05);
 cursor:pointer;
 }
@@ -424,7 +363,7 @@ background:rgba(0,255,136,0.15);
 }
 
 /* ==============================
-GRID
+PRODUCT GRID
 ============================== */
 
 .grid{
@@ -433,60 +372,140 @@ grid-template-columns:repeat(2,1fr);
 gap:8px;
 }
 
-/* ==============================
-PRODUCT IMAGE (16:9)
-============================== */
-
-.product-image{
-width:100%;
-aspect-ratio:16/9;
-border-radius:12px;
-margin-bottom:8px;
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-border:1px solid rgba(255,255,255,.1);
+@media(min-width:768px){
+.grid{
+grid-template-columns:repeat(4,1fr);
+}
 }
 
 /* ==============================
-PRODUCT META
+CATEGORY PRODUCT PAGES
 ============================== */
 
-.product-meta{
-font-size:13px;
+.product-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+@media(min-width:900px){
+.product-grid{
+grid-template-columns:repeat(6,1fr);
+}
+}
+
+@media(min-width:1200px){
+.product-grid{
+grid-template-columns:repeat(8,1fr);
+}
+}
+
+.product-card{
+background:#111;
+border-radius:14px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.product-img{
+width:100%;
+aspect-ratio:1/1.25;
+object-fit:cover;
+display:block;
+}
+
+.product-caption{
+padding:10px;
 text-align:center;
-margin-top:4px;
-color:#ffffff;
 }
 
 .product-price{
 font-size:14px;
 font-weight:700;
 color:#00ff88;
-margin-bottom:4px;  
+margin-bottom:4px;
 }
 
 .product-discount{
 font-size:11px;
 color:#ff4b2b;
 font-weight:700;
-margin-bottom:4px;  
+margin-bottom:4px;
+}
+
+.view-btn{
+display:inline-block;
+padding:6px 12px;
+font-size:12px;
+border-radius:20px;
+background:linear-gradient(135deg,#ff512f,#dd2476);
+color:#fff;
+text-decoration:none;
 }
 
 /* ==============================
-CARD SPACING
+BRAND STORE GRID
 ============================== */
 
-.grid .glass-card{
-padding:10px;
+.brand-store-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-top:10px;
 }
 
-.grid .card-title{
-font-size:12px;
-line-height:1.4;
-margin-bottom:6px;
-min-height:36px;
+.brand-store-card{
+display:flex;
+gap:10px;
+padding:16px;
+border-radius:14px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
 }
+
+.brand-thumb{
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-shrink:0;
+}
+
+.brand-thumb img{
+max-width:100%;
+max-height:100%;
+object-fit:contain;
+}
+
+.brand-title{
+font-size:15px;
+font-weight:700;
+color:#ffffff;
+margin-bottom:6px;
+}
+
+.brand-desc{
+font-size:13px;
+color:#cccccc;
+line-height:1.4;
+margin-bottom:10px;
+}
+
+.brand-open-btn{
+display:inline-block;
+padding:8px 14px;
+font-size:13px;
+border-radius:20px;
+text-decoration:none;
+color:#fff;
+background:linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+/* ==============================
+BOTTOM NAV
+============================== */
 
 .bottom-nav{
 position:fixed;
@@ -515,195 +534,4 @@ font-size:14px;
 .nav-item span{
 display:block;
 font-size:14px;
-}
-
-.guide-carousel-wrap{
-position:relative;
-overflow:hidden;
-}
-
-.guide-carousel-title{
-font-size:14px;
-font-weight:700;
-color:gold;
-text-align:center;
-margin:5px 0;
-}
-
-.guide-carousel{
-display:flex;
-align-items:flex-start;
-gap:8px;
-overflow-x:auto;
-scroll-behavior:smooth;
-scroll-snap-type:x mandatory;
--webkit-overflow-scrolling:touch;
-padding:8px 8px;
-
-/* height fix */
-min-height:150px;
-}
-
-.guide-carousel::-webkit-scrollbar{
-display:none;
-}
-
-/* 16:9 cards */
-
-.guide-carousel .guide-card{
-flex:0 0 260px;
-width:260px;
-aspect-ratio:16/9;
-height:auto;
-scroll-snap-align:start;
-}
-
-/* ==============================
-SEARCH SUGGESTIONS
-============================== */
-
-#searchSuggestions{
-margin-top:6px;
-background:#111;
-border-radius:10px;
-overflow:hidden;
-border:1px solid rgba(255,255,255,.1);
-}
-
-.search-item{
-padding:10px;
-cursor:pointer;
-font-size:13px;
-border-bottom:1px solid rgba(255,255,255,.05);
-}
-
-.search-item:hover{
-background:rgba(0,255,136,0.15);
-}
-
-/* ==============================
-BRAND STORES GRID
-============================== */
-
-.brand-store-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
-margin-top:10px;
-}
-
-/* ==============================
-BRAND CARD
-============================== */
-
-.brand-store-card{
-display:flex;
-gap:10px;
-padding:16px;
-border-radius:14px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-box-shadow:0 6px 18px rgba(0,0,0,0.6);
-}
-
-/* ==============================
-BRAND LOGO CONTAINER
-============================== */
-
-.brand-thumb{
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-shrink:0;
-}
-
-.brand-thumb img{
-max-width:100%;
-max-height:100%;
-object-fit:contain;
-}
-
-/* ==============================
-BRAND TEXT
-============================== */
-
-.brand-title{
-font-size:15px;
-font-weight:700;
-color:#ffffff;
-margin-bottom:6px;
-}
-
-.brand-desc{
-font-size:13px;
-color:#cccccc;
-line-height:1.4;
-margin-bottom:10px;
-}
-
-/* ==============================
-OPEN BRAND BUTTON
-============================== */
-
-.brand-open-btn{
-display:inline-block;
-padding:8px 14px;
-font-size:13px;
-border-radius:20px;
-text-decoration:none;
-color:#ffffff;
-background:linear-gradient(135deg,#ff512f,#dd2476);
-transition:.3s;
-}
-
-.brand-open-btn:hover{
-transform:translateY(-2px);
-box-shadow:0 6px 16px rgba(0,0,0,0.6);
-}
-
-/* ==============================
-RESPONSIVE
-============================== */
-
-@media(max-width:768px){
-
-.brand-store-grid{
-grid-template-columns:1fr;
-}
-
-}
-
-/* ==============================
-RESPONSIVE
-============================== */
-
-/* Mobile carousel cards */
-@media(max-width:768px){
-
-.guide-carousel .guide-card{
-flex:0 0 220px;
-width:220px;
-}
-
-}
-
-/* Small devices grid */
-@media(max-width:600px){
-
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-/* Desktop grid */
-@media(min-width:768px){
-
-.grid{
-grid-template-columns:repeat(4,1fr);
-}
-
 }
