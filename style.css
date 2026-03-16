@@ -46,11 +46,6 @@ border:none;
 color:gold;
 font-size:25px;
 cursor:pointer;
-transition:.3s;
-}
-
-.menu-btn:hover{
-transform:scale(1.1);
 }
 
 .logo{
@@ -96,12 +91,10 @@ color:#00ff88;
 text-decoration:none;
 font-size:13px;
 border-bottom:1px solid rgba(255,255,255,.05);
-transition:.25s;
 }
 
 .drawer a:hover{
 background:rgba(0,255,136,.15);
-padding-left:18px;
 }
 
 /* ==============================
@@ -144,14 +137,6 @@ backdrop-filter:blur(12px);
 box-shadow:
 0 0 0 1px rgba(0,255,136,0.06),
 0 10px 30px rgba(0,0,0,0.6);
-transition:.35s;
-}
-
-.glass-card:hover{
-transform:translateY(-3px);
-box-shadow:
-0 0 0 1px rgba(0,255,136,0.15),
-0 14px 35px rgba(0,0,0,0.7);
 }
 
 /* ==============================
@@ -180,7 +165,43 @@ DIVIDER
 .theme-divider-b{
 height:1px;
 margin:10px 0;
-background:linear-gradient(90deg,transparent,#ffffff70,transparent);
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.65),
+transparent
+);
+}
+
+/* ==============================
+CHIP BUTTONS
+============================== */
+
+.brand-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+justify-content:center;
+}
+
+.brand{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:8px 12px;
+border-radius:999px;
+font-size:12px;
+font-weight:700;
+color:#fff;
+text-decoration:none;
+white-space:nowrap;
+background:var(--chip-color);
+box-shadow:
+0 6px 16px rgba(0,0,0,.65),
+inset 0 2px 4px rgba(255,255,255,.45),
+inset 0 -4px 8px rgba(0,0,0,.6);
+border:1px solid rgba(255,255,255,.35);
+text-shadow:0 1px 2px rgba(0,0,0,.9);
 }
 
 /* ==============================
@@ -201,7 +222,6 @@ flex-direction:column;
 align-items:center;
 text-decoration:none;
 color:#fff;
-transition:.3s;
 }
 
 .category-icon img{
@@ -211,12 +231,6 @@ border-radius:50%;
 object-fit:cover;
 border:2px solid rgba(255,255,255,0.15);
 background:#222;
-transition:.35s;
-}
-
-.category-icon:hover img{
-transform:scale(1.1);
-border-color:#00ff88;
 }
 
 .category-icon span{
@@ -225,40 +239,87 @@ margin-top:6px;
 }
 
 /* ==============================
-GUIDE CAROUSEL
+CATEGORY SELECT (AMAZON)
 ============================== */
 
-.guide-carousel{
-display:flex;
-gap:8px;
-overflow-x:auto;
-scroll-snap-type:x mandatory;
-scroll-behavior:smooth;
-padding:8px;
-}
-
-.guide-card{
-flex:0 0 260px;
-aspect-ratio:16/9;
-border-radius:18px;
-display:flex;
-align-items:flex-end;
-padding:10px;
-color:#fff;
-text-decoration:none;
-background-size:cover;
-background-position:center;
-border:1px solid rgba(255,255,255,0.18);
-transition:.35s;
-}
-
-.guide-card:hover{
-transform:scale(1.04);
-}
-
-.guide-title{
+.category-select{
+width:100%;
+padding:12px;
+border-radius:12px;
+border:1px solid rgba(0,255,136,0.28);
+background:rgba(255,255,255,0.06);
+color:#ffffff;
 font-size:14px;
-font-weight:700;
+outline:none;
+appearance:none;
+cursor:pointer;
+}
+
+.category-select:focus{
+border:1px solid #00ff88;
+}
+
+.category-select option{
+background:#111;
+color:#ffffff;
+}
+
+/* ==============================
+CUSTOM MARKETPLACE DROPDOWN
+============================== */
+
+.custom-dropdown{
+position:relative;
+width:100%;
+}
+
+.dropdown-selected{
+width:100%;
+padding:8px;
+border-radius:12px;
+border:1px solid rgba(0,255,136,0.28);
+background:rgba(255,255,255,0.06);
+color:#ffffff;
+font-size:14px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+}
+
+.dropdown-arrow{
+font-size:16px;
+opacity:.8;
+}
+
+.dropdown-list{
+position:absolute;
+top:105%;
+left:0;
+right:0;
+background:#111;
+border-radius:12px;
+border:1px solid rgba(0,255,136,0.28);
+display:none;
+max-height:260px;
+overflow-y:auto;
+z-index:50;
+}
+
+.dropdown-list.active{
+display:block;
+}
+
+.dropdown-item{
+padding:10px;
+font-size:14px;
+color:#ffffff;
+border-bottom:1px solid rgba(255,255,255,.05);
+cursor:pointer;
+}
+
+.dropdown-item:hover{
+background:rgba(0,255,136,0.15);
 }
 
 /* ==============================
@@ -292,12 +353,6 @@ background:#111;
 border-radius:14px;
 overflow:hidden;
 border:1px solid rgba(255,255,255,0.08);
-transition:.35s;
-}
-
-.product-card:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 25px rgba(0,0,0,0.7);
 }
 
 .product-img{
@@ -305,14 +360,6 @@ width:100%;
 aspect-ratio:1/1.25;
 object-fit:cover;
 display:block;
-}
-
-.product-img{
-transition:transform .4s ease;
-}
-
-.product-card:hover .product-img{
-transform:scale(1.05);
 }
 
 .product-caption{
@@ -342,86 +389,6 @@ border-radius:20px;
 background:linear-gradient(135deg,#ff512f,#dd2476);
 color:#fff;
 text-decoration:none;
-transition:.3s;
-}
-
-.view-btn:hover{
-transform:scale(1.05);
-}
-
-/* ==============================
-BRAND STORE GRID
-============================== */
-
-.brand-store-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
-margin-top:10px;
-}
-
-@media(max-width:768px){
-.brand-store-grid{
-grid-template-columns:1fr;
-}
-}
-
-.brand-store-card{
-display:flex;
-gap:10px;
-padding:16px;
-border-radius:14px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-transition:.3s;
-}
-
-.brand-store-card:hover{
-transform:translateY(-4px);
-}
-
-.brand-thumb{
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.brand-thumb img{
-max-width:100%;
-max-height:100%;
-object-fit:contain;
-}
-
-.brand-title{
-font-size:15px;
-font-weight:700;
-color:#fff;
-margin-bottom:6px;
-}
-
-.brand-desc{
-font-size:13px;
-color:#ccc;
-line-height:1.4;
-margin-bottom:10px;
-}
-
-.brand-open-btn{
-display:inline-block;
-padding:8px 14px;
-font-size:13px;
-border-radius:20px;
-text-decoration:none;
-color:#fff;
-background:linear-gradient(135deg,#ff512f,#dd2476);
-transition:.3s;
-}
-
-.brand-open-btn:hover{
-transform:scale(1.05);
 }
 
 /* ==============================
@@ -446,7 +413,6 @@ z-index:200;
 .bottom-nav a{
 color:#00ff88;
 text-decoration:none;
-transition:.25s;
 }
 
 .nav-item{
@@ -457,9 +423,4 @@ font-size:14px;
 .nav-item span{
 display:block;
 font-size:16px;
-}
-
-.bottom-nav a:hover{
-transform:translateY(-3px);
-color:#ffffff;
 }
