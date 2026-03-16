@@ -1,381 +1,558 @@
 /* ==============================
-DRAWER SYSTEM
+GLOBAL
 ============================== */
 
-const drawer = document.getElementById("drawer");
-const overlay = document.getElementById("drawerOverlay");
-
-function toggleDrawer(){
-
-if(!drawer || !overlay) return;
-
-drawer.classList.toggle("active");
-overlay.classList.toggle("active");
-
-document.body.style.overflow =
-drawer.classList.contains("active") ? "hidden" : "";
-
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 
-if(overlay){
-overlay.addEventListener("click",toggleDrawer);
+html{
+scroll-behavior:smooth;
+touch-action:manipulation;
+}
+
+body{
+background:linear-gradient(135deg,#0b0b0b,#151515);
+color:#00ff88;
+overflow-x:hidden;
 }
 
 
 /* ==============================
-STORE DATA
+HEADER
 ============================== */
 
-let storeData = {};
-let myntraData = {};
-
-
-/* ==============================
-LOAD AMAZON JSON
-============================== */
-
-async function loadStore(){
-
-try{
-
-const res = await fetch("json/amazon.json");
-
-if(!res.ok) return;
-
-storeData = await res.json();
-
-const firstCategory = Object.keys(storeData)[0];
-
-if(firstCategory){
-renderProducts(firstCategory);
+.app-header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 18px;
+border-bottom:1px solid rgba(0,255,136,0.28);
+z-index:200;
+backdrop-filter:blur(12px);
 }
 
-}catch(e){
-
-console.log("Amazon JSON error",e);
-
+.menu-btn{
+background:transparent;
+border:none;
+color:gold;
+font-size:25px;
+padding:7px;
+cursor:pointer;
 }
 
+.logo{
+font-size:13px;
+color:gold;
+font-weight:700;
+letter-spacing:.5px;
 }
 
-loadStore();
-
-
-/* ==============================
-AMAZON DROPDOWN SYSTEM
-============================== */
-
-const amazonSelected = document.getElementById("amazonSelected");
-const amazonDropdown = document.getElementById("amazonDropdown");
-
-if(amazonSelected && amazonDropdown){
-
-amazonSelected.addEventListener("click",()=>{
-
-amazonDropdown.classList.toggle("active");
-
-});
-
-
-document.querySelectorAll(".dropdown-item").forEach(item=>{
-
-item.addEventListener("click",function(){
-
-const cat = this.dataset.cat;
-
-amazonSelected.innerHTML =
-this.innerText + '<span class="dropdown-arrow">⌄</span>';
-
-amazonDropdown.classList.remove("active");
-
-renderProducts(cat);
-
-});
-
-});
-
-
-/* close dropdown outside click */
-
-document.addEventListener("click",(e)=>{
-
-if(!e.target.closest(".custom-dropdown")){
-amazonDropdown.classList.remove("active");
-}
-
-});
-
+.header-icons img{
+width:38px;
+height:38px;
+object-fit:contain;
+border-radius:8px;
 }
 
 
 /* ==============================
-PRODUCT CARD
+DRAWER
 ============================== */
 
-function productCard(p){
+.drawer{
+position:fixed;
+top:0;
+left:-280px;
+width:200px;
+height:100%;
+background:rgba(10,12,20,.95);
+z-index:300;
+overflow-y:auto;
+border-right:1px solid rgba(0,255,136,0.28);
+transition:left .3s ease;
+padding-top:15px;
+}
 
-return `
+.drawer.active{
+left:0;
+}
 
-<div class="glass-card">
-
-<div class="product-image"
-style="background-image:url('${p.image}')">
-</div>
-
-<div class="card-title">${p.title || ""}</div>
-
-<div class="theme-divider-b"></div>
-
-<div class="product-meta">
-
-<div class="product-price">${p.price}</div>
-<div class="product-discount">${p.discount}</div>
-
-</div>
-
-<div class="brand-wrap">
-
-<a href="${p.link}"
-target="_blank"
-class="view-btn">
-
-View Deal
-
-</a>
-
-</div>
-
-</div>
-
-`;
-
+.drawer a{
+display:block;
+padding:7px 14px;
+color:#00ff88;
+text-decoration:none;
+font-size:13px;
+border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 
 /* ==============================
-RENDER AMAZON PRODUCTS
+DRAWER OVERLAY
 ============================== */
 
-function renderProducts(cat){
+.drawer-overlay{
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,.65);
+z-index:250;
+display:none;
+}
 
-const grid = document.getElementById("hotDeals");
-
-if(!grid) return;
-
-if(!storeData[cat]) return;
-
-let html="";
-
-storeData[cat].forEach(p=>{
-html += productCard(p);
-});
-
-grid.innerHTML = html;
-
+.drawer-overlay.active{
+display:block;
 }
 
 
 /* ==============================
-COLLECTION LOADER
+MAIN
 ============================== */
 
-async function loadCollection(cat){
-
-try{
-
-const res = await fetch("json/" + cat + ".json");
-
-if(!res.ok) return;
-
-const data = await res.json();
-
-const grid = document.getElementById("hotDeals");
-
-if(!grid) return;
-
-let html="";
-
-data.products.forEach(p=>{
-html += productCard(p);
-});
-
-grid.innerHTML = html;
-
-toggleDrawer();
-
-}catch(e){
-
-console.log("Collection load error",e);
-
-}
-
+.main-content{
+padding:65px 8px 65px;
+max-width:1200px;
+margin:auto;
 }
 
 
 /* ==============================
-BRAND DIRECTORY
+GLASS CARD (3D)
 ============================== */
 
-async function loadBrands(){
+.glass-card{
+border-radius:18px;
+padding:15px;
+margin-bottom:10px;
+background:rgba(255,255,255,0.04);
+border:1.5px solid rgba(0,255,136,0.28);
+backdrop-filter:blur(10px);
 
-try{
-
-const res = await fetch("json/brands.json");
-
-if(!res.ok) return;
-
-const data = await res.json();
-
-const grid = document.getElementById("brandGrid");
-
-if(!grid) return;
-
-let html="";
-
-data.brands.forEach(b=>{
-
-html += `
-
-<div class="brand-store-card">
-
-<div class="brand-thumb">
-
-<img 
-data-domain="${b.domain}"
-loading="lazy"
-alt="${b.name}"
-class="brand-icon">
-
-</div>
-
-<div class="brand-content">
-
-<div class="brand-title">${b.name}</div>
-
-<p class="brand-desc">${b.description}</p>
-
-<a href="${b.link}" target="_blank"
-class="brand-open-btn"
-style="--chip-color:linear-gradient(135deg,#ff512f,#dd2476);">
-
-${b.button} →
-
-</a>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-grid.innerHTML = html;
-
-loadBrandIcons();
-
-}catch(e){
-
-console.log("Brand JSON error",e);
-
+box-shadow:
+0 10px 28px rgba(0,0,0,.9),
+inset 0 1px 1px rgba(255,255,255,.05);
 }
-
-}
-
-loadBrands();
 
 
 /* ==============================
-LAZY FAVICON LOADER
+TEXT
 ============================== */
 
-function loadBrandIcons(){
+.card-title{
+font-size:13px;
+font-weight:800;
+text-align:center;
+color:#ffffff;
+}
 
-const icons = document.querySelectorAll(".brand-icon");
+.card-text{
+font-size:12.5px;
+line-height:1.6;
+color:#ffffff;
+text-align:center;
+}
 
-icons.forEach(img=>{
 
-const domain = img.dataset.domain;
+/* ==============================
+DIVIDER
+============================== */
 
-const google =
-`https://www.google.com/s2/favicons?sz=128&domain=${domain}`;
+.theme-divider-b{
+height:1px;
+margin:4px 0 6px;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
+}
 
-const duck =
-`https://icons.duckduckgo.com/ip3/${domain}.ico`;
 
-img.src = google;
+/* ==============================
+CATEGORY GRID
+============================== */
 
-img.onerror = function(){
+.category-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:8px;
+margin-top:12px;
+margin-bottom:12px;
+justify-items:center;
+align-items:start;
+}
 
-this.onerror = function(){
-this.src="images/logo.png";
-};
 
-this.src = duck;
+/* ==============================
+CATEGORY ICON
+============================== */
 
-};
+.category-icon{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+text-decoration:none;
+color:#ffffff;
+width:100%;
+transition:transform .25s ease;
+}
 
-});
+.category-icon img{
+width:75px;
+height:75px;
+border-radius:50%;
+object-fit:cover;
+border:1px solid rgba(255,255,255,0.15);
+background:#222;
+transition:.35s;
+}
+
+.category-icon span{
+font-size:11px;
+margin-top:6px;
+}
+
+@media (hover:hover){
+
+.category-icon:hover img{
+transform:translateY(-4px) scale(1.08);
+border:2px solid #00ff88;
+
+box-shadow:
+0 0 12px rgba(0,255,136,.35),
+0 6px 14px rgba(0,0,0,.6);
+}
 
 }
 
 
 /* ==============================
-AUTO SLIDE GUIDE CAROUSEL
+GUIDE CARD
 ============================== */
 
-const guideCarousel = document.getElementById("guideCarousel");
+.guide-card{
+position:relative;
+border-radius:18px;
+padding:8px;
+color:#fff;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+overflow:hidden;
+text-decoration:none;
+background-size:cover;
+background-position:center;
+border:1px solid rgba(255,255,255,0.18);
 
-if(guideCarousel){
+box-shadow:
+0 14px 36px rgba(0,0,0,.9),
+0 6px 14px rgba(0,0,0,.6);
 
-let scrollAmount = 0;
-let autoSlide;
-
-function startCarousel(){
-
-autoSlide = setInterval(()=>{
-
-const card = guideCarousel.querySelector(".guide-card");
-if(!card) return;
-
-const cardWidth = card.offsetWidth + 8;
-
-scrollAmount += cardWidth;
-
-if(scrollAmount >= guideCarousel.scrollWidth - guideCarousel.clientWidth){
-scrollAmount = 0;
+transition:.25s;
 }
 
-guideCarousel.scrollTo({
-left: scrollAmount,
-behavior: "smooth"
-});
+@media (hover:hover){
 
-},2800);
+.guide-card:hover{
+transform:translateY(-6px) scale(1.03);
+box-shadow:
+0 0 14px rgba(0,255,136,.35),
+0 18px 38px rgba(0,0,0,.95);
+}
 
 }
 
-function stopCarousel(){
-clearInterval(autoSlide);
+.guide-card::before{
+content:"";
+position:absolute;
+inset:0;
+background:var(--card-color);
+opacity:.25;
 }
 
-startCarousel();
-
-/* pause on hover */
-
-guideCarousel.addEventListener("mouseenter",stopCarousel);
-guideCarousel.addEventListener("mouseleave",startCarousel);
-
-/* pause when tab inactive */
-
-document.addEventListener("visibilitychange",()=>{
-
-if(document.hidden){
-stopCarousel();
-}else{
-startCarousel();
+.guide-title{
+font-size:14px;
+font-weight:700;
+margin:10px;
 }
 
-});
+
+/* ==============================
+BRAND WRAP
+============================== */
+
+.brand-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+justify-content:center;
+}
+
+
+/* ==============================
+BRAND CHIP BUTTON
+============================== */
+
+.brand{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:8px 16px;
+
+border-radius:999px;
+
+font-size:12px;
+font-weight:700;
+
+color:#ffffff;
+text-decoration:none;
+
+background:var(--chip-color);
+
+box-shadow:
+0 6px 16px rgba(0,0,0,.65),
+inset 0 2px 4px rgba(255,255,255,.45),
+inset 0 -4px 8px rgba(0,0,0,.6);
+
+border:1px solid rgba(255,255,255,.35);
+
+transition:transform .2s ease, box-shadow .2s ease;
+
+}
+
+.brand:active{
+transform:scale(.95);
+}
+
+@media (hover:hover){
+
+.brand:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 14px rgba(0,255,136,.35),
+0 6px 16px rgba(0,0,0,.65);
+
+}
+
+}
+
+
+/* ==============================
+CUSTOM DROPDOWN
+============================== */
+
+.custom-dropdown{
+position:relative;
+width:100%;
+}
+
+.dropdown-selected{
+width:100%;
+padding:8px;
+border-radius:12px;
+border:1px solid rgba(0,255,136,0.28);
+background:rgba(255,255,255,0.06);
+color:#ffffff;
+font-size:14px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+}
+
+.dropdown-list{
+
+position:absolute;
+top:110%;
+left:0;
+right:0;
+
+background:#0f0f0f;
+
+border-radius:12px;
+
+border:1px solid rgba(0,255,136,0.28);
+
+display:none;
+
+max-height:260px;
+
+overflow-y:auto;
+
+z-index:999;
+
+box-shadow:0 12px 28px rgba(0,0,0,.85);
+
+}
+
+.dropdown-list.active{
+display:block;
+}
+
+.dropdown-item{
+padding:8px 12px;
+cursor:pointer;
+color:#00ff88;
+}
+
+.dropdown-item:hover{
+background:rgba(0,255,136,.12);
+}
+
+
+/* ==============================
+PRODUCT GRID
+============================== */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:6px;
+}
+
+
+/* ==============================
+PRODUCT IMAGE
+============================== */
+
+.product-image{
+width:100%;
+aspect-ratio:1/1;
+border-radius:12px;
+margin-bottom:6px;
+padding:6px;
+background:#fff;
+background-size:contain;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+
+/* ==============================
+PRODUCT META
+============================== */
+
+.product-meta{
+text-align:center;
+}
+
+.product-price{
+font-weight:700;
+color:#00ff88;
+}
+
+.product-discount{
+font-size:11px;
+color:#ff4b2b;
+font-weight:700;
+}
+
+
+/* ==============================
+VIEW DEAL BUTTON
+============================== */
+
+.view-btn{
+display:inline-block;
+padding:8px 16px;
+border-radius:999px;
+font-size:12px;
+font-weight:700;
+color:#ffffff;
+text-decoration:none;
+
+background:linear-gradient(135deg,#ffb347,#ff8c00);
+
+box-shadow:
+0 6px 16px rgba(0,0,0,.65),
+inset 0 2px 4px rgba(255,255,255,.45),
+inset 0 -4px 8px rgba(0,0,0,.6);
+
+border:1px solid rgba(255,255,255,.35);
+
+transition:transform .2s ease;
+}
+
+.view-btn:active{
+transform:scale(.95);
+}
+
+@media (hover:hover){
+
+.view-btn:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 14px rgba(255,170,0,.35),
+0 6px 16px rgba(0,0,0,.65);
+
+}
+
+}
+
+
+/* ==============================
+BOTTOM NAV
+============================== */
+
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:65px;
+backdrop-filter:blur(12px);
+display:flex;
+justify-content:space-around;
+align-items:center;
+border-top:1px solid rgba(0,255,136,0.28);
+z-index:200;
+}
+
+.bottom-nav a{
+color:#00ff88;
+text-decoration:none;
+}
+
+.nav-item{
+text-align:center;
+font-size:14px;
+}
+
+.nav-item span{
+display:block;
+}
+
+
+/* ==============================
+RESPONSIVE
+============================== */
+
+@media(max-width:600px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(min-width:768px){
+
+.grid{
+grid-template-columns:repeat(4,1fr);
+}
 
 }
