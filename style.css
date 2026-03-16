@@ -349,7 +349,7 @@ TABLET GRID
 @media(min-width:768px){
 
 .brand-store-grid{
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(2,1fr);
 }
 
 }
@@ -360,7 +360,7 @@ DESKTOP GRID
 @media(min-width:1200px){
 
 .brand-store-grid{
-grid-template-columns:repeat(6,1fr);
+grid-template-columns:repeat(4,1fr);
 }
 
 }
