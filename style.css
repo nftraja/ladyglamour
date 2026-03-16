@@ -394,38 +394,6 @@ cursor:pointer;
 background:rgba(0,255,136,0.15);
 }
 
-/* ==============================
-GRID
-============================== */
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:8px;
-}
-
-/* ==============================
-PRODUCT IMAGE (16:9)
-============================== */
-.product-image{
-width:100%;
-aspect-ratio:16/9;
-border-radius:12px;
-margin-bottom:8px;
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-border:1px solid rgba(255,255,255,.1);
-}
-
-/* ==============================
-PRODUCT META
-============================== */
-.product-meta{
-font-size:13px;
-text-align:center;
-margin-top:4px;
-color:#ffffff;
-}
 .product-price{
 font-size:14px;
 font-weight:700;
@@ -437,48 +405,6 @@ font-size:11px;
 color:#ff4b2b;
 font-weight:700;
 margin-bottom:4px;
-}
-
-/* ==============================
-CARD SPACING
-============================== */
-.grid .glass-card{
-padding:10px;
-}
-.grid .card-title{
-font-size:12px;
-line-height:1.4;
-margin-bottom:6px;
-min-height:36px;
-}
-
-/* ==============================
-PRODUCT CARD HOVER
-============================== */
-
-.product-card{
-transition:all .35s ease;
-cursor:pointer;
-}
-
-.product-card:hover{
-transform:translateY(-6px) scale(1.02);
-box-shadow:
-0 12px 30px rgba(0,0,0,.8),
-0 0 15px rgba(0,255,136,.25);
-border:1px solid rgba(0,255,136,.45);
-}
-
-.product-card:hover .product-img{
-transform:scale(1.06);
-transition:transform .45s ease;
-}
-
-.product-card:hover .view-btn{
-transform:translateY(-2px);
-box-shadow:
-0 6px 16px rgba(0,0,0,.7),
-0 0 10px rgba(255,90,150,.35);
 }
 
 /* ==============================
