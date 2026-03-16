@@ -8,136 +8,47 @@
 
 <title>LadyGlamour Smartwatch Deals</title>
 
-<style>
-
-/* GLOBAL */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#0b0b0b,#151515);
-color:#fff;
-padding:20px;
-}
-
-/* CARD */
-
-.glass-card{
-border-radius:18px;
-padding:15px;
-margin-bottom:18px;
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-}
-
-/* TITLE */
-
-.card-title{
-font-size:14px;
-font-weight:700;
-text-align:center;
-margin-bottom:10px;
-}
-
-/* DIVIDER */
-
-.theme-divider-b{
-height:1px;
-margin:8px 0 14px;
-background:linear-gradient(90deg,transparent,#ffffff80,transparent);
-}
-
-/* GRID */
-
-.product-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-}
-
-/* DESKTOP */
-
-@media(min-width:900px){
-.product-grid{
-grid-template-columns:repeat(6,1fr);
-}
-}
-
-@media(min-width:1200px){
-.product-grid{
-grid-template-columns:repeat(8,1fr);
-}
-}
-
-/* PRODUCT CARD */
-
-.product-card{
-background:#111;
-border-radius:14px;
-overflow:hidden;
-border:1px solid rgba(255,255,255,0.08);
-}
-
-/* IMAGE */
-
-.product-img{
-width:100%;
-aspect-ratio:1/1.25;
-object-fit:cover;
-display:block;
-}
-
-/* CAPTION */
-
-.product-caption{
-padding:10px;
-text-align:center;
-}
-
-/* DISCOUNT */
-
-.product-discount{
-display:inline-block;
-background:#ffd700;
-color:#000;
-font-size:11px;
-font-weight:700;
-padding:3px 6px;
-border-radius:6px;
-margin-bottom:6px;
-}
-
-/* PRICE */
-
-.product-price{
-font-size:14px;
-font-weight:700;
-color:#00ff88;
-margin-bottom:6px;
-}
-
-/* BUTTON */
-
-.view-btn{
-display:inline-block;
-padding:6px 12px;
-font-size:12px;
-border-radius:20px;
-background:linear-gradient(135deg,#ff512f,#dd2476);
-color:#fff;
-text-decoration:none;
-}
-
-</style>
+<link rel="stylesheet" href="style2.css">
 
 </head>
 
 <body>
+
+<!-- DRAWER OVERLAY -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- DRAWER MENU -->
+<div class="drawer" id="drawer">
+
+<button class="menu-btn" onclick="toggleDrawer()">← Back</button>
+
+<a href="index.html">Women Fashion</a>
+<a href="footwear.html">Footwear</a>
+<a href="watch.html">Watches</a>
+<a href="jewellery.html">Jewellery</a>
+<a href="beauty.html">Makeup</a>
+<a href="beauty.html">Skincare</a>
+<a href="perfume.html">Perfumes</a>
+<a href="wallet.html">Wallets</a>
+<a href="watch.html">Sunglasses</a>
+<a href="travel.html">Travel Bags</a>
+<a href="giftsets.html">Gift Sets</a>
+<a href="accessories.html">Fashion Accessories</a>
+<a href="gadget.html">Phone Accessories</a>
+<a href="haircare.html">Hair Care</a>
+
+</div>
+
+<!-- HEADER -->
+<header class="app-header">
+<button class="menu-btn" onclick="toggleDrawer()">☰</button>
+<div class="logo">🛍 LadyGlamour</div>
+<div class="header-icons">
+<img src="images/logo.png" alt="logo">
+</div>
+</header>
+
+<main class="main-content">
 
 
 <!-- AMAZON -->
@@ -151,7 +62,7 @@ text-decoration:none;
 <div class="product-grid">
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/71HwtfJ3c6L._SX679_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/71HwtfJ3c6L._SX679_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">84% OFF</div>
 <div class="product-price">₹1,099</div>
@@ -160,7 +71,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/71TDTr8MGPL._SL1500_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/71TDTr8MGPL._SL1500_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">87% OFF</div>
 <div class="product-price">₹2,499</div>
@@ -169,7 +80,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/610BF3kqBZL._SL1500_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/610BF3kqBZL._SL1500_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">82% OFF</div>
 <div class="product-price">₹1,099</div>
@@ -178,11 +89,62 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/617eGDTJz4L._SL1080_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/617eGDTJz4L._SL1080_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">5% OFF</div>
 <div class="product-price">₹1,959</div>
 <a href="https://amzn.to/4s11via" class="view-btn">View Deal</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MYNTRA -->
+
+<div class="glass-card">
+
+<div class="card-title">Myntra Smartwatch</div>
+
+<div class="theme-divider-b"></div>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/32756197/2025/2/24/8a11aafc-5649-4b81-aa2e-8e884ffca2051740380203735-boAt-Ultima-Ember-196-AMOLED-Display-Smart-Watch-87617403802-7.jpg" loading="lazy" decoding="async" class="product-img">
+<div class="product-caption">
+<div class="product-discount">65% OFF</div>
+<div class="product-price">₹2199</div>
+<a href="https://myntr.it/hMUSwcE" class="view-btn">View Deal</a>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://assets.myntassets.com/f_auto,h_150,q_auto:best,w_112/assets/images/2025/SEPTEMBER/9/ZpaX7dN6_19a0cb3c91414654a31bcfd243dfa74e.jpg" loading="lazy" decoding="async" class="product-img">
+<div class="product-caption">
+<div class="product-discount">60% OFF</div>
+<div class="product-price">₹3599</div>
+<a href="https://myntr.it/POw9dpU" class="view-btn">View Deal</a>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://assets.myntassets.com/f_auto,h_150,q_auto:best,w_112/assets/images/2024/SEPTEMBER/18/DIRJ0xM1_7287675cac974a5daff913efd11f1d2c.jpg" loading="lazy" decoding="async" class="product-img">
+<div class="product-caption">
+<div class="product-discount">50% OFF</div>
+<div class="product-price">₹2499</div>
+<a href="https://myntr.it/ZOeQvuE" class="view-btn">View Deal</a>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2025/SEPTEMBER/2/XKI6g5FA_3a9f49edc6a14b4b889fdd092810db13.jpg" loading="lazy" decoding="async" class="product-img">
+<div class="product-caption">
+<div class="product-discount">60% OFF</div>
+<div class="product-price">₹1899</div>
+<a href="https://myntr.it/imhyagH" class="view-btn">View Deal</a>
 </div>
 </div>
 
@@ -202,7 +164,7 @@ text-decoration:none;
 <div class="product-grid">
 
 <div class="product-card">
-<img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg" class="product-img">
+<img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">40% OFF</div>
 <div class="product-price">₹1,999</div>
@@ -211,7 +173,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg" class="product-img">
+<img src="https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">35% OFF</div>
 <div class="product-price">₹1,499</div>
@@ -224,59 +186,25 @@ text-decoration:none;
 </div>
 
 
-<!-- MYNTRA -->
+</main>
 
-<div class="glass-card">
-
-<div class="card-title">Myntra Smartwatch</div>
-
-<div class="theme-divider-b"></div>
-
-<div class="product-grid">
-
-
-<div class="product-card">
-<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/32756197/2025/2/24/8a11aafc-5649-4b81-aa2e-8e884ffca2051740380203735-boAt-Ultima-Ember-196-AMOLED-Display-Smart-Watch-87617403802-7.jpg" class="product-img">
-<div class="product-caption">
-<div class="product-discount">65% OFF</div>
-<div class="product-price">₹2199</div>
-<a href="https://myntr.it/hMUSwcE" class="view-btn">View Deal</a>
-</div>
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+<a href="index.html" class="nav-item">
+<span>🏠</span>Home
+</a>
+<a href="brands.html" class="nav-item">
+<span>🏷️</span>Brands
+</a>
+<a href="discover.html" class="nav-item">
+<span>🔎</span>Discover
+</a>
+<a href="https://www.nftraja.com/p/lady-glamour.html" class="nav-item">
+<span>📖</span>Guides
+</a>
 </div>
 
-
-<div class="product-card">
-<img src="https://assets.myntassets.com/f_auto,h_150,q_auto:best,w_112/assets/images/2025/SEPTEMBER/9/ZpaX7dN6_19a0cb3c91414654a31bcfd243dfa74e.jpg" class="product-img">
-<div class="product-caption">
-<div class="product-discount">60% OFF</div>
-<div class="product-price">₹3599</div>
-<a href="https://myntr.it/POw9dpU" class="view-btn">View Deal</a>
-</div>
-</div>
-
-
-<div class="product-card">
-<img src="https://assets.myntassets.com/f_auto,h_150,q_auto:best,w_112/assets/images/2024/SEPTEMBER/18/DIRJ0xM1_7287675cac974a5daff913efd11f1d2c.jpg" class="product-img">
-<div class="product-caption">
-<div class="product-discount">50% OFF</div>
-<div class="product-price">₹2499</div>
-<a href="https://myntr.it/ZOeQvuE" class="view-btn">View Deal</a>
-</div>
-</div>
-
-
-<div class="product-card">
-<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2025/SEPTEMBER/2/XKI6g5FA_3a9f49edc6a14b4b889fdd092810db13.jpg" class="product-img">
-<div class="product-caption">
-<div class="product-discount">60% OFF</div>
-<div class="product-price">₹1899</div>
-<a href="https://myntr.it/imhyagH" class="view-btn">View Deal</a>
-</div>
-</div>
-
-
-</div>
-</div>
+<script src="app.js"></script>
 
 </body>
 </html>
