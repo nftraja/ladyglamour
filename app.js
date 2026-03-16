@@ -61,6 +61,38 @@ loadStore();
 
 
 /* ==============================
+AMAZON DROPDOWN SYSTEM
+============================== */
+
+const amazonSelected = document.getElementById("amazonSelected");
+const amazonDropdown = document.getElementById("amazonDropdown");
+
+if(amazonSelected && amazonDropdown){
+
+amazonSelected.addEventListener("click",function(){
+amazonDropdown.classList.toggle("active");
+});
+
+document.querySelectorAll(".dropdown-item").forEach(item=>{
+
+item.addEventListener("click",function(){
+
+const cat = this.getAttribute("data-cat");
+
+amazonSelected.innerHTML =
+this.innerText + '<span class="dropdown-arrow">⌄</span>';
+
+amazonDropdown.classList.remove("active");
+
+renderProducts(cat);
+
+});
+
+});
+
+}
+
+/* ==============================
 PRODUCT CARD
 ============================== */
 
