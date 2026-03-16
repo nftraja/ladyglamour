@@ -6,7 +6,8 @@
 "domain":"flipkart.com",
 "description":"Explore mobiles, electronics, fashion and home products with exclusive sales and seasonal offers.",
 "button":"Open Flipkart Store",
-"link":"https://fktr.in/OKfB3X9"
+"link":"https://fktr.in/OKfB3X9",
+"color":"linear-gradient(135deg,#2874f0,#ff9f00)"
 },
 
 {
@@ -14,7 +15,8 @@
 "domain":"myntra.com",
 "description":"Discover trending fashion, clothing, footwear and accessories from top lifestyle brands.",
 "button":"Open Myntra Store",
-"link":"https://myntr.it/dY3JI5f"
+"link":"https://myntr.it/dY3JI5f",
+"color":"linear-gradient(135deg,#ff3c83,#ff8a00)"
 },
 
 {
@@ -22,7 +24,8 @@
 "domain":"ajio.com",
 "description":"Shop stylish fashion collections, premium clothing and accessories from top brands.",
 "button":"Open Ajio Store",
-"link":"https://ajiio.in/v0MQXRT"
+"link":"https://ajiio.in/v0MQXRT",
+"color":"linear-gradient(135deg,#2c3e50,#4ca1af)"
 },
 
 {
@@ -30,7 +33,8 @@
 "domain":"wow.skin",
 "description":"Explore natural skincare, haircare and beauty products designed for a healthy lifestyle.",
 "button":"Open WOW Store",
-"link":"https://bitli.in/0fwgbQl"
+"link":"https://bitli.in/0fwgbQl",
+"color":"linear-gradient(135deg,#00c853,#64dd17)"
 },
 
 {
@@ -38,7 +42,8 @@
 "domain":"dotandkey.com",
 "description":"Shop dermatologist tested skincare solutions for glowing and healthy skin.",
 "button":"Open Dot & Key Store",
-"link":"https://bitli.in/iFLGyS6"
+"link":"https://bitli.in/iFLGyS6",
+"color":"linear-gradient(135deg,#ff6a00,#ee0979)"
 },
 
 {
@@ -46,7 +51,8 @@
 "domain":"buykaro.com",
 "description":"Discover trending products, deals and curated shopping recommendations.",
 "button":"Open BuyKaro Store",
-"link":"https://bitli.in/vS0t6Sa"
+"link":"https://bitli.in/vS0t6Sa",
+"color":"linear-gradient(135deg,#ff512f,#dd2476)"
 },
 
 {
@@ -54,7 +60,8 @@
 "domain":"mamaearth.in",
 "description":"Discover toxin-free skincare, haircare and beauty products inspired by nature.",
 "button":"Open MamaEarth Store",
-"link":"https://bitli.in/N2IE3EF"
+"link":"https://bitli.in/N2IE3EF",
+"color":"linear-gradient(135deg,#00b09b,#96c93d)"
 },
 
 {
@@ -62,7 +69,8 @@
 "domain":"goibibo.com",
 "description":"Book flights, hotels and travel packages with exclusive deals and discounts.",
 "button":"Open Goibibo",
-"link":"https://bitli.in/JOra6I4"
+"link":"https://bitli.in/JOra6I4",
+"color":"linear-gradient(135deg,#ff512f,#f09819)"
 },
 
 {
@@ -70,7 +78,8 @@
 "domain":"croma.com",
 "description":"Explore electronics, gadgets and appliances from trusted technology brands.",
 "button":"Open Croma Store",
-"link":"https://bitli.in/J9b520D"
+"link":"https://bitli.in/J9b520D",
+"color":"linear-gradient(135deg,#00c6ff,#0072ff)"
 },
 
 {
@@ -78,7 +87,8 @@
 "domain":"oneplus.com",
 "description":"Discover premium smartphones, accessories and smart devices from OnePlus.",
 "button":"Open OnePlus Store",
-"link":"https://bitli.in/BDjXgMa"
+"link":"https://bitli.in/BDjXgMa",
+"color":"linear-gradient(135deg,#ff0000,#8b0000)"
 },
 
 {
@@ -86,7 +96,8 @@
 "domain":"makemytrip.com",
 "description":"Book flights, hotels, holiday packages and travel services with great offers.",
 "button":"Open MakeMyTrip",
-"link":"https://bitli.in/c9w1ukO"
+"link":"https://bitli.in/c9w1ukO",
+"color":"linear-gradient(135deg,#ff8008,#ffc837)"
 },
 
 {
@@ -94,7 +105,8 @@
 "domain":"puma.com",
 "description":"Shop sportswear, sneakers and athletic fashion from Puma.",
 "button":"Open Puma Store",
-"link":"https://bitli.in/9y0jhR5"
+"link":"https://bitli.in/9y0jhR5",
+"color":"linear-gradient(135deg,#000000,#434343)"
 },
 
 {
@@ -102,7 +114,8 @@
 "domain":"acer.com",
 "description":"Explore laptops, gaming devices and electronics from Acer.",
 "button":"Open Acer Store",
-"link":"https://bitli.in/YdHLi42"
+"link":"https://bitli.in/YdHLi42",
+"color":"linear-gradient(135deg,#78ffd6,#007991)"
 },
 
 {
@@ -110,7 +123,8 @@
 "domain":"cleartrip.com",
 "description":"Find flights, hotels and travel experiences with exclusive deals.",
 "button":"Open Cleartrip",
-"link":"https://bitli.in/fR2Iscj"
+"link":"https://bitli.in/fR2Iscj",
+"color":"linear-gradient(135deg,#ff9966,#ff5e62)"
 },
 
 {
@@ -118,7 +132,8 @@
 "domain":"kirobeauty.com",
 "description":"Explore clean beauty and vegan makeup products for modern skincare.",
 "button":"Open Kiro Beauty",
-"link":"https://bitli.in/YuFVvGy"
+"link":"https://bitli.in/YuFVvGy",
+"color":"linear-gradient(135deg,#ff758c,#ff7eb3)"
 },
 
 {
@@ -126,7 +141,8 @@
 "domain":"apna.co",
 "description":"Find jobs, career opportunities and professional networking on Apna.",
 "button":"Open Apna",
-"link":"https://bitli.in/fzvj6W8"
+"link":"https://bitli.in/fzvj6W8",
+"color":"linear-gradient(135deg,#36d1dc,#5b86e5)"
 },
 
 {
@@ -134,7 +150,8 @@
 "domain":"gonoise.com",
 "description":"Discover smartwatches, earbuds and wearable gadgets from Noise.",
 "button":"Open Noise Store",
-"link":"https://bitli.in/Qg1q01k"
+"link":"https://bitli.in/Qg1q01k",
+"color":"linear-gradient(135deg,#f12711,#f5af19)"
 },
 
 {
@@ -142,7 +159,8 @@
 "domain":"lotusbotanicals.com",
 "description":"Shop natural skincare and beauty products powered by botanical ingredients.",
 "button":"Open Lotus Botanicals",
-"link":"https://bitli.in/1TrYZ7k"
+"link":"https://bitli.in/1TrYZ7k",
+"color":"linear-gradient(135deg,#11998e,#38ef7d)"
 },
 
 {
@@ -150,7 +168,8 @@
 "domain":"durexindia.com",
 "description":"Explore personal wellness products and intimate lifestyle essentials.",
 "button":"Open Durex Store",
-"link":"https://bitli.in/wnbmvJ9"
+"link":"https://bitli.in/wnbmvJ9",
+"color":"linear-gradient(135deg,#1f4037,#99f2c8)"
 },
 
 {
@@ -158,7 +177,8 @@
 "domain":"mpocket.com",
 "description":"Access instant personal loans and financial services through mPockket.",
 "button":"Open mPockket",
-"link":"https://bitli.in/2o4rUzD"
+"link":"https://bitli.in/2o4rUzD",
+"color":"linear-gradient(135deg,#f7971e,#ffd200)"
 },
 
 {
@@ -166,7 +186,8 @@
 "domain":"truemeds.in",
 "description":"Order medicines and healthcare products with affordable alternatives.",
 "button":"Open Truemeds",
-"link":"https://bitli.in/ecdiFkz"
+"link":"https://bitli.in/ecdiFkz",
+"color":"linear-gradient(135deg,#00c6ff,#0072ff)"
 },
 
 {
@@ -174,7 +195,8 @@
 "domain":"shopclues.com",
 "description":"Explore affordable fashion, electronics and daily deals on ShopClues.",
 "button":"Open ShopClues",
-"link":"https://bitli.in/0DuAk5a"
+"link":"https://bitli.in/0DuAk5a",
+"color":"linear-gradient(135deg,#f857a6,#ff5858)"
 },
 
 {
@@ -182,7 +204,8 @@
 "domain":"swissbeauty.in",
 "description":"Discover affordable makeup and beauty products from Swiss Beauty.",
 "button":"Open SwissBeauty",
-"link":"https://bitli.in/WDZFmoM"
+"link":"https://bitli.in/WDZFmoM",
+"color":"linear-gradient(135deg,#ff416c,#ff4b2b)"
 },
 
 {
@@ -190,7 +213,8 @@
 "domain":"zanducare.com",
 "description":"Explore ayurvedic wellness, health supplements and herbal remedies.",
 "button":"Open Zandu",
-"link":"https://bitli.in/3t0Iufy"
+"link":"https://bitli.in/3t0Iufy",
+"color":"linear-gradient(135deg,#56ab2f,#a8e063)"
 },
 
 {
@@ -198,455 +222,9 @@
 "domain":"reliancedigital.in",
 "description":"Shop electronics, gadgets and appliances with exclusive offers.",
 "button":"Open Reliance Digital",
-"link":"https://bitli.in/s6b8r2Q"
-},
-
-{
-"name":"BHIM",
-"domain":"bhimupi.org.in",
-"description":"Make secure digital payments using BHIM UPI platform.",
-"button":"Open BHIM",
-"link":"https://bitli.in/B8DHu90"
-},
-
-{
-"name":"Zype",
-"domain":"zype.com",
-"description":"Explore digital streaming and video platform services.",
-"button":"Open Zype",
-"link":"https://bitli.in/HA40bD6"
-},
-
-{
-"name":"Booking.com",
-"domain":"booking.com",
-"description":"Find hotels, apartments and travel accommodations worldwide.",
-"button":"Open Booking.com",
-"link":"https://bitli.in/2XSCx7C"
-},
-
-{
-"name":"Tata CliQ",
-"domain":"tatacliq.com",
-"description":"Shop fashion, luxury and electronics from premium brands.",
-"button":"Open Tata CliQ",
-"link":"https://bitli.in/q4obaDu"
-},
-
-{
-"name":"Havells",
-"domain":"havells.com",
-"description":"Discover electrical appliances, lighting and home solutions from Havells.",
-"button":"Open Havells",
-"link":"https://bitli.in/hgUeFeD"
-},
-
-{
-"name":"TripAdvisor",
-"domain":"tripadvisor.com",
-"description":"Discover hotels, travel reviews and trip planning insights worldwide.",
-"button":"Open TripAdvisor",
-"link":"https://bitli.in/X45Lcj4"
-},
-
-{
-"name":"BlackBerry",
-"domain":"blackberry.com",
-"description":"Explore security software, enterprise solutions and technology services.",
-"button":"Open BlackBerry",
-"link":"https://bitli.in/irj1ITq"
-},
-
-{
-"name":"PharmEasy",
-"domain":"pharmeasy.in",
-"description":"Order medicines, healthcare products and diagnostic tests online.",
-"button":"Open PharmEasy",
-"link":"https://bitli.in/tlRJ3Ww"
-},
-
-{
-"name":"OTTplay",
-"domain":"ottplay.com",
-"description":"Discover streaming guides, OTT recommendations and entertainment updates.",
-"button":"Open OTTplay",
-"link":"https://bitli.in/TMkeJBb"
-},
-
-{
-"name":"Oppo",
-"domain":"oppo.com",
-"description":"Explore smartphones, smart devices and accessories from OPPO.",
-"button":"Open Oppo Store",
-"link":"https://bitli.in/0Eys1dj"
-},
-
-{
-"name":"Libas",
-"domain":"libas.in",
-"description":"Shop ethnic fashion, kurtis and clothing collections from Libas.",
-"button":"Open Libas",
-"link":"https://bitli.in/P8SeTeP"
-},
-
-{
-"name":"Realme",
-"domain":"realme.com",
-"description":"Discover smartphones, audio devices and smart technology products.",
-"button":"Open Realme Store",
-"link":"https://bitli.in/swYbfus"
-},
-
-{
-"name":"HP",
-"domain":"hp.com",
-"description":"Explore laptops, printers and computing devices from HP.",
-"button":"Open HP Store",
-"link":"https://bitli.in/oN1l8Sf"
-},
-
-{
-"name":"COSIQ",
-"domain":"cosiq.com",
-"description":"Discover science-based skincare and beauty solutions from COSIQ.",
-"button":"Open COSIQ",
-"link":"https://bitli.in/txx7fQ9"
-},
-
-{
-"name":"Healthify",
-"domain":"healthifyme.com",
-"description":"Track fitness, diet and wellness goals with Healthify's health and nutrition platform.",
-"button":"Open Healthify",
-"link":"https://bitli.in/Y8nY5XR"
-},
-
-{
-"name":"RBL Bank",
-"domain":"rblbank.com",
-"description":"Explore banking services, credit cards and financial products from RBL Bank.",
-"button":"Open RBL Bank",
-"link":"https://bitli.in/POoMZFM"
-},
-
-{
-"name":"Dyson",
-"domain":"dyson.com",
-"description":"Discover premium vacuum cleaners, air purifiers and hair care technology from Dyson.",
-"button":"Open Dyson Store",
-"link":"https://bitli.in/00xazKE"
-},
-
-{
-"name":"Jivisa",
-"domain":"jivisa.com",
-"description":"Shop stylish ethnic fashion, kurtis and clothing collections from Jivisa.",
-"button":"Open Jivisa",
-"link":"https://bitli.in/wtq2cmr"
-},
-
-{
-"name":"Clove Dental",
-"domain":"clovedental.in",
-"description":"Book dental treatments, checkups and oral healthcare services with Clove Dental.",
-"button":"Open Clove Dental",
-"link":"https://bitli.in/ufyezBr"
-},
-
-{
-"name":"ZET Credit Card",
-"domain":"zetapp.in",
-"description":"Apply for credit cards and financial products with ZET affiliate platform.",
-"button":"Open ZET",
-"link":"https://bitli.in/6rjk1Fv"
-},
-
-{
-"name":"Axis Bank",
-"domain":"axisbank.com",
-"description":"Explore banking, credit cards, loans and financial services from Axis Bank.",
-"button":"Open Axis Bank",
-"link":"https://bitli.in/ZHu28Tw"
-},
-
-{
-"name":"Bajaj Finserv",
-"domain":"bajajfinserv.in",
-"description":"Discover loans, credit cards, insurance and financial services from Bajaj Finserv.",
-"button":"Open Bajaj Finserv",
-"link":"https://bitli.in/ECCSAlT"
-},
-
-{
-"name":"IDFC Credit Card",
-"domain":"idfcfirstbank.com",
-"description":"Apply for IDFC FIRST Bank credit cards and financial services.",
-"button":"Open IDFC Card",
-"link":"https://bitli.in/rs6Pd4i"
-},
-
-{
-"name":"Interio by Godrej",
-"domain":"interio.godrej.com",
-"description":"Explore stylish furniture and home interior solutions from Godrej Interio.",
-"button":"Open Godrej Interio",
-"link":"https://bitli.in/18mT04S"
-},
-
-{
-"name":"SS Beauty",
-"domain":"ssbeauty.in",
-"description":"Discover premium cosmetics, skincare and beauty products from SS Beauty.",
-"button":"Open SS Beauty",
-"link":"https://bitli.in/Lhh3Qok"
-},
-
-{
-"name":"Agoda",
-"domain":"agoda.com",
-"description":"Book hotels, flights and travel accommodations worldwide with Agoda.",
-"button":"Open Agoda",
-"link":"https://bitli.in/1pKH0Mu"
-},
-
-{
-"name":"SBI Card",
-"domain":"sbicard.com",
-"description":"Apply for SBI credit cards and explore exclusive rewards and offers.",
-"button":"Open SBI Card",
-"link":"https://bitli.in/tFYy8PV"
-},
-
-{
-"name":"Beyoung",
-"domain":"beyoung.in",
-"description":"Shop trendy clothing, t-shirts and casual fashion from Beyoung.",
-"button":"Open Beyoung",
-"link":"https://bitli.in/6K3p52b"
-},
-
-{
-"name":"Malaysia Airlines",
-"domain":"malaysiaairlines.com",
-"description":"Book international flights and travel services with Malaysia Airlines.",
-"button":"Open Malaysia Airlines",
-"link":"https://bitli.in/vl7F6in"
-},
-
-{
-"name":"BigRock",
-"domain":"bigrock.in",
-"description":"Register domains, hosting and website services with BigRock.",
-"button":"Open BigRock",
-"link":"https://bitli.in/kEgyOv9"
-},
-
-{
-"name":"Decathlon",
-"domain":"decathlon.in",
-"description":"Shop sports gear, fitness equipment and outdoor products from Decathlon.",
-"button":"Open Decathlon",
-"link":"https://bitli.in/85pOwUl"
-},
-
-{
-"name":"Radisson Hotels",
-"domain":"radissonhotels.com",
-"description":"Discover luxury hotels and travel stays worldwide with Radisson Hotels.",
-"button":"Open Radisson",
-"link":"https://bitli.in/m3sdaI3"
-},
-
-{
-"name":"Udemy",
-"domain":"udemy.com",
-"description":"Learn new skills with online courses in business, tech and personal development.",
-"button":"Open Udemy",
-"link":"https://bitli.in/i00dgI8"
-},
-
-{
-"name":"Neeman's",
-"domain":"neemans.com",
-"description":"Shop sustainable footwear and lifestyle products from Neeman's.",
-"button":"Open Neeman's",
-"link":"https://bitli.in/uhFbe8U"
-},
-
-{
-"name":"Nutrabay",
-"domain":"nutrabay.com",
-"description":"Discover supplements, nutrition products and fitness essentials.",
-"button":"Open Nutrabay",
-"link":"https://bitli.in/gW1PtJb"
-},
-
-{
-"name":"Conscious Chemist",
-"domain":"consciouschemist.com",
-"description":"Shop science-based skincare and beauty solutions from Conscious Chemist.",
-"button":"Open Conscious Chemist",
-"link":"https://bitli.in/HYCiOm5"
-},
-
-{
-"name":"Sanfe",
-"domain":"sanfe.in",
-"description":"Explore feminine hygiene, skincare and wellness products from Sanfe.",
-"button":"Open Sanfe",
-"link":"https://bitli.in/jx6gNr4"
-},
-
-{
-"name":"Clovia",
-"domain":"clovia.com",
-"description":"Shop lingerie, sleepwear and women's fashion essentials from Clovia.",
-"button":"Open Clovia",
-"link":"https://bitli.in/jCtvF07"
-},
-
-{
-"name":"Fire-Boltt",
-"domain":"fireboltt.com",
-"description":"Discover smartwatches, fitness trackers and audio gadgets from Fire-Boltt.",
-"button":"Open Fire-Boltt",
-"link":"https://bitli.in/eJLpO3i"
-},
-
-{
-"name":"Kotak 811",
-"domain":"kotak.com",
-"description":"Open a digital savings account with Kotak 811 banking services.",
-"button":"Open Kotak 811",
-"link":"https://bitli.in/9XZrWnF"
-},
-
-{
-"name":"Poonawalla Fincorp",
-"domain":"poonawallafincorp.com",
-"description":"Explore personal loans, business loans and financial services.",
-"button":"Open Poonawalla Fincorp",
-"link":"https://bitli.in/9Hkwj6k"
-},
-
-{
-"name":"AU Small Finance Bank",
-"domain":"aubank.in",
-"description":"Discover banking, savings accounts and financial services from AU Bank.",
-"button":"Open AU Bank",
-"link":"https://bitli.in/8egydrD"
-},
-
-{
-"name":"KIWI",
-"domain":"kiwi.club",
-"description":"Explore credit card rewards and fintech services with KIWI.",
-"button":"Open KIWI",
-"link":"https://bitli.in/a59I7OM"
-},
-
-{
-"name":"Scapia Card",
-"domain":"scapia.cards",
-"description":"Apply for Scapia travel credit card and enjoy rewards on trips.",
-"button":"Open Scapia Card",
-"link":"https://bitli.in/uAI6MSo"
-},
-
-{
-"name":"FirstCry",
-"domain":"firstcry.com",
-"description":"Shop baby products, toys and kids essentials from FirstCry.",
-"button":"Open FirstCry",
-"link":"https://bitli.in/po9ixON"
-},
-
-{
-"name":"Pepperfry",
-"domain":"pepperfry.com",
-"description":"Discover furniture, home décor and interior products from Pepperfry.",
-"button":"Open Pepperfry",
-"link":"https://bitli.in/uROlbF1"
-},
-
-{
-"name":"Shopsy",
-"domain":"shopsy.in",
-"description":"Explore affordable fashion, electronics and deals on Shopsy.",
-"button":"Open Shopsy",
-"link":"https://bitli.in/7j12U9c"
-},
-
-{
-"name":"MediBuddy",
-"domain":"medibuddy.in",
-"description":"Book doctor consultations, diagnostics and health services online.",
-"button":"Open MediBuddy",
-"link":"https://bitli.in/lfwhjOc"
-},
-
-{
-"name":"VLCC",
-"domain":"vlcc.com",
-"description":"Explore wellness, beauty treatments and skincare products from VLCC.",
-"button":"Open VLCC",
-"link":"https://bitli.in/j0oPt96"
-},
-
-{
-"name":"The Man Company",
-"domain":"themancompany.com",
-"description":"Discover grooming, beard care and skincare products for men.",
-"button":"Open The Man Company",
-"link":"https://bitli.in/MY7sge8"
-},
-
-{
-"name":"Kindlife",
-"domain":"kindlife.in",
-"description":"Shop clean beauty, wellness and lifestyle products from Kindlife.",
-"button":"Open Kindlife",
-"link":"https://bitli.in/CKlaWbz"
-},
-
-{
-"name":"Mokobara",
-"domain":"mokobara.com",
-"description":"Explore premium luggage, travel accessories and bags from Mokobara.",
-"button":"Open Mokobara",
-"link":"https://bitli.in/2eyJlu5"
-},
-
-{
-"name":"Redcliffe Labs",
-"domain":"redcliffelabs.com",
-"description":"Book diagnostic tests and health checkups with Redcliffe Labs.",
-"button":"Open Redcliffe Labs",
-"link":"https://bitli.in/kaFS0wf"
-},
-
-{
-"name":"Uniqlo",
-"domain":"uniqlo.com",
-"description":"Shop modern clothing and lifestyle fashion from UNIQLO.",
-"button":"Open Uniqlo",
-"link":"https://bitli.in/rWjCx4s"
-},
-
-{
-"name":"Netmeds",
-"domain":"netmeds.com",
-"description":"Order medicines, health products and diagnostics online with Netmeds.",
-"button":"Open Netmeds",
-"link":"https://bitli.in/hr8IDzx"
-},
-
-{
-"name":"KAMA Ayurveda",
-"domain":"kamaayurveda.com",
-"description":"Explore luxury ayurvedic skincare and wellness products from KAMA Ayurveda.",
-"button":"Open KAMA Ayurveda",
-"link":"https://bitli.in/38wlvAU"
+"link":"https://bitli.in/s6b8r2Q",
+"color":"linear-gradient(135deg,#1d2b64,#f8cdda)"
 }
+
 ]
 }
