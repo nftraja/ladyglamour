@@ -19,7 +19,6 @@ color:#00ff88;
 overflow-x:hidden;
 }
 
-
 /* ==============================
 HEADER
 ============================== */
@@ -67,7 +66,6 @@ object-fit:contain;
 border-radius:8px;
 }
 
-
 /* ==============================
 DRAWER
 ============================== */
@@ -98,7 +96,6 @@ font-size:13px;
 border-bottom:1px solid rgba(255,255,255,.05);
 }
 
-
 /* ==============================
 DRAWER OVERLAY
 ============================== */
@@ -117,16 +114,14 @@ display:none;
 display:block;
 }
 
-
 /* ==============================
 MAIN
 ============================== */
 .main-content{
-padding:60px 12px 65px;
+padding:65px 8px 65px;
 max-width:1200px;
 margin:auto;
 }
-
 
 /* ==============================
 GLASS CARD
@@ -138,7 +133,6 @@ margin-bottom:10px;
 background:rgba(255,255,255,0.04);
 border:1.5px solid rgba(0,255,136,0.28);
 }
-
 
 /* ==============================
 TEXT
@@ -156,7 +150,6 @@ line-height:1.6;
 color:#ffffff;
 text-align:center;
 }
-
 
 /* ==============================
 CATEGORY GRID
@@ -227,7 +220,6 @@ color:#00ff88;
 
 }
 
-
 /* ==============================
 DESKTOP CATEGORY GRID
 ============================== */
@@ -243,7 +235,6 @@ height:80px;
 }
 
 }
-
 
 /* ==============================
 GUIDE CARD
@@ -266,14 +257,12 @@ transition:transform .25s ease;
 will-change:transform;
 }
 
-
 /* ==============================
 GUIDE TAP
 ============================== */
 .guide-card:active{
 transform:scale(.96);
 }
-
 
 /* ==============================
 GUIDE HOVER
@@ -286,7 +275,6 @@ box-shadow:0 0 14px rgba(0,255,136,.35);
 }
 
 }
-
 
 .guide-card::before{
 content:"";
@@ -326,16 +314,14 @@ margin-left:10px;
 margin-bottom:10px;
 }
 
-
 /* ==============================
 DIVIDER
 ============================== */
 .theme-divider-b{
 height:1px;
-margin:6px 0;
+margin:4px 0 6px;
 background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
 }
-
 
 /* ==============================
 CHIP BUTTON
@@ -381,7 +367,6 @@ box-shadow:
 }
 
 }
-
 
 /* ==============================
 CUSTOM DROPDOWN
@@ -445,7 +430,6 @@ grid-template-columns:repeat(2,1fr);
 gap:6px;
 }
 
-
 /* ==============================
 PRODUCT IMAGE
 ============================== */
@@ -453,28 +437,52 @@ PRODUCT IMAGE
 width:100%;
 aspect-ratio:1/1;
 border-radius:12px;
-margin-bottom:8px;
-background-size:cover;
+margin-bottom:6px;
+padding:6px;
+background:#fff;
+background-size:contain;
 background-position:center;
 background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,.1);
 }
 
+/* ==============================
+PRODUCT META
+============================== */
+.product-meta{
+font-size:13px;
+text-align:center;
+margin-top:4px;
+color:#ffffff;
+}
+
+.product-price{
+font-size:13.5px;
+font-weight:700;
+color:#00ff88;
+margin-bottom:1px;
+}
+
+.product-discount{
+font-size:11px;
+color:#ff4b2b;
+font-weight:700;
+margin-bottom:5px;
+}
 
 /* ==============================
 GRID CARD SPACING
 ============================== */
 .grid .glass-card{
-padding:10px;
+padding:6px;
 }
 
 .grid .card-title{
 font-size:12px;
 line-height:1.4;
-margin-bottom:6px;
-min-height:36px;
+margin-bottom:4px;
+min-height:34px;
 }
-
 
 /* ==============================
 BOTTOM NAV
@@ -507,7 +515,6 @@ font-size:14px;
 display:block;
 font-size:14px;
 }
-
 
 /* ==============================
 CAROUSEL
@@ -547,7 +554,6 @@ width:260px;
 aspect-ratio:16/9;
 scroll-snap-align:start;
 }
-
 
 /* ==============================
 RESPONSIVE
