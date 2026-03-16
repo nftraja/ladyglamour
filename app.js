@@ -224,10 +224,12 @@ html += `
 
 <div class="brand-thumb">
 
-<img src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}"
+<img
+loading="lazy"
+decoding="async"
+src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}"
 alt="${b.name}"
-onerror="this.src='images/brand.png'">
-
+onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/${b.domain}.ico';this.onerror=function(){this.src='images/logo.png';};">
 </div>
 
 <div class="brand-info">
@@ -287,6 +289,6 @@ left: scrollAmount,
 behavior: "smooth"
 });
 
-},3500);
+},2800);
 
 }
