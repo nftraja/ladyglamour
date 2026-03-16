@@ -285,6 +285,6 @@ left: scrollAmount,
 behavior: "smooth"
 });
 
-},4500);
+},3500);
 
 }
