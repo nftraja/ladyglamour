@@ -68,32 +68,36 @@ AMAZON DROPDOWN SYSTEM
 
 const amazonSelected = document.getElementById("amazonSelected");
 const amazonDropdown = document.getElementById("amazonDropdown");
+const dropdownWrap = document.querySelector(".custom-dropdown");
 
 if(amazonSelected && amazonDropdown){
 
-  amazonSelected.addEventListener("click",function(e){
+amazonSelected.addEventListener("click",function(e){
 
-    e.stopPropagation();
-    amazonDropdown.classList.toggle("active");
+e.stopPropagation();
 
-  });
+amazonDropdown.classList.toggle("active");
+dropdownWrap.classList.toggle("open");
 
-  document.querySelectorAll(".dropdown-item").forEach(item=>{
+});
 
-    item.addEventListener("click",function(){
+document.querySelectorAll(".dropdown-item").forEach(item=>{
 
-      const cat = this.dataset.cat;
+item.addEventListener("click",function(){
 
-      amazonSelected.innerHTML =
-      this.innerText + '<span class="dropdown-arrow">⌄</span>';
+const cat = this.dataset.cat;
 
-      amazonDropdown.classList.remove("active");
+amazonSelected.innerHTML =
+this.innerText + '<span class="dropdown-arrow">⌄</span>';
 
-      renderProducts(cat);
+amazonDropdown.classList.remove("active");
+dropdownWrap.classList.remove("open");
 
-    });
+renderProducts(cat);
 
-  });
+});
+
+});
 
 }
 
@@ -106,10 +110,10 @@ document.addEventListener("click",function(e){
 
 if(!e.target.closest(".custom-dropdown")){
 amazonDropdown?.classList.remove("active");
+dropdownWrap?.classList.remove("open");
 }
 
 });
-
 
 /* ==============================
 PRODUCT CARD
