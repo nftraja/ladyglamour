@@ -223,10 +223,7 @@ html += `
 <div class="brand-store-card">
 
 <div class="brand-thumb">
-
-<img src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}"
-alt="${b.name}">
-
+<img src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}" alt="${b.name}">
 </div>
 
 <div class="brand-info">
@@ -235,7 +232,8 @@ alt="${b.name}">
 
 <p class="brand-desc">${b.description}</p>
 
-<a href="${b.link}" target="_blank" class="brand-open-btn">
+<a href="${b.link}" target="_blank" class="brand-open-btn"
+style="--chip-color:${b.color}">
 ${b.button} →
 </a>
 
