@@ -49,6 +49,7 @@ letter-spacing:.5px;
 width:38px;
 height:38px;
 border-radius:8px;
+object-fit:contain;
 }
 
 /* DRAWER */
@@ -148,6 +149,8 @@ display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:12px;
 align-items:start;
+
+width:100%;
 }
 
 /* PRODUCT CARD */
@@ -159,7 +162,12 @@ overflow:hidden;
 border:1px solid rgba(255,255,255,0.08);
 transition:.35s;
 position:relative;
+
+width:100%;
+min-width:0;
 }
+
+/* hover */
 
 .product-card:hover{
 transform:translateY(-5px) scale(1.02);
@@ -173,9 +181,13 @@ border:1px solid rgba(0,255,136,.35);
 
 .product-img{
 width:100%;
+height:auto;
 aspect-ratio:1/1.25;
 object-fit:cover;
 display:block;
+
+max-width:100%;
+
 transition:transform .45s ease;
 }
 
@@ -258,13 +270,17 @@ display:block;
 /* RESPONSIVE */
 
 @media(min-width:900px){
+
 .product-grid{
 grid-template-columns:repeat(4,1fr);
 }
+
 }
 
 @media(min-width:1200px){
+
 .product-grid{
 grid-template-columns:repeat(6,1fr);
 }
+
 }
