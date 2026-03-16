@@ -1,6 +1,27 @@
-/* ==============================
-GLOBAL
-============================== */
+/* =================================================
+ROOT VARIABLES (PERFORMANCE + REUSE)
+================================================= */
+
+:root{
+
+--border-green:1.5px solid rgba(0,255,136,0.28);
+
+--glass-bg:rgba(255,255,255,0.04);
+
+--card-shadow:0 6px 18px rgba(0,0,0,.6);
+
+--btn-shadow:
+0 6px 16px rgba(0,0,0,.65),
+inset 0 2px 4px rgba(255,255,255,.45),
+inset 0 -4px 8px rgba(0,0,0,.6);
+
+}
+
+
+/* =================================================
+GLOBAL RESET
+================================================= */
+
 *{
 margin:0;
 padding:0;
@@ -17,11 +38,14 @@ body{
 background:linear-gradient(135deg,#0b0b0b,#151515);
 color:#00ff88;
 overflow-x:hidden;
+-webkit-font-smoothing:antialiased;
 }
 
-/* ==============================
+
+/* =================================================
 HEADER
-============================== */
+================================================= */
+
 .app-header{
 position:fixed;
 top:0;
@@ -32,7 +56,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:0 18px;
-border-bottom:1px solid rgba(0,255,136,0.28);
+border-bottom:var(--border-green);
 z-index:200;
 backdrop-filter:blur(12px);
 }
@@ -66,9 +90,11 @@ object-fit:contain;
 border-radius:8px;
 }
 
-/* ==============================
+
+/* =================================================
 DRAWER
-============================== */
+================================================= */
+
 .drawer{
 position:fixed;
 top:0;
@@ -78,7 +104,7 @@ height:100%;
 background:rgba(10,12,20,.95);
 z-index:300;
 overflow-y:auto;
-border-right:1px solid rgba(0,255,136,0.28);
+border-right:var(--border-green);
 transition:left .3s ease;
 padding-top:15px;
 }
@@ -96,9 +122,11 @@ font-size:13px;
 border-bottom:1px solid rgba(255,255,255,.05);
 }
 
-/* ==============================
+
+/* =================================================
 DRAWER OVERLAY
-============================== */
+================================================= */
+
 .drawer-overlay{
 position:fixed;
 top:0;
@@ -114,29 +142,36 @@ display:none;
 display:block;
 }
 
-/* ==============================
-MAIN
-============================== */
+
+/* =================================================
+MAIN CONTENT
+================================================= */
+
 .main-content{
 padding:65px 8px 65px;
 max-width:1200px;
 margin:auto;
 }
 
-/* ==============================
+
+/* =================================================
 GLASS CARD
-============================== */
+================================================= */
+
 .glass-card{
 border-radius:18px;
 padding:15px;
 margin-bottom:10px;
-background:rgba(255,255,255,0.04);
-border:1.5px solid rgba(0,255,136,0.28);
+background:var(--glass-bg);
+border:var(--border-green);
+contain:layout paint;
 }
 
-/* ==============================
+
+/* =================================================
 TEXT
-============================== */
+================================================= */
+
 .card-title{
 font-size:13px;
 font-weight:800;
@@ -151,9 +186,22 @@ color:#ffffff;
 text-align:center;
 }
 
-/* ==============================
+
+/* =================================================
+DIVIDER
+================================================= */
+
+.theme-divider-b{
+height:1px;
+margin:4px 0 6px;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
+}
+
+
+/* =================================================
 CATEGORY GRID
-============================== */
+================================================= */
+
 .category-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -164,9 +212,11 @@ justify-items:center;
 align-items:start;
 }
 
-/* ==============================
+
+/* =================================================
 CATEGORY ICON
-============================== */
+================================================= */
+
 .category-icon{
 display:flex;
 flex-direction:column;
@@ -176,6 +226,7 @@ text-decoration:none;
 color:#ffffff;
 width:100%;
 transition:transform .25s ease;
+will-change:transform;
 }
 
 .category-icon img{
@@ -194,16 +245,10 @@ margin-top:6px;
 transition:color .25s ease;
 }
 
-/* ==============================
-CATEGORY TAP
-============================== */
 .category-icon:active img{
 transform:scale(.94);
 }
 
-/* ==============================
-CATEGORY HOVER (DESKTOP)
-============================== */
 @media (hover:hover){
 
 .category-icon:hover img{
@@ -220,25 +265,11 @@ color:#00ff88;
 
 }
 
-/* ==============================
-DESKTOP CATEGORY GRID
-============================== */
-@media(min-width:768px){
 
-.category-grid{
-grid-template-columns:repeat(8,1fr);
-}
-
-.category-icon img{
-width:80px;
-height:80px;
-}
-
-}
-
-/* ==============================
+/* =================================================
 GUIDE CARD
-============================== */
+================================================= */
+
 .guide-card{
 position:relative;
 border-radius:18px;
@@ -257,16 +288,10 @@ transition:transform .25s ease;
 will-change:transform;
 }
 
-/* ==============================
-GUIDE TAP
-============================== */
 .guide-card:active{
 transform:scale(.96);
 }
 
-/* ==============================
-GUIDE HOVER
-============================== */
 @media (hover:hover){
 
 .guide-card:hover{
@@ -276,66 +301,10 @@ box-shadow:0 0 14px rgba(0,255,136,.35);
 
 }
 
-.guide-card::before{
-content:"";
-position:absolute;
-inset:0;
-background:var(--card-color);
-opacity:.25;
-z-index:0;
-}
 
-.guide-card::after{
-content:"";
-position:absolute;
-top:0;
-left:0;
-right:0;
-height:45%;
-background:linear-gradient(
-180deg,
-rgba(255,255,255,0.55),
-rgba(255,255,255,0.18),
-transparent
-);
-opacity:.35;
-pointer-events:none;
-}
-
-.guide-card *{
-position:relative;
-z-index:2;
-}
-
-.guide-title{
-font-size:14px;
-font-weight:700;
-margin-left:10px;
-margin-bottom:10px;
-}
-
-/* ==============================
-DIVIDER
-============================== */
-.theme-divider-b{
-height:1px;
-margin:4px 0 6px;
-background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
-}
-
-/* ==============================
-CHIP BUTTON
-============================== */
-.brand-wrap{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-justify-content:center;
-}
-
-/* ==============================
+/* =================================================
 BRAND STORE GRID
-============================== */
+================================================= */
 
 .brand-store-grid{
 display:grid;
@@ -357,49 +326,32 @@ grid-template-columns:repeat(6,1fr);
 }
 
 
-/* ==============================
-BRAND STORE CARD
-============================== */
+/* =================================================
+BRAND CARD
+================================================= */
 
 .brand-store-card{
 display:flex;
 flex-direction:column;
 align-items:center;
 text-align:center;
-
 padding:14px;
-
 border-radius:16px;
-background:rgba(255,255,255,0.04);
-
-border:1.5px solid rgba(0,255,136,0.28);
-
-backdrop-filter:blur(10px);
-
-box-shadow:0 6px 18px rgba(0,0,0,.6);
-
+background:var(--glass-bg);
+border:var(--border-green);
+box-shadow:var(--card-shadow);
 transition:transform .25s ease;
+contain:layout paint;
 }
-
-
-/* ==============================
-BRAND CARD TAP
-============================== */
 
 .brand-store-card:active{
 transform:scale(.98);
 }
 
-
-/* ==============================
-DESKTOP HOVER
-============================== */
-
 @media (hover:hover){
 
 .brand-store-card:hover{
 transform:translateY(-3px);
-
 box-shadow:
 0 0 16px rgba(0,255,136,.25),
 0 8px 22px rgba(0,0,0,.65);
@@ -408,24 +360,19 @@ box-shadow:
 }
 
 
-/* ==============================
+/* =================================================
 BRAND LOGO
-============================== */
+================================================= */
 
 .brand-thumb{
 width:70px;
 height:70px;
-
 border-radius:14px;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 background:#fff;
-
 margin-bottom:8px;
-
 padding:6px;
 }
 
@@ -436,63 +383,42 @@ object-fit:contain;
 }
 
 
-/* ==============================
-BRAND TITLE
-============================== */
+/* =================================================
+BRAND TEXT
+================================================= */
 
 .brand-title{
 font-size:14px;
 font-weight:700;
-
 color:#00ff88;
-
 margin-bottom:6px;
 }
-
-
-/* ==============================
-BRAND DESCRIPTION
-============================== */
 
 .brand-desc{
 font-size:12px;
 color:#ffffff;
-
 line-height:1.5;
-
 margin-bottom:10px;
 }
 
 
-/* ==============================
+/* =================================================
 BRAND BUTTON
-============================== */
+================================================= */
 
 .brand-open-btn{
 display:inline-flex;
 align-items:center;
 justify-content:center;
-
 padding:8px 14px;
-
 border-radius:999px;
-
 font-size:12px;
 font-weight:700;
-
 color:#fff;
-
 text-decoration:none;
-
 background:var(--chip-color);
-
-box-shadow:
-0 6px 16px rgba(0,0,0,.65),
-inset 0 2px 4px rgba(255,255,255,.45),
-inset 0 -4px 8px rgba(0,0,0,.6);
-
+box-shadow:var(--btn-shadow);
 border:1px solid rgba(255,255,255,.35);
-
 transition:transform .2s ease;
 }
 
@@ -504,7 +430,6 @@ transform:scale(.95);
 
 .brand-open-btn:hover{
 transform:scale(1.05);
-
 box-shadow:
 0 0 14px rgba(0,255,136,.35),
 0 6px 16px rgba(0,0,0,.65);
@@ -512,103 +437,22 @@ box-shadow:
 
 }
 
-/* ==============================
-MOBILE AMAZON STYLE
-============================== */
-@media(max-width:600px){
 
-.brand-store-card{
-flex-direction:column;
-align-items:center;
-text-align:center;
-}
-
-.brand-thumb{
-width:80px;
-height:80px;
-margin-bottom:6px;
-}
-
-.brand-content{
-align-items:center;
-}
-
-.brand-desc{
-margin-bottom:10px;
-}
-
-.brand-open-btn{
-width:100%;
-max-width:220px;
-}
-
-}
-
-/* ==============================
-CUSTOM DROPDOWN
-============================== */
-.custom-dropdown{
-position:relative;
-width:100%;
-}
-
-.dropdown-selected{
-width:100%;
-padding:8px;
-border-radius:12px;
-border:1px solid rgba(0,255,136,0.28);
-background:rgba(255,255,255,0.06);
-color:#ffffff;
-font-size:14px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-cursor:pointer;
-}
-
-.dropdown-list{
-position:absolute;
-top:105%;
-left:0;
-right:0;
-background:#111;
-border-radius:12px;
-border:1px solid rgba(0,255,136,0.28);
-display:none;
-max-height:260px;
-overflow-y:auto;
-z-index:50;
-}
-
-.dropdown-list.active{
-display:block;
-}
-
-.dropdown-item{
-padding:10px;
-font-size:14px;
-color:#ffffff;
-border-bottom:1px solid rgba(255,255,255,.05);
-cursor:pointer;
-}
-
-.dropdown-item:hover{
-background:rgba(0,255,136,0.15);
-}
-
-
-/* ==============================
+/* =================================================
 PRODUCT GRID
-============================== */
+================================================= */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:6px;
 }
 
-/* ==============================
+
+/* =================================================
 PRODUCT IMAGE
-============================== */
+================================================= */
+
 .product-image{
 width:100%;
 aspect-ratio:1/1;
@@ -622,9 +466,11 @@ background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,.1);
 }
 
-/* ==============================
+
+/* =================================================
 PRODUCT META
-============================== */
+================================================= */
+
 .product-meta{
 font-size:13px;
 text-align:center;
@@ -646,25 +492,14 @@ font-weight:700;
 margin-bottom:5px;
 }
 
-/* ==============================
-GRID CARD SPACING
-============================== */
-.grid .glass-card{
-padding:6px;
-}
 
-.grid .card-title{
-font-size:12px;
-line-height:1.4;
-margin-bottom:4px;
-min-height:34px;
-}
+/* =================================================
+AMAZON DEAL BUTTON FIX
+================================================= */
 
-/* ==============================
-VIEW DEAL BUTTON
-============================== */
+.view-btn,
+#hotDeals a{
 
-.view-btn{
 display:inline-block;
 
 padding:8px 16px;
@@ -679,35 +514,39 @@ text-decoration:none;
 
 background:linear-gradient(135deg,#ffb347,#ff8c00);
 
-box-shadow:
-0 6px 16px rgba(0,0,0,.65),
-inset 0 2px 4px rgba(255,255,255,.45),
-inset 0 -4px 8px rgba(0,0,0,.6);
+box-shadow:var(--btn-shadow);
 
 border:1px solid rgba(255,255,255,.35);
 
 transition:transform .2s ease;
+
 }
 
-.view-btn:active{
+.view-btn:active,
+#hotDeals a:active{
 transform:scale(.95);
 }
 
 @media (hover:hover){
 
-.view-btn:hover{
+.view-btn:hover,
+#hotDeals a:hover{
+
 transform:scale(1.05);
 
 box-shadow:
 0 0 14px rgba(255,170,0,.35),
 0 6px 16px rgba(0,0,0,.65);
-}
 
 }
 
-/* ==============================
+}
+
+
+/* =================================================
 BOTTOM NAV
-============================== */
+================================================= */
+
 .bottom-nav{
 position:fixed;
 bottom:0;
@@ -718,7 +557,7 @@ backdrop-filter:blur(12px);
 display:flex;
 justify-content:space-around;
 align-items:center;
-border-top:1px solid rgba(0,255,136,0.28);
+border-top:var(--border-green);
 z-index:200;
 }
 
@@ -737,9 +576,11 @@ display:block;
 font-size:14px;
 }
 
-/* ==============================
+
+/* =================================================
 CAROUSEL
-============================== */
+================================================= */
+
 .guide-carousel-wrap{
 position:relative;
 overflow:hidden;
@@ -776,9 +617,11 @@ aspect-ratio:16/9;
 scroll-snap-align:start;
 }
 
-/* ==============================
+
+/* =================================================
 RESPONSIVE
-============================== */
+================================================= */
+
 @media(max-width:768px){
 
 .guide-carousel .guide-card{
