@@ -417,3 +417,21 @@ grid.style.display="grid";
 
 window.addEventListener("load",fixGridLayout);
 window.addEventListener("pageshow",fixGridLayout);
+
+/* ==============================
+FORCE SERVICE WORKER UPDATE
+============================== */
+
+if ('serviceWorker' in navigator) {
+
+navigator.serviceWorker.getRegistrations().then(function(registrations) {
+
+for (let registration of registrations) {
+
+registration.update();
+
+}
+
+});
+
+}
