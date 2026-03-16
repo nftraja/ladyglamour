@@ -39,6 +39,9 @@ async function loadStore(){
 try{
 
 let res = await fetch("json/amazon.json");
+
+if(!res.ok) return;
+
 storeData = await res.json();
 
 const firstCategory = Object.keys(storeData)[0];
@@ -111,6 +114,10 @@ html+=productCard(p);
 
 grid.innerHTML=html;
 
+/* GRID REFLOW FIX */
+
+fixGridLayout();
+
 }
 
 
@@ -123,6 +130,9 @@ async function loadCollection(cat){
 try{
 
 let res = await fetch("json/" + cat + ".json");
+
+if(!res.ok) return;
+
 let data = await res.json();
 
 let grid = document.getElementById("hotDeals");
@@ -138,6 +148,10 @@ html+=productCard(p);
 grid.innerHTML=html;
 
 toggleDrawer();
+
+/* GRID REFLOW FIX */
+
+fixGridLayout();
 
 }
 catch(e){
@@ -156,6 +170,9 @@ async function loadBrands(){
 try{
 
 let res = await fetch("json/brands.json");
+
+if(!res.ok) return;
+
 let data = await res.json();
 
 let grid = document.getElementById("brandGrid");
@@ -207,3 +224,27 @@ console.log("Brand JSON error",e);
 }
 
 loadBrands();
+
+
+/* ==============================
+GRID REFLOW FIX
+Fix PWA / reopen / back bug
+============================== */
+
+function fixGridLayout(){
+
+document.querySelectorAll(".product-grid").forEach(grid=>{
+
+grid.style.display="none";
+
+grid.offsetHeight;
+
+grid.style.display="grid";
+
+});
+
+}
+
+window.addEventListener("load",fixGridLayout);
+
+window.addEventListener("pageshow",fixGridLayout);
