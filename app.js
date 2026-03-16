@@ -27,7 +27,7 @@ STORE DATA
 ============================== */
 
 let storeData = {};
-let myntraData = {};   // UPDATED
+let myntraData = {};
 
 
 /* ==============================
@@ -41,7 +41,6 @@ try{
 let res = await fetch("json/amazon.json");
 storeData = await res.json();
 
-/* AUTO LOAD FIRST CATEGORY */
 const firstCategory = Object.keys(storeData)[0];
 
 if(firstCategory){
@@ -59,112 +58,6 @@ loadStore();
 
 
 /* ==============================
-CAROUSEL SYSTEM
-============================== */
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-const carousel = document.getElementById("guideCarousel");
-
-if(!carousel) return;
-
-let autoSlide;
-
-function startAuto(){
-
-autoSlide = setInterval(()=>{
-
-const cardWidth = carousel.querySelector(".guide-card").offsetWidth + 10;
-
-carousel.scrollBy({
-left:cardWidth,
-behavior:"smooth"
-});
-
-if(carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth-5){
-
-carousel.scrollTo({
-left:0,
-behavior:"smooth"
-});
-
-}
-
-},4000);
-
-}
-
-function stopAuto(){
-clearInterval(autoSlide);
-}
-
-startAuto();
-
-
-let isDown=false;
-let startX;
-let scrollLeft;
-
-carousel.addEventListener("mousedown",(e)=>{
-
-isDown=true;
-startX=e.pageX-carousel.offsetLeft;
-scrollLeft=carousel.scrollLeft;
-stopAuto();
-
-});
-
-carousel.addEventListener("mouseleave",()=>{
-isDown=false;
-startAuto();
-});
-
-carousel.addEventListener("mouseup",()=>{
-isDown=false;
-startAuto();
-});
-
-carousel.addEventListener("mousemove",(e)=>{
-
-if(!isDown) return;
-
-e.preventDefault();
-
-const x=e.pageX-carousel.offsetLeft;
-const walk=(x-startX)*1.5;
-
-carousel.scrollLeft=scrollLeft-walk;
-
-});
-
-
-let touchStartX=0;
-
-carousel.addEventListener("touchstart",(e)=>{
-
-touchStartX=e.touches[0].clientX;
-stopAuto();
-
-});
-
-carousel.addEventListener("touchmove",(e)=>{
-
-let touchEndX=e.touches[0].clientX;
-
-carousel.scrollLeft += touchStartX-touchEndX;
-
-touchStartX = touchEndX;
-
-});
-
-carousel.addEventListener("touchend",()=>{
-startAuto();
-});
-
-});
-
-
-/* ==============================
 PRODUCT CARD
 ============================== */
 
@@ -172,32 +65,18 @@ function productCard(p){
 
 return `
 
-<div class="glass-card">
+<div class="product-card">
 
-<div class="product-image"
-style="background-image:url('${p.image}')">
-</div>
+<img src="${p.image}" class="product-img">
 
-<div class="card-title">${p.title}</div>
+<div class="product-caption">
 
-<div class="theme-divider-b"></div>
-
-<div class="product-meta">
-
-<div class="product-price">${p.price}</div>
 <div class="product-discount">${p.discount}</div>
 
-</div>
+<div class="product-price">${p.price}</div>
 
-<div class="brand-wrap">
-
-<a href="${p.link}"
-target="_blank"
-class="brand"
-style="--chip-color:#ff9900;">
-
-<span>View Deal</span>
-
+<a href="${p.link}" target="_blank" class="view-btn">
+View Deal
 </a>
 
 </div>
@@ -233,87 +112,12 @@ grid.innerHTML=html;
 
 
 /* ==============================
-AMAZON CUSTOM DROPDOWN
-============================== */
-
-const amazonSelected = document.getElementById("amazonSelected");
-const amazonDropdown = document.getElementById("amazonDropdown");
-
-if(amazonSelected){
-
-amazonSelected.addEventListener("click",function(){
-
-amazonDropdown.classList.toggle("active");
-
-});
-
-}
-
-document.querySelectorAll("#amazonDropdown .dropdown-item")
-.forEach(item=>{
-
-item.addEventListener("click",function(){
-
-let cat = this.dataset.cat;
-
-renderProducts(cat);
-
-amazonSelected.innerHTML =
-this.textContent +
-' <span class="dropdown-arrow">⌄</span>';
-
-amazonDropdown.classList.remove("active");
-
-scrollToDeals();
-
-});
-
-});
-
-
-/* ==============================
-CLOSE DROPDOWN OUTSIDE CLICK
-============================== */
-
-document.addEventListener("click",function(e){
-
-if(!e.target.closest(".custom-dropdown")){
-
-if(amazonDropdown) amazonDropdown.classList.remove("active");
-if(typeof marketDropdown !== "undefined" && marketDropdown)
-marketDropdown.classList.remove("active");
-
-}
-
-});
-
-
-/* ==============================
-SCROLL AMAZON
-============================== */
-
-function scrollToDeals(){
-
-let target=document.getElementById("hotDeals");
-
-if(!target) return;
-
-window.scrollTo({
-top:target.offsetTop-80,
-behavior:"smooth"
-});
-
-}
-
-
-/* ==============================
-COLLECTION LOADER (DRAWER MENU)
+COLLECTION LOADER
 ============================== */
 
 async function loadCollection(cat){
 
 let res = await fetch("json/" + cat + ".json");
-
 let data = await res.json();
 
 let grid = document.getElementById("hotDeals");
@@ -332,8 +136,7 @@ toggleDrawer();
 
 
 /* ==============================
-BRAND DIRECTORY SYSTEM
-AUTO BRAND LOGO + JSON LOAD
+BRAND DIRECTORY
 ============================== */
 
 async function loadBrands(){
@@ -357,8 +160,7 @@ html += `
 
 <div class="brand-thumb">
 
-<img src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}"
-alt="${b.name}">
+<img src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}">
 
 </div>
 
@@ -368,12 +170,8 @@ alt="${b.name}">
 
 <p class="brand-desc">${b.description}</p>
 
-<a href="${b.link}"
-target="_blank"
-class="brand-open-btn">
-
+<a href="${b.link}" target="_blank" class="brand-open-btn">
 ${b.button} →
-
 </a>
 
 </div>
@@ -396,42 +194,3 @@ console.log("Brand JSON error",e);
 }
 
 loadBrands();
-
-/* ==============================
-FORCE GRID REFLOW FIX
-============================== */
-
-function fixGridLayout(){
-
-document.querySelectorAll(".product-grid").forEach(grid=>{
-
-grid.style.display="none";
-
-grid.offsetHeight; // force reflow
-
-grid.style.display="grid";
-
-});
-
-}
-
-window.addEventListener("load",fixGridLayout);
-window.addEventListener("pageshow",fixGridLayout);
-
-/* ==============================
-FORCE SERVICE WORKER UPDATE
-============================== */
-
-if ('serviceWorker' in navigator) {
-
-navigator.serviceWorker.getRegistrations().then(function(registrations) {
-
-for (let registration of registrations) {
-
-registration.update();
-
-}
-
-});
-
-}
