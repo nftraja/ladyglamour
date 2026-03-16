@@ -1,7 +1,6 @@
 /* ==============================
 GLOBAL
 ============================== */
-
 *{
 margin:0;
 padding:0;
@@ -20,11 +19,9 @@ color:#00ff88;
 overflow-x:hidden;
 }
 
-
 /* ==============================
 HEADER
 ============================== */
-
 .app-header{
 position:fixed;
 top:0;
@@ -63,11 +60,9 @@ object-fit:contain;
 border-radius:8px;
 }
 
-
 /* ==============================
 DRAWER
 ============================== */
-
 .drawer{
 position:fixed;
 top:0;
@@ -95,11 +90,9 @@ font-size:13px;
 border-bottom:1px solid rgba(255,255,255,.05);
 }
 
-
 /* ==============================
 DRAWER OVERLAY
 ============================== */
-
 .drawer-overlay{
 position:fixed;
 top:0;
@@ -115,35 +108,45 @@ display:none;
 display:block;
 }
 
-
 /* ==============================
 MAIN
 ============================== */
-
 .main-content{
 padding:65px 8px 65px;
 max-width:1200px;
 margin:auto;
 }
 
-
 /* ==============================
 GLASS CARD
 ============================== */
-
 .glass-card{
 border-radius:18px;
 padding:15px;
 margin-bottom:10px;
+
 background:rgba(255,255,255,0.04);
 border:1.5px solid rgba(0,255,136,0.28);
+
+box-shadow:
+0 6px 18px rgba(0,0,0,.6),
+inset 0 1px 0 rgba(255,255,255,.05);
+
+transition:transform .25s ease, box-shadow .25s ease;
 }
 
+@media(hover:hover){
+.glass-card:hover{
+transform:translateY(-4px);
+box-shadow:
+0 0 16px rgba(0,255,136,.25),
+0 10px 24px rgba(0,0,0,.75);
+}
+}
 
 /* ==============================
 TEXT
 ============================== */
-
 .card-title{
 font-size:13px;
 font-weight:800;
@@ -158,22 +161,18 @@ color:#ffffff;
 text-align:center;
 }
 
-
 /* ==============================
 DIVIDER
 ============================== */
-
 .theme-divider-b{
 height:1px;
 margin:4px 0 6px;
 background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
 }
 
-
 /* ==============================
 CATEGORY GRID
 ============================== */
-
 .category-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -181,7 +180,6 @@ gap:8px;
 margin-top:12px;
 margin-bottom:12px;
 justify-items:center;
-align-items:start;
 }
 
 .category-icon{
@@ -192,6 +190,7 @@ text-align:center;
 text-decoration:none;
 color:#ffffff;
 width:100%;
+transition:transform .25s ease;
 }
 
 .category-icon img{
@@ -201,6 +200,7 @@ border-radius:50%;
 object-fit:cover;
 border:1px solid rgba(255,255,255,0.15);
 background:#222;
+transition:all .35s ease;
 }
 
 .category-icon span{
@@ -208,56 +208,66 @@ font-size:11px;
 margin-top:6px;
 }
 
+@media (hover:hover){
+.category-icon:hover img{
+transform:translateY(-4px) scale(1.08);
+border:2px solid #00ff88;
+box-shadow:
+0 0 12px rgba(0,255,136,.35),
+0 6px 14px rgba(0,0,0,.6);
+}
+}
 
 /* ==============================
-GUIDE CAROUSEL
+CUSTOM DROPDOWN
 ============================== */
-
-.guide-carousel-wrap{
+.custom-dropdown{
 position:relative;
-overflow:hidden;
+width:100%;
 }
 
-.guide-carousel-title{
-font-size:14px;
-font-weight:700;
-color:gold;
-text-align:center;
-margin:5px 0;
-}
-
-.guide-carousel{
+.dropdown-selected{
+width:100%;
+padding:10px;
+border-radius:12px;
+border:1px solid rgba(0,255,136,0.28);
+background:rgba(255,255,255,0.06);
+color:#ffffff;
 display:flex;
-gap:8px;
-overflow-x:auto;
-scroll-behavior:smooth;
-scroll-snap-type:x mandatory;
--webkit-overflow-scrolling:touch;
-padding:8px;
+justify-content:space-between;
+cursor:pointer;
 }
 
-.guide-carousel::-webkit-scrollbar{
+.dropdown-list{
+position:absolute;
+top:105%;
+left:0;
+right:0;
+background:#111;
+border-radius:12px;
+border:1px solid rgba(0,255,136,0.28);
 display:none;
+max-height:260px;
+overflow-y:auto;
+z-index:50;
 }
 
-.guide-carousel .guide-card{
-flex:0 0 260px;
-width:260px;
-aspect-ratio:16/9;
-scroll-snap-align:start;
+.dropdown-list.active{
+display:block;
 }
-
 
 /* ==============================
 PRODUCT GRID
 ============================== */
-
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:6px;
 }
 
+/* ==============================
+PRODUCT IMAGE
+============================== */
 .product-image{
 width:100%;
 aspect-ratio:1/1;
@@ -271,11 +281,9 @@ background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,.1);
 }
 
-
 /* ==============================
 PRODUCT META
 ============================== */
-
 .product-meta{
 font-size:13px;
 text-align:center;
@@ -287,42 +295,88 @@ color:#ffffff;
 font-size:13.5px;
 font-weight:700;
 color:#00ff88;
-margin-bottom:1px;
 }
 
 .product-discount{
 font-size:11px;
 color:#ff4b2b;
 font-weight:700;
-margin-bottom:5px;
 }
-
 
 /* ==============================
 VIEW DEAL BUTTON
 ============================== */
-
 .view-btn{
-display:inline-block;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
 padding:8px 16px;
+
 border-radius:999px;
+
 font-size:12px;
 font-weight:700;
+
 color:#ffffff;
 text-decoration:none;
+
 background:linear-gradient(135deg,#ffb347,#ff8c00);
+
 box-shadow:
 0 6px 16px rgba(0,0,0,.65),
 inset 0 2px 4px rgba(255,255,255,.45),
 inset 0 -4px 8px rgba(0,0,0,.6);
+
 border:1px solid rgba(255,255,255,.35);
+
+transition:transform .2s ease;
 }
 
+.view-btn:active{
+transform:scale(.95);
+}
+
+/* ==============================
+CAROUSEL
+============================== */
+.guide-carousel{
+display:flex;
+gap:8px;
+overflow-x:auto;
+scroll-behavior:smooth;
+scroll-snap-type:x mandatory;
+padding:8px;
+}
+
+.guide-carousel::-webkit-scrollbar{
+display:none;
+}
+
+.guide-card{
+flex:0 0 260px;
+width:260px;
+aspect-ratio:16/9;
+border-radius:18px;
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,0.18);
+
+transition:transform .25s ease, box-shadow .25s ease;
+}
+
+@media(hover:hover){
+.guide-card:hover{
+transform:scale(1.03);
+box-shadow:
+0 0 14px rgba(0,255,136,.35),
+0 10px 24px rgba(0,0,0,.7);
+}
+}
 
 /* ==============================
 BOTTOM NAV
 ============================== */
-
 .bottom-nav{
 position:fixed;
 bottom:0;
@@ -352,13 +406,10 @@ display:block;
 font-size:14px;
 }
 
-
 /* ==============================
 RESPONSIVE
 ============================== */
-
 @media(min-width:768px){
-
 .grid{
 grid-template-columns:repeat(4,1fr);
 }
@@ -366,5 +417,4 @@ grid-template-columns:repeat(4,1fr);
 .category-grid{
 grid-template-columns:repeat(8,1fr);
 }
-
 }
