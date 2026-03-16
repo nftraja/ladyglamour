@@ -38,7 +38,7 @@ async function loadStore(){
 
 try{
 
-let res = await fetch("json/amazon.json");
+const res = await fetch("json/amazon.json");
 
 if(!res.ok) return;
 
@@ -50,9 +50,10 @@ if(firstCategory){
 renderProducts(firstCategory);
 }
 
-}
-catch(e){
+}catch(e){
+
 console.log("Amazon JSON error",e);
+
 }
 
 }
@@ -69,15 +70,17 @@ const amazonDropdown = document.getElementById("amazonDropdown");
 
 if(amazonSelected && amazonDropdown){
 
-amazonSelected.addEventListener("click",function(){
+amazonSelected.addEventListener("click",()=>{
+
 amazonDropdown.classList.toggle("active");
+
 });
 
 document.querySelectorAll(".dropdown-item").forEach(item=>{
 
 item.addEventListener("click",function(){
 
-const cat = this.getAttribute("data-cat");
+const cat = this.dataset.cat;
 
 amazonSelected.innerHTML =
 this.innerText + '<span class="dropdown-arrow">⌄</span>';
@@ -91,6 +94,7 @@ renderProducts(cat);
 });
 
 }
+
 
 /* ==============================
 PRODUCT CARD
@@ -121,10 +125,9 @@ style="background-image:url('${p.image}')">
 
 <a href="${p.link}"
 target="_blank"
-class="brand"
-style="--chip-color:#ff9900;">
+class="view-btn">
 
-<span>View Deal</span>
+View Deal
 
 </a>
 
@@ -143,7 +146,7 @@ RENDER AMAZON PRODUCTS
 
 function renderProducts(cat){
 
-let grid = document.getElementById("hotDeals");
+const grid = document.getElementById("hotDeals");
 
 if(!grid) return;
 
@@ -152,7 +155,7 @@ if(!storeData[cat]) return;
 let html="";
 
 storeData[cat].forEach(p=>{
-html+=productCard(p);
+html += productCard(p);
 });
 
 grid.innerHTML = html;
@@ -168,29 +171,30 @@ async function loadCollection(cat){
 
 try{
 
-let res = await fetch("json/" + cat + ".json");
+const res = await fetch("json/" + cat + ".json");
 
 if(!res.ok) return;
 
-let data = await res.json();
+const data = await res.json();
 
-let grid = document.getElementById("hotDeals");
+const grid = document.getElementById("hotDeals");
 
 if(!grid) return;
 
 let html="";
 
 data.products.forEach(p=>{
-html+=productCard(p);
+html += productCard(p);
 });
 
 grid.innerHTML = html;
 
 toggleDrawer();
 
-}
-catch(e){
+}catch(e){
+
 console.log("Collection load error",e);
+
 }
 
 }
@@ -204,13 +208,13 @@ async function loadBrands(){
 
 try{
 
-let res = await fetch("json/brands.json");
+const res = await fetch("json/brands.json");
 
 if(!res.ok) return;
 
-let data = await res.json();
+const data = await res.json();
 
-let grid = document.getElementById("brandGrid");
+const grid = document.getElementById("brandGrid");
 
 if(!grid) return;
 
@@ -258,9 +262,7 @@ grid.innerHTML = html;
 
 loadBrandIcons();
 
-}
-
-catch(e){
+}catch(e){
 
 console.log("Brand JSON error",e);
 
@@ -268,6 +270,7 @@ console.log("Brand JSON error",e);
 
 }
 
+loadBrands();
 
 
 /* ==============================
@@ -276,23 +279,24 @@ LAZY FAVICON LOADER
 
 function loadBrandIcons(){
 
-let icons = document.querySelectorAll(".brand-icon");
+const icons = document.querySelectorAll(".brand-icon");
 
 icons.forEach(img=>{
 
-let domain = img.dataset.domain;
+const domain = img.dataset.domain;
 
-let google = `https://www.google.com/s2/favicons?sz=128&domain=${domain}`;
-let duck = `https://icons.duckduckgo.com/ip3/${domain}.ico`;
+const google =
+`https://www.google.com/s2/favicons?sz=128&domain=${domain}`;
+
+const duck =
+`https://icons.duckduckgo.com/ip3/${domain}.ico`;
 
 img.src = google;
 
 img.onerror = function(){
 
 this.onerror = function(){
-
 this.src="images/logo.png";
-
 };
 
 this.src = duck;
@@ -303,8 +307,6 @@ this.src = duck;
 
 }
 
-
-loadBrands();
 
 /* ==============================
 AUTO SLIDE GUIDE CAROUSEL
@@ -318,9 +320,14 @@ let scrollAmount = 0;
 
 setInterval(()=>{
 
-const cardWidth = guideCarousel.querySelector(".guide-card")?.offsetWidth || 260;
+const card =
+guideCarousel.querySelector(".guide-card");
 
-scrollAmount += cardWidth + 8;
+if(!card) return;
+
+const cardWidth = card.offsetWidth + 8;
+
+scrollAmount += cardWidth;
 
 if(scrollAmount >= guideCarousel.scrollWidth - guideCarousel.clientWidth){
 scrollAmount = 0;
