@@ -278,7 +278,6 @@ box-shadow:
 /* ==============================
 BOTTOM NAV
 ============================== */
-
 .bottom-nav{
 position:fixed;
 bottom:0;
@@ -291,17 +290,21 @@ justify-content:space-around;
 align-items:center;
 border-top:1px solid rgba(0,255,136,0.28);
 z-index:200;
-background:#0b0b0b;
+}
+
+.bottom-nav a{
+color:#00ff88;
+text-decoration:none;
 }
 
 .nav-item{
 text-align:center;
 font-size:14px;
-color:#00ff88;
 }
 
 .nav-item span{
 display:block;
+font-size:14px;
 }
 
 
