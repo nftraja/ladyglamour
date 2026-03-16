@@ -1,13 +1,11 @@
 /* =================================================
-ROOT VARIABLES (PERFORMANCE + REUSE)
+ROOT VARIABLES
 ================================================= */
 
 :root{
 
 --border-green:1.5px solid rgba(0,255,136,0.28);
-
 --glass-bg:rgba(255,255,255,0.04);
-
 --card-shadow:0 6px 18px rgba(0,0,0,.6);
 
 --btn-shadow:
@@ -199,6 +197,61 @@ background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent)
 
 
 /* =================================================
+CUSTOM DROPDOWN
+================================================= */
+
+.custom-dropdown{
+position:relative;
+width:100%;
+margin-top:10px;
+}
+
+.dropdown-selected{
+width:100%;
+padding:12px;
+border-radius:12px;
+border:var(--border-green);
+background:rgba(255,255,255,0.06);
+color:#ffffff;
+font-size:14px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+}
+
+.dropdown-list{
+position:absolute;
+top:105%;
+left:0;
+right:0;
+background:#111;
+border-radius:12px;
+border:var(--border-green);
+display:none;
+max-height:260px;
+overflow-y:auto;
+z-index:50;
+}
+
+.dropdown-list.active{
+display:block;
+}
+
+.dropdown-item{
+padding:10px;
+font-size:14px;
+color:#00ff88;
+border-bottom:1px solid rgba(255,255,255,.05);
+cursor:pointer;
+}
+
+.dropdown-item:hover{
+background:rgba(0,255,136,0.15);
+}
+
+
+/* =================================================
 CATEGORY GRID
 ================================================= */
 
@@ -267,178 +320,6 @@ color:#00ff88;
 
 
 /* =================================================
-GUIDE CARD
-================================================= */
-
-.guide-card{
-position:relative;
-border-radius:18px;
-padding:8px;
-color:#fff;
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-overflow:hidden;
-text-decoration:none;
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-border:1px solid rgba(255,255,255,0.18);
-transition:transform .25s ease;
-will-change:transform;
-}
-
-.guide-card:active{
-transform:scale(.96);
-}
-
-@media (hover:hover){
-
-.guide-card:hover{
-transform:scale(1.03);
-box-shadow:0 0 14px rgba(0,255,136,.35);
-}
-
-}
-
-
-/* =================================================
-BRAND STORE GRID
-================================================= */
-
-.brand-store-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:14px;
-margin-top:12px;
-}
-
-@media(min-width:768px){
-.brand-store-grid{
-grid-template-columns:repeat(3,1fr);
-}
-}
-
-@media(min-width:1200px){
-.brand-store-grid{
-grid-template-columns:repeat(6,1fr);
-}
-}
-
-
-/* =================================================
-BRAND CARD
-================================================= */
-
-.brand-store-card{
-display:flex;
-flex-direction:column;
-align-items:center;
-text-align:center;
-padding:14px;
-border-radius:16px;
-background:var(--glass-bg);
-border:var(--border-green);
-box-shadow:var(--card-shadow);
-transition:transform .25s ease;
-contain:layout paint;
-}
-
-.brand-store-card:active{
-transform:scale(.98);
-}
-
-@media (hover:hover){
-
-.brand-store-card:hover{
-transform:translateY(-3px);
-box-shadow:
-0 0 16px rgba(0,255,136,.25),
-0 8px 22px rgba(0,0,0,.65);
-}
-
-}
-
-
-/* =================================================
-BRAND LOGO
-================================================= */
-
-.brand-thumb{
-width:70px;
-height:70px;
-border-radius:14px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#fff;
-margin-bottom:8px;
-padding:6px;
-}
-
-.brand-thumb img{
-max-width:100%;
-max-height:100%;
-object-fit:contain;
-}
-
-
-/* =================================================
-BRAND TEXT
-================================================= */
-
-.brand-title{
-font-size:14px;
-font-weight:700;
-color:#00ff88;
-margin-bottom:6px;
-}
-
-.brand-desc{
-font-size:12px;
-color:#ffffff;
-line-height:1.5;
-margin-bottom:10px;
-}
-
-
-/* =================================================
-BRAND BUTTON
-================================================= */
-
-.brand-open-btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:8px 14px;
-border-radius:999px;
-font-size:12px;
-font-weight:700;
-color:#fff;
-text-decoration:none;
-background:var(--chip-color);
-box-shadow:var(--btn-shadow);
-border:1px solid rgba(255,255,255,.35);
-transition:transform .2s ease;
-}
-
-.brand-open-btn:active{
-transform:scale(.95);
-}
-
-@media (hover:hover){
-
-.brand-open-btn:hover{
-transform:scale(1.05);
-box-shadow:
-0 0 14px rgba(0,255,136,.35),
-0 6px 16px rgba(0,0,0,.65);
-}
-
-}
-
-
-/* =================================================
 PRODUCT GRID
 ================================================= */
 
@@ -493,55 +374,38 @@ margin-bottom:5px;
 }
 
 
-/* ==============================
-AMAZON DEAL BUTTON FIX
-============================== */
+/* =================================================
+VIEW DEAL BUTTON
+================================================= */
 
-.view-btn,
-#hotDeals a{
-
+.view-btn{
 display:inline-flex;
 align-items:center;
 justify-content:center;
-
-margin:auto;
-
 padding:8px 16px;
-
 border-radius:999px;
-
 font-size:12px;
 font-weight:700;
-
 color:#ffffff;
 text-decoration:none;
-
 background:linear-gradient(135deg,#ffb347,#ff8c00);
-
 box-shadow:var(--btn-shadow);
-
 border:1px solid rgba(255,255,255,.35);
-
 transition:transform .2s ease;
-
+margin:auto;
 }
 
-.view-btn:active,
-#hotDeals a:active{
+.view-btn:active{
 transform:scale(.95);
 }
 
 @media (hover:hover){
 
-.view-btn:hover,
-#hotDeals a:hover{
-
+.view-btn:hover{
 transform:scale(1.05);
-
 box-shadow:
 0 0 14px rgba(255,170,0,.35),
 0 6px 16px rgba(0,0,0,.65);
-
 }
 
 }
@@ -582,58 +446,8 @@ font-size:14px;
 
 
 /* =================================================
-CAROUSEL
-================================================= */
-
-.guide-carousel-wrap{
-position:relative;
-overflow:hidden;
-}
-
-.guide-carousel-title{
-font-size:14px;
-font-weight:700;
-color:gold;
-text-align:center;
-margin:5px 0;
-}
-
-.guide-carousel{
-display:flex;
-align-items:flex-start;
-gap:8px;
-overflow-x:auto;
-scroll-behavior:smooth;
-scroll-snap-type:x mandatory;
--webkit-overflow-scrolling:touch;
-padding:8px;
-min-height:150px;
-}
-
-.guide-carousel::-webkit-scrollbar{
-display:none;
-}
-
-.guide-carousel .guide-card{
-flex:0 0 260px;
-width:260px;
-aspect-ratio:16/9;
-scroll-snap-align:start;
-}
-
-
-/* =================================================
 RESPONSIVE
 ================================================= */
-
-@media(max-width:768px){
-
-.guide-carousel .guide-card{
-flex:0 0 220px;
-width:220px;
-}
-
-}
 
 @media(max-width:600px){
 
