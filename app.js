@@ -68,21 +68,32 @@ function productCard(p){
 
 return `
 
-<div class="product-card">
+<div class="glass-card">
 
-<img src="${p.image}"
-loading="lazy"
-decoding="async"
-class="product-img">
+<div class="product-image"
+style="background-image:url('${p.image}')">
+</div>
 
-<div class="product-caption">
+<div class="card-title">${p.title || ""}</div>
 
-<div class="product-discount">${p.discount}</div>
+<div class="theme-divider-b"></div>
+
+<div class="product-meta">
 
 <div class="product-price">${p.price}</div>
+<div class="product-discount">${p.discount}</div>
 
-<a href="${p.link}" target="_blank" class="view-btn">
-View Deal
+</div>
+
+<div class="brand-wrap">
+
+<a href="${p.link}"
+target="_blank"
+class="brand"
+style="--chip-color:#ff9900;">
+
+<span>View Deal</span>
+
 </a>
 
 </div>
@@ -112,7 +123,7 @@ storeData[cat].forEach(p=>{
 html+=productCard(p);
 });
 
-grid.innerHTML=html;
+grid.innerHTML = html;
 
 }
 
@@ -141,7 +152,7 @@ data.products.forEach(p=>{
 html+=productCard(p);
 });
 
-grid.innerHTML=html;
+grid.innerHTML = html;
 
 toggleDrawer();
 
