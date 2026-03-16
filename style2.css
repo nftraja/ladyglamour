@@ -1,0 +1,329 @@
+/* ==============================
+GLOBAL
+============================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0b0b0b,#151515);
+color:#ffffff;
+overflow-x:hidden;
+}
+
+
+/* ==============================
+HEADER
+============================== */
+
+.app-header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 18px;
+border-bottom:1px solid rgba(0,255,136,0.28);
+z-index:200;
+backdrop-filter:blur(12px);
+}
+
+.menu-btn{
+background:transparent;
+border:none;
+color:gold;
+font-size:25px;
+padding:7px;
+cursor:pointer;
+}
+
+.logo{
+font-size:13px;
+color:gold;
+font-weight:700;
+letter-spacing:.5px;
+}
+
+.header-icons{
+display:flex;
+align-items:center;
+}
+
+.header-icons img{
+width:38px;
+height:38px;
+object-fit:contain;
+border-radius:8px;
+}
+
+
+/* ==============================
+DRAWER
+============================== */
+
+.drawer{
+position:fixed;
+top:0;
+left:-280px;
+width:200px;
+height:100%;
+background:rgba(10,12,20,.95);
+z-index:300;
+overflow-y:auto;
+border-right:1px solid rgba(0,255,136,0.28);
+transition:left .3s ease;
+padding-top:15px;
+}
+
+.drawer.active{
+left:0;
+}
+
+.drawer a{
+display:block;
+padding:7px 14px;
+color:#00ff88;
+text-decoration:none;
+font-size:13px;
+border-bottom:1px solid rgba(255,255,255,.05);
+transition:.25s;
+}
+
+.drawer a:hover{
+background:rgba(0,255,136,.12);
+padding-left:18px;
+}
+
+
+/* ==============================
+DRAWER OVERLAY
+============================== */
+
+.drawer-overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.65);
+z-index:250;
+display:none;
+}
+
+.drawer-overlay.active{
+display:block;
+}
+
+
+/* ==============================
+MAIN
+============================== */
+
+.main-content{
+padding:70px 14px 80px;
+max-width:1400px;
+margin:auto;
+}
+
+
+/* ==============================
+GLASS CARD
+============================== */
+
+.glass-card{
+border-radius:18px;
+padding:16px;
+margin-bottom:18px;
+background:rgba(255,255,255,0.04);
+border:1.5px solid rgba(0,255,136,0.28);
+backdrop-filter:blur(10px);
+transition:.35s;
+}
+
+.glass-card:hover{
+transform:translateY(-3px);
+box-shadow:
+0 10px 30px rgba(0,0,0,.7),
+0 0 12px rgba(0,255,136,.15);
+border:1.5px solid rgba(0,255,136,0.45);
+}
+
+.card-title{
+font-size:14px;
+font-weight:700;
+text-align:center;
+margin-bottom:10px;
+}
+
+.theme-divider-b{
+height:1px;
+margin:10px 0;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
+}
+
+
+/* ==============================
+PRODUCT GRID
+============================== */
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+
+/* ==============================
+PRODUCT CARD
+============================== */
+
+.product-card{
+background:#111;
+border-radius:14px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.08);
+transition:.35s;
+position:relative;
+}
+
+.product-card:hover{
+transform:translateY(-5px) scale(1.02);
+box-shadow:
+0 12px 30px rgba(0,0,0,.8),
+0 0 15px rgba(0,255,136,.18);
+border:1px solid rgba(0,255,136,.35);
+}
+
+
+/* ==============================
+PRODUCT IMAGE
+============================== */
+
+.product-img{
+width:100%;
+aspect-ratio:1/1.25;
+object-fit:cover;
+display:block;
+transition:transform .45s ease;
+}
+
+.product-card:hover .product-img{
+transform:scale(1.06);
+}
+
+
+/* ==============================
+PRODUCT CAPTION
+============================== */
+
+.product-caption{
+padding:10px;
+text-align:center;
+}
+
+.product-discount{
+display:inline-block;
+background:#ffd700;
+color:#000;
+font-size:11px;
+font-weight:700;
+padding:3px 6px;
+border-radius:6px;
+margin-bottom:6px;
+}
+
+.product-price{
+font-size:14px;
+font-weight:700;
+color:#00ff88;
+margin-bottom:6px;
+}
+
+
+/* ==============================
+VIEW DEAL BUTTON
+============================== */
+
+.view-btn{
+display:inline-block;
+padding:6px 12px;
+font-size:12px;
+border-radius:20px;
+background:linear-gradient(135deg,#ff512f,#dd2476);
+color:#fff;
+text-decoration:none;
+transition:.3s;
+}
+
+.view-btn:hover{
+transform:translateY(-2px);
+box-shadow:
+0 6px 16px rgba(0,0,0,.7),
+0 0 10px rgba(255,90,150,.35);
+}
+
+
+/* ==============================
+BOTTOM NAV
+============================== */
+
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:65px;
+backdrop-filter:blur(12px);
+display:flex;
+justify-content:space-around;
+align-items:center;
+border-top:1px solid rgba(0,255,136,0.28);
+z-index:200;
+background:#0b0b0b;
+}
+
+.bottom-nav a{
+color:#00ff88;
+text-decoration:none;
+}
+
+.nav-item{
+text-align:center;
+font-size:14px;
+transition:.25s;
+}
+
+.nav-item span{
+display:block;
+font-size:14px;
+}
+
+.nav-item:hover{
+transform:translateY(-2px);
+color:#00ff88;
+}
+
+
+/* ==============================
+RESPONSIVE
+============================== */
+
+@media(min-width:900px){
+
+.product-grid{
+grid-template-columns:repeat(4,1fr);
+}
+
+}
+
+@media(min-width:1200px){
+
+.product-grid{
+grid-template-columns:repeat(6,1fr);
+}
+
+}
