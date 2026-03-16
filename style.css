@@ -1,24 +1,6 @@
-/* =================================================
-ROOT VARIABLES
-================================================= */
-
-:root{
-
---border-green:1.5px solid rgba(0,255,136,0.28);
---glass-bg:rgba(255,255,255,0.04);
---card-shadow:0 6px 18px rgba(0,0,0,.6);
-
---btn-shadow:
-0 6px 16px rgba(0,0,0,.65),
-inset 0 2px 4px rgba(255,255,255,.45),
-inset 0 -4px 8px rgba(0,0,0,.6);
-
-}
-
-
-/* =================================================
-GLOBAL RESET
-================================================= */
+/* ==============================
+GLOBAL
+============================== */
 
 *{
 margin:0;
@@ -36,13 +18,12 @@ body{
 background:linear-gradient(135deg,#0b0b0b,#151515);
 color:#00ff88;
 overflow-x:hidden;
--webkit-font-smoothing:antialiased;
 }
 
 
-/* =================================================
+/* ==============================
 HEADER
-================================================= */
+============================== */
 
 .app-header{
 position:fixed;
@@ -54,7 +35,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:0 18px;
-border-bottom:var(--border-green);
+border-bottom:1px solid rgba(0,255,136,0.28);
 z-index:200;
 backdrop-filter:blur(12px);
 }
@@ -75,12 +56,6 @@ font-weight:700;
 letter-spacing:.5px;
 }
 
-.header-icons{
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
 .header-icons img{
 width:38px;
 height:38px;
@@ -89,9 +64,9 @@ border-radius:8px;
 }
 
 
-/* =================================================
+/* ==============================
 DRAWER
-================================================= */
+============================== */
 
 .drawer{
 position:fixed;
@@ -102,7 +77,7 @@ height:100%;
 background:rgba(10,12,20,.95);
 z-index:300;
 overflow-y:auto;
-border-right:var(--border-green);
+border-right:1px solid rgba(0,255,136,0.28);
 transition:left .3s ease;
 padding-top:15px;
 }
@@ -121,9 +96,9 @@ border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 
-/* =================================================
+/* ==============================
 DRAWER OVERLAY
-================================================= */
+============================== */
 
 .drawer-overlay{
 position:fixed;
@@ -141,9 +116,9 @@ display:block;
 }
 
 
-/* =================================================
-MAIN CONTENT
-================================================= */
+/* ==============================
+MAIN
+============================== */
 
 .main-content{
 padding:65px 8px 65px;
@@ -152,23 +127,22 @@ margin:auto;
 }
 
 
-/* =================================================
+/* ==============================
 GLASS CARD
-================================================= */
+============================== */
 
 .glass-card{
 border-radius:18px;
 padding:15px;
 margin-bottom:10px;
-background:var(--glass-bg);
-border:var(--border-green);
-contain:layout paint;
+background:rgba(255,255,255,0.04);
+border:1.5px solid rgba(0,255,136,0.28);
 }
 
 
-/* =================================================
+/* ==============================
 TEXT
-================================================= */
+============================== */
 
 .card-title{
 font-size:13px;
@@ -185,9 +159,9 @@ text-align:center;
 }
 
 
-/* =================================================
+/* ==============================
 DIVIDER
-================================================= */
+============================== */
 
 .theme-divider-b{
 height:1px;
@@ -196,64 +170,9 @@ background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent)
 }
 
 
-/* =================================================
-CUSTOM DROPDOWN
-================================================= */
-
-.custom-dropdown{
-position:relative;
-width:100%;
-margin-top:10px;
-}
-
-.dropdown-selected{
-width:100%;
-padding:12px;
-border-radius:12px;
-border:var(--border-green);
-background:rgba(255,255,255,0.06);
-color:#ffffff;
-font-size:14px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-cursor:pointer;
-}
-
-.dropdown-list{
-position:absolute;
-top:105%;
-left:0;
-right:0;
-background:#111;
-border-radius:12px;
-border:var(--border-green);
-display:none;
-max-height:260px;
-overflow-y:auto;
-z-index:50;
-}
-
-.dropdown-list.active{
-display:block;
-}
-
-.dropdown-item{
-padding:10px;
-font-size:14px;
-color:#00ff88;
-border-bottom:1px solid rgba(255,255,255,.05);
-cursor:pointer;
-}
-
-.dropdown-item:hover{
-background:rgba(0,255,136,0.15);
-}
-
-
-/* =================================================
+/* ==============================
 CATEGORY GRID
-================================================= */
+============================== */
 
 .category-grid{
 display:grid;
@@ -265,11 +184,6 @@ justify-items:center;
 align-items:start;
 }
 
-
-/* =================================================
-CATEGORY ICON
-================================================= */
-
 .category-icon{
 display:flex;
 flex-direction:column;
@@ -278,8 +192,6 @@ text-align:center;
 text-decoration:none;
 color:#ffffff;
 width:100%;
-transition:transform .25s ease;
-will-change:transform;
 }
 
 .category-icon img{
@@ -289,50 +201,62 @@ border-radius:50%;
 object-fit:cover;
 border:1px solid rgba(255,255,255,0.15);
 background:#222;
-transition:all .35s ease;
 }
 
 .category-icon span{
 font-size:11px;
 margin-top:6px;
-transition:color .25s ease;
-}
-
-.category-icon:active img{
-transform:scale(.94);
-}
-
-@media (hover:hover){
-
-.category-icon:hover img{
-transform:translateY(-4px) scale(1.08);
-border:2px solid #00ff88;
-box-shadow:
-0 0 12px rgba(0,255,136,.35),
-0 6px 14px rgba(0,0,0,.6);
-}
-
-.category-icon:hover span{
-color:#00ff88;
-}
-
 }
 
 
-/* =================================================
+/* ==============================
+GUIDE CAROUSEL
+============================== */
+
+.guide-carousel-wrap{
+position:relative;
+overflow:hidden;
+}
+
+.guide-carousel-title{
+font-size:14px;
+font-weight:700;
+color:gold;
+text-align:center;
+margin:5px 0;
+}
+
+.guide-carousel{
+display:flex;
+gap:8px;
+overflow-x:auto;
+scroll-behavior:smooth;
+scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch;
+padding:8px;
+}
+
+.guide-carousel::-webkit-scrollbar{
+display:none;
+}
+
+.guide-carousel .guide-card{
+flex:0 0 260px;
+width:260px;
+aspect-ratio:16/9;
+scroll-snap-align:start;
+}
+
+
+/* ==============================
 PRODUCT GRID
-================================================= */
+============================== */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:6px;
 }
-
-
-/* =================================================
-PRODUCT IMAGE
-================================================= */
 
 .product-image{
 width:100%;
@@ -348,9 +272,9 @@ border:1px solid rgba(255,255,255,.1);
 }
 
 
-/* =================================================
+/* ==============================
 PRODUCT META
-================================================= */
+============================== */
 
 .product-meta{
 font-size:13px;
@@ -374,14 +298,12 @@ margin-bottom:5px;
 }
 
 
-/* =================================================
+/* ==============================
 VIEW DEAL BUTTON
-================================================= */
+============================== */
 
 .view-btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
+display:inline-block;
 padding:8px 16px;
 border-radius:999px;
 font-size:12px;
@@ -389,31 +311,17 @@ font-weight:700;
 color:#ffffff;
 text-decoration:none;
 background:linear-gradient(135deg,#ffb347,#ff8c00);
-box-shadow:var(--btn-shadow);
-border:1px solid rgba(255,255,255,.35);
-transition:transform .2s ease;
-margin:auto;
-}
-
-.view-btn:active{
-transform:scale(.95);
-}
-
-@media (hover:hover){
-
-.view-btn:hover{
-transform:scale(1.05);
 box-shadow:
-0 0 14px rgba(255,170,0,.35),
-0 6px 16px rgba(0,0,0,.65);
+0 6px 16px rgba(0,0,0,.65),
+inset 0 2px 4px rgba(255,255,255,.45),
+inset 0 -4px 8px rgba(0,0,0,.6);
+border:1px solid rgba(255,255,255,.35);
 }
 
-}
 
-
-/* =================================================
+/* ==============================
 BOTTOM NAV
-================================================= */
+============================== */
 
 .bottom-nav{
 position:fixed;
@@ -425,7 +333,7 @@ backdrop-filter:blur(12px);
 display:flex;
 justify-content:space-around;
 align-items:center;
-border-top:var(--border-green);
+border-top:1px solid rgba(0,255,136,0.28);
 z-index:200;
 }
 
@@ -445,22 +353,18 @@ font-size:14px;
 }
 
 
-/* =================================================
+/* ==============================
 RESPONSIVE
-================================================= */
-
-@media(max-width:600px){
-
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
+============================== */
 
 @media(min-width:768px){
 
 .grid{
 grid-template-columns:repeat(4,1fr);
+}
+
+.category-grid{
+grid-template-columns:repeat(8,1fr);
 }
 
 }
