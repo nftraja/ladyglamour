@@ -22,7 +22,15 @@ font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-se
 body{
 background:linear-gradient(135deg,#0b0b0b,#151515);
 color:#fff;
+}
+
+/* MAIN CONTENT */
+
+.main-content{
 padding:20px;
+padding-bottom:90px;
+max-width:1400px;
+margin:auto;
 }
 
 /* CARD */
@@ -130,12 +138,48 @@ background:linear-gradient(135deg,#ff512f,#dd2476);
 color:#fff;
 text-decoration:none;
 }
+
+/* BOTTOM NAV */
+
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:65px;
+backdrop-filter:blur(12px);
+display:flex;
+justify-content:space-around;
+align-items:center;
+border-top:1px solid rgba(0,255,136,0.28);
+z-index:200;
+background:#0b0b0b;
+}
+
+.bottom-nav a{
+color:#00ff88;
+text-decoration:none;
+}
+
+.nav-item{
+text-align:center;
+font-size:14px;
+}
+
+.nav-item span{
+display:block;
+font-size:14px;
+}
+
 </style>
 </head>
 
 <body>
 
+<main class="main-content">
+
 <!-- AMAZON -->
+
 <div class="glass-card">
 <div class="card-title">Amazon Beauty</div>
 <div class="theme-divider-b"></div>
@@ -143,7 +187,7 @@ text-decoration:none;
 <div class="product-grid">
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/71BpjD7e0JL._SL1500_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/71BpjD7e0JL._SL1500_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">10% OFF</div>
 <div class="product-price">₹720</div>
@@ -152,7 +196,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/618SWselkmL._SL1500_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/618SWselkmL._SL1500_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">29% OFF</div>
 <div class="product-price">₹210</div>
@@ -161,7 +205,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/61r9-JQ-I8L._SL1080_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/61r9-JQ-I8L._SL1080_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">28% OFF</div>
 <div class="product-price">₹500</div>
@@ -170,7 +214,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/51f4HVnR4eL._SL1200_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/51f4HVnR4eL._SL1200_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">35% OFF</div>
 <div class="product-price">₹213</div>
@@ -180,8 +224,9 @@ text-decoration:none;
 
 </div>
 </div>
-  
+
 <!-- MYNTRA -->
+
 <div class="glass-card">
 <div class="card-title">Myntra Beauty</div>
 <div class="theme-divider-b"></div>
@@ -189,7 +234,7 @@ text-decoration:none;
 <div class="product-grid">
 
 <div class="product-card">
-<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2025/FEBRUARY/24/pbeHdU3u_ffc96dacc22340d3b1fecaab5616232a.jpg" class="product-img">
+<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2025/FEBRUARY/24/pbeHdU3u_ffc96dacc22340d3b1fecaab5616232a.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">60% OFF</div>
 <div class="product-price">₹260</div>
@@ -198,7 +243,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/33997075/2025/5/7/60d1df38-880c-4385-8e63-661ca7ab441f1746595793473-ELLE-18-Im-Obsessed-Makeup-Kit--With-Pouch-9281746595792798-1.jpg" class="product-img">
+<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/33997075/2025/5/7/60d1df38-880c-4385-8e63-661ca7ab441f1746595793473-ELLE-18-Im-Obsessed-Makeup-Kit--With-Pouch-9281746595792798-1.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">68% OFF</div>
 <div class="product-price">₹699</div>
@@ -207,7 +252,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2025/APRIL/21/GDzYCAab_a549259d29274b729e75be237988c275.jpg" class="product-img">
+<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2025/APRIL/21/GDzYCAab_a549259d29274b729e75be237988c275.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">15%</div>
 <div class="product-price">₹595</div>
@@ -216,18 +261,19 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2026/JANUARY/30/Ar36JdQP_0fc9895aa8d74e82a884621b55f63e0f.jpg" class="product-img">
+<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2026/JANUARY/30/Ar36JdQP_0fc9895aa8d74e82a884621b55f63e0f.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">31%</div>
 <div class="product-price">₹206</div>
 <a href="https://myntr.it/MB1z5vl" class="view-btn">View Deal</a>
 </div>
 </div>
-  
+
 </div>
 </div>
-  
+
 <!-- FLIPKART -->
+
 <div class="glass-card">
 <div class="card-title">Flipkart Beauty</div>
 <div class="theme-divider-b"></div>
@@ -235,7 +281,7 @@ text-decoration:none;
 <div class="product-grid">
 
 <div class="product-card">
-<img src="https://images.pexels.com/photos/3373736/pexels-photo-3373736.jpeg" class="product-img">
+<img src="https://images.pexels.com/photos/3373736/pexels-photo-3373736.jpeg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">30% OFF</div>
 <div class="product-price">₹799</div>
@@ -244,7 +290,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://images.pexels.com/photos/301367/pexels-photo-301367.jpeg" class="product-img">
+<img src="https://images.pexels.com/photos/301367/pexels-photo-301367.jpeg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">25% OFF</div>
 <div class="product-price">₹899</div>
@@ -253,6 +299,25 @@ text-decoration:none;
 </div>
 
 </div>
+</div>
+
+</main>
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom-nav">
+<a href="index.html" class="nav-item">
+<span>🏠</span>Home
+</a>
+<a href="brands.html" class="nav-item">
+<span>🏷️</span>Brands
+</a>
+<a href="discover.html" class="nav-item">
+<span>🔎</span>Discover
+</a>
+<a href="https://www.nftraja.com/p/lady-glamour.html" class="nav-item">
+<span>📖</span>Guides
+</a>
 </div>
 
 </body>
