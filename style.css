@@ -1,6 +1,7 @@
-/* =================================================
-GLOBAL RESET
-================================================= */
+/* ==============================
+GLOBAL
+============================== */
+
 *{
 margin:0;
 padding:0;
@@ -20,9 +21,10 @@ overflow-x:hidden;
 }
 
 
-/* =================================================
+/* ==============================
 HEADER
-================================================= */
+============================== */
+
 .app-header{
 position:fixed;
 top:0;
@@ -68,9 +70,10 @@ border-radius:8px;
 }
 
 
-/* =================================================
-DRAWER MENU
-================================================= */
+/* ==============================
+DRAWER
+============================== */
+
 .drawer{
 position:fixed;
 top:0;
@@ -99,9 +102,10 @@ border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 
-/* =================================================
+/* ==============================
 DRAWER OVERLAY
-================================================= */
+============================== */
+
 .drawer-overlay{
 position:fixed;
 top:0;
@@ -118,9 +122,10 @@ display:block;
 }
 
 
-/* =================================================
-MAIN CONTENT
-================================================= */
+/* ==============================
+MAIN
+============================== */
+
 .main-content{
 padding:65px 8px 65px;
 max-width:1200px;
@@ -128,9 +133,10 @@ margin:auto;
 }
 
 
-/* =================================================
+/* ==============================
 GLASS CARD
-================================================= */
+============================== */
+
 .glass-card{
 border-radius:18px;
 padding:15px;
@@ -140,9 +146,10 @@ border:1.5px solid rgba(0,255,136,0.28);
 }
 
 
-/* =================================================
-TEXT ELEMENTS
-================================================= */
+/* ==============================
+TEXT
+============================== */
+
 .card-title{
 font-size:13px;
 font-weight:800;
@@ -158,9 +165,10 @@ text-align:center;
 }
 
 
-/* =================================================
+/* ==============================
 DIVIDER
-================================================= */
+============================== */
+
 .theme-divider-b{
 height:1px;
 margin:4px 0 6px;
@@ -168,9 +176,10 @@ background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent)
 }
 
 
-/* =================================================
+/* ==============================
 CATEGORY GRID
-================================================= */
+============================== */
+
 .category-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -182,9 +191,10 @@ align-items:start;
 }
 
 
-/* =================================================
+/* ==============================
 CATEGORY ICON
-================================================= */
+============================== */
+
 .category-icon{
 display:flex;
 flex-direction:column;
@@ -212,23 +222,21 @@ margin-top:6px;
 transition:color .25s ease;
 }
 
-
-/* =================================================
-CATEGORY TAP
-================================================= */
 .category-icon:active img{
 transform:scale(.94);
 }
 
 
-/* =================================================
-CATEGORY HOVER DESKTOP
-================================================= */
+/* ==============================
+CATEGORY HOVER
+============================== */
+
 @media (hover:hover){
 
 .category-icon:hover img{
 transform:translateY(-4px) scale(1.08);
 border:2px solid #00ff88;
+
 box-shadow:
 0 0 12px rgba(0,255,136,.35),
 0 6px 14px rgba(0,0,0,.6);
@@ -241,9 +249,10 @@ color:#00ff88;
 }
 
 
-/* =================================================
-CATEGORY DESKTOP GRID
-================================================= */
+/* ==============================
+DESKTOP CATEGORY GRID
+============================== */
+
 @media(min-width:768px){
 
 .category-grid{
@@ -258,9 +267,10 @@ height:80px;
 }
 
 
-/* =================================================
+/* ==============================
 GUIDE CARD
-================================================= */
+============================== */
+
 .guide-card{
 position:relative;
 border-radius:18px;
@@ -331,9 +341,22 @@ margin-bottom:10px;
 }
 
 
-/* =================================================
+/* ==============================
+BRAND WRAP
+============================== */
+
+.brand-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+justify-content:center;
+}
+
+
+/* ==============================
 BRAND STORE GRID
-================================================= */
+============================== */
+
 .brand-store-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -354,9 +377,10 @@ grid-template-columns:repeat(6,1fr);
 }
 
 
-/* =================================================
+/* ==============================
 BRAND STORE CARD
-================================================= */
+============================== */
+
 .brand-store-card{
 display:flex;
 flex-direction:column;
@@ -376,18 +400,22 @@ transform:scale(.98);
 }
 
 @media (hover:hover){
+
 .brand-store-card:hover{
 transform:translateY(-3px);
+
 box-shadow:
 0 0 16px rgba(0,255,136,.25),
 0 8px 22px rgba(0,0,0,.65);
 }
+
 }
 
 
-/* =================================================
+/* ==============================
 BRAND LOGO
-================================================= */
+============================== */
+
 .brand-thumb{
 width:70px;
 height:70px;
@@ -407,15 +435,21 @@ object-fit:contain;
 }
 
 
-/* =================================================
-BRAND TEXT
-================================================= */
+/* ==============================
+BRAND TITLE
+============================== */
+
 .brand-title{
 font-size:14px;
 font-weight:700;
 color:#00ff88;
 margin-bottom:6px;
 }
+
+
+/* ==============================
+BRAND DESCRIPTION
+============================== */
 
 .brand-desc{
 font-size:12px;
@@ -425,25 +459,35 @@ margin-bottom:10px;
 }
 
 
-/* =================================================
+/* ==============================
 BRAND BUTTON
-================================================= */
+============================== */
+
 .brand-open-btn{
 display:inline-flex;
 align-items:center;
 justify-content:center;
+
 padding:8px 14px;
+
 border-radius:999px;
+
 font-size:12px;
 font-weight:700;
+
 color:#fff;
+
 text-decoration:none;
+
 background:var(--chip-color);
+
 box-shadow:
 0 6px 16px rgba(0,0,0,.65),
 inset 0 2px 4px rgba(255,255,255,.45),
 inset 0 -4px 8px rgba(0,0,0,.6);
+
 border:1px solid rgba(255,255,255,.35);
+
 transition:transform .2s ease;
 }
 
@@ -451,19 +495,53 @@ transition:transform .2s ease;
 transform:scale(.95);
 }
 
-@media (hover:hover){
-.brand-open-btn:hover{
-transform:scale(1.05);
-box-shadow:
-0 0 14px rgba(0,255,136,.35),
-0 6px 16px rgba(0,0,0,.65);
+
+/* ==============================
+CUSTOM DROPDOWN
+============================== */
+
+.custom-dropdown{
+position:relative;
+width:100%;
 }
+
+.dropdown-selected{
+width:100%;
+padding:8px;
+border-radius:12px;
+border:1px solid rgba(0,255,136,0.28);
+background:rgba(255,255,255,0.06);
+color:#ffffff;
+font-size:14px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+}
+
+.dropdown-list{
+position:absolute;
+top:105%;
+left:0;
+right:0;
+background:#111;
+border-radius:12px;
+border:1px solid rgba(0,255,136,0.28);
+display:none;
+max-height:260px;
+overflow-y:auto;
+z-index:50;
+}
+
+.dropdown-list.active{
+display:block;
 }
 
 
-/* =================================================
+/* ==============================
 PRODUCT GRID
-================================================= */
+============================== */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -471,9 +549,10 @@ gap:6px;
 }
 
 
-/* =================================================
+/* ==============================
 PRODUCT IMAGE
-================================================= */
+============================== */
+
 .product-image{
 width:100%;
 aspect-ratio:1/1;
@@ -488,9 +567,10 @@ border:1px solid rgba(255,255,255,.1);
 }
 
 
-/* =================================================
+/* ==============================
 PRODUCT META
-================================================= */
+============================== */
+
 .product-meta{
 font-size:13px;
 text-align:center;
@@ -513,37 +593,16 @@ margin-bottom:5px;
 }
 
 
-/* =================================================
-GRID CARD SPACING
-================================================= */
-.grid .glass-card{
-padding:6px;
-}
+/* ==============================
+VIEW DEAL BUTTON
+============================== */
 
-.grid .card-title{
-font-size:12px;
-line-height:1.4;
-margin-bottom:4px;
-min-height:34px;
-}
-
-
-/* =================================================
-AMAZON DEAL BUTTON (SAFE FIX)
-================================================= */
-
-.view-btn,
-#hotDeals a{
-
+.view-btn{
 display:inline-block;
-
 padding:8px 16px;
-
 border-radius:999px;
-
 font-size:12px;
 font-weight:700;
-
 color:#ffffff;
 text-decoration:none;
 
@@ -557,33 +616,17 @@ inset 0 -4px 8px rgba(0,0,0,.6);
 border:1px solid rgba(255,255,255,.35);
 
 transition:transform .2s ease;
-
 }
 
-.view-btn:active,
-#hotDeals a:active{
+.view-btn:active{
 transform:scale(.95);
 }
 
-@media (hover:hover){
 
-.view-btn:hover,
-#hotDeals a:hover{
-
-transform:scale(1.05);
-
-box-shadow:
-0 0 14px rgba(255,170,0,.35),
-0 6px 16px rgba(0,0,0,.65);
-
-}
-
-}
-
-
-/* =================================================
+/* ==============================
 BOTTOM NAV
-================================================= */
+============================== */
+
 .bottom-nav{
 position:fixed;
 bottom:0;
@@ -614,9 +657,10 @@ font-size:14px;
 }
 
 
-/* =================================================
+/* ==============================
 CAROUSEL
-================================================= */
+============================== */
+
 .guide-carousel-wrap{
 position:relative;
 overflow:hidden;
@@ -654,9 +698,9 @@ scroll-snap-align:start;
 }
 
 
-/* =================================================
+/* ==============================
 RESPONSIVE
-================================================= */
+============================== */
 
 @media(max-width:768px){
 
