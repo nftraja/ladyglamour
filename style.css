@@ -7,12 +7,10 @@ padding:0;
 box-sizing:border-box;
 font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
-
 html{
 scroll-behavior:smooth;
 touch-action:manipulation;
 }
-
 body{
 background:linear-gradient(135deg,#0b0b0b,#151515);
 color:#00ff88;
@@ -22,7 +20,6 @@ overflow-x:hidden;
 /* ==============================
 HEADER
 ============================== */
-
 .app-header{
 position:fixed;
 top:0;
@@ -37,29 +34,25 @@ border-bottom:1px solid rgba(0,255,136,0.28);
 z-index:200;
 backdrop-filter:blur(12px);
 }
-
 .menu-btn{
 background:transparent;
 border:none;
 color:gold;
 font-size:25px;
-padding:7px;
+padding:7px 7px;
 cursor:pointer;
 }
-
 .logo{
 font-size:13px;
 color:gold;
 font-weight:700;
 letter-spacing:.5px;
 }
-
 .header-icons{
 display:flex;
 align-items:center;
 justify-content:center;
 }
-
 .header-icons img{
 width:38px;
 height:38px;
@@ -70,7 +63,6 @@ border-radius:8px;
 /* ==============================
 DRAWER
 ============================== */
-
 .drawer{
 position:fixed;
 top:0;
@@ -84,11 +76,9 @@ border-right:1px solid rgba(0,255,136,0.28);
 transition:left .3s ease;
 padding-top:15px;
 }
-
 .drawer.active{
 left:0;
 }
-
 .drawer a{
 display:block;
 padding:7px 14px;
@@ -101,7 +91,6 @@ border-bottom:1px solid rgba(255,255,255,.05);
 /* ==============================
 DRAWER OVERLAY
 ============================== */
-
 .drawer-overlay{
 position:fixed;
 top:0;
@@ -112,7 +101,6 @@ background:rgba(0,0,0,.65);
 z-index:250;
 display:none;
 }
-
 .drawer-overlay.active{
 display:block;
 }
@@ -120,7 +108,6 @@ display:block;
 /* ==============================
 MAIN
 ============================== */
-
 .main-content{
 padding:70px 12px 70px;
 max-width:1200px;
@@ -130,7 +117,6 @@ margin:auto;
 /* ==============================
 GLASS CARD
 ============================== */
-
 .glass-card{
 border-radius:18px;
 padding:15px;
@@ -142,7 +128,6 @@ border:1.5px solid rgba(0,255,136,0.28);
 /* ==============================
 TEXT
 ============================== */
-
 .card-title{
 font-size:13px;
 font-weight:800;
@@ -150,7 +135,6 @@ text-align:center;
 margin-bottom:6px;
 color:#ffffff;
 }
-
 .card-text{
 font-size:12.5px;
 line-height:1.6;
@@ -161,7 +145,6 @@ text-align:center;
 /* ==============================
 CATEGORY ICON GRID
 ============================== */
-
 .category-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -172,6 +155,9 @@ justify-items:center;
 align-items:start;
 }
 
+/* ==============================
+CATEGORY ICON
+============================== */
 .category-icon{
 display:flex;
 flex-direction:column;
@@ -181,7 +167,6 @@ text-decoration:none;
 color:#ffffff;
 width:100%;
 }
-
 .category-icon img{
 width:70px;
 height:70px;
@@ -190,7 +175,6 @@ object-fit:cover;
 border:2px solid rgba(255,255,255,0.15);
 background:#222;
 }
-
 .category-icon span{
 font-size:11px;
 margin-top:6px;
@@ -198,56 +182,211 @@ text-align:center;
 }
 
 /* ==============================
-GUIDE CAROUSEL
+DESKTOP GRID
 ============================== */
+@media(min-width:768px){
+.category-grid{
+grid-template-columns:repeat(8,1fr);
+}
+.category-icon img{
+width:80px;
+height:80px;
+}
+}
 
-.guide-carousel-wrap{
+.guide-card{
 position:relative;
-overflow:hidden;
-}
-
-.guide-carousel-title{
-font-size:14px;
-font-weight:700;
-color:gold;
-text-align:center;
-margin:5px 0;
-}
-
-.guide-carousel{
-display:flex;
-align-items:flex-start;
-gap:8px;
-overflow-x:auto;
-scroll-behavior:smooth;
-scroll-snap-type:x mandatory;
--webkit-overflow-scrolling:touch;
+border-radius:18px;
 padding:8px;
-min-height:150px;
+color:#fff;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+overflow:hidden;
+text-decoration:none;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+border:1px solid rgba(255,255,255,0.18);
 }
-
-.guide-carousel::-webkit-scrollbar{
+.guide-card::before{
+content:"";
+position:absolute;
+inset:0;
+background:var(--card-color);
+opacity:.25;
+z-index:0;
+}
+.guide-card::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:45%;
+background:linear-gradient(
+180deg,
+rgba(255,255,255,0.55),
+rgba(255,255,255,0.18),
+transparent
+);
+opacity:.35;
+pointer-events:none;
+}
+.guide-card span.gloss{
+position:absolute;
+top:-80%;
+left:-40%;
+width:60%;
+height:220%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.35),
+transparent
+);
+transform:rotate(25deg);
+opacity:0;
+transition:.6s;
+}
+.guide-card *{
+position:relative;
+z-index:2;
+}
+.guide-icon{
 display:none;
 }
-
-.guide-carousel .guide-card{
-flex:0 0 260px;
-width:260px;
-aspect-ratio:16/9;
-height:auto;
-scroll-snap-align:start;
+.guide-title{
+font-size:14px;
+font-weight:700;
+margin-left:10px;
+margin-bottom:10px;
 }
 
 /* ==============================
-GRID (Amazon products)
+DIVIDER
 ============================== */
+.theme-divider-b{
+height:1px;
+margin:10px 0;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
+}
 
+/* ==============================
+CHIP BUTTONS
+============================== */
+.brand-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+justify-content:center;
+}
+.brand{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:8px 12px;
+border-radius:999px;
+font-size:12px;
+font-weight:700;
+color:#fff;
+text-decoration:none;
+white-space:nowrap;
+background:var(--chip-color);
+box-shadow:
+0 6px 16px rgba(0,0,0,.65),
+inset 0 2px 4px rgba(255,255,255,.45),
+inset 0 -4px 8px rgba(0,0,0,.6);
+border:1px solid rgba(255,255,255,.35);
+text-shadow:0 1px 2px rgba(0,0,0,.9);
+}
+
+/* ==============================
+CATEGORY SELECT (AMAZON)
+============================== */
+.category-select{
+width:100%;
+padding:12px;
+border-radius:12px;
+border:1px solid rgba(0,255,136,0.28);
+background:rgba(255,255,255,0.06);
+color:#ffffff;
+font-size:14px;
+outline:none;
+appearance:none;
+cursor:pointer;
+}
+.category-select:focus{
+border:1px solid #00ff88;
+}
+.category-select option{
+background:#111;
+color:#ffffff;
+}
+
+/* ==============================
+CUSTOM MARKETPLACE DROPDOWN
+============================== */
+.custom-dropdown{
+position:relative;
+width:100%;
+}
+.dropdown-selected{
+width:100%;
+padding:8px;
+border-radius:12px;
+border:1px solid rgba(0,255,136,0.28);
+background:rgba(255,255,255,0.06);
+color:#ffffff;
+font-size:14px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+}
+.dropdown-arrow{
+font-size:16px;
+opacity:.8;
+}
+.dropdown-list{
+position:absolute;
+top:105%;
+left:0;
+right:0;
+background:#111;
+border-radius:12px;
+border:1px solid rgba(0,255,136,0.28);
+display:none;
+max-height:260px;
+overflow-y:auto;
+z-index:50;
+}
+.dropdown-list.active{
+display:block;
+}
+.dropdown-item{
+padding:10px;
+font-size:14px;
+color:#ffffff;
+border-bottom:1px solid rgba(255,255,255,.05);
+cursor:pointer;
+}
+.dropdown-item:hover{
+background:rgba(0,255,136,0.15);
+}
+
+/* ==============================
+GRID
+============================== */
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:8px;
 }
 
+/* ==============================
+PRODUCT IMAGE (16:9)
+============================== */
 .product-image{
 width:100%;
 aspect-ratio:16/9;
@@ -259,20 +398,21 @@ background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,.1);
 }
 
+/* ==============================
+PRODUCT META
+============================== */
 .product-meta{
 font-size:13px;
 text-align:center;
 margin-top:4px;
 color:#ffffff;
 }
-
 .product-price{
 font-size:14px;
 font-weight:700;
 color:#00ff88;
 margin-bottom:4px;
 }
-
 .product-discount{
 font-size:11px;
 color:#ff4b2b;
@@ -281,48 +421,21 @@ margin-bottom:4px;
 }
 
 /* ==============================
-CATEGORY PRODUCT PAGES
+CARD SPACING
 ============================== */
-
-.product-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-}
-
-.product-card{
-background:#111;
-border-radius:14px;
-overflow:hidden;
-border:1px solid rgba(255,255,255,0.08);
-}
-
-.product-img{
-width:100%;
-aspect-ratio:1/1.25;
-object-fit:cover;
-display:block;
-}
-
-.product-caption{
+.grid .glass-card{
 padding:10px;
-text-align:center;
 }
-
-.view-btn{
-display:inline-block;
-padding:6px 12px;
+.grid .card-title{
 font-size:12px;
-border-radius:20px;
-background:linear-gradient(135deg,#ff512f,#dd2476);
-color:#fff;
-text-decoration:none;
+line-height:1.4;
+margin-bottom:6px;
+min-height:36px;
 }
 
 /* ==============================
 BOTTOM NAV
 ============================== */
-
 .bottom-nav{
 position:fixed;
 bottom:0;
@@ -336,25 +449,145 @@ align-items:center;
 border-top:1px solid rgba(0,255,136,0.28);
 z-index:200;
 }
-
 .bottom-nav a{
 color:#00ff88;
 text-decoration:none;
 }
-
 .nav-item{
 text-align:center;
 font-size:14px;
 }
-
 .nav-item span{
 display:block;
 font-size:14px;
 }
 
 /* ==============================
+CAROUSEL
+============================== */
+.guide-carousel-wrap{
+position:relative;
+overflow:hidden;
+}
+.guide-carousel-title{
+font-size:14px;
+font-weight:700;
+color:gold;
+text-align:center;
+margin:5px 0;
+}
+.guide-carousel{
+display:flex;
+align-items:flex-start;
+gap:8px;
+overflow-x:auto;
+scroll-behavior:smooth;
+scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch;
+padding:8px 8px;
+min-height:150px;
+}
+.guide-carousel::-webkit-scrollbar{
+display:none;
+}
+.guide-carousel .guide-card{
+flex:0 0 260px;
+width:260px;
+aspect-ratio:16/9;
+height:auto;
+scroll-snap-align:start;
+}
+
+/* ==============================
+BRAND STORES GRID
+============================== */
+.brand-store-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-top:10px;
+}
+
+/* ==============================
+BRAND CARD
+============================== */
+.brand-store-card{
+display:flex;
+gap:10px;
+padding:16px;
+border-radius:14px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+box-shadow:0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* ==============================
+BRAND LOGO
+============================== */
+.brand-thumb{
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-shrink:0;
+}
+.brand-thumb img{
+max-width:100%;
+max-height:100%;
+object-fit:contain;
+}
+
+/* ==============================
+BRAND TEXT
+============================== */
+.brand-title{
+font-size:15px;
+font-weight:700;
+color:#ffffff;
+margin-bottom:6px;
+}
+.brand-desc{
+font-size:13px;
+color:#cccccc;
+line-height:1.4;
+margin-bottom:10px;
+}
+
+/* ==============================
+OPEN BRAND BUTTON
+============================== */
+.brand-open-btn{
+display:inline-block;
+padding:8px 14px;
+font-size:13px;
+border-radius:20px;
+text-decoration:none;
+color:#ffffff;
+background:linear-gradient(135deg,#ff512f,#dd2476);
+transition:.3s;
+}
+.brand-open-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 16px rgba(0,0,0,0.6);
+}
+
+/* ==============================
 RESPONSIVE
 ============================== */
+@media(max-width:768px){
+.brand-store-grid{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:768px){
+.guide-carousel .guide-card{
+flex:0 0 220px;
+width:220px;
+}
+}
 
 @media(max-width:600px){
 .grid{
@@ -365,17 +598,5 @@ grid-template-columns:repeat(2,1fr);
 @media(min-width:768px){
 .grid{
 grid-template-columns:repeat(4,1fr);
-}
-}
-
-@media(min-width:900px){
-.product-grid{
-grid-template-columns:repeat(4,1fr);
-}
-}
-
-@media(min-width:1200px){
-.product-grid{
-grid-template-columns:repeat(6,1fr);
 }
 }
