@@ -283,13 +283,13 @@ style="--chip-color:#444; cursor:pointer;">
 </div>
 
 <div class="bottom-nav">
-<a href="/index.html" class="nav-item">
+<a href="index.html" class="nav-item">
 <span>🏠</span>Home
 </a>
-<a href="/brands.html" class="nav-item">
+<a href="brands.html" class="nav-item">
 <span>🏷️</span>Brands
 </a>
-<a href="/discover.html" class="nav-item">
+<a href="discover.html" class="nav-item">
 <span>🔎</span>Discover
 </a>
 <a href="https://www.nftraja.com/p/lady-glamour.html" class="nav-item">
@@ -299,45 +299,107 @@ style="--chip-color:#444; cursor:pointer;">
 
 <script src="app.js"></script>
 
+<!-- SAFE NAVIGATION FIX -->
+<script>
+
+document.addEventListener("click",function(e){
+
+const link = e.target.closest("a");
+
+if(!link) return;
+
+const href = link.getAttribute("href");
+
+if(!href) return;
+
+if(
+href.startsWith("http") ||
+href.startsWith("javascript") ||
+href.startsWith("#")
+){
+return;
+}
+
+e.preventDefault();
+
+window.location.href = href;
+
+});
+
+</script>
+
+
 <!-- SERVICE WORKER REGISTER -->
 <script>
+
 if ('serviceWorker' in navigator) {
-navigator.serviceWorker.register('sw.js')
+
+navigator.serviceWorker.register('/sw.js')
+
 .then(function(registration) {
 console.log('Service Worker registered');
 })
+
 .catch(function(error) {
 console.log('Service Worker registration failed:', error);
 });
+
 }
+
 </script>
+
 
 <!-- INSTALL PROMPT SCRIPT -->
 <script>
+
 let deferredPrompt = null;
+
 window.addEventListener('beforeinstallprompt', (e) => {
+
 e.preventDefault();
+
 deferredPrompt = e;
+
 console.log("Install prompt available");
+
 });
+
 document.getElementById("installBtn").addEventListener("click", async function(e){
+
 e.preventDefault();
+
 if(!deferredPrompt){
+
 alert("Use your browser menu and tap 'Add to Home Screen' to install.");
+
 return;
+
 }
+
 deferredPrompt.prompt();
+
 const { outcome } = await deferredPrompt.userChoice;
+
 if(outcome === "accepted"){
+
 console.log("User installed app");
+
 }
+
 deferredPrompt = null;
+
 });
+
 window.addEventListener('appinstalled', () => {
+
 const popup = document.getElementById("installSuccess");
+
 popup.style.display="flex";
+
 popup.style.pointerEvents="auto";
+
 });
+
 </script>
 
 </body>
