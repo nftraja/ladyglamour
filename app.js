@@ -396,3 +396,19 @@ console.log("Brand JSON error",e);
 }
 
 loadBrands();
+
+/* ==============================
+GRID RENDER FIX (PWA LAYOUT FIX)
+============================== */
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.querySelectorAll(".product-grid").forEach(grid=>{
+grid.classList.add("grid-ready");
+});
+
+},50);
+
+});
