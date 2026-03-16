@@ -114,10 +114,6 @@ html+=productCard(p);
 
 grid.innerHTML=html;
 
-/* GRID REFLOW FIX */
-
-fixGridLayout();
-
 }
 
 
@@ -148,10 +144,6 @@ html+=productCard(p);
 grid.innerHTML=html;
 
 toggleDrawer();
-
-/* GRID REFLOW FIX */
-
-fixGridLayout();
 
 }
 catch(e){
@@ -224,27 +216,3 @@ console.log("Brand JSON error",e);
 }
 
 loadBrands();
-
-
-/* ==============================
-GRID REFLOW FIX
-Fix PWA / reopen / back bug
-============================== */
-
-function fixGridLayout(){
-
-document.querySelectorAll(".product-grid").forEach(grid=>{
-
-grid.style.display="none";
-
-grid.offsetHeight;
-
-grid.style.display="grid";
-
-});
-
-}
-
-window.addEventListener("load",fixGridLayout);
-
-window.addEventListener("pageshow",fixGridLayout);
