@@ -134,7 +134,7 @@ margin:auto;
 
 
 /* ==============================
-GLASS CARD
+GLASS CARD (3D DEPTH)
 ============================== */
 
 .glass-card{
@@ -143,6 +143,11 @@ padding:15px;
 margin-bottom:10px;
 background:rgba(255,255,255,0.04);
 border:1.5px solid rgba(0,255,136,0.28);
+backdrop-filter:blur(10px);
+
+box-shadow:
+0 10px 26px rgba(0,0,0,.8),
+inset 0 1px 1px rgba(255,255,255,.06);
 }
 
 
@@ -268,7 +273,7 @@ height:80px;
 
 
 /* ==============================
-GUIDE CARD
+GUIDE CARD (3D CAROUSEL)
 ============================== */
 
 .guide-card{
@@ -285,7 +290,12 @@ background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,0.18);
-transition:transform .25s ease;
+
+box-shadow:
+0 14px 34px rgba(0,0,0,.9),
+0 6px 14px rgba(0,0,0,.6);
+
+transition:transform .25s ease, box-shadow .25s ease;
 will-change:transform;
 }
 
@@ -296,8 +306,11 @@ transform:scale(.96);
 @media (hover:hover){
 
 .guide-card:hover{
-transform:scale(1.03);
-box-shadow:0 0 14px rgba(0,255,136,.35);
+transform:translateY(-6px) scale(1.03);
+
+box-shadow:
+0 0 14px rgba(0,255,136,.35),
+0 18px 38px rgba(0,0,0,.95);
 }
 
 }
@@ -378,7 +391,7 @@ grid-template-columns:repeat(6,1fr);
 
 
 /* ==============================
-BRAND STORE CARD
+BRAND STORE CARD (3D)
 ============================== */
 
 .brand-store-card{
@@ -391,7 +404,11 @@ border-radius:16px;
 background:rgba(255,255,255,0.04);
 border:1.5px solid rgba(0,255,136,0.28);
 backdrop-filter:blur(10px);
-box-shadow:0 6px 18px rgba(0,0,0,.6);
+
+box-shadow:
+0 12px 26px rgba(0,0,0,.85),
+inset 0 1px 1px rgba(255,255,255,.06);
+
 transition:transform .25s ease;
 }
 
@@ -402,11 +419,11 @@ transform:scale(.98);
 @media (hover:hover){
 
 .brand-store-card:hover{
-transform:translateY(-3px);
+transform:translateY(-4px);
 
 box-shadow:
 0 0 16px rgba(0,255,136,.25),
-0 8px 22px rgba(0,0,0,.65);
+0 12px 30px rgba(0,0,0,.9);
 }
 
 }
@@ -467,18 +484,12 @@ BRAND BUTTON
 display:inline-flex;
 align-items:center;
 justify-content:center;
-
 padding:8px 14px;
-
 border-radius:999px;
-
 font-size:12px;
 font-weight:700;
-
 color:#fff;
-
 text-decoration:none;
-
 background:var(--chip-color);
 
 box-shadow:
@@ -546,6 +557,12 @@ PRODUCT GRID
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:6px;
+}
+
+@media(min-width:768px){
+.grid{
+grid-template-columns:repeat(4,1fr);
+}
 }
 
 
@@ -724,5 +741,4 @@ grid-template-columns:repeat(2,1fr);
 .grid{
 grid-template-columns:repeat(4,1fr);
 }
-
 }
