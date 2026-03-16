@@ -7,15 +7,18 @@ padding:0;
 box-sizing:border-box;
 font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
+
 html{
 scroll-behavior:smooth;
 touch-action:manipulation;
 }
+
 body{
 background:linear-gradient(135deg,#0b0b0b,#151515);
 color:#00ff88;
 overflow-x:hidden;
 }
+
 
 /* ==============================
 HEADER
@@ -34,31 +37,36 @@ border-bottom:1px solid rgba(0,255,136,0.28);
 z-index:200;
 backdrop-filter:blur(12px);
 }
+
 .menu-btn{
 background:transparent;
 border:none;
 color:gold;
 font-size:25px;
-padding:7px 7px;
+padding:7px;
 cursor:pointer;
 }
+
 .logo{
 font-size:13px;
 color:gold;
 font-weight:700;
 letter-spacing:.5px;
 }
+
 .header-icons{
 display:flex;
 align-items:center;
 justify-content:center;
 }
+
 .header-icons img{
 width:38px;
 height:38px;
 object-fit:contain;
 border-radius:8px;
 }
+
 
 /* ==============================
 DRAWER
@@ -76,9 +84,11 @@ border-right:1px solid rgba(0,255,136,0.28);
 transition:left .3s ease;
 padding-top:15px;
 }
+
 .drawer.active{
 left:0;
 }
+
 .drawer a{
 display:block;
 padding:7px 14px;
@@ -87,6 +97,7 @@ text-decoration:none;
 font-size:13px;
 border-bottom:1px solid rgba(255,255,255,.05);
 }
+
 
 /* ==============================
 DRAWER OVERLAY
@@ -101,9 +112,11 @@ background:rgba(0,0,0,.65);
 z-index:250;
 display:none;
 }
+
 .drawer-overlay.active{
 display:block;
 }
+
 
 /* ==============================
 MAIN
@@ -114,16 +127,18 @@ max-width:1200px;
 margin:auto;
 }
 
+
 /* ==============================
 GLASS CARD
 ============================== */
 .glass-card{
 border-radius:18px;
-padding:15px;
+padding:14px;
 margin-bottom:10px;
 background:rgba(255,255,255,0.04);
 border:1.5px solid rgba(0,255,136,0.28);
 }
+
 
 /* ==============================
 TEXT
@@ -135,6 +150,7 @@ text-align:center;
 margin-bottom:6px;
 color:#ffffff;
 }
+
 .card-text{
 font-size:12.5px;
 line-height:1.6;
@@ -142,17 +158,19 @@ color:#ffffff;
 text-align:center;
 }
 
+
 /* ==============================
-CATEGORY ICON GRID
+CATEGORY GRID
 ============================== */
 .category-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:8px;
-margin-top:12px;
+margin-top:10px;
 justify-items:center;
 align-items:start;
 }
+
 
 /* ==============================
 CATEGORY ICON
@@ -165,7 +183,7 @@ text-align:center;
 text-decoration:none;
 color:#ffffff;
 width:100%;
-transition:all .3s ease;
+transition:transform .25s ease;
 }
 
 .category-icon img{
@@ -175,19 +193,27 @@ border-radius:50%;
 object-fit:cover;
 border:2px solid rgba(255,255,255,0.15);
 background:#222;
-transition:all .35s ease;
+transition:all .3s ease;
 }
 
 .category-icon span{
 font-size:11px;
 margin-top:6px;
-text-align:center;
-transition:color .3s ease;
 }
 
+
 /* ==============================
-CATEGORY ICON HOVER
+CATEGORY TAP
 ============================== */
+.category-icon:active img{
+transform:scale(.95);
+}
+
+
+/* ==============================
+CATEGORY HOVER
+============================== */
+@media (hover:hover){
 
 .category-icon:hover img{
 transform:scale(1.08);
@@ -199,19 +225,29 @@ box-shadow:0 0 12px rgba(0,255,136,.35);
 color:#00ff88;
 }
 
+}
+
+
 /* ==============================
-DESKTOP GRID
+DESKTOP CATEGORY GRID
 ============================== */
 @media(min-width:768px){
+
 .category-grid{
 grid-template-columns:repeat(8,1fr);
 }
+
 .category-icon img{
 width:80px;
 height:80px;
 }
+
 }
 
+
+/* ==============================
+GUIDE CARD
+============================== */
 .guide-card{
 position:relative;
 border-radius:18px;
@@ -226,7 +262,32 @@ background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,0.18);
+transition:transform .25s ease;
+will-change:transform;
 }
+
+
+/* ==============================
+GUIDE TAP
+============================== */
+.guide-card:active{
+transform:scale(.96);
+}
+
+
+/* ==============================
+GUIDE HOVER
+============================== */
+@media (hover:hover){
+
+.guide-card:hover{
+transform:scale(1.03);
+box-shadow:0 0 14px rgba(0,255,136,.35);
+}
+
+}
+
+
 .guide-card::before{
 content:"";
 position:absolute;
@@ -235,6 +296,7 @@ background:var(--card-color);
 opacity:.25;
 z-index:0;
 }
+
 .guide-card::after{
 content:"";
 position:absolute;
@@ -251,29 +313,12 @@ transparent
 opacity:.35;
 pointer-events:none;
 }
-.guide-card span.gloss{
-position:absolute;
-top:-80%;
-left:-40%;
-width:60%;
-height:220%;
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,0.35),
-transparent
-);
-transform:rotate(25deg);
-opacity:0;
-transition:.6s;
-}
+
 .guide-card *{
 position:relative;
 z-index:2;
 }
-.guide-icon{
-display:none;
-}
+
 .guide-title{
 font-size:14px;
 font-weight:700;
@@ -281,17 +326,19 @@ margin-left:10px;
 margin-bottom:10px;
 }
 
+
 /* ==============================
 DIVIDER
 ============================== */
 .theme-divider-b{
 height:1px;
-margin:6px 6px;
+margin:6px 0;
 background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
 }
 
+
 /* ==============================
-CHIP BUTTONS
+CHIP BUTTON
 ============================== */
 .brand-wrap{
 display:flex;
@@ -299,6 +346,7 @@ flex-wrap:wrap;
 gap:8px;
 justify-content:center;
 }
+
 .brand{
 display:inline-flex;
 align-items:center;
@@ -316,16 +364,33 @@ box-shadow:
 inset 0 2px 4px rgba(255,255,255,.45),
 inset 0 -4px 8px rgba(0,0,0,.6);
 border:1px solid rgba(255,255,255,.35);
-text-shadow:0 1px 2px rgba(0,0,0,.9);
+transition:transform .2s ease;
 }
 
+.brand:active{
+transform:scale(.95);
+}
+
+@media (hover:hover){
+
+.brand:hover{
+transform:scale(1.05);
+box-shadow:
+0 0 14px rgba(0,255,136,.35),
+0 6px 16px rgba(0,0,0,.65);
+}
+
+}
+
+
 /* ==============================
-CUSTOM MARKETPLACE DROPDOWN
+CUSTOM DROPDOWN
 ============================== */
 .custom-dropdown{
 position:relative;
 width:100%;
 }
+
 .dropdown-selected{
 width:100%;
 padding:8px;
@@ -339,10 +404,7 @@ justify-content:space-between;
 align-items:center;
 cursor:pointer;
 }
-.dropdown-arrow{
-font-size:16px;
-opacity:.8;
-}
+
 .dropdown-list{
 position:absolute;
 top:105%;
@@ -356,9 +418,11 @@ max-height:260px;
 overflow-y:auto;
 z-index:50;
 }
+
 .dropdown-list.active{
 display:block;
 }
+
 .dropdown-item{
 padding:10px;
 font-size:14px;
@@ -366,12 +430,14 @@ color:#ffffff;
 border-bottom:1px solid rgba(255,255,255,.05);
 cursor:pointer;
 }
+
 .dropdown-item:hover{
 background:rgba(0,255,136,0.15);
 }
 
+
 /* ==============================
-GRID
+PRODUCT GRID
 ============================== */
 .grid{
 display:grid;
@@ -379,8 +445,9 @@ grid-template-columns:repeat(2,1fr);
 gap:6px;
 }
 
+
 /* ==============================
-PRODUCT IMAGE (1:1)
+PRODUCT IMAGE
 ============================== */
 .product-image{
 width:100%;
@@ -393,28 +460,21 @@ background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,.1);
 }
 
-/* ==============================
-PRODUCT META
-============================== */
-.product-meta{
-font-size:13px;
-text-align:center;
-margin-top:4px;
-color:#ffffff;
-}
 
 /* ==============================
-CARD SPACING
+GRID CARD SPACING
 ============================== */
 .grid .glass-card{
 padding:10px;
 }
+
 .grid .card-title{
 font-size:12px;
 line-height:1.4;
 margin-bottom:6px;
 min-height:36px;
 }
+
 
 /* ==============================
 BOTTOM NAV
@@ -432,18 +492,22 @@ align-items:center;
 border-top:1px solid rgba(0,255,136,0.28);
 z-index:200;
 }
+
 .bottom-nav a{
 color:#00ff88;
 text-decoration:none;
 }
+
 .nav-item{
 text-align:center;
 font-size:14px;
 }
+
 .nav-item span{
 display:block;
 font-size:14px;
 }
+
 
 /* ==============================
 CAROUSEL
@@ -452,6 +516,7 @@ CAROUSEL
 position:relative;
 overflow:hidden;
 }
+
 .guide-carousel-title{
 font-size:14px;
 font-weight:700;
@@ -459,6 +524,7 @@ color:gold;
 text-align:center;
 margin:5px 0;
 }
+
 .guide-carousel{
 display:flex;
 align-items:flex-start;
@@ -467,119 +533,46 @@ overflow-x:auto;
 scroll-behavior:smooth;
 scroll-snap-type:x mandatory;
 -webkit-overflow-scrolling:touch;
-padding:8px 8px;
+padding:8px;
 min-height:150px;
 }
+
 .guide-carousel::-webkit-scrollbar{
 display:none;
 }
+
 .guide-carousel .guide-card{
 flex:0 0 260px;
 width:260px;
 aspect-ratio:16/9;
-height:auto;
 scroll-snap-align:start;
 }
 
-/* ==============================
-BRAND STORES GRID
-============================== */
-.brand-store-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
-margin-top:10px;
-}
-
-/* ==============================
-BRAND CARD
-============================== */
-.brand-store-card{
-display:flex;
-gap:10px;
-padding:16px;
-border-radius:14px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-box-shadow:0 6px 18px rgba(0,0,0,0.6);
-}
-
-/* ==============================
-BRAND LOGO
-============================== */
-.brand-thumb{
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-shrink:0;
-}
-.brand-thumb img{
-max-width:100%;
-max-height:100%;
-object-fit:contain;
-}
-
-/* ==============================
-BRAND TEXT
-============================== */
-.brand-title{
-font-size:15px;
-font-weight:700;
-color:#ffffff;
-margin-bottom:6px;
-}
-.brand-desc{
-font-size:13px;
-color:#cccccc;
-line-height:1.4;
-margin-bottom:10px;
-}
-
-/* ==============================
-OPEN BRAND BUTTON
-============================== */
-.brand-open-btn{
-display:inline-block;
-padding:8px 14px;
-font-size:13px;
-border-radius:20px;
-text-decoration:none;
-color:#ffffff;
-background:linear-gradient(135deg,#ff512f,#dd2476);
-transition:.3s;
-}
-.brand-open-btn:hover{
-transform:translateY(-2px);
-box-shadow:0 6px 16px rgba(0,0,0,0.6);
-}
 
 /* ==============================
 RESPONSIVE
 ============================== */
 @media(max-width:768px){
-.brand-store-grid{
-grid-template-columns:1fr;
-}
-}
 
-@media(max-width:768px){
 .guide-carousel .guide-card{
 flex:0 0 220px;
 width:220px;
 }
+
 }
 
 @media(max-width:600px){
+
 .grid{
 grid-template-columns:repeat(2,1fr);
 }
+
 }
 
 @media(min-width:768px){
+
 .grid{
 grid-template-columns:repeat(4,1fr);
 }
+
 }
