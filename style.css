@@ -1,6 +1,6 @@
-/* ==============================
-GLOBAL
-============================== */
+/* =================================================
+GLOBAL RESET
+================================================= */
 *{
 margin:0;
 padding:0;
@@ -19,9 +19,10 @@ color:#00ff88;
 overflow-x:hidden;
 }
 
-/* ==============================
+
+/* =================================================
 HEADER
-============================== */
+================================================= */
 .app-header{
 position:fixed;
 top:0;
@@ -53,6 +54,12 @@ font-weight:700;
 letter-spacing:.5px;
 }
 
+.header-icons{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
 .header-icons img{
 width:38px;
 height:38px;
@@ -60,9 +67,10 @@ object-fit:contain;
 border-radius:8px;
 }
 
-/* ==============================
-DRAWER
-============================== */
+
+/* =================================================
+DRAWER MENU
+================================================= */
 .drawer{
 position:fixed;
 top:0;
@@ -90,9 +98,10 @@ font-size:13px;
 border-bottom:1px solid rgba(255,255,255,.05);
 }
 
-/* ==============================
+
+/* =================================================
 DRAWER OVERLAY
-============================== */
+================================================= */
 .drawer-overlay{
 position:fixed;
 top:0;
@@ -108,45 +117,32 @@ display:none;
 display:block;
 }
 
-/* ==============================
-MAIN
-============================== */
+
+/* =================================================
+MAIN CONTENT
+================================================= */
 .main-content{
 padding:65px 8px 65px;
 max-width:1200px;
 margin:auto;
 }
 
-/* ==============================
+
+/* =================================================
 GLASS CARD
-============================== */
+================================================= */
 .glass-card{
 border-radius:18px;
 padding:15px;
 margin-bottom:10px;
-
 background:rgba(255,255,255,0.04);
 border:1.5px solid rgba(0,255,136,0.28);
-
-box-shadow:
-0 6px 18px rgba(0,0,0,.6),
-inset 0 1px 0 rgba(255,255,255,.05);
-
-transition:transform .25s ease, box-shadow .25s ease;
 }
 
-@media(hover:hover){
-.glass-card:hover{
-transform:translateY(-4px);
-box-shadow:
-0 0 16px rgba(0,255,136,.25),
-0 10px 24px rgba(0,0,0,.75);
-}
-}
 
-/* ==============================
-TEXT
-============================== */
+/* =================================================
+TEXT ELEMENTS
+================================================= */
 .card-title{
 font-size:13px;
 font-weight:800;
@@ -161,18 +157,20 @@ color:#ffffff;
 text-align:center;
 }
 
-/* ==============================
+
+/* =================================================
 DIVIDER
-============================== */
+================================================= */
 .theme-divider-b{
 height:1px;
 margin:4px 0 6px;
 background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
 }
 
-/* ==============================
+
+/* =================================================
 CATEGORY GRID
-============================== */
+================================================= */
 .category-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -180,8 +178,13 @@ gap:8px;
 margin-top:12px;
 margin-bottom:12px;
 justify-items:center;
+align-items:start;
 }
 
+
+/* =================================================
+CATEGORY ICON
+================================================= */
 .category-icon{
 display:flex;
 flex-direction:column;
@@ -206,9 +209,23 @@ transition:all .35s ease;
 .category-icon span{
 font-size:11px;
 margin-top:6px;
+transition:color .25s ease;
 }
 
+
+/* =================================================
+CATEGORY TAP
+================================================= */
+.category-icon:active img{
+transform:scale(.94);
+}
+
+
+/* =================================================
+CATEGORY HOVER DESKTOP
+================================================= */
 @media (hover:hover){
+
 .category-icon:hover img{
 transform:translateY(-4px) scale(1.08);
 border:2px solid #00ff88;
@@ -216,58 +233,247 @@ box-shadow:
 0 0 12px rgba(0,255,136,.35),
 0 6px 14px rgba(0,0,0,.6);
 }
+
+.category-icon:hover span{
+color:#00ff88;
 }
 
-/* ==============================
-CUSTOM DROPDOWN
-============================== */
-.custom-dropdown{
+}
+
+
+/* =================================================
+CATEGORY DESKTOP GRID
+================================================= */
+@media(min-width:768px){
+
+.category-grid{
+grid-template-columns:repeat(8,1fr);
+}
+
+.category-icon img{
+width:80px;
+height:80px;
+}
+
+}
+
+
+/* =================================================
+GUIDE CARD
+================================================= */
+.guide-card{
 position:relative;
-width:100%;
-}
-
-.dropdown-selected{
-width:100%;
-padding:10px;
-border-radius:12px;
-border:1px solid rgba(0,255,136,0.28);
-background:rgba(255,255,255,0.06);
-color:#ffffff;
+border-radius:18px;
+padding:8px;
+color:#fff;
 display:flex;
-justify-content:space-between;
-cursor:pointer;
+flex-direction:column;
+justify-content:flex-end;
+overflow:hidden;
+text-decoration:none;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+border:1px solid rgba(255,255,255,0.18);
+transition:transform .25s ease;
+will-change:transform;
 }
 
-.dropdown-list{
+.guide-card:active{
+transform:scale(.96);
+}
+
+@media (hover:hover){
+
+.guide-card:hover{
+transform:scale(1.03);
+box-shadow:0 0 14px rgba(0,255,136,.35);
+}
+
+}
+
+.guide-card::before{
+content:"";
 position:absolute;
-top:105%;
+inset:0;
+background:var(--card-color);
+opacity:.25;
+z-index:0;
+}
+
+.guide-card::after{
+content:"";
+position:absolute;
+top:0;
 left:0;
 right:0;
-background:#111;
-border-radius:12px;
-border:1px solid rgba(0,255,136,0.28);
-display:none;
-max-height:260px;
-overflow-y:auto;
-z-index:50;
+height:45%;
+background:linear-gradient(
+180deg,
+rgba(255,255,255,0.55),
+rgba(255,255,255,0.18),
+transparent
+);
+opacity:.35;
+pointer-events:none;
 }
 
-.dropdown-list.active{
-display:block;
+.guide-card *{
+position:relative;
+z-index:2;
 }
 
-/* ==============================
+.guide-title{
+font-size:14px;
+font-weight:700;
+margin-left:10px;
+margin-bottom:10px;
+}
+
+
+/* =================================================
+BRAND STORE GRID
+================================================= */
+.brand-store-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+margin-top:12px;
+}
+
+@media(min-width:768px){
+.brand-store-grid{
+grid-template-columns:repeat(3,1fr);
+}
+}
+
+@media(min-width:1200px){
+.brand-store-grid{
+grid-template-columns:repeat(6,1fr);
+}
+}
+
+
+/* =================================================
+BRAND STORE CARD
+================================================= */
+.brand-store-card{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+padding:14px;
+border-radius:16px;
+background:rgba(255,255,255,0.04);
+border:1.5px solid rgba(0,255,136,0.28);
+backdrop-filter:blur(10px);
+box-shadow:0 6px 18px rgba(0,0,0,.6);
+transition:transform .25s ease;
+}
+
+.brand-store-card:active{
+transform:scale(.98);
+}
+
+@media (hover:hover){
+.brand-store-card:hover{
+transform:translateY(-3px);
+box-shadow:
+0 0 16px rgba(0,255,136,.25),
+0 8px 22px rgba(0,0,0,.65);
+}
+}
+
+
+/* =================================================
+BRAND LOGO
+================================================= */
+.brand-thumb{
+width:70px;
+height:70px;
+border-radius:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#fff;
+margin-bottom:8px;
+padding:6px;
+}
+
+.brand-thumb img{
+max-width:100%;
+max-height:100%;
+object-fit:contain;
+}
+
+
+/* =================================================
+BRAND TEXT
+================================================= */
+.brand-title{
+font-size:14px;
+font-weight:700;
+color:#00ff88;
+margin-bottom:6px;
+}
+
+.brand-desc{
+font-size:12px;
+color:#ffffff;
+line-height:1.5;
+margin-bottom:10px;
+}
+
+
+/* =================================================
+BRAND BUTTON
+================================================= */
+.brand-open-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:8px 14px;
+border-radius:999px;
+font-size:12px;
+font-weight:700;
+color:#fff;
+text-decoration:none;
+background:var(--chip-color);
+box-shadow:
+0 6px 16px rgba(0,0,0,.65),
+inset 0 2px 4px rgba(255,255,255,.45),
+inset 0 -4px 8px rgba(0,0,0,.6);
+border:1px solid rgba(255,255,255,.35);
+transition:transform .2s ease;
+}
+
+.brand-open-btn:active{
+transform:scale(.95);
+}
+
+@media (hover:hover){
+.brand-open-btn:hover{
+transform:scale(1.05);
+box-shadow:
+0 0 14px rgba(0,255,136,.35),
+0 6px 16px rgba(0,0,0,.65);
+}
+}
+
+
+/* =================================================
 PRODUCT GRID
-============================== */
+================================================= */
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:6px;
 }
 
-/* ==============================
+
+/* =================================================
 PRODUCT IMAGE
-============================== */
+================================================= */
 .product-image{
 width:100%;
 aspect-ratio:1/1;
@@ -281,9 +487,10 @@ background-repeat:no-repeat;
 border:1px solid rgba(255,255,255,.1);
 }
 
-/* ==============================
+
+/* =================================================
 PRODUCT META
-============================== */
+================================================= */
 .product-meta{
 font-size:13px;
 text-align:center;
@@ -295,21 +502,40 @@ color:#ffffff;
 font-size:13.5px;
 font-weight:700;
 color:#00ff88;
+margin-bottom:1px;
 }
 
 .product-discount{
 font-size:11px;
 color:#ff4b2b;
 font-weight:700;
+margin-bottom:5px;
 }
 
-/* ==============================
-VIEW DEAL BUTTON
-============================== */
-.view-btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
+
+/* =================================================
+GRID CARD SPACING
+================================================= */
+.grid .glass-card{
+padding:6px;
+}
+
+.grid .card-title{
+font-size:12px;
+line-height:1.4;
+margin-bottom:4px;
+min-height:34px;
+}
+
+
+/* =================================================
+AMAZON DEAL BUTTON (SAFE FIX)
+================================================= */
+
+.view-btn,
+#hotDeals a{
+
+display:inline-block;
 
 padding:8px 16px;
 
@@ -331,52 +557,33 @@ inset 0 -4px 8px rgba(0,0,0,.6);
 border:1px solid rgba(255,255,255,.35);
 
 transition:transform .2s ease;
+
 }
 
-.view-btn:active{
+.view-btn:active,
+#hotDeals a:active{
 transform:scale(.95);
 }
 
-/* ==============================
-CAROUSEL
-============================== */
-.guide-carousel{
-display:flex;
-gap:8px;
-overflow-x:auto;
-scroll-behavior:smooth;
-scroll-snap-type:x mandatory;
-padding:8px;
-}
+@media (hover:hover){
 
-.guide-carousel::-webkit-scrollbar{
-display:none;
-}
+.view-btn:hover,
+#hotDeals a:hover{
 
-.guide-card{
-flex:0 0 260px;
-width:260px;
-aspect-ratio:16/9;
-border-radius:18px;
-overflow:hidden;
+transform:scale(1.05);
 
-border:1px solid rgba(255,255,255,0.18);
-
-transition:transform .25s ease, box-shadow .25s ease;
-}
-
-@media(hover:hover){
-.guide-card:hover{
-transform:scale(1.03);
 box-shadow:
-0 0 14px rgba(0,255,136,.35),
-0 10px 24px rgba(0,0,0,.7);
-}
+0 0 14px rgba(255,170,0,.35),
+0 6px 16px rgba(0,0,0,.65);
+
 }
 
-/* ==============================
+}
+
+
+/* =================================================
 BOTTOM NAV
-============================== */
+================================================= */
 .bottom-nav{
 position:fixed;
 bottom:0;
@@ -406,15 +613,72 @@ display:block;
 font-size:14px;
 }
 
-/* ==============================
+
+/* =================================================
+CAROUSEL
+================================================= */
+.guide-carousel-wrap{
+position:relative;
+overflow:hidden;
+}
+
+.guide-carousel-title{
+font-size:14px;
+font-weight:700;
+color:gold;
+text-align:center;
+margin:5px 0;
+}
+
+.guide-carousel{
+display:flex;
+align-items:flex-start;
+gap:8px;
+overflow-x:auto;
+scroll-behavior:smooth;
+scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch;
+padding:8px;
+min-height:150px;
+}
+
+.guide-carousel::-webkit-scrollbar{
+display:none;
+}
+
+.guide-carousel .guide-card{
+flex:0 0 260px;
+width:260px;
+aspect-ratio:16/9;
+scroll-snap-align:start;
+}
+
+
+/* =================================================
 RESPONSIVE
-============================== */
+================================================= */
+
+@media(max-width:768px){
+
+.guide-carousel .guide-card{
+flex:0 0 220px;
+width:220px;
+}
+
+}
+
+@media(max-width:600px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
 @media(min-width:768px){
+
 .grid{
 grid-template-columns:repeat(4,1fr);
 }
 
-.category-grid{
-grid-template-columns:repeat(8,1fr);
-}
 }
