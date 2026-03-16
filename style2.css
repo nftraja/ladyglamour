@@ -33,6 +33,7 @@ padding:0 18px;
 border-bottom:1px solid rgba(0,255,136,0.28);
 z-index:200;
 backdrop-filter:blur(12px);
+background:rgba(10,10,10,.75);
 }
 
 .menu-btn{
@@ -174,13 +175,6 @@ PRODUCT GRID
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:12px;
-
-opacity:0;
-transition:opacity .2s ease;
-}
-
-.product-grid.grid-ready{
-opacity:1;
 }
 
 
@@ -212,6 +206,7 @@ PRODUCT IMAGE
 
 .product-img{
 width:100%;
+height:auto;
 aspect-ratio:1/1.25;
 object-fit:cover;
 display:block;
