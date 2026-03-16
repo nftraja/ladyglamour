@@ -334,6 +334,39 @@ justify-content:center;
 }
 
 /* ==============================
+BRAND STORE GRID
+============================== */
+.brand-store-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:12px;
+}
+
+/* ==============================
+TABLET GRID
+============================== */
+@media(min-width:768px){
+
+.brand-store-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+/* ==============================
+DESKTOP GRID
+============================== */
+@media(min-width:1200px){
+
+.brand-store-grid{
+grid-template-columns:repeat(6,1fr);
+}
+
+}
+
+
+/* ==============================
 BRAND STORE CARD
 ============================== */
 .brand-store-card{
@@ -426,6 +459,7 @@ line-height:1.5;
 margin-bottom:6px;
 }
 
+
 /* ==============================
 BRAND OPEN BUTTON
 ============================== */
@@ -433,23 +467,19 @@ BRAND OPEN BUTTON
 display:inline-flex;
 align-items:center;
 justify-content:center;
-padding:8px 12px;
+padding:8px 14px;
 border-radius:999px;
 font-size:12px;
 font-weight:700;
 color:#fff;
 text-decoration:none;
 white-space:nowrap;
-
 background:var(--chip-color);
-
 box-shadow:
 0 6px 16px rgba(0,0,0,.65),
 inset 0 2px 4px rgba(255,255,255,.45),
 inset 0 -4px 8px rgba(0,0,0,.6);
-
 border:1px solid rgba(255,255,255,.35);
-
 transition:transform .2s ease;
 }
 
