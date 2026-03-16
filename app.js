@@ -224,23 +224,26 @@ html += `
 
 <div class="brand-thumb">
 
-<img
+<img 
+data-domain="${b.domain}"
 loading="lazy"
-decoding="async"
-src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}"
 alt="${b.name}"
-onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/${b.domain}.ico';this.onerror=function(){this.src='images/logo.png';};">
+class="brand-icon">
+
 </div>
 
-<div class="brand-info">
+<div class="brand-content">
 
 <div class="brand-title">${b.name}</div>
 
 <p class="brand-desc">${b.description}</p>
 
-<a href="${b.link}" target="_blank" class="brand-open-btn"
-style="--chip-color:${b.color}">
+<a href="${b.link}" target="_blank"
+class="brand-open-btn"
+style="--chip-color:linear-gradient(135deg,#ff512f,#dd2476);">
+
 ${b.button} →
+
 </a>
 
 </div>
@@ -253,7 +256,10 @@ ${b.button} →
 
 grid.innerHTML = html;
 
+loadBrandIcons();
+
 }
+
 catch(e){
 
 console.log("Brand JSON error",e);
@@ -261,6 +267,42 @@ console.log("Brand JSON error",e);
 }
 
 }
+
+
+
+/* ==============================
+LAZY FAVICON LOADER
+============================== */
+
+function loadBrandIcons(){
+
+let icons = document.querySelectorAll(".brand-icon");
+
+icons.forEach(img=>{
+
+let domain = img.dataset.domain;
+
+let google = `https://www.google.com/s2/favicons?sz=128&domain=${domain}`;
+let duck = `https://icons.duckduckgo.com/ip3/${domain}.ico`;
+
+img.src = google;
+
+img.onerror = function(){
+
+this.onerror = function(){
+
+this.src="images/logo.png";
+
+};
+
+this.src = duck;
+
+};
+
+});
+
+}
+
 
 loadBrands();
 
