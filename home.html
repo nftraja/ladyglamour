@@ -8,132 +8,47 @@
 
 <title>LadyGlamour Home Deals</title>
 
-<style>
+<link rel="stylesheet" href="style2.css">
 
-/* GLOBAL */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#0b0b0b,#151515);
-color:#fff;
-padding:20px;
-}
-
-/* CARD */
-
-.glass-card{
-border-radius:18px;
-padding:15px;
-margin-bottom:18px;
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-}
-
-/* TITLE */
-
-.card-title{
-font-size:14px;
-font-weight:700;
-text-align:center;
-margin-bottom:10px;
-}
-
-/* DIVIDER */
-
-.theme-divider-b{
-height:1px;
-margin:8px 0 14px;
-background:linear-gradient(90deg,transparent,#ffffff80,transparent);
-}
-
-/* GRID */
-
-.product-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-}
-
-@media(min-width:900px){
-.product-grid{
-grid-template-columns:repeat(6,1fr);
-}
-}
-
-@media(min-width:1200px){
-.product-grid{
-grid-template-columns:repeat(8,1fr);
-}
-}
-
-/* PRODUCT CARD */
-
-.product-card{
-background:#111;
-border-radius:14px;
-overflow:hidden;
-border:1px solid rgba(255,255,255,0.08);
-}
-
-/* IMAGE */
-
-.product-img{
-width:100%;
-aspect-ratio:1/1.25;
-object-fit:cover;
-display:block;
-}
-
-/* CAPTION */
-
-.product-caption{
-padding:10px;
-text-align:center;
-}
-
-/* DISCOUNT */
-
-.product-discount{
-display:inline-block;
-background:#ffd700;
-color:#000;
-font-size:11px;
-font-weight:700;
-padding:3px 6px;
-border-radius:6px;
-margin-bottom:6px;
-}
-
-/* PRICE */
-
-.product-price{
-font-size:14px;
-font-weight:700;
-color:#00ff88;
-margin-bottom:6px;
-}
-
-/* BUTTON */
-
-.view-btn{
-display:inline-block;
-padding:6px 12px;
-font-size:12px;
-border-radius:20px;
-background:linear-gradient(135deg,#ff512f,#dd2476);
-color:#fff;
-text-decoration:none;
-}
-</style>
 </head>
 
 <body>
+
+<!-- DRAWER OVERLAY -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- DRAWER MENU -->
+<div class="drawer" id="drawer">
+
+<button class="menu-btn" onclick="toggleDrawer()">← Back</button>
+
+<a href="index.html">Women Fashion</a>
+<a href="footwear.html">Footwear</a>
+<a href="watch.html">Watches</a>
+<a href="jewellery.html">Jewellery</a>
+<a href="beauty.html">Makeup</a>
+<a href="beauty.html">Skincare</a>
+<a href="perfume.html">Perfumes</a>
+<a href="wallet.html">Wallets</a>
+<a href="watch.html">Sunglasses</a>
+<a href="travel.html">Travel Bags</a>
+<a href="giftsets.html">Gift Sets</a>
+<a href="accessories.html">Fashion Accessories</a>
+<a href="gadget.html">Phone Accessories</a>
+<a href="haircare.html">Hair Care</a>
+
+</div>
+
+<!-- HEADER -->
+<header class="app-header">
+<button class="menu-btn" onclick="toggleDrawer()">☰</button>
+<div class="logo">🛍 LadyGlamour</div>
+<div class="header-icons">
+<img src="images/logo.png" alt="logo">
+</div>
+</header>
+
+<main class="main-content">
 
 <!-- AMAZON -->
 <div class="glass-card">
@@ -143,7 +58,7 @@ text-decoration:none;
 <div class="product-grid">
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/71zBsfUnhCL._SL1500_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/71zBsfUnhCL._SL1500_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">69% OFF</div>
 <div class="product-price">₹277</div>
@@ -152,7 +67,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/81461-kpZEL._SL1500_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/81461-kpZEL._SL1500_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">71% OFF</div>
 <div class="product-price">₹969</div>
@@ -161,7 +76,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/61ZLAor5y1L._SL1500_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/61ZLAor5y1L._SL1500_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">45% OFF</div>
 <div class="product-price">₹3,699</div>
@@ -170,16 +85,15 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://m.media-amazon.com/images/I/71J+zbpd+0L._SL1500_.jpg" class="product-img">
+<img src="https://m.media-amazon.com/images/I/71J+zbpd+0L._SL1500_.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">30% OFF</div>
 <div class="product-price">₹440</div>
 <a href="https://amzn.to/4bGGO5q" class="view-btn">View Deal</a>
 </div>
 </div>
-  
-</div>
 
+</div>
 </div>
 
 
@@ -191,7 +105,7 @@ text-decoration:none;
 <div class="product-grid">
 
 <div class="product-card">
-<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2025/JUNE/29/VmK7F8w9_b82556398e6c4af8afd199fd6df966a4.jpg" class="product-img">
+<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2025/JUNE/29/VmK7F8w9_b82556398e6c4af8afd199fd6df966a4.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">54% OFF</div>
 <div class="product-price">₹942</div>
@@ -200,7 +114,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/27766284/2024/2/21/5310d35a-d8d8-4bd0-bdc5-f4326431736f1708516195168PrestigeBlueGreySolidPlasticBathAccessoriesSet1.jpg" class="product-img">
+<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/27766284/2024/2/21/5310d35a-d8d8-4bd0-bdc5-f4326431736f1708516195168PrestigeBlueGreySolidPlasticBathAccessoriesSet1.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">47% OFF</div>
 <div class="product-price">₹845</div>
@@ -209,7 +123,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/29309866/2024/6/13/472b1888-9835-4d5e-b7e3-1b8f30f2b8c51718277068772-Art-Street-Black--Red-Set-of-7-Wooden-Elephant-with-Flower-W-1.jpg" class="product-img">
+<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/29309866/2024/6/13/472b1888-9835-4d5e-b7e3-1b8f30f2b8c51718277068772-Art-Street-Black--Red-Set-of-7-Wooden-Elephant-with-Flower-W-1.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">87% OFF</div>
 <div class="product-price">₹987</div>
@@ -218,7 +132,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/24785110/2023/9/2/52e98dad-d602-4d01-897e-2f43f5e8458d1693669380637TridentQueenBedsheetSet144TC100CottonJules2.jpg" class="product-img">
+<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/24785110/2023/9/2/52e98dad-d602-4d01-897e-2f43f5e8458d1693669380637TridentQueenBedsheetSet144TC100CottonJules2.jpg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">72% OFF</div>
 <div class="product-price">₹755</div>
@@ -227,12 +141,10 @@ text-decoration:none;
 </div>
 
 </div>
-
 </div>
 
 
 <!-- FLIPKART -->
-
 <div class="glass-card">
 
 <div class="card-title">Flipkart Home</div>
@@ -242,7 +154,7 @@ text-decoration:none;
 <div class="product-grid">
 
 <div class="product-card">
-<img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg" class="product-img">
+<img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">40% OFF</div>
 <div class="product-price">₹999</div>
@@ -251,7 +163,7 @@ text-decoration:none;
 </div>
 
 <div class="product-card">
-<img src="https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg" class="product-img">
+<img src="https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg" loading="lazy" decoding="async" class="product-img">
 <div class="product-caption">
 <div class="product-discount">35% OFF</div>
 <div class="product-price">₹1099</div>
@@ -263,6 +175,25 @@ text-decoration:none;
 
 </div>
 
+</main>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+<a href="index.html" class="nav-item">
+<span>🏠</span>Home
+</a>
+<a href="brands.html" class="nav-item">
+<span>🏷️</span>Brands
+</a>
+<a href="discover.html" class="nav-item">
+<span>🔎</span>Discover
+</a>
+<a href="https://www.nftraja.com/p/lady-glamour.html" class="nav-item">
+<span>📖</span>Guides
+</a>
+</div>
+
+<script src="app.js"></script>
 
 </body>
 </html>
