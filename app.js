@@ -223,7 +223,11 @@ html += `
 <div class="brand-store-card">
 
 <div class="brand-thumb">
-<img src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}" alt="${b.name}">
+
+<img src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}"
+alt="${b.name}"
+onerror="this.src='images/brand.png'">
+
 </div>
 
 <div class="brand-info">
