@@ -321,39 +321,8 @@ style="--chip-color:#444; cursor:pointer;">
 
 <script src="app.js"></script>
 
-<!-- SAFE NAVIGATION FIX -->
-<script>
-
-document.addEventListener("click",function(e){
-
-const link = e.target.closest("a");
-
-if(!link) return;
-
-const href = link.getAttribute("href");
-
-if(!href) return;
-
-if(
-href.startsWith("http") ||
-href.startsWith("javascript") ||
-href.startsWith("#")
-){
-return;
-}
-
-e.preventDefault();
-
-window.location.href = href;
-
-});
-
-</script>
-
-
 <!-- SERVICE WORKER REGISTER -->
 <script>
-
 if ('serviceWorker' in navigator) {
 
 navigator.serviceWorker.register('/sw.js')
@@ -367,9 +336,7 @@ console.log('Service Worker registration failed:', error);
 });
 
 }
-
 </script>
-
 
 <!-- INSTALL PROMPT SCRIPT -->
 <script>
@@ -379,34 +346,22 @@ let deferredPrompt = null;
 window.addEventListener('beforeinstallprompt', (e) => {
 
 e.preventDefault();
-
 deferredPrompt = e;
-
-console.log("Install prompt available");
 
 });
 
-document.getElementById("installBtn").addEventListener("click", async function(e){
+document.getElementById("installBtn")?.addEventListener("click", async function(e){
 
 e.preventDefault();
 
 if(!deferredPrompt){
-
 alert("Use your browser menu and tap 'Add to Home Screen' to install.");
-
 return;
-
 }
 
 deferredPrompt.prompt();
 
 const { outcome } = await deferredPrompt.userChoice;
-
-if(outcome === "accepted"){
-
-console.log("User installed app");
-
-}
 
 deferredPrompt = null;
 
@@ -416,26 +371,51 @@ window.addEventListener('appinstalled', () => {
 
 const popup = document.getElementById("installSuccess");
 
+if(popup){
 popup.style.display="flex";
-
 popup.style.pointerEvents="auto";
+}
 
 });
-
 </script>
 
-<script src="app.js"></script>
-
-<!-- INSTANT NAVIGATION -->
+<!-- UNIVERSAL SPEED + INSTANT NAVIGATION -->
 <script>
+
+(function(){
+
+/* IMAGE OPTIMIZATION */
+
+function optimizeImages(){
+document.querySelectorAll("img").forEach(img=>{
+img.loading="lazy";
+img.decoding="async";
+});
+}
+
+/* PREFETCH */
+
+function prefetch(url){
+
+if(!url.endsWith(".html")) return;
+
+const link=document.createElement("link");
+link.rel="prefetch";
+link.href=url;
+
+document.head.appendChild(link);
+
+}
+
+/* INSTANT NAVIGATION */
 
 document.addEventListener("click",function(e){
 
-const link = e.target.closest("a");
+const link=e.target.closest("a");
 
 if(!link) return;
 
-const href = link.getAttribute("href");
+const href=link.getAttribute("href");
 
 if(!href) return;
 
@@ -454,34 +434,65 @@ if(!href.endsWith(".html")) return;
 e.preventDefault();
 
 fetch(href)
-.then(res => res.text())
-.then(html => {
+.then(res=>res.text())
+.then(html=>{
 
-const parser = new DOMParser();
-const doc = parser.parseFromString(html,"text/html");
+const parser=new DOMParser();
+const doc=parser.parseFromString(html,"text/html");
 
-const newContent = doc.querySelector("main");
-const currentContent = document.querySelector("main");
+const newContent=doc.querySelector("main");
+const currentContent=document.querySelector("main");
 
 if(newContent && currentContent){
-currentContent.innerHTML = newContent.innerHTML;
-}
+
+currentContent.innerHTML=newContent.innerHTML;
+
+optimizeImages();
 
 window.history.pushState({}, "", href);
 
 window.scrollTo(0,0);
 
+}else{
+
+window.location.href=href;
+
+}
+
 })
 .catch(()=>{
-window.location.href = href;
+window.location.href=href;
 });
 
 });
+
+/* PREFETCH ON HOVER */
+
+document.querySelectorAll("a").forEach(link=>{
+
+link.addEventListener("mouseover",()=>{
+
+const href=link.getAttribute("href");
+
+if(!href) return;
+
+prefetch(href);
+
+});
+
+});
+
+/* BACK BUTTON */
 
 window.addEventListener("popstate",()=>{
 location.reload();
 });
 
+/* INIT */
+
+document.addEventListener("DOMContentLoaded",optimizeImages);
+
+})();
 </script>
 
 </body>
