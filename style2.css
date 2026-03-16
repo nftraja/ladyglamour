@@ -1,7 +1,3 @@
-/* ==============================
-GLOBAL
-============================== */
-
 *{
 margin:0;
 padding:0;
@@ -15,10 +11,7 @@ color:#ffffff;
 overflow-x:hidden;
 }
 
-
-/* ==============================
-HEADER
-============================== */
+/* HEADER */
 
 .app-header{
 position:fixed;
@@ -52,22 +45,13 @@ font-weight:700;
 letter-spacing:.5px;
 }
 
-.header-icons{
-display:flex;
-align-items:center;
-}
-
 .header-icons img{
 width:38px;
 height:38px;
-object-fit:contain;
 border-radius:8px;
 }
 
-
-/* ==============================
-DRAWER
-============================== */
+/* DRAWER */
 
 .drawer{
 position:fixed;
@@ -102,10 +86,7 @@ background:rgba(0,255,136,.12);
 padding-left:18px;
 }
 
-
-/* ==============================
-DRAWER OVERLAY
-============================== */
+/* OVERLAY */
 
 .drawer-overlay{
 position:fixed;
@@ -119,10 +100,7 @@ display:none;
 display:block;
 }
 
-
-/* ==============================
-MAIN
-============================== */
+/* MAIN */
 
 .main-content{
 padding:70px 14px 80px;
@@ -130,10 +108,7 @@ max-width:1400px;
 margin:auto;
 }
 
-
-/* ==============================
-GLASS CARD
-============================== */
+/* GLASS CARD */
 
 .glass-card{
 border-radius:18px;
@@ -166,21 +141,16 @@ margin:10px 0;
 background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
 }
 
-
-/* ==============================
-PRODUCT GRID
-============================== */
+/* GRID */
 
 .product-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:12px;
+align-items:start;
 }
 
-
-/* ==============================
-PRODUCT CARD
-============================== */
+/* PRODUCT CARD */
 
 .product-card{
 background:#111;
@@ -189,12 +159,7 @@ overflow:hidden;
 border:1px solid rgba(255,255,255,0.08);
 transition:.35s;
 position:relative;
-
-width:100%;
-min-width:0;
 }
-
-/* hover */
 
 .product-card:hover{
 transform:translateY(-5px) scale(1.02);
@@ -204,19 +169,13 @@ box-shadow:
 border:1px solid rgba(0,255,136,.35);
 }
 
-
-/* ==============================
-PRODUCT IMAGE
-============================== */
+/* IMAGE */
 
 .product-img{
 width:100%;
-max-width:100%;
-height:auto;
 aspect-ratio:1/1.25;
 object-fit:cover;
 display:block;
-
 transition:transform .45s ease;
 }
 
@@ -224,10 +183,7 @@ transition:transform .45s ease;
 transform:scale(1.06);
 }
 
-
-/* ==============================
-PRODUCT CAPTION
-============================== */
+/* CAPTION */
 
 .product-caption{
 padding:10px;
@@ -252,10 +208,7 @@ color:#00ff88;
 margin-bottom:6px;
 }
 
-
-/* ==============================
-VIEW DEAL BUTTON
-============================== */
+/* BUTTON */
 
 .view-btn{
 display:inline-block;
@@ -275,10 +228,7 @@ box-shadow:
 0 0 10px rgba(255,90,150,.35);
 }
 
-
-/* ==============================
-BOTTOM NAV
-============================== */
+/* BOTTOM NAV */
 
 .bottom-nav{
 position:fixed;
@@ -295,44 +245,26 @@ z-index:200;
 background:#0b0b0b;
 }
 
-.bottom-nav a{
-color:#00ff88;
-text-decoration:none;
-}
-
 .nav-item{
 text-align:center;
 font-size:14px;
-transition:.25s;
+color:#00ff88;
 }
 
 .nav-item span{
 display:block;
-font-size:14px;
 }
 
-.nav-item:hover{
-transform:translateY(-2px);
-color:#00ff88;
-}
-
-
-/* ==============================
-RESPONSIVE
-============================== */
+/* RESPONSIVE */
 
 @media(min-width:900px){
-
 .product-grid{
 grid-template-columns:repeat(4,1fr);
 }
-
 }
 
 @media(min-width:1200px){
-
 .product-grid{
 grid-template-columns:repeat(6,1fr);
 }
-
 }
