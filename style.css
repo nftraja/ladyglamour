@@ -453,6 +453,35 @@ min-height:36px;
 }
 
 /* ==============================
+PRODUCT CARD HOVER
+============================== */
+
+.product-card{
+transition:all .35s ease;
+cursor:pointer;
+}
+
+.product-card:hover{
+transform:translateY(-6px) scale(1.02);
+box-shadow:
+0 12px 30px rgba(0,0,0,.8),
+0 0 15px rgba(0,255,136,.25);
+border:1px solid rgba(0,255,136,.45);
+}
+
+.product-card:hover .product-img{
+transform:scale(1.06);
+transition:transform .45s ease;
+}
+
+.product-card:hover .view-btn{
+transform:translateY(-2px);
+box-shadow:
+0 6px 16px rgba(0,0,0,.7),
+0 0 10px rgba(255,90,150,.35);
+}
+
+/* ==============================
 BOTTOM NAV
 ============================== */
 .bottom-nav{
