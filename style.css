@@ -1,7 +1,6 @@
 /* ==============================
 GLOBAL
 ============================== */
-
 *{
 margin:0;
 padding:0;
@@ -37,7 +36,6 @@ padding:0 18px;
 border-bottom:1px solid rgba(0,255,136,0.28);
 z-index:200;
 backdrop-filter:blur(12px);
-background:#0b0b0b;
 }
 
 .menu-btn{
@@ -45,6 +43,7 @@ background:transparent;
 border:none;
 color:gold;
 font-size:25px;
+padding:7px;
 cursor:pointer;
 }
 
@@ -53,6 +52,12 @@ font-size:13px;
 color:gold;
 font-weight:700;
 letter-spacing:.5px;
+}
+
+.header-icons{
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
 .header-icons img{
@@ -69,14 +74,14 @@ DRAWER
 .drawer{
 position:fixed;
 top:0;
-left:-260px;
+left:-280px;
 width:200px;
 height:100%;
-background:rgba(10,12,20,.96);
+background:rgba(10,12,20,.95);
 z-index:300;
 overflow-y:auto;
 border-right:1px solid rgba(0,255,136,0.28);
-transition:left .35s ease;
+transition:left .3s ease;
 padding-top:15px;
 }
 
@@ -86,15 +91,11 @@ left:0;
 
 .drawer a{
 display:block;
-padding:9px 14px;
+padding:7px 14px;
 color:#00ff88;
 text-decoration:none;
 font-size:13px;
 border-bottom:1px solid rgba(255,255,255,.05);
-}
-
-.drawer a:hover{
-background:rgba(0,255,136,.15);
 }
 
 /* ==============================
@@ -103,7 +104,10 @@ DRAWER OVERLAY
 
 .drawer-overlay{
 position:fixed;
-inset:0;
+top:0;
+left:0;
+right:0;
+bottom:0;
 background:rgba(0,0,0,.65);
 z-index:250;
 display:none;
@@ -118,7 +122,7 @@ MAIN
 ============================== */
 
 .main-content{
-padding:70px 12px 85px;
+padding:70px 12px 70px;
 max-width:1200px;
 margin:auto;
 }
@@ -129,14 +133,10 @@ GLASS CARD
 
 .glass-card{
 border-radius:18px;
-padding:16px;
-margin-bottom:14px;
+padding:15px;
+margin-bottom:10px;
 background:rgba(255,255,255,0.04);
 border:1.5px solid rgba(0,255,136,0.28);
-backdrop-filter:blur(12px);
-box-shadow:
-0 0 0 1px rgba(0,255,136,0.06),
-0 10px 30px rgba(0,0,0,0.6);
 }
 
 /* ==============================
@@ -144,7 +144,7 @@ TEXT
 ============================== */
 
 .card-title{
-font-size:14px;
+font-size:13px;
 font-weight:800;
 text-align:center;
 margin-bottom:6px;
@@ -159,69 +159,27 @@ text-align:center;
 }
 
 /* ==============================
-DIVIDER
-============================== */
-
-.theme-divider-b{
-height:1px;
-margin:10px 0;
-background:linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,0.65),
-transparent
-);
-}
-
-/* ==============================
-CHIP BUTTONS
-============================== */
-
-.brand-wrap{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-justify-content:center;
-}
-
-.brand{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:8px 12px;
-border-radius:999px;
-font-size:12px;
-font-weight:700;
-color:#fff;
-text-decoration:none;
-white-space:nowrap;
-background:var(--chip-color);
-box-shadow:
-0 6px 16px rgba(0,0,0,.65),
-inset 0 2px 4px rgba(255,255,255,.45),
-inset 0 -4px 8px rgba(0,0,0,.6);
-border:1px solid rgba(255,255,255,.35);
-text-shadow:0 1px 2px rgba(0,0,0,.9);
-}
-
-/* ==============================
 CATEGORY ICON GRID
 ============================== */
 
 .category-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:10px;
-margin:14px 0;
+gap:8px;
+margin-top:12px;
+margin-bottom:12px;
 justify-items:center;
+align-items:start;
 }
 
 .category-icon{
 display:flex;
 flex-direction:column;
 align-items:center;
+text-align:center;
 text-decoration:none;
-color:#fff;
+color:#ffffff;
+width:100%;
 }
 
 .category-icon img{
@@ -236,94 +194,94 @@ background:#222;
 .category-icon span{
 font-size:11px;
 margin-top:6px;
+text-align:center;
 }
 
 /* ==============================
-CATEGORY SELECT (AMAZON)
+GUIDE CAROUSEL
 ============================== */
 
-.category-select{
-width:100%;
-padding:12px;
-border-radius:12px;
-border:1px solid rgba(0,255,136,0.28);
-background:rgba(255,255,255,0.06);
-color:#ffffff;
-font-size:14px;
-outline:none;
-appearance:none;
-cursor:pointer;
-}
-
-.category-select:focus{
-border:1px solid #00ff88;
-}
-
-.category-select option{
-background:#111;
-color:#ffffff;
-}
-
-/* ==============================
-CUSTOM MARKETPLACE DROPDOWN
-============================== */
-
-.custom-dropdown{
+.guide-carousel-wrap{
 position:relative;
-width:100%;
+overflow:hidden;
 }
 
-.dropdown-selected{
-width:100%;
-padding:8px;
-border-radius:12px;
-border:1px solid rgba(0,255,136,0.28);
-background:rgba(255,255,255,0.06);
-color:#ffffff;
+.guide-carousel-title{
 font-size:14px;
+font-weight:700;
+color:gold;
+text-align:center;
+margin:5px 0;
+}
+
+.guide-carousel{
 display:flex;
-justify-content:space-between;
-align-items:center;
-cursor:pointer;
+align-items:flex-start;
+gap:8px;
+overflow-x:auto;
+scroll-behavior:smooth;
+scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch;
+padding:8px;
+min-height:150px;
 }
 
-.dropdown-arrow{
-font-size:16px;
-opacity:.8;
-}
-
-.dropdown-list{
-position:absolute;
-top:105%;
-left:0;
-right:0;
-background:#111;
-border-radius:12px;
-border:1px solid rgba(0,255,136,0.28);
+.guide-carousel::-webkit-scrollbar{
 display:none;
-max-height:260px;
-overflow-y:auto;
-z-index:50;
 }
 
-.dropdown-list.active{
-display:block;
-}
-
-.dropdown-item{
-padding:10px;
-font-size:14px;
-color:#ffffff;
-border-bottom:1px solid rgba(255,255,255,.05);
-cursor:pointer;
-}
-
-.dropdown-item:hover{
-background:rgba(0,255,136,0.15);
+.guide-carousel .guide-card{
+flex:0 0 260px;
+width:260px;
+aspect-ratio:16/9;
+height:auto;
+scroll-snap-align:start;
 }
 
 /* ==============================
-PRODUCT GRID
+GRID (Amazon products)
+============================== */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+}
+
+.product-image{
+width:100%;
+aspect-ratio:16/9;
+border-radius:12px;
+margin-bottom:8px;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+border:1px solid rgba(255,255,255,.1);
+}
+
+.product-meta{
+font-size:13px;
+text-align:center;
+margin-top:4px;
+color:#ffffff;
+}
+
+.product-price{
+font-size:14px;
+font-weight:700;
+color:#00ff88;
+margin-bottom:4px;
+}
+
+.product-discount{
+font-size:11px;
+color:#ff4b2b;
+font-weight:700;
+margin-bottom:4px;
+}
+
+/* ==============================
+CATEGORY PRODUCT PAGES
 ============================== */
 
 .product-grid{
@@ -331,22 +289,6 @@ display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:12px;
 }
-
-@media(min-width:900px){
-.product-grid{
-grid-template-columns:repeat(4,1fr);
-}
-}
-
-@media(min-width:1200px){
-.product-grid{
-grid-template-columns:repeat(6,1fr);
-}
-}
-
-/* ==============================
-PRODUCT CARD
-============================== */
 
 .product-card{
 background:#111;
@@ -367,23 +309,9 @@ padding:10px;
 text-align:center;
 }
 
-.product-price{
-font-size:14px;
-font-weight:700;
-color:#00ff88;
-margin-bottom:4px;
-}
-
-.product-discount{
-font-size:11px;
-color:#ff4b2b;
-font-weight:700;
-margin-bottom:4px;
-}
-
 .view-btn{
 display:inline-block;
-padding:6px 14px;
+padding:6px 12px;
 font-size:12px;
 border-radius:20px;
 background:linear-gradient(135deg,#ff512f,#dd2476);
@@ -406,7 +334,6 @@ display:flex;
 justify-content:space-around;
 align-items:center;
 border-top:1px solid rgba(0,255,136,0.28);
-background:#0b0b0b;
 z-index:200;
 }
 
@@ -422,5 +349,33 @@ font-size:14px;
 
 .nav-item span{
 display:block;
-font-size:16px;
+font-size:14px;
+}
+
+/* ==============================
+RESPONSIVE
+============================== */
+
+@media(max-width:600px){
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(min-width:768px){
+.grid{
+grid-template-columns:repeat(4,1fr);
+}
+}
+
+@media(min-width:900px){
+.product-grid{
+grid-template-columns:repeat(4,1fr);
+}
+}
+
+@media(min-width:1200px){
+.product-grid{
+grid-template-columns:repeat(6,1fr);
+}
 }
