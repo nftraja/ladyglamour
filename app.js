@@ -67,7 +67,10 @@ return `
 
 <div class="product-card">
 
-<img src="${p.image}" class="product-img">
+<img src="${p.image}"
+loading="lazy"
+decoding="async"
+class="product-img">
 
 <div class="product-caption">
 
@@ -117,10 +120,14 @@ COLLECTION LOADER
 
 async function loadCollection(cat){
 
+try{
+
 let res = await fetch("json/" + cat + ".json");
 let data = await res.json();
 
 let grid = document.getElementById("hotDeals");
+
+if(!grid) return;
 
 let html="";
 
@@ -131,6 +138,11 @@ html+=productCard(p);
 grid.innerHTML=html;
 
 toggleDrawer();
+
+}
+catch(e){
+console.log("Collection load error",e);
+}
 
 }
 
@@ -160,7 +172,8 @@ html += `
 
 <div class="brand-thumb">
 
-<img src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}">
+<img src="https://www.google.com/s2/favicons?sz=128&domain=${b.domain}"
+alt="${b.name}">
 
 </div>
 
