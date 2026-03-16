@@ -76,6 +76,7 @@ amazonDropdown.classList.toggle("active");
 
 });
 
+
 document.querySelectorAll(".dropdown-item").forEach(item=>{
 
 item.addEventListener("click",function(){
@@ -90,6 +91,17 @@ amazonDropdown.classList.remove("active");
 renderProducts(cat);
 
 });
+
+});
+
+
+/* close dropdown outside click */
+
+document.addEventListener("click",(e)=>{
+
+if(!e.target.closest(".custom-dropdown")){
+amazonDropdown.classList.remove("active");
+}
 
 });
 
@@ -317,12 +329,13 @@ const guideCarousel = document.getElementById("guideCarousel");
 if(guideCarousel){
 
 let scrollAmount = 0;
+let autoSlide;
 
-setInterval(()=>{
+function startCarousel(){
 
-const card =
-guideCarousel.querySelector(".guide-card");
+autoSlide = setInterval(()=>{
 
+const card = guideCarousel.querySelector(".guide-card");
 if(!card) return;
 
 const cardWidth = card.offsetWidth + 8;
@@ -339,5 +352,30 @@ behavior: "smooth"
 });
 
 },2800);
+
+}
+
+function stopCarousel(){
+clearInterval(autoSlide);
+}
+
+startCarousel();
+
+/* pause on hover */
+
+guideCarousel.addEventListener("mouseenter",stopCarousel);
+guideCarousel.addEventListener("mouseleave",startCarousel);
+
+/* pause when tab inactive */
+
+document.addEventListener("visibilitychange",()=>{
+
+if(document.hidden){
+stopCarousel();
+}else{
+startCarousel();
+}
+
+});
 
 }
