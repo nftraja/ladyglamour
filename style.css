@@ -37,6 +37,7 @@ padding:0 18px;
 border-bottom:1px solid rgba(0,255,136,0.28);
 z-index:200;
 backdrop-filter:blur(12px);
+background:#0b0b0b;
 }
 
 .menu-btn{
@@ -44,8 +45,12 @@ background:transparent;
 border:none;
 color:gold;
 font-size:25px;
-padding:7px;
 cursor:pointer;
+transition:.3s;
+}
+
+.menu-btn:hover{
+transform:scale(1.1);
 }
 
 .logo{
@@ -53,11 +58,6 @@ font-size:13px;
 color:gold;
 font-weight:700;
 letter-spacing:.5px;
-}
-
-.header-icons{
-display:flex;
-align-items:center;
 }
 
 .header-icons img{
@@ -74,14 +74,14 @@ DRAWER
 .drawer{
 position:fixed;
 top:0;
-left:-280px;
+left:-260px;
 width:200px;
 height:100%;
-background:rgba(10,12,20,.95);
+background:rgba(10,12,20,.96);
 z-index:300;
 overflow-y:auto;
 border-right:1px solid rgba(0,255,136,0.28);
-transition:left .3s ease;
+transition:left .35s ease;
 padding-top:15px;
 }
 
@@ -91,11 +91,17 @@ left:0;
 
 .drawer a{
 display:block;
-padding:7px 14px;
+padding:9px 14px;
 color:#00ff88;
 text-decoration:none;
 font-size:13px;
 border-bottom:1px solid rgba(255,255,255,.05);
+transition:.25s;
+}
+
+.drawer a:hover{
+background:rgba(0,255,136,.15);
+padding-left:18px;
 }
 
 /* ==============================
@@ -119,7 +125,7 @@ MAIN
 ============================== */
 
 .main-content{
-padding:70px 12px 70px;
+padding:70px 12px 85px;
 max-width:1200px;
 margin:auto;
 }
@@ -130,11 +136,22 @@ GLASS CARD
 
 .glass-card{
 border-radius:18px;
-padding:15px;
-margin-bottom:12px;
+padding:16px;
+margin-bottom:14px;
 background:rgba(255,255,255,0.04);
 border:1.5px solid rgba(0,255,136,0.28);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
+box-shadow:
+0 0 0 1px rgba(0,255,136,0.06),
+0 10px 30px rgba(0,0,0,0.6);
+transition:.35s;
+}
+
+.glass-card:hover{
+transform:translateY(-3px);
+box-shadow:
+0 0 0 1px rgba(0,255,136,0.15),
+0 14px 35px rgba(0,0,0,0.7);
 }
 
 /* ==============================
@@ -142,7 +159,7 @@ TEXT
 ============================== */
 
 .card-title{
-font-size:13px;
+font-size:14px;
 font-weight:800;
 text-align:center;
 margin-bottom:6px;
@@ -163,7 +180,7 @@ DIVIDER
 .theme-divider-b{
 height:1px;
 margin:10px 0;
-background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
+background:linear-gradient(90deg,transparent,#ffffff70,transparent);
 }
 
 /* ==============================
@@ -173,8 +190,8 @@ CATEGORY ICON GRID
 .category-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:8px;
-margin:12px 0;
+gap:10px;
+margin:14px 0;
 justify-items:center;
 }
 
@@ -182,9 +199,9 @@ justify-items:center;
 display:flex;
 flex-direction:column;
 align-items:center;
-text-align:center;
 text-decoration:none;
-color:#ffffff;
+color:#fff;
+transition:.3s;
 }
 
 .category-icon img{
@@ -194,6 +211,12 @@ border-radius:50%;
 object-fit:cover;
 border:2px solid rgba(255,255,255,0.15);
 background:#222;
+transition:.35s;
+}
+
+.category-icon:hover img{
+transform:scale(1.1);
+border-color:#00ff88;
 }
 
 .category-icon span{
@@ -201,35 +224,9 @@ font-size:11px;
 margin-top:6px;
 }
 
-@media(min-width:768px){
-
-.category-grid{
-grid-template-columns:repeat(8,1fr);
-}
-
-.category-icon img{
-width:80px;
-height:80px;
-}
-
-}
-
 /* ==============================
 GUIDE CAROUSEL
 ============================== */
-
-.guide-carousel-wrap{
-position:relative;
-overflow:hidden;
-}
-
-.guide-carousel-title{
-font-size:14px;
-font-weight:700;
-color:gold;
-text-align:center;
-margin:6px 0;
-}
 
 .guide-carousel{
 display:flex;
@@ -238,11 +235,6 @@ overflow-x:auto;
 scroll-snap-type:x mandatory;
 scroll-behavior:smooth;
 padding:8px;
-min-height:150px;
-}
-
-.guide-carousel::-webkit-scrollbar{
-display:none;
 }
 
 .guide-card{
@@ -251,135 +243,26 @@ aspect-ratio:16/9;
 border-radius:18px;
 display:flex;
 align-items:flex-end;
-padding:8px;
+padding:10px;
 color:#fff;
 text-decoration:none;
 background-size:cover;
 background-position:center;
 border:1px solid rgba(255,255,255,0.18);
-position:relative;
+transition:.35s;
 }
 
-.guide-card::before{
-content:"";
-position:absolute;
-inset:0;
-background:var(--card-color);
-opacity:.25;
+.guide-card:hover{
+transform:scale(1.04);
 }
 
 .guide-title{
 font-size:14px;
 font-weight:700;
-margin:10px;
-position:relative;
-z-index:2;
-}
-
-@media(max-width:768px){
-
-.guide-card{
-flex:0 0 220px;
-}
-
-}
-
-/* ==============================
-CHIP BUTTONS
-============================== */
-
-.brand-wrap{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-justify-content:center;
-}
-
-.brand{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:8px 12px;
-border-radius:999px;
-font-size:12px;
-font-weight:700;
-color:#fff;
-text-decoration:none;
-white-space:nowrap;
-background:var(--chip-color);
-border:1px solid rgba(255,255,255,.35);
-}
-
-/* ==============================
-CUSTOM DROPDOWN
-============================== */
-
-.custom-dropdown{
-position:relative;
-width:100%;
-}
-
-.dropdown-selected{
-width:100%;
-padding:8px;
-border-radius:12px;
-border:1px solid rgba(0,255,136,0.28);
-background:rgba(255,255,255,0.06);
-color:#fff;
-font-size:14px;
-display:flex;
-justify-content:space-between;
-cursor:pointer;
-}
-
-.dropdown-list{
-position:absolute;
-top:105%;
-left:0;
-right:0;
-background:#111;
-border-radius:12px;
-border:1px solid rgba(0,255,136,0.28);
-display:none;
-max-height:260px;
-overflow-y:auto;
-z-index:50;
-}
-
-.dropdown-list.active{
-display:block;
-}
-
-.dropdown-item{
-padding:10px;
-font-size:14px;
-color:#fff;
-border-bottom:1px solid rgba(255,255,255,.05);
-cursor:pointer;
-}
-
-.dropdown-item:hover{
-background:rgba(0,255,136,0.15);
 }
 
 /* ==============================
 PRODUCT GRID
-============================== */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:8px;
-}
-
-@media(min-width:768px){
-.grid{
-grid-template-columns:repeat(4,1fr);
-}
-}
-
-/* ==============================
-CATEGORY PRODUCT PAGES
 ============================== */
 
 .product-grid{
@@ -390,21 +273,31 @@ gap:12px;
 
 @media(min-width:900px){
 .product-grid{
-grid-template-columns:repeat(6,1fr);
+grid-template-columns:repeat(4,1fr);
 }
 }
 
 @media(min-width:1200px){
 .product-grid{
-grid-template-columns:repeat(8,1fr);
+grid-template-columns:repeat(6,1fr);
 }
 }
+
+/* ==============================
+PRODUCT CARD
+============================== */
 
 .product-card{
 background:#111;
 border-radius:14px;
 overflow:hidden;
 border:1px solid rgba(255,255,255,0.08);
+transition:.35s;
+}
+
+.product-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(0,0,0,0.7);
 }
 
 .product-img{
@@ -435,12 +328,17 @@ margin-bottom:4px;
 
 .view-btn{
 display:inline-block;
-padding:6px 12px;
+padding:6px 14px;
 font-size:12px;
 border-radius:20px;
 background:linear-gradient(135deg,#ff512f,#dd2476);
 color:#fff;
 text-decoration:none;
+transition:.3s;
+}
+
+.view-btn:hover{
+transform:scale(1.05);
 }
 
 /* ==============================
@@ -454,6 +352,12 @@ gap:10px;
 margin-top:10px;
 }
 
+@media(max-width:768px){
+.brand-store-grid{
+grid-template-columns:1fr;
+}
+}
+
 .brand-store-card{
 display:flex;
 gap:10px;
@@ -462,6 +366,11 @@ border-radius:14px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
 backdrop-filter:blur(10px);
+transition:.3s;
+}
+
+.brand-store-card:hover{
+transform:translateY(-4px);
 }
 
 .brand-thumb{
@@ -470,7 +379,6 @@ height:60px;
 display:flex;
 align-items:center;
 justify-content:center;
-flex-shrink:0;
 }
 
 .brand-thumb img{
@@ -482,13 +390,13 @@ object-fit:contain;
 .brand-title{
 font-size:15px;
 font-weight:700;
-color:#ffffff;
+color:#fff;
 margin-bottom:6px;
 }
 
 .brand-desc{
 font-size:13px;
-color:#cccccc;
+color:#ccc;
 line-height:1.4;
 margin-bottom:10px;
 }
@@ -501,6 +409,11 @@ border-radius:20px;
 text-decoration:none;
 color:#fff;
 background:linear-gradient(135deg,#ff512f,#dd2476);
+transition:.3s;
+}
+
+.brand-open-btn:hover{
+transform:scale(1.05);
 }
 
 /* ==============================
@@ -518,12 +431,14 @@ display:flex;
 justify-content:space-around;
 align-items:center;
 border-top:1px solid rgba(0,255,136,0.28);
+background:#0b0b0b;
 z-index:200;
 }
 
 .bottom-nav a{
 color:#00ff88;
 text-decoration:none;
+transition:.25s;
 }
 
 .nav-item{
@@ -533,5 +448,10 @@ font-size:14px;
 
 .nav-item span{
 display:block;
-font-size:14px;
+font-size:16px;
+}
+
+.bottom-nav a:hover{
+transform:translateY(-3px);
+color:#ffffff;
 }
