@@ -1,3 +1,7 @@
+/* ==============================
+GLOBAL
+============================== */
+
 *{
 margin:0;
 padding:0;
@@ -11,7 +15,10 @@ color:#ffffff;
 overflow-x:hidden;
 }
 
-/* HEADER */
+
+/* ==============================
+HEADER
+============================== */
 
 .app-header{
 position:fixed;
@@ -52,7 +59,10 @@ border-radius:8px;
 object-fit:contain;
 }
 
-/* DRAWER */
+
+/* ==============================
+DRAWER
+============================== */
 
 .drawer{
 position:fixed;
@@ -87,7 +97,10 @@ background:rgba(0,255,136,.12);
 padding-left:18px;
 }
 
-/* OVERLAY */
+
+/* ==============================
+OVERLAY
+============================== */
 
 .drawer-overlay{
 position:fixed;
@@ -101,7 +114,10 @@ display:none;
 display:block;
 }
 
-/* MAIN */
+
+/* ==============================
+MAIN
+============================== */
 
 .main-content{
 padding:70px 14px 80px;
@@ -109,7 +125,10 @@ max-width:1400px;
 margin:auto;
 }
 
-/* GLASS CARD */
+
+/* ==============================
+GLASS CARD
+============================== */
 
 .glass-card{
 border-radius:18px;
@@ -142,18 +161,29 @@ margin:10px 0;
 background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),transparent);
 }
 
-/* GRID */
+
+/* ==============================
+GRID
+============================== */
 
 .product-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:12px;
 align-items:start;
-
 width:100%;
 }
 
-/* PRODUCT CARD */
+/* GRID FIX FOR PWA BUG */
+
+.product-grid > *{
+min-width:0;
+}
+
+
+/* ==============================
+PRODUCT CARD
+============================== */
 
 .product-card{
 background:#111;
@@ -162,12 +192,9 @@ overflow:hidden;
 border:1px solid rgba(255,255,255,0.08);
 transition:.35s;
 position:relative;
-
 width:100%;
 min-width:0;
 }
-
-/* hover */
 
 .product-card:hover{
 transform:translateY(-5px) scale(1.02);
@@ -177,7 +204,10 @@ box-shadow:
 border:1px solid rgba(0,255,136,.35);
 }
 
-/* IMAGE */
+
+/* ==============================
+IMAGE
+============================== */
 
 .product-img{
 width:100%;
@@ -185,9 +215,7 @@ height:auto;
 aspect-ratio:1/1.25;
 object-fit:cover;
 display:block;
-
 max-width:100%;
-
 transition:transform .45s ease;
 }
 
@@ -195,7 +223,10 @@ transition:transform .45s ease;
 transform:scale(1.06);
 }
 
-/* CAPTION */
+
+/* ==============================
+CAPTION
+============================== */
 
 .product-caption{
 padding:10px;
@@ -220,7 +251,10 @@ color:#00ff88;
 margin-bottom:6px;
 }
 
-/* BUTTON */
+
+/* ==============================
+BUTTON
+============================== */
 
 .view-btn{
 display:inline-block;
@@ -240,7 +274,10 @@ box-shadow:
 0 0 10px rgba(255,90,150,.35);
 }
 
-/* BOTTOM NAV */
+
+/* ==============================
+BOTTOM NAV
+============================== */
 
 .bottom-nav{
 position:fixed;
@@ -267,7 +304,10 @@ color:#00ff88;
 display:block;
 }
 
-/* RESPONSIVE */
+
+/* ==============================
+RESPONSIVE
+============================== */
 
 @media(min-width:900px){
 
