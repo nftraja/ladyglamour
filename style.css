@@ -336,10 +336,11 @@ justify-content:center;
 /* ==============================
 BRAND STORE GRID
 ============================== */
+
 .brand-store-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:12px;
+gap:14px;
 margin-top:12px;
 }
 
@@ -359,15 +360,24 @@ grid-template-columns:repeat(6,1fr);
 /* ==============================
 BRAND STORE CARD
 ============================== */
+
 .brand-store-card{
 display:flex;
-gap:12px;
-padding:12px;
+flex-direction:column;
+align-items:center;
+text-align:center;
+
+padding:14px;
+
 border-radius:16px;
 background:rgba(255,255,255,0.04);
+
 border:1.5px solid rgba(0,255,136,0.28);
+
 backdrop-filter:blur(10px);
+
 box-shadow:0 6px 18px rgba(0,0,0,.6);
+
 transition:transform .25s ease;
 }
 
@@ -375,6 +385,7 @@ transition:transform .25s ease;
 /* ==============================
 BRAND CARD TAP
 ============================== */
+
 .brand-store-card:active{
 transform:scale(.98);
 }
@@ -383,10 +394,12 @@ transform:scale(.98);
 /* ==============================
 DESKTOP HOVER
 ============================== */
+
 @media (hover:hover){
 
 .brand-store-card:hover{
 transform:translateY(-3px);
+
 box-shadow:
 0 0 16px rgba(0,255,136,.25),
 0 8px 22px rgba(0,0,0,.65);
@@ -398,15 +411,21 @@ box-shadow:
 /* ==============================
 BRAND LOGO
 ============================== */
+
 .brand-thumb{
 width:70px;
 height:70px;
+
 border-radius:14px;
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 background:#fff;
-flex-shrink:0;
+
+margin-bottom:8px;
+
 padding:6px;
 }
 
@@ -418,58 +437,62 @@ object-fit:contain;
 
 
 /* ==============================
-BRAND CONTENT
-============================== */
-.brand-content{
-flex:1;
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-
-
-/* ==============================
 BRAND TITLE
 ============================== */
+
 .brand-title{
 font-size:14px;
 font-weight:700;
+
 color:#00ff88;
-margin-bottom:4px;
+
+margin-bottom:6px;
 }
 
 
 /* ==============================
 BRAND DESCRIPTION
 ============================== */
+
 .brand-desc{
 font-size:12px;
 color:#ffffff;
+
 line-height:1.5;
-margin-bottom:8px;
+
+margin-bottom:10px;
 }
 
 
 /* ==============================
-BRAND OPEN BUTTON
+BRAND BUTTON
 ============================== */
+
 .brand-open-btn{
 display:inline-flex;
 align-items:center;
 justify-content:center;
+
 padding:8px 14px;
+
 border-radius:999px;
+
 font-size:12px;
 font-weight:700;
+
 color:#fff;
+
 text-decoration:none;
-white-space:nowrap;
+
 background:var(--chip-color);
+
 box-shadow:
 0 6px 16px rgba(0,0,0,.65),
 inset 0 2px 4px rgba(255,255,255,.45),
 inset 0 -4px 8px rgba(0,0,0,.6);
+
 border:1px solid rgba(255,255,255,.35);
+
 transition:transform .2s ease;
 }
 
@@ -481,13 +504,13 @@ transform:scale(.95);
 
 .brand-open-btn:hover{
 transform:scale(1.05);
+
 box-shadow:
 0 0 14px rgba(0,255,136,.35),
 0 6px 16px rgba(0,0,0,.65);
 }
 
 }
-
 
 /* ==============================
 MOBILE AMAZON STYLE
